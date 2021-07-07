@@ -27,7 +27,8 @@ public class Login extends AppCompatActivity {
         login = findViewById(R.id.imageButton);
 
         login.setOnClickListener(v -> {
-            //로그인하고 들어가는 메인 페이지
+            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+            startActivity(intent);
         });
 
 
