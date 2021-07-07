@@ -29,7 +29,13 @@
             android:label="@string/title_activity_login"
             android:theme="@style/Theme.2021_Wedge.Fullscreen" />
 
-        <activity android:name=".MainActivity"/>
+        <activity android:name=".bottomBar.MainActivity"/>
+        <activity android:name=".MyPageFrag.NoticeActivity"/>
+        <activity android:name=".MyPageFrag.FAQActivity"/>
+        <activity android:name=".MyPageFrag.SetActivity"/>
+        <activity android:name=".MyPageFrag.FavoriteStoreActivity"/>
+        <activity android:name=".MyPageFrag.GrowingPotatoActivity"/>
+        <activity android:name=".MyPageFrag.PersonalInfoActivity"/>
     </application>
 
 </manifest>

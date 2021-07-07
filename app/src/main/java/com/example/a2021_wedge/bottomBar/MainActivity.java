@@ -1,4 +1,4 @@
-package com.example.a2021_wedge;
+package com.example.a2021_wedge.bottomBar;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,7 @@ import android.os.Bundle;
 
 import com.example.a2021_wedge.HomeFrag.HomeFrag;
 import com.example.a2021_wedge.MyPageFrag.MyPageFrag;
+import com.example.a2021_wedge.R;
 import com.example.a2021_wedge.SearchFrag.SearchFrag;
 import com.example.a2021_wedge.StoreFrag.StoreFrag;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -15,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.acrivity_mainpage);
+        setContentView(R.layout.activity_mainpage);
 
         BottomNavigationView mBottomNavigationView = findViewById(R.id.bottom_navigation);
 

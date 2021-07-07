@@ -46,7 +46,7 @@
         tools:visibility="invisible" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button10"
+        android:id="@+id/personal_info"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.4"
@@ -57,7 +57,7 @@
         android:textColor="@color/black"/>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button11"
+        android:id="@+id/growing_potato"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.4"
@@ -68,7 +68,7 @@
         android:textColor="@color/black" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button12"
+        android:id="@+id/favorite_store"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.4"
@@ -79,7 +79,7 @@
         android:textColor="@color/black" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button13"
+        android:id="@+id/set"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.4"
@@ -90,7 +90,7 @@
         android:textColor="@color/black" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button14"
+        android:id="@+id/faq"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.4"
@@ -101,7 +101,7 @@
         android:textColor="@color/black" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button15"
+        android:id="@+id/notice"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.4"
