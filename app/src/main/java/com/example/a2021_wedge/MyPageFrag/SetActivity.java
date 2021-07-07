@@ -18,8 +18,6 @@ public class SetActivity extends AppCompatActivity {
 
         //뒤로 가기 버튼
         back = findViewById(R.id.back);
-        back.setOnClickListener(v -> {
-            onBackPressed();
-        });
+        back.setOnClickListener(v -> onBackPressed());
     }
 }
