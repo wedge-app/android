@@ -19,16 +19,36 @@
             <Button
                 android:id="@+id/button"
                 android:layout_width="match_parent"
-                android:layout_height="630dp"
+                android:layout_height="190dp"
+                android:visibility="invisible"
+                tools:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/main6" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="match_parent"
+                android:layout_height="310dp"
+                android:layout_marginTop="-40dp"
+                app:srcCompat="@drawable/main5" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="match_parent"
+                android:layout_height="145dp"
                 android:visibility="invisible"
                 tools:visibility="invisible" />
 
             <ImageView
                 android:id="@+id/imageView"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/potato"
-                android:layout_marginBottom="10dp"/>
+                android:layout_height="80dp"
+                android:layout_marginBottom="20dp"
+                app:srcCompat="@drawable/potato" />
 
         </LinearLayout>
     </FrameLayout>
