@@ -9,7 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.2021_Wedge">
-        <activity android:name=".Main"></activity>
+        <activity
+            android:name=".join"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_join"
+            android:theme="@style/Theme.2021_Wedge.Fullscreen"></activity>
+        <activity
+            android:name=".Login"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_login"
+            android:theme="@style/Theme.2021_Wedge.Fullscreen" />
+        <activity android:name=".Main" />
     </application>
 
 </manifest>
