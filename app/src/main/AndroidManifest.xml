@@ -9,6 +9,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.2021_Wedge">
+        <activity
+            android:name=".gymrestaurant"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_gymrestaurant"
+            android:theme="@style/Theme.2021_Wedge.Fullscreen"></activity>
+        <activity
+            android:name=".enterpage"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_enterpage"
+            android:theme="@style/Theme.2021_Wedge.Fullscreen" />
         <activity android:name=".Main">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -16,26 +26,23 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".join"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_join"
-            android:theme="@style/Theme.2021_Wedge.Fullscreen"/>
-
+            android:theme="@style/Theme.2021_Wedge.Fullscreen" />
         <activity
             android:name=".Login"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_login"
             android:theme="@style/Theme.2021_Wedge.Fullscreen" />
-
-        <activity android:name=".bottomBar.MainActivity"/>
-        <activity android:name=".MyPageFrag.NoticeActivity"/>
-        <activity android:name=".MyPageFrag.FAQActivity"/>
-        <activity android:name=".MyPageFrag.SetActivity"/>
-        <activity android:name=".MyPageFrag.FavoriteStoreActivity"/>
-        <activity android:name=".MyPageFrag.GrowingPotatoActivity"/>
-        <activity android:name=".MyPageFrag.PersonalInfoActivity"/>
+        <activity android:name=".bottomBar.MainActivity" />
+        <activity android:name=".MyPageFrag.NoticeActivity" />
+        <activity android:name=".MyPageFrag.FAQActivity" />
+        <activity android:name=".MyPageFrag.SetActivity" />
+        <activity android:name=".MyPageFrag.FavoriteStoreActivity" />
+        <activity android:name=".MyPageFrag.GrowingPotatoActivity" />
+        <activity android:name=".MyPageFrag.PersonalInfoActivity" />
     </application>
 
 </manifest>
