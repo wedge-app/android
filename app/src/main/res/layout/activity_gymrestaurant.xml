@@ -95,11 +95,10 @@
                 android:id="@+id/imageButton5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="270dp"
-                android:layout_marginTop="50dp"
-                android:background="#FFFFFF"
+                android:layout_marginLeft="280dp"
+                android:layout_marginTop="62dp"
+                android:background="#FFFFF"
                 app:srcCompat="@drawable/selectionline" />
-
         </LinearLayout>
 
     </FrameLayout>
