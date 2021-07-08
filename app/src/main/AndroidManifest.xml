@@ -16,26 +16,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity
-            android:name=".join"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:label="@string/title_activity_join"
-            android:theme="@style/Theme.2021_Wedge.Fullscreen"/>
-
-        <activity
-            android:name=".Login"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:label="@string/title_activity_login"
-            android:theme="@style/Theme.2021_Wedge.Fullscreen" />
-
-        <activity android:name=".bottomBar.MainActivity"/>
-        <activity android:name=".MyPageFrag.NoticeActivity"/>
-        <activity android:name=".MyPageFrag.FAQActivity"/>
-        <activity android:name=".MyPageFrag.SetActivity"/>
-        <activity android:name=".MyPageFrag.FavoriteStoreActivity"/>
-        <activity android:name=".MyPageFrag.GrowingPotatoActivity"/>
-        <activity android:name=".MyPageFrag.PersonalInfoActivity"/>
+        <activity android:name="com.example.a2021_wedge.join" />
+        <activity android:name="com.example.a2021_wedge.Login" />
+        <activity android:name=".bottomBar.MainActivity" />
+        <activity android:name=".MyPageFrag.NoticeActivity" />
+        <activity android:name=".MyPageFrag.FAQActivity" />
+        <activity android:name=".MyPageFrag.SetActivity" />
+        <activity android:name=".MyPageFrag.FavoriteStoreActivity" />
+        <activity android:name=".MyPageFrag.GrowingPotatoActivity" />
+        <activity android:name=".MyPageFrag.PersonalInfoActivity" />
     </application>
 
 </manifest>
