@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="20sp"
@@ -13,5 +14,89 @@
         app:srcCompat="@drawable/back"
         android:background="#FFFFFF"
         android:contentDescription="@string/todo" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:text="ㅇㅇ님의 감자는..."
+            android:textSize="34sp"
+            app:layout_constraintBottom_toTopOf="@+id/con_pot"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.083" />
+
+        <ImageView
+            android:id="@+id/con_pot"
+            android:layout_width="298dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="93dp"
+            app:layout_constraintBottom_toTopOf="@+id/con_lv_pot"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/potato" />
+
+        <TextView
+            android:id="@+id/con_lv_pot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="48dp"
+            android:text="바삭 감자"
+            android:textColor="#000000"
+            android:textSize="34sp"
+            app:layout_constraintBottom_toTopOf="@+id/info_levelup"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+        />
+
+        <TextView
+            android:id="@+id/info_levelup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="148dp"
+            android:background="#FFE589"
+            android:text="웨지 감자가 되기 위해서는... \nㅇ번의 리뷰 작성이 필요해요~"
+            android:textColor="#555555"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/review_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="리뷰 작성 횟수 : ㅇ 번"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.481"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/info_levelup"
+            app:layout_constraintVertical_bias="0.255" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="213dp"
+            android:layout_height="36dp"
+            android:background="#FFC700"
+            android:text="감자의 성장기 한 눈에 보기"
+            android:textColor="#CE737272"
+            app:backgroundTint="#FFE589"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/review_num" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </LinearLayout>
