@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20sp"
+    android:orientation="vertical"
+    tools:context=".MyPageFrag.Potato.TotalPotato">
+
+    <LinearLayout
+        android:id="@+id/top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="62dp"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/textView29"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="감자의 성장 일대기"
+            android:textColor="#000000"
+            android:textSize="22sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/haet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="34sp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/lv1_pot"
+            android:layout_width="82dp"
+            android:layout_height="153dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/haetpotato" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView36"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/lv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="햇감자"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView31"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="땅에서 막 나온 햇감자.\n나의 변신은 무궁무진하다.\n그 중에서도 가장 멋진 웨지 감자로 거듭날 것이다!"
+                android:textColor="#323232" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/next_bar1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="?android:attr/fastScrollThumbDrawable" />
+
+    <LinearLayout
+        android:id="@+id/basak"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/lv2_pot"
+            android:layout_width="198dp"
+            android:layout_height="153dp"
+            android:layout_weight="1"
+            android:src="@drawable/potato" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView35"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/lv2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="바삭 감자"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView34"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="웨지 감자가 되기 위한 관문.\n맛집에 대한 뜨거운 열기에\n익어버려 내 몸이 바삭해졌다.\n다른 감자들과는 달라달라~!"
+                android:textColor="#323232" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/next_bar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="?android:attr/fastScrollThumbDrawable" />
+
+    <LinearLayout
+        android:id="@+id/wazi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageView22"
+            android:layout_width="351dp"
+            android:layout_height="153dp"
+            android:layout_weight="1"
+            android:src="@drawable/potato" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView39"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/lv3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="웨지 감자"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView41"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="날카롭고도 동글한 옆태가 매력적인 웨지 감자로 재탄생!! \n화려한 분신술까지 연마했다.\n웨지의 능력을 뽐낼 시간!"
+                android:textColor="#323232" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>
