@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#FFFFFF"
     android:theme="@style/ThemeOverlay.2021_Wedge.FullscreenContainer"
-    tools:context=".Login">
+    tools:context=".First.Login">
 
 
     <FrameLayout
@@ -126,7 +126,7 @@
                 android:id="@+id/imageView3"
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
-                android:layout_marginBottom="20dp"
+                android:layout_marginBottom="100dp"
                 app:srcCompat="@drawable/potato" />
 
         </LinearLayout>

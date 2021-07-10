@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#FFFFFF"
     android:theme="@style/ThemeOverlay.2021_Wedge.FullscreenContainer"
-    tools:context=".join">
+    tools:context=".First.join">
 
 
     <FrameLayout

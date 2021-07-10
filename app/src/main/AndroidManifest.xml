@@ -9,15 +9,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.2021_Wedge">
-        <activity android:name=".Main">
+        <activity
+            android:name=".enterPage"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_enter_page"
+            android:theme="@style/Theme.2021_Wedge.Fullscreen">
+        </activity>
+        <activity android:name=".First.Main">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.a2021_wedge.join" />
-        <activity android:name="com.example.a2021_wedge.Login" />
+        <activity android:name=".First.join" />
+        <activity android:name=".First.Login" />
         <activity android:name=".bottomBar.MainActivity" />
         <activity android:name=".MyPageFrag.NoticeActivity" />
         <activity android:name=".MyPageFrag.FAQActivity" />
