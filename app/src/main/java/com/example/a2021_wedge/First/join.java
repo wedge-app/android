@@ -1,4 +1,4 @@
-package com.example.a2021_wedge;
+package com.example.a2021_wedge.First;
 
 import android.annotation.SuppressLint;
 
@@ -14,6 +14,8 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+
+import com.example.a2021_wedge.R;
 
 
 public class join extends AppCompatActivity {
