@@ -32,6 +32,7 @@
         <activity android:name=".MyPageFrag.PersonalInfoActivity" />
         <activity android:name=".MyPageFrag.Potato.GrowingPotatoActivity" />
         <activity android:name=".MyPageFrag.Potato.TotalPotato" />
+        <activity android:name=".MyPageFrag.gymrestaurant" />
         <activity android:name=".MyPageFrag.Potato.LevelupPotato1" />
         <activity android:name=".MyPageFrag.Potato.LevelupPotato2" />
     </application>
