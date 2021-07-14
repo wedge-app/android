@@ -9,6 +9,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.2021_Wedge">
+        <activity
+            android:name=".MyPageFrag.onetalking"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_onetalking"
+            android:theme="@style/Theme.2021_Wedge.Fullscreen" />
+        <activity
+            android:name=".enterPage"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_enter_page"
+            android:theme="@style/Theme.2021_Wedge.Fullscreen" />
         <activity android:name=".First.Main">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -35,8 +45,8 @@
         <activity android:name=".MyPageFrag.FavoriteStoreActivity"/>
         <activity android:name=".MyPageFrag.Potato.GrowingPotatoActivity"/>
         <activity android:name=".MyPageFrag.PersonalInfoActivity"/>
-        <activity android:name=".MyPageFrag.DevelopStoryActivity" />
         <activity android:name=".MyPageFrag.Potato.TotalPotato" />
+        <activity android:name=".MyPageFrag.gymrestaurant" />
         <activity android:name=".MyPageFrag.Potato.LevelupPotato1" />
         <activity android:name=".MyPageFrag.Potato.LevelupPotato2" />
 
