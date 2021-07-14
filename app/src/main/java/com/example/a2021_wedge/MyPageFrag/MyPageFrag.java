@@ -13,10 +13,11 @@ import androidx.fragment.app.Fragment;
 
 import com.example.a2021_wedge.MyPageFrag.Potato.GrowingPotatoActivity;
 import com.example.a2021_wedge.R;
+import com.google.android.gms.maps.SupportMapFragment;
 
 public class MyPageFrag extends Fragment {
 
-    Button personal_info, growing_potato, favorite_store, set, faq, notice;
+    Button personal_info, growing_potato, favorite_store, develop_story, faq, notice;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -40,12 +41,6 @@ public class MyPageFrag extends Fragment {
             startActivity(intent);
         });
 
-        set = v.findViewById(R.id.set);
-        set.setOnClickListener(v1 -> {
-            Intent intent = new Intent(getActivity(), SetActivity.class);
-            startActivity(intent);
-        });
-
         faq = v.findViewById(R.id.faq);
         faq.setOnClickListener(v1 -> {
             Intent intent = new Intent(getActivity(), FAQActivity.class);
@@ -58,6 +53,13 @@ public class MyPageFrag extends Fragment {
             startActivity(intent);
         });
 
+        develop_story = v.findViewById(R.id.develop_story);
+        develop_story.setOnClickListener(v1 -> {
+            Intent intent = new Intent(getActivity(), DevelopStoryActivity.class);
+            startActivity(intent);
+        });
+
         return v;
+
     }
 }

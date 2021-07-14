@@ -12,6 +12,12 @@
     <string name="도움말">도움말(FAQ)</string>
     <string name="공지사항">공지사항</string>
     <string name="오늘하루는맛있었나요">오늘 하루는 맛있었나요?</string>
+    <string name="확인">확인</string>
+    <string name="새비밀번호입력">새 비밀번호를 입력하세요</string>
+    <string name="새로운이름입력">새로운 이름을 입력하세요</string>
+    <string name="새폰번호입력">새로운 핸드폰 번호를 입력하세요</string>
+    <string name="다시비번입력">다시 비밀번호를 입력하세요</string>
+    <string name="개발자들의이야기">개발자들의 이야기</string>
     <string name="title_activity_search2">FullscreenActivity</string>
     <string name="title_activity_enter_page">FullscreenActivity</string>
     <string name="title_activity_onetalking">FullscreenActivity</string>
