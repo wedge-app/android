@@ -32,10 +32,18 @@
         <activity android:name=".bottomBar.MainActivity"/>
         <activity android:name=".MyPageFrag.NoticeActivity"/>
         <activity android:name=".MyPageFrag.FAQActivity"/>
-        <activity android:name=".MyPageFrag.DevelopStoryActivity"/>
         <activity android:name=".MyPageFrag.FavoriteStoreActivity"/>
         <activity android:name=".MyPageFrag.Potato.GrowingPotatoActivity"/>
         <activity android:name=".MyPageFrag.PersonalInfoActivity"/>
+        <activity android:name=".MyPageFrag.SetActivity" />
+        <activity android:name=".MyPageFrag.Potato.TotalPotato" />
+        <activity android:name=".MyPageFrag.Potato.LevelupPotato1" />
+        <activity android:name=".MyPageFrag.Potato.LevelupPotato2" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyA-tvc63ZqobnLcazKZfalDrSgR2ujgYeU" />
+
     </application>
 
 </manifest>
