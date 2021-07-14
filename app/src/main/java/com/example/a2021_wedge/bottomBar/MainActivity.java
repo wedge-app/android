@@ -9,37 +9,14 @@ import com.example.a2021_wedge.MyPageFrag.MyPageFrag;
 import com.example.a2021_wedge.R;
 import com.example.a2021_wedge.SearchFrag.SearchFrag;
 import com.example.a2021_wedge.StoreFrag.StoreFrag;
-import com.google.android.gms.maps.CameraUpdateFactory;
-import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.OnMapReadyCallback;
-import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class MainActivity extends AppCompatActivity implements OnMapReadyCallback {
-    //Button b;
-    private GoogleMap googleMap;
+public class MainActivity extends AppCompatActivity  {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mainpage);
-
-        /*b = findViewById(R.id.goMap);
-        b.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this, MainHome.class);
-                startActivity(i);
-            }
-        });*/
-
-
-            SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
-            mapFragment.getMapAsync(this);
-
-
 
         BottomNavigationView mBottomNavigationView = findViewById(R.id.bottom_navigation);
 
@@ -58,24 +35,14 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
             return false;
         });
 
-    }
+        if (savedInstanceState == null) {
 
-    @Override
-    public void onMapReady(GoogleMap googleMap) {
-        this.googleMap = googleMap;
-        //37.591308, 127.022128
-        //37.592641, 127.016387
-        LatLng latLng = new LatLng(37.591308, 127.022128);
+            HomeFrag mainFragment = new HomeFrag();
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.frame_container, mainFragment, "main")
+                    .commit();
 
-        MarkerOptions markerOptions = new MarkerOptions();
-        markerOptions.position(latLng);
-        markerOptions.title("성신여대");
-        markerOptions.snippet("3단 언덕 맛집!!");
-        googleMap.addMarker(markerOptions);
+        }
 
-
-        //googleMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
-        //googleMap.moveCamera(CameraUpdateFactory.zoomTo(15));
-        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng,18));
     }
 }
