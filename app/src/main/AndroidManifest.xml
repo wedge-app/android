@@ -9,15 +9,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.2021_Wedge">
-        <activity android:name=".Main">
+
+        <activity android:name=".First.Main">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.a2021_wedge.join" />
-        <activity android:name="com.example.a2021_wedge.Login" />
+        <activity android:name=".First.join" />
+        <activity android:name=".First.Login" />
         <activity android:name=".bottomBar.MainActivity" />
         <activity android:name=".MyPageFrag.NoticeActivity" />
         <activity android:name=".MyPageFrag.FAQActivity" />
@@ -28,6 +29,11 @@
         <activity android:name=".MyPageFrag.Potato.TotalPotato" />
         <activity android:name=".MyPageFrag.Potato.LevelupPotato1" />
         <activity android:name=".MyPageFrag.Potato.LevelupPotato2" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyA-tvc63ZqobnLcazKZfalDrSgR2ujgYeU" />
+
     </application>
 
 </manifest>

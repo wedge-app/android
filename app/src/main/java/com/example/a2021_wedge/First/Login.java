@@ -1,4 +1,4 @@
-package com.example.a2021_wedge;
+package com.example.a2021_wedge.First;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.example.a2021_wedge.R;
 import com.example.a2021_wedge.bottomBar.MainActivity;
 
 

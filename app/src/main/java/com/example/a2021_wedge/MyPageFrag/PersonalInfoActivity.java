@@ -6,7 +6,7 @@ import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.a2021_wedge.Login;
+import com.example.a2021_wedge.First.Login;
 import com.example.a2021_wedge.R;
 
 public class PersonalInfoActivity extends AppCompatActivity {

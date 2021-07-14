@@ -7,11 +7,23 @@
     android:orientation="vertical"
     tools:context=".bottomBar.MainActivity">
 
+
+
     <FrameLayout
         android:id="@+id/frame_container"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.9"/>
+        android:layout_weight="0.9">
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+
+    </FrameLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
