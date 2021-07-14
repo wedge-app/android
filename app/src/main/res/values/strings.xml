@@ -20,4 +20,5 @@
     <string name="개발자들의이야기">개발자들의 이야기</string>
     <string name="title_activity_search2">FullscreenActivity</string>
     <string name="title_activity_enter_page">FullscreenActivity</string>
+    <string name="title_activity_onetalking">FullscreenActivity</string>
 </resources>
