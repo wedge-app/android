@@ -10,15 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.2021_Wedge">
         <activity
-            android:name=".onetalking"
+            android:name=".MyPageFrag.onetalking"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_onetalking"
-            android:theme="@style/Theme.2021_Wedge.Fullscreen"></activity>
+            android:theme="@style/Theme.2021_Wedge.Fullscreen" />
         <activity
             android:name=".enterPage"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_enter_page"
-            android:theme="@style/Theme.2021_Wedge.Fullscreen"></activity>
+            android:theme="@style/Theme.2021_Wedge.Fullscreen" />
         <activity android:name=".First.Main">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
