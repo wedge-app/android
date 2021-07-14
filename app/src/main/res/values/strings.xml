@@ -20,4 +20,6 @@
     <string name="새폰번호입력">새로운 핸드폰 번호를 입력하세요</string>
     <string name="다시비번입력">다시 비밀번호를 입력하세요</string>
     <string name="개발자들의이야기">개발자들의 이야기</string>
+    <string name="title_activity_search2">FullscreenActivity</string>
+    <string name="title_activity_enter_page">FullscreenActivity</string>
 </resources>
