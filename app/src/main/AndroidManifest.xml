@@ -32,7 +32,7 @@
         <activity android:name=".bottomBar.MainActivity"/>
         <activity android:name=".MyPageFrag.NoticeActivity"/>
         <activity android:name=".MyPageFrag.FAQActivity"/>
-        <activity android:name=".MyPageFrag.SetActivity"/>
+        <activity android:name=".MyPageFrag.DevelopStoryActivity"/>
         <activity android:name=".MyPageFrag.FavoriteStoreActivity"/>
         <activity android:name=".MyPageFrag.GrowingPotatoActivity"/>
         <activity android:name=".MyPageFrag.PersonalInfoActivity"/>

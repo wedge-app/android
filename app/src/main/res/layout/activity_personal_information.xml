@@ -1,16 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:layout_margin="20sp"
-android:orientation="vertical">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="20sp" >
 
-<ImageButton
-    android:id="@+id/back"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    app:srcCompat="@drawable/back"
-    android:contentDescription="@string/todo" />
+    <ImageButton
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#FFFFFF"
+        android:contentDescription="@string/todo"
+        app:srcCompat="@drawable/back" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginHorizontal="10dp"
+        app:srcCompat="@drawable/text_new_password"
+        android:contentDescription="@string/todo"/>
+
+    <EditText
+        android:id="@+id/edit_new_password"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:background="@drawable/layout_edit_box"
+        android:autofillHints=""
+        android:paddingHorizontal="5dp"
+        android:hint="@string/새비밀번호입력"
+        android:inputType="textPassword"/>
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginHorizontal="10dp"
+        app:srcCompat="@drawable/text_password_done"
+        android:contentDescription="@string/todo"/>
+
+    <EditText
+        android:id="@+id/edit_password_done"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:background="@drawable/layout_edit_box"
+        android:autofillHints=""
+        android:paddingHorizontal="5dp"
+        android:hint="@string/다시비번입력"
+        android:inputType="textPassword"/>
+
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginHorizontal="10dp"
+        app:srcCompat="@drawable/join_name"
+        android:contentDescription="@string/todo"/>
+
+    <EditText
+        android:id="@+id/edit_name"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:background="@drawable/layout_edit_box"
+        android:autofillHints=""
+        android:paddingHorizontal="5dp"
+        android:hint="@string/새로운이름입력"
+        android:inputType="textPersonName"/>
+
+    <ImageView
+        android:id="@+id/imageView16"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginHorizontal="10dp"
+        app:srcCompat="@drawable/text_phone_number"
+        android:contentDescription="@string/todo" />
+
+    <EditText
+        android:id="@+id/edit_phone_number"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:background="@drawable/layout_edit_box"
+        android:autofillHints=""
+        android:paddingHorizontal="5dp"
+        android:hint="@string/새폰번호입력"
+        android:inputType="phone" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.7" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button10"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:background="#FFC700"
+        android:text="@string/확인" />
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.7" />
 
 </LinearLayout>

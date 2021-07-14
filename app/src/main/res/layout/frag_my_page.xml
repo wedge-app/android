@@ -79,17 +79,6 @@
         android:textColor="@color/black" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/set"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.4"
-        android:layout_marginBottom="10dp"
-        android:background="@color/light_orange"
-        android:text="@string/설정"
-        android:textSize="20sp"
-        android:textColor="@color/black" />
-
-    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/faq"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -108,6 +97,17 @@
         android:layout_marginBottom="10dp"
         android:background="@color/light_orange"
         android:text="@string/공지사항"
+        android:textSize="20sp"
+        android:textColor="@color/black" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/develop_story"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.4"
+        android:layout_marginBottom="10dp"
+        android:background="@color/light_orange"
+        android:text="@string/개발자들의이야기"
         android:textSize="20sp"
         android:textColor="@color/black" />
 

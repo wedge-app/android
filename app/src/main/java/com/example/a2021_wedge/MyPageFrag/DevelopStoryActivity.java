@@ -8,13 +8,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.a2021_wedge.R;
 
-public class SetActivity extends AppCompatActivity {
+public class DevelopStoryActivity extends AppCompatActivity {
     ImageButton back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_set);
+        setContentView(R.layout.activity_develop_story);
 
         //뒤로 가기 버튼
         back = findViewById(R.id.back);
