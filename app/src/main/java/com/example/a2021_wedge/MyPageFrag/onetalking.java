@@ -10,8 +10,6 @@ import android.os.Handler;
 import android.view.MotionEvent;
 import android.view.View;
 
-import com.example.a2021_wedge.databinding.ActivityOnetalkingBinding;
-
 
 public class onetalking extends AppCompatActivity {
 }
