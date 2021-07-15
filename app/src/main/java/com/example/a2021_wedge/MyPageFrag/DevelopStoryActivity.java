@@ -10,7 +10,6 @@ import com.example.a2021_wedge.R;
 
 public class DevelopStoryActivity extends AppCompatActivity {
     ImageButton back;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
