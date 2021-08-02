@@ -63,7 +63,7 @@
                 app:srcCompat="@drawable/join_id" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName3"
+                android:id="@+id/id"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/login_enter"
@@ -88,7 +88,7 @@
                 app:srcCompat="@drawable/join_password" />
 
             <EditText
-                android:id="@+id/editTextTextPassword"
+                android:id="@+id/pwd"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
@@ -113,7 +113,7 @@
                 app:srcCompat="@drawable/join_name" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName4"
+                android:id="@+id/name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/login_enter"
@@ -138,7 +138,7 @@
                 app:srcCompat="@drawable/join_phone_number" />
 
             <EditText
-                android:id="@+id/editTextPhone"
+                android:id="@+id/tel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
