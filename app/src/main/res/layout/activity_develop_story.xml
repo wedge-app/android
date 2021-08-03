@@ -8,10 +8,10 @@
 
     <ImageButton
         android:id="@+id/back"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/back"
+        android:layout_width="224dp"
+        android:layout_height="730dp"
         android:background="#FFFFFF"
-        android:contentDescription="@string/todo" />
+        android:contentDescription="@string/todo"
+        app:srcCompat="@drawable/back" />
 
 </LinearLayout>
