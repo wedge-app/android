@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class enterPage extends AppCompatActivity {
@@ -77,6 +78,7 @@ public class enterPage extends AppCompatActivity {
         wait.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Toast.makeText(enterPage.this, "줄서기가 정상신청되었습니다.", Toast.LENGTH_SHORT).show();
                 //미리 줄서기
                 int w = Integer.parseInt(wait_num.getText().toString());
                 wait_num.setText(w + 1);

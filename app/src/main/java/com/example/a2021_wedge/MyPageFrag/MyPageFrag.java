@@ -1,7 +1,9 @@
 package com.example.a2021_wedge.MyPageFrag;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
@@ -35,6 +37,7 @@ import java.util.ArrayList;
 public class MyPageFrag extends Fragment {
 
     Button personal_info, growing_potato, favorite_store, develop_story, faq, notice;
+    TextView email;
 
     private String mJsonString;
 
@@ -46,6 +49,12 @@ public class MyPageFrag extends Fragment {
 
         userName = v.findViewById(R.id.user_name);
         userName.setMovementMethod(new ScrollingMovementMethod());
+
+        //유저명 변경
+        email = v.findViewById(R.id.textView28);
+        SharedPreferences pref = this.getActivity().getSharedPreferences("user_info", Context.MODE_PRIVATE);
+        String prefEmail = pref.getString("user_email","");
+        email.setText(prefEmail);
 
         personal_info = v.findViewById(R.id.personal_info);
 
