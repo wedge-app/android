@@ -9,6 +9,7 @@ import android.widget.ImageButton;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.a2021_wedge.R;
+import com.example.a2021_wedge.Sajang.StoreManagement;
 
 public class GrowingPotatoActivity extends AppCompatActivity {
     ImageButton back;

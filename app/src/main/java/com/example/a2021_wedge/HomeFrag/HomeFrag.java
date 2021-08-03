@@ -71,20 +71,37 @@ public class HomeFrag extends Fragment implements OnMapReadyCallback  {
     @Override
     public void onMapReady(GoogleMap googleMap) {
         //37.591308, 127.022128 성신여대
+        //37.59193, 127.01847 언앨리셰프
+        GoogleMap gMap = googleMap;
 
         MapsInitializer.initialize(this.getActivity());
+        double[][] location = {{37.59193, 127.01847},{37.59210, 127.01841}};
+        LatLng latLng_new;
 
-        LatLng latLng = new LatLng(37.591308, 127.022128);
+        // for loop를 통한 n개의 마커 생성
+        for (int i = 0; i < location.length; i++) {
+            // 1. 마커 옵션 설정 (만드는 과정)
+            MarkerOptions makerOptions = new MarkerOptions();
+            latLng_new = new LatLng(location[i][0], location[i][1]);
+            makerOptions // LatLng에 대한 어레이를 만들어서 이용할 수도 있다.
+                    .position(latLng_new); // 타이틀.
 
+            // 2. 마커 생성 (마커를 나타냄)
+            gMap.addMarker(makerOptions);
+            googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng_new,18));
+
+        }
+
+
+        /*LatLng latLng = new LatLng(37.59193, 127.01847);
         MarkerOptions markerOptions = new MarkerOptions();
-        markerOptions.position(latLng);
-        markerOptions.title("성신여대");
-        markerOptions.snippet("3단 언덕 맛집!!");
+        markerOptions.position(latLng)
+                .title("언앨리셰프")
+                .snippet("아늑한 분위기에서 즐기는 파스타와 피자");
         googleMap.addMarker(markerOptions);
 
-        //googleMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
-        //googleMap.animateCamera(CameraUpdateFactory.zoomTo(13));
-        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng,18));
+*/
+
     }
 
 }
