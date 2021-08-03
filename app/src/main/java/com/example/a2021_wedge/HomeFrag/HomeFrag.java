@@ -6,6 +6,13 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.Spinner;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -39,6 +46,13 @@ public class HomeFrag extends Fragment implements OnMapReadyCallback  {
         super.onCreate(savedInstanceState);
     }
 
+    boolean isOpenPage = false;
+    LinearLayout linear;
+    Animation top, bottom;
+    Button btn_slide;
+
+    String[] items = {"한식", "중식", "양식", "일식", "패스트푸드"};
+
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         v = inflater.inflate(R.layout.frag_home, container, false);
@@ -47,7 +61,68 @@ public class HomeFrag extends Fragment implements OnMapReadyCallback  {
         mapView.onCreate(savedInstanceState);
         mapView.getMapAsync(this);
 
+        Spinner spinner = v.findViewById(R.id.spinner);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getContext(), android.R.layout.simple_spinner_item, items);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+//                textView.setText(items[position]);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+//                textView.setText("선택 : ");
+            }
+        });
+
+        linear = v.findViewById(R.id.linear);
+        linear.setVisibility(View.INVISIBLE);
+        top = AnimationUtils.loadAnimation(getContext(), R.anim.translate_top);
+        bottom = AnimationUtils.loadAnimation(getContext(), R.anim.translate_bottom);
+
+        SlidingAnimationListener listener = new SlidingAnimationListener();
+        top.setAnimationListener(listener);
+        bottom.setAnimationListener(listener);
+
+        btn_slide = v.findViewById(R.id.btn_slide);
+        btn_slide.setOnClickListener(v -> {
+            if(isOpenPage){
+                linear.startAnimation(bottom);
+            }else{
+                linear.setVisibility(View.VISIBLE);
+                linear.startAnimation(top);
+
+            }
+        });
+
         return v;
+    }
+
+    class SlidingAnimationListener implements Animation.AnimationListener {
+        @Override
+        public void onAnimationStart(Animation animation) {
+
+        }
+
+        @Override
+        public void onAnimationEnd(Animation animation) {
+            if(isOpenPage){
+                linear.setVisibility(View.INVISIBLE);
+                btn_slide.setText("열기");
+                isOpenPage=false;
+            }else{
+                linear.setVisibility(View.VISIBLE);
+                btn_slide.setText("닫기");
+                isOpenPage=true;
+            }
+        }
+
+        @Override
+        public void onAnimationRepeat(Animation animation) {
+
+        }
     }
 
     @Override
