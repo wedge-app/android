@@ -7,10 +7,12 @@
     android:background="#FFFFFF"
     android:theme="@style/ThemeOverlay.2021_Wedge.FullscreenContainer"
     tools:context=".MyPageFrag.gymrestaurant">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+
         <TextView
             android:id="@+id/textView7"
             android:layout_width="match_parent"
@@ -21,6 +23,7 @@
             android:textColor="#000000"
             android:textSize="30dp"
             android:textStyle="bold" />
+
         <Spinner
             android:id="@+id/spinner"
             android:layout_width="wrap_content"
@@ -30,6 +33,7 @@
             android:background="@drawable/yellowbox"
             android:entries="@array/array_list"
             android:gravity="center" />
+
         <TextView
             android:id="@+id/textView8"
             android:layout_width="match_parent"
@@ -40,6 +44,7 @@
             android:text="엽기떡볶이 성신여대점"
             android:textColor="#000000"
             android:textSize="24dp" />
+
         <ImageView
             android:id="@+id/imageView12"
             android:layout_width="wrap_content"
@@ -47,6 +52,7 @@
             android:layout_marginLeft="40dp"
             android:layout_marginTop="20dp"
             app:srcCompat="@drawable/greyline" />
+
         <TextView
             android:id="@+id/textView11"
             android:layout_width="match_parent"
@@ -57,6 +63,7 @@
             android:text="짜장면"
             android:textColor="#000000"
             android:textSize="24dp" />
+
         <ImageView
             android:id="@+id/imageView13"
             android:layout_width="wrap_content"
@@ -65,6 +72,7 @@
             android:layout_marginTop="20dp"
             app:srcCompat="@drawable/greyline" />
     </LinearLayout>
+
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -72,21 +80,32 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-            <ImageView
-                android:id="@+id/imageView14"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:layout_marginRight="350dp"
-                app:srcCompat="@drawable/back" />
+
             <ImageButton
                 android:id="@+id/imageButton5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="270dp"
-                android:layout_marginTop="62dp"
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:layout_marginLeft="267dp"
+                android:layout_marginTop="103dp"
                 android:background="#FFC812"
                 app:srcCompat="@drawable/selectionline" />
         </LinearLayout>
     </FrameLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20sp"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/back"
+            android:background="#FFFFFF"
+            android:contentDescription="@string/todo" />
+
+    </LinearLayout>
 </FrameLayout>
