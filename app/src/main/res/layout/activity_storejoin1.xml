@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#ffffff"
+    android:theme="@style/ThemeOverlay.2021_Wedge.FullscreenContainer"
+    tools:context=".Storejoin1">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/storeback"
+                    app:srcCompat="@drawable/back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:background="#FFFFFF"
+                    android:gravity="left" />
+
+                <Button
+                    android:id="@+id/btn"
+                    android:layout_width="370dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:visibility="invisible"
+                    tools:visibility="invisible" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/t"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:autoSizeTextType="uniform"
+                android:gravity="center"
+                android:text="회원가입"
+                android:textColor="#000000"
+                android:textSize="22sp" />
+
+            <ImageView
+                android:id="@+id/i"
+                app:srcCompat="@drawable/join_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="300dp"
+                android:layout_marginBottom="10dp" />
+
+            <EditText
+                android:id="@+id/idhh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="30dp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/login_enter"
+                android:ems="10"
+                android:hint="아이디"
+                android:inputType="textPersonName"
+                android:paddingHorizontal="30dp"
+                android:textColor="#8F9090"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/imageViehhw7"
+                app:srcCompat="@drawable/join_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="240dp"
+                android:layout_marginBottom="10dp" />
+
+            <EditText
+                android:id="@+id/pwhhd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="30dp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/login_enter"
+                android:ems="10"
+                android:hint="비밀번호"
+                android:inputType="textPassword"
+                android:paddingHorizontal="30dp"
+                android:textColor="#8F9090"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/imagehhView8"
+                app:srcCompat="@drawable/join_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="280dp"
+                android:layout_marginBottom="10dp" />
+
+            <EditText
+                android:id="@+id/nahhme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="30dp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/login_enter"
+                android:ems="10"
+                android:hint="이름"
+                android:inputType="textPersonName"
+                android:paddingHorizontal="30dp"
+                android:textColor="#8F9090"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/imaghheView9"
+                app:srcCompat="@drawable/join_phone_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="180dp"
+                android:layout_marginBottom="10dp" />
+
+            <EditText
+                android:id="@+id/thhel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="30dp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/login_enter"
+                android:ems="10"
+                android:hint="휴대폰 번호"
+                android:inputType="phone"
+                android:paddingHorizontal="30dp"
+                android:textColor="#8F9090"
+                android:textSize="15sp" />
+
+            <ImageButton
+                android:id="@+id/storenext"
+                app:srcCompat="@drawable/join_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF" />
+
+        </LinearLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/butthon9"
+                android:layout_width="match_parent"
+                android:layout_height="617dp"
+                android:visibility="invisible"
+                tools:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/texthView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="다음"
+                android:textColor="#000000"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </FrameLayout>
+</FrameLayout>

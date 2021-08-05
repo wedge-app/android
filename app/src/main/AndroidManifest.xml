@@ -9,12 +9,28 @@
 
     <application
         android:allowBackup="true"
-        android:usesCleartextTraffic="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.2021_Wedge">
+        android:theme="@style/Theme.2021_Wedge"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".storesublist"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_storesublist"
+            android:theme="@style/Theme.2021_Wedge.Fullscreen"></activity>
+        <activity
+            android:name=".storejoin2"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_storejoin2"
+            android:theme="@style/Theme.2021_Wedge.Fullscreen"
+            android:usesCleartextTraffic="true" />
+        <activity
+            android:name=".Storejoin1"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_storejoin1"
+            android:theme="@style/Theme.2021_Wedge.Fullscreen" />
         <activity
             android:name=".Sajang.StoreManagement"
             android:exported="true" />
