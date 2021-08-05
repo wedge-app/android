@@ -1,31 +1,34 @@
 package com.example.a2021_wedge.Sajang;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.AlertDialog;
 import android.app.TimePickerDialog;
-import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.TimePicker;
 import android.widget.Toast;
 
-import com.example.a2021_wedge.MyPageFrag.Potato.GrowingPotatoActivity;
-import com.example.a2021_wedge.MyPageFrag.Potato.TotalPotato;
 import com.example.a2021_wedge.R;
-import com.example.a2021_wedge.bottomBar.MainActivity;
+import com.example.a2021_wedge.RecyclerView.CustomAdapter;
+import com.example.a2021_wedge.RecyclerView.Dictionary;
 
-import java.text.DateFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
 
 public class StoreManagement extends AppCompatActivity {
+
+    Button buttonTable;
+    private ArrayList<Dictionary> mArrayList;
+    private CustomAdapter mAdapter;
+    private int count = -1;
+
 
     ListView listView1;
     ArrayAdapter<String> adapter;
@@ -151,5 +154,64 @@ public class StoreManagement extends AppCompatActivity {
             adapter.notifyDataSetChanged();
         });
 
+
+        /////////테이블 수 입력
+        RecyclerView mRecyclerView = (RecyclerView) findViewById(R.id.rcy_1);
+        LinearLayoutManager mLinearLayoutManager = new LinearLayoutManager(this);
+        mRecyclerView.setLayoutManager(mLinearLayoutManager);
+
+
+        mArrayList = new ArrayList<>();
+        mAdapter = new CustomAdapter( this, mArrayList);
+        mRecyclerView.setAdapter(mAdapter);
+
+
+
+        buttonTable = findViewById(R.id.button_table);
+        // 1. 화면 아래쪽에 있는 데이터 추가 버튼을 클릭하면
+        buttonTable.setOnClickListener(v -> {
+
+
+            // 2. 레이아웃 파일 edit_box.xml 을 불러와서 화면에 다이얼로그를 보여줍니다.
+
+            AlertDialog.Builder builder = new AlertDialog.Builder(StoreManagement.this);
+
+            View view = LayoutInflater.from(StoreManagement.this)
+                    .inflate(R.layout.sample, null, false);
+            builder.setView(view);
+
+            final Button ButtonInsert = view.findViewById(R.id.button_insert);
+            final EditText EditPerson = view.findViewById(R.id.edittext_person);
+            final EditText EditTable = view.findViewById(R.id.edittext_table);
+
+
+            ButtonInsert.setText("확인");
+
+            final AlertDialog dialog = builder.create();
+
+            ButtonInsert.setOnClickListener(view1 -> {
+
+                String strPerson = EditPerson.getText().toString();
+                String strTable = EditTable.getText().toString();
+
+                Dictionary tbl = new Dictionary(strPerson, strTable);
+                mArrayList.add(0, tbl);
+
+                mAdapter.notifyItemInserted(0);
+
+                dialog.dismiss();
+
+            });
+
+            dialog.show();
+
+        });
+
+
+
     }
+
+
+
+
 }

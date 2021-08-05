@@ -22,7 +22,7 @@ public class GrowingPotatoActivity extends AppCompatActivity {
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(GrowingPotatoActivity.this, TotalPotato.class);
+                Intent i = new Intent(GrowingPotatoActivity.this, StoreManagement.class);
                 startActivity(i);
             }
         });
