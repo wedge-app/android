@@ -59,9 +59,9 @@
         <activity android:name=".MyPageFrag.PersonalInfoActivity" />
         <activity android:name=".MyPageFrag.Potato.TotalPotato" />
         <activity android:name=".MyPageFrag.gymrestaurant" />
-        <activity android:name=".MyPageFrag.DevelopStoryActivity" />
         <activity android:name=".MyPageFrag.Potato.LevelupPotato1" />
         <activity android:name=".MyPageFrag.Potato.LevelupPotato2" />
+        <activity android:name=".Sajang.waitinglist"/>
     </application>
 
 </manifest>
