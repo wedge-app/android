@@ -23,4 +23,6 @@
     <string name="title_activity_onetalking">FullscreenActivity</string>
     <string name="title_activity_waiting_list">FullscreenActivity</string>
     <string name="title_activity_waitinglist">FullscreenActivity</string>
+    <string name="title_activity_item">FullscreenActivity</string>
+    <string name="title_activity_list_item">FullscreenActivity</string>
 </resources>
