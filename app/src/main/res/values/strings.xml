@@ -25,4 +25,7 @@
     <string name="title_activity_waitinglist">FullscreenActivity</string>
     <string name="title_activity_item">FullscreenActivity</string>
     <string name="title_activity_list_item">FullscreenActivity</string>
+    <string name="title_activity_storejoin1">FullscreenActivity</string>
+    <string name="title_activity_storejoin2">FullscreenActivity</string>
+    <string name="title_activity_storesublist">FullscreenActivity</string>
 </resources>
