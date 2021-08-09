@@ -19,7 +19,10 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import com.example.a2021_wedge.First.Login;
+import com.example.a2021_wedge.MyPageFrag.PersonalInfoActivity;
 import com.example.a2021_wedge.R;
+import com.example.a2021_wedge.enterPage;
 
 public class SearchFrag extends Fragment {
     EditText search;
@@ -51,6 +54,14 @@ public class SearchFrag extends Fragment {
         //입장 버튼
         enter = v.findViewById(R.id.imageButton5);
         enter.setVisibility(View.INVISIBLE);
+
+        enter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), enterPage.class);
+                startActivity(intent);
+            }
+        });
 
         //구분선
         line = v.findViewById(R.id.imageView13);

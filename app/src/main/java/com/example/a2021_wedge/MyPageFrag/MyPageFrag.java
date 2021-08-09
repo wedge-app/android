@@ -18,9 +18,12 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.example.a2021_wedge.First.Model_UserSignUp;
 import com.example.a2021_wedge.MyPageFrag.Potato.GrowingPotatoActivity;
 import com.example.a2021_wedge.R;
 import com.example.a2021_wedge.bottomBar.MainActivity;
+import com.example.a2021_wedge.retrofit.RetrofitClient;
+import com.example.a2021_wedge.retrofit.RetrofitInterface;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -34,6 +37,12 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+
 public class MyPageFrag extends Fragment {
 
     Button personal_info, growing_potato, favorite_store, develop_story, faq, notice;
@@ -42,6 +51,8 @@ public class MyPageFrag extends Fragment {
     private String mJsonString;
 
     private TextView userName;
+
+    private String SERVER_URL = "http://8c31442c9fdb.ngrok.io/phpMyAdmin-5.1.1/";
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -55,6 +66,31 @@ public class MyPageFrag extends Fragment {
         SharedPreferences pref = this.getActivity().getSharedPreferences("user_info", Context.MODE_PRIVATE);
         String prefEmail = pref.getString("user_email","");
         email.setText(prefEmail);
+
+
+
+                Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(SERVER_URL)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+        RetrofitInterface retrofitInterface = retrofit.create(RetrofitInterface.class);
+        Call<Model_UserSignUp> getinfo = retrofitInterface.get_join();
+
+        getinfo.enqueue(new Callback<Model_UserSignUp>() {
+            @Override
+            public void onResponse(Call<Model_UserSignUp> call, Response<Model_UserSignUp> response) {
+                Model_UserSignUp join = response.body();
+                System.out.println("연결 상태 : "+response.body().toString());
+
+                email.setText(join.getId());
+            }
+
+            @Override
+            public void onFailure(Call<Model_UserSignUp> call, Throwable t) {
+                System.out.println("연결 실패");
+            }
+        });
 
         personal_info = v.findViewById(R.id.personal_info);
 

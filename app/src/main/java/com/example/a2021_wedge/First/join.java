@@ -5,12 +5,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
 
 import com.example.a2021_wedge.R;
+import com.example.a2021_wedge.retrofit.RetrofitClient;
 import com.example.a2021_wedge.retrofit.RetrofitInterface;
 
 import retrofit2.Call;
@@ -23,6 +25,9 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class join extends AppCompatActivity {
     ImageButton fin, back;
     EditText id, pwd, name, tel;
+
+    RetrofitClient mInstance;
+    private String SERVER_URL = "http://8c31442c9fdb.ngrok.io/phpMyAdmin-5.1.1/";
 
 
     @Override
@@ -47,54 +52,28 @@ public class join extends AppCompatActivity {
         fin.setOnClickListener(v -> {
 
             Retrofit retrofit = new Retrofit.Builder()
-                    .baseUrl("https://wedge21.herokuapp.com/")
+                    .baseUrl(SERVER_URL)
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
 
             RetrofitInterface retrofitInterface = retrofit.create(RetrofitInterface.class);
+            mInstance = new RetrofitClient();
+            Model_UserSignUp userjoin = new Model_UserSignUp(id.getText().toString(), pwd.getText().toString(), name.getText().toString(), tel.getText().toString());
+            Call<Model_UserSignUp> call = retrofitInterface.post_join(userjoin);
 
-            Model_UserSignUp m = new Model_UserSignUp(id.getText().toString(), pwd.getText().toString(), name.getText().toString(), tel.getText().toString());
-            //RetrofitClient retrofitClient = new RetrofitClient();
-            Call<Void> call = retrofitInterface.userSignUp(m);
-            //Call<Model_UserLogIn> call = retrofitClient.retrofitInterface.userLogIn(m);
-
-            call.enqueue(new Callback<Void>() {
+            call.enqueue(new Callback<Model_UserSignUp>() {
                 @Override
-                public void onResponse(Call<Void> call, Response<Void> response) {
-                    SharedPreferences pref = getSharedPreferences("user_info",MODE_PRIVATE);
-                    SharedPreferences.Editor editor = pref.edit();
+                public void onResponse(Call<Model_UserSignUp> call, Response<Model_UserSignUp> response) {
+                    Model_UserSignUp join = response.body();
 
-                    editor.clear();
+                    System.out.println("연결 상태 : "+response.body().toString());
 
-                    System.out.println("코드 들어옴");
-
-                    if(response.code() == 200){
-                        Toast.makeText(join.this, "로그인 성공", Toast.LENGTH_LONG).show();
-                        System.out.println("코드 들어옴2");
-                        //System.out.println("로그인 후 응답 상황 token:"+response.body().getToken());
-                        editor.putString("user_email", id.getText().toString());
-//                        editor.putString("token", response.body().getToken());
-                        editor.apply();
-
-                        Intent intent = new Intent(getApplicationContext(), Login.class);
-                        startActivity(intent);
-
-                    } else if(response.code() == 401){
-                        Toast.makeText(join.this, "로그인 실패", Toast.LENGTH_LONG).show();
-                        System.out.println("코드 들어3");
-                    }else {
-                        System.out.println(response.code());
-                    }
                 }
 
                 @Override
-                public void onFailure(Call<Void> call, Throwable t) {
-                    Toast.makeText(join.this, t.getMessage(),Toast.LENGTH_LONG).show();
-                    System.out.println(t.getMessage());
-                    System.out.println("코드 들어옴4");
+                public void onFailure(Call<Model_UserSignUp> call, Throwable t) {
+                    System.out.println("연결 실패");
                 }
-
-
             });
 
         });

@@ -28,6 +28,7 @@ public class enterPage extends AppCompatActivity {
 
         //뒤로가기
         back = findViewById(R.id.back3);
+        back.setOnClickListener(v -> onBackPressed());
 
         info = findViewById(R.id.imageButton6);
         menu = findViewById(R.id.imageButton7);
