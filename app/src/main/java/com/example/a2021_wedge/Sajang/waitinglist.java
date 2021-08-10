@@ -9,9 +9,11 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.content.Intent;
 import android.widget.ImageButton;
+import android.widget.ListView;
 
 import com.example.a2021_wedge.R;
 import com.example.a2021_wedge.databinding.ActivityWaitinglistBinding;
@@ -20,9 +22,15 @@ import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
 
 
 public class waitinglist extends AppCompatActivity {
+
+    ListView listView2;
+    ArrayAdapter<String> adapter;
+    ArrayList<String> listItem;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
