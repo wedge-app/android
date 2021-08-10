@@ -21,6 +21,10 @@
     <string name="title_activity_search2">FullscreenActivity</string>
     <string name="title_activity_enter_page">FullscreenActivity</string>
     <string name="title_activity_onetalking">FullscreenActivity</string>
+    <string name="title_activity_waiting_list">FullscreenActivity</string>
+    <string name="title_activity_waitinglist">FullscreenActivity</string>
+    <string name="title_activity_item">FullscreenActivity</string>
+    <string name="title_activity_list_item">FullscreenActivity</string>
     <string name="title_activity_storejoin1">FullscreenActivity</string>
     <string name="title_activity_storejoin2">FullscreenActivity</string>
     <string name="title_activity_storesublist">FullscreenActivity</string>
