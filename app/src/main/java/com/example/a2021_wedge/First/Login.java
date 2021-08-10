@@ -6,16 +6,26 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.a2021_wedge.R;
 import com.example.a2021_wedge.Storejoin1;
 import com.example.a2021_wedge.bottomBar.MainActivity;
+import com.example.a2021_wedge.retrofit.RetrofitClient;
+import com.example.a2021_wedge.retrofit.RetrofitInterface;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 
 public class Login extends AppCompatActivity {
@@ -23,6 +33,8 @@ public class Login extends AppCompatActivity {
     TextView join;
     EditText email, pw;
     int check = 0;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +47,9 @@ public class Login extends AppCompatActivity {
         SharedPreferences pref = getSharedPreferences("user_info",MODE_PRIVATE);
         SharedPreferences.Editor editor = pref.edit();
         editor.clear();
+
+
+
 
         //사장님 로그인
         CheckBox checkBox = (CheckBox) findViewById(R.id.checkBox);
