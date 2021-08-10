@@ -162,11 +162,11 @@ public class StoreManagement extends AppCompatActivity {
 
 
         mArrayList = new ArrayList<>();
-        mAdapter = new CustomAdapter( this, mArrayList);
+        mAdapter = new CustomAdapter( mArrayList);
         mRecyclerView.setAdapter(mAdapter);
 
 
-
+        AlertDialog.Builder builder = new AlertDialog.Builder(StoreManagement.this);
         buttonTable = findViewById(R.id.button_table);
         // 1. 화면 아래쪽에 있는 데이터 추가 버튼을 클릭하면
         buttonTable.setOnClickListener(v -> {
@@ -174,7 +174,7 @@ public class StoreManagement extends AppCompatActivity {
 
             // 2. 레이아웃 파일 edit_box.xml 을 불러와서 화면에 다이얼로그를 보여줍니다.
 
-            AlertDialog.Builder builder = new AlertDialog.Builder(StoreManagement.this);
+
 
             View view = LayoutInflater.from(StoreManagement.this)
                     .inflate(R.layout.sample, null, false);

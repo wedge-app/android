@@ -58,8 +58,9 @@ public class Login extends AppCompatActivity {
                 Intent store = new Intent(getApplicationContext(),  MainActivity.class);
                 startActivity(store);
             }
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(intent);
+                //Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                //startActivity(intent);
+            loginBtn(login);
 
         });
 
@@ -114,6 +115,14 @@ public class Login extends AppCompatActivity {
             });
 
         });
+    }
+
+    public void loginBtn(View view) {
+        String user = email.getText().toString();
+        String pass = pw.getText().toString();
+
+        background bg = new background(this);
+        bg.execute(user,pass);
     }
 
 }
