@@ -15,6 +15,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.2021_Wedge"
         android:usesCleartextTraffic="true">
+        android:theme="@style/Theme.2021_Wedge"
+        android:usesCleartextTraffic="true">
         <activity
             android:name=".storesublist"
             android:configChanges="orientation|keyboardHidden|screenSize"
@@ -75,7 +77,6 @@
         <activity android:name=".MyPageFrag.PersonalInfoActivity" />
         <activity android:name=".MyPageFrag.Potato.TotalPotato" />
         <activity android:name=".MyPageFrag.gymrestaurant" />
-        <activity android:name=".MyPageFrag.DevelopStoryActivity" />
         <activity android:name=".MyPageFrag.Potato.LevelupPotato1" />
         <activity android:name=".MyPageFrag.Potato.LevelupPotato2" />
     </application>
