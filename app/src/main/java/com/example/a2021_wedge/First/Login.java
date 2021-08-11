@@ -49,8 +49,6 @@ public class Login extends AppCompatActivity {
         editor.clear();
 
 
-
-
         //사장님 로그인
         CheckBox checkBox = (CheckBox) findViewById(R.id.checkBox);
         checkBox.setOnClickListener(new CheckBox.OnClickListener() {
@@ -73,9 +71,8 @@ public class Login extends AppCompatActivity {
                 Intent store = new Intent(getApplicationContext(),  MainActivity.class);
                 startActivity(store);
             }
-                //Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                //startActivity(intent);
-            loginBtn(login);
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
 
         });
 
@@ -130,14 +127,6 @@ public class Login extends AppCompatActivity {
             });
 
         });
-    }
-
-    public void loginBtn(View view) {
-        String user = email.getText().toString();
-        String pass = pw.getText().toString();
-
-        background bg = new background(this);
-        bg.execute(user,pass);
     }
 
 }

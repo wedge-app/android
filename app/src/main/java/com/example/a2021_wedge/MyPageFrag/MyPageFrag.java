@@ -67,31 +67,6 @@ public class MyPageFrag extends Fragment {
         String prefEmail = pref.getString("user_email","");
         email.setText(prefEmail);
 
-
-
-                Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl(SERVER_URL)
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
-
-        RetrofitInterface retrofitInterface = retrofit.create(RetrofitInterface.class);
-        Call<Model_UserSignUp> getinfo = retrofitInterface.get_join();
-
-        getinfo.enqueue(new Callback<Model_UserSignUp>() {
-            @Override
-            public void onResponse(Call<Model_UserSignUp> call, Response<Model_UserSignUp> response) {
-                Model_UserSignUp join = response.body();
-                System.out.println("연결 상태 : "+response.body().toString());
-
-                email.setText(join.getId());
-            }
-
-            @Override
-            public void onFailure(Call<Model_UserSignUp> call, Throwable t) {
-                System.out.println("연결 실패");
-            }
-        });
-
         personal_info = v.findViewById(R.id.personal_info);
 
         userName.setOnClickListener(new View.OnClickListener() {
@@ -115,7 +90,7 @@ public class MyPageFrag extends Fragment {
 
         favorite_store = v.findViewById(R.id.favorite_store);
         favorite_store.setOnClickListener(v1 -> {
-            Intent intent = new Intent(getActivity(), FavoriteStoreActivity.class);
+            Intent intent = new Intent(getActivity(), gymrestaurant.class);
             startActivity(intent);
         });
 
