@@ -10,7 +10,7 @@ import retrofit2.http.POST;
 
 public interface RetrofitInterface {
 //    String SERVER_URL = "https://fierce-mesa-76163.herokuapp.com/";
-     String SERVER_URL = "http://8c31442c9fdb.ngrok.io/phpMyAdmin-5.1.1/";
+//     String SERVER_URL = "http://8c31442c9fdb.ngrok.io/phpMyAdmin-5.1.1/";
 
      @FormUrlEncoded
      @POST("test")
