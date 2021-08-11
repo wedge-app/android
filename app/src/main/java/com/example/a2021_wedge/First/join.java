@@ -1,25 +1,28 @@
 package com.example.a2021_wedge.First;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
 
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.toolbox.Volley;
 import com.example.a2021_wedge.R;
+import com.example.a2021_wedge.retrofit.RegisterRequest;
 import com.example.a2021_wedge.retrofit.RetrofitClient;
-import com.example.a2021_wedge.retrofit.RetrofitInterface;
 
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+
 
 
 public class join extends AppCompatActivity {
@@ -27,7 +30,8 @@ public class join extends AppCompatActivity {
     EditText id, pwd, name, tel;
 
     RetrofitClient mInstance;
-    private String SERVER_URL = "http://8c31442c9fdb.ngrok.io/phpMyAdmin-5.1.1/";
+    private AlertDialog dialog;
+
 
 
     @Override
@@ -49,34 +53,54 @@ public class join extends AppCompatActivity {
 
         //완료 버튼
         fin = findViewById(R.id.imageButton3);
-        fin.setOnClickListener(v -> {
+        fin.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                System.out.println("onclick 성공");
+                String userID = id.getText().toString();
+                String userPass = pwd.getText().toString();
+                String userName = name.getText().toString();
+                String userTel = tel.getText().toString();
 
-            Retrofit retrofit = new Retrofit.Builder()
-                    .baseUrl(SERVER_URL)
-                    .addConverterFactory(GsonConverterFactory.create())
-                    .build();
-
-            RetrofitInterface retrofitInterface = retrofit.create(RetrofitInterface.class);
-            mInstance = new RetrofitClient();
-            Model_UserSignUp userjoin = new Model_UserSignUp(id.getText().toString(), pwd.getText().toString(), name.getText().toString(), tel.getText().toString());
-            Call<Model_UserSignUp> call = retrofitInterface.post_join(userjoin);
-
-            call.enqueue(new Callback<Model_UserSignUp>() {
-                @Override
-                public void onResponse(Call<Model_UserSignUp> call, Response<Model_UserSignUp> response) {
-                    Model_UserSignUp join = response.body();
-
-                    System.out.println("연결 상태 : "+response.body().toString());
-
+                if(userID.equals("")){
+                    AlertDialog.Builder builder=new AlertDialog.Builder( join.this );
+                    dialog=builder.setMessage("아이디는 빈 칸일 수 없습니다")
+                            .setPositiveButton("확인",null)
+                            .create();
+                    dialog.show();
+                    return;
                 }
+                Response.Listener<String> responseListener = new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        System.out.println("Listener 진입 성공/ response 값 : "+response);
+                        try {
+                            JSONObject jsonObject = new JSONObject(response);
+                            boolean success = jsonObject.getBoolean( "success" );
 
-                @Override
-                public void onFailure(Call<Model_UserSignUp> call, Throwable t) {
-                    System.out.println("연결 실패");
-                }
-            });
+                            //회원가입 성공시
+                            if(success) {
+                                System.out.println("연결 성공");
+                                Toast.makeText( getApplicationContext(), "회원가입 성공", Toast.LENGTH_SHORT ).show();
+                                onBackPressed();
+                                //회원가입 실패시
+                            } else {
+                                System.out.println("연결 실패");
+                                Toast.makeText( getApplicationContext(), "회원가입 실패", Toast.LENGTH_SHORT ).show();
+                                return;
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                };
 
+                //서버로 Volley를 이용해서 요청
+                RegisterRequest registerRequest = new RegisterRequest( userID, userPass, userName, userTel, responseListener);
+                RequestQueue queue = Volley.newRequestQueue( join.this );
+                queue.add(registerRequest );
+            }
         });
-    }
 
+    }
 }
