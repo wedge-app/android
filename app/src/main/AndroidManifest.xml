@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.a2021_wedge">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -14,6 +13,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:theme="@style/Theme.2021_Wedge"
+        android:usesCleartextTraffic="true">
         android:theme="@style/Theme.2021_Wedge"
         android:usesCleartextTraffic="true">
         <activity
@@ -60,7 +61,6 @@
         <activity
             android:name=".First.join"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:usesCleartextTraffic="true"
             android:label="@string/title_activity_join"
             android:theme="@style/Theme.2021_Wedge.Fullscreen" />
         <activity
@@ -77,8 +77,6 @@
         <activity android:name=".MyPageFrag.PersonalInfoActivity" />
         <activity android:name=".MyPageFrag.Potato.TotalPotato" />
         <activity android:name=".MyPageFrag.gymrestaurant" />
-        <activity android:name=".MyPageFrag.DevelopStoryActivity"
-            tools:ignore="DuplicateActivity" />
         <activity android:name=".MyPageFrag.Potato.LevelupPotato1" />
         <activity android:name=".MyPageFrag.Potato.LevelupPotato2" />
     </application>
