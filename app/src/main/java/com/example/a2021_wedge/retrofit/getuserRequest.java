@@ -7,15 +7,13 @@ import com.android.volley.toolbox.StringRequest;
 import java.util.HashMap;
 import java.util.Map;
 
-public class RegisterRequest extends StringRequest {
-
+public class getuserRequest extends StringRequest{
     //서버 URL 설정(php 파일 연동)
-    final static private  String URL = "http://mywedge21.dothome.co.kr/signup.php";
+    final static private  String URL = "http://mywedge21.dothome.co.kr/getuser.php";
     private Map<String, String> map;
 
-
-    public RegisterRequest(String userID, String userPassword, String userName, String userTel, Response.Listener<String> listener) {
-        super(Method.POST, URL, listener, null);
+    public getuserRequest(String userID, String userPassword, String userName, String userTel, Response.Listener<String> listener) {
+        super(Method.GET, URL, listener, null);
         map = new HashMap<>();
         map.put("userID", userID);
         map.put("userPassword", userPassword);
@@ -23,9 +21,8 @@ public class RegisterRequest extends StringRequest {
         map.put("userTel", userTel);
     }
 
-
     @Override
-    protected Map<String, String>getParams() throws AuthFailureError {
+    protected Map<String, String> getParams() throws AuthFailureError {
         return map;
     }
 }

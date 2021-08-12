@@ -15,16 +15,23 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.toolbox.Volley;
+import com.example.a2021_wedge.HomeFrag.HomeFrag;
 import com.example.a2021_wedge.R;
-import com.example.a2021_wedge.Sajang.WaitingList;
+import com.example.a2021_wedge.Sajang.StoreManagement;
 import com.example.a2021_wedge.Storejoin1;
 import com.example.a2021_wedge.bottomBar.MainActivity;
+import com.example.a2021_wedge.retrofit.LoginRequest;
 import com.example.a2021_wedge.retrofit.RetrofitClient;
 import com.example.a2021_wedge.retrofit.RetrofitInterface;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import retrofit2.Call;
 import retrofit2.Callback;
-import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
@@ -34,6 +41,8 @@ public class Login extends AppCompatActivity {
     TextView join;
     EditText email, pw;
     int check = 0;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,13 +56,16 @@ public class Login extends AppCompatActivity {
         SharedPreferences.Editor editor = pref.edit();
         editor.clear();
 
+
+
+
         //사장님 로그인
         CheckBox checkBox = (CheckBox) findViewById(R.id.checkBox);
         checkBox.setOnClickListener(new CheckBox.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(check == 0) check++;
-                else check--;
+                if(check % 2 == 0) check++;
+                else if(check % 2 != 0) check--;
             }
         });
 
@@ -65,13 +77,13 @@ public class Login extends AppCompatActivity {
             editor.putString("user_pwd", pw.getText().toString());
             editor.apply();
 
-            if(check == 0){ //사장님로그인인지 판단(수정필요)
-                Intent store = new Intent(getApplicationContext(), MainActivity.class);
+            if(check % 2 == 0){ //사장님로그인인지 판단(수정필요)
+                Intent store = new Intent(getApplicationContext(),  MainActivity.class);
                 startActivity(store);
-            }else {
-                Intent intent = new Intent(getApplicationContext(), WaitingList.class);
-                startActivity(intent);
             }
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+
         });
 
         FrameLayout sign = findViewById(R.id.signup);
@@ -84,6 +96,7 @@ public class Login extends AppCompatActivity {
         gene.setVisibility(View.INVISIBLE);
         CheckBox store = (CheckBox) findViewById(R.id.checkBox4);
         store.setVisibility(View.INVISIBLE);
+
 
         //회원가입 버튼
         join = findViewById(R.id.textView);

@@ -22,17 +22,12 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-
-
-
 public class join extends AppCompatActivity {
     ImageButton fin, back;
     EditText id, pwd, name, tel;
 
     RetrofitClient mInstance;
     private AlertDialog dialog;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

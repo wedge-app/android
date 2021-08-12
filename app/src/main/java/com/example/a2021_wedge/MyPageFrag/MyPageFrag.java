@@ -13,15 +13,21 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.toolbox.Volley;
+import com.example.a2021_wedge.First.Login;
 import com.example.a2021_wedge.First.Model_UserSignUp;
 import com.example.a2021_wedge.MyPageFrag.Potato.GrowingPotatoActivity;
 import com.example.a2021_wedge.R;
 import com.example.a2021_wedge.bottomBar.MainActivity;
+import com.example.a2021_wedge.retrofit.LoginRequest;
 import com.example.a2021_wedge.retrofit.RetrofitClient;
 import com.example.a2021_wedge.retrofit.RetrofitInterface;
 
@@ -39,7 +45,6 @@ import java.util.ArrayList;
 
 import retrofit2.Call;
 import retrofit2.Callback;
-import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
@@ -49,9 +54,7 @@ public class MyPageFrag extends Fragment {
     TextView email;
 
     private String mJsonString;
-
     private TextView userName;
-
     private String SERVER_URL = "http://8c31442c9fdb.ngrok.io/phpMyAdmin-5.1.1/";
 
     @Override
@@ -61,36 +64,14 @@ public class MyPageFrag extends Fragment {
         userName = v.findViewById(R.id.user_name);
         userName.setMovementMethod(new ScrollingMovementMethod());
 
+        email = v.findViewById(R.id.textView28);
+
         //유저명 변경
         email = v.findViewById(R.id.textView28);
         SharedPreferences pref = this.getActivity().getSharedPreferences("user_info", Context.MODE_PRIVATE);
-        String prefEmail = pref.getString("user_email","");
-        email.setText(prefEmail);
+        String prefname = pref.getString("userName","");
+        email.setText(prefname);
 
-
-
-                Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl(SERVER_URL)
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
-
-        RetrofitInterface retrofitInterface = retrofit.create(RetrofitInterface.class);
-        Call<Model_UserSignUp> getinfo = retrofitInterface.get_join();
-
-        getinfo.enqueue(new Callback<Model_UserSignUp>() {
-            @Override
-            public void onResponse(Call<Model_UserSignUp> call, Response<Model_UserSignUp> response) {
-                Model_UserSignUp join = response.body();
-                System.out.println("연결 상태 : "+response.body().toString());
-
-                email.setText(join.getId());
-            }
-
-            @Override
-            public void onFailure(Call<Model_UserSignUp> call, Throwable t) {
-                System.out.println("연결 실패");
-            }
-        });
 
         personal_info = v.findViewById(R.id.personal_info);
 
