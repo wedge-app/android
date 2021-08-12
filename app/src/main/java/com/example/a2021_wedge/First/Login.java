@@ -16,6 +16,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.a2021_wedge.R;
+import com.example.a2021_wedge.Sajang.WaitingList;
 import com.example.a2021_wedge.Storejoin1;
 import com.example.a2021_wedge.bottomBar.MainActivity;
 import com.example.a2021_wedge.retrofit.RetrofitClient;
@@ -34,8 +35,6 @@ public class Login extends AppCompatActivity {
     EditText email, pw;
     int check = 0;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,16 +47,13 @@ public class Login extends AppCompatActivity {
         SharedPreferences.Editor editor = pref.edit();
         editor.clear();
 
-
-
-
         //사장님 로그인
         CheckBox checkBox = (CheckBox) findViewById(R.id.checkBox);
         checkBox.setOnClickListener(new CheckBox.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(check % 2 == 0) check++;
-                else if(check % 2 != 0) check--;
+                if(check == 0) check++;
+                else check--;
             }
         });
 
@@ -69,13 +65,13 @@ public class Login extends AppCompatActivity {
             editor.putString("user_pwd", pw.getText().toString());
             editor.apply();
 
-            if(check % 2 == 0){ //사장님로그인인지 판단(수정필요)
-                Intent store = new Intent(getApplicationContext(),  MainActivity.class);
+            if(check == 0){ //사장님로그인인지 판단(수정필요)
+                Intent store = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(store);
-            }
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+            }else {
+                Intent intent = new Intent(getApplicationContext(), WaitingList.class);
                 startActivity(intent);
-
+            }
         });
 
         FrameLayout sign = findViewById(R.id.signup);
@@ -88,7 +84,6 @@ public class Login extends AppCompatActivity {
         gene.setVisibility(View.INVISIBLE);
         CheckBox store = (CheckBox) findViewById(R.id.checkBox4);
         store.setVisibility(View.INVISIBLE);
-
 
         //회원가입 버튼
         join = findViewById(R.id.textView);
