@@ -15,15 +15,23 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.toolbox.Volley;
+import com.example.a2021_wedge.HomeFrag.HomeFrag;
 import com.example.a2021_wedge.R;
+import com.example.a2021_wedge.Sajang.StoreManagement;
 import com.example.a2021_wedge.Storejoin1;
 import com.example.a2021_wedge.bottomBar.MainActivity;
+import com.example.a2021_wedge.retrofit.LoginRequest;
 import com.example.a2021_wedge.retrofit.RetrofitClient;
 import com.example.a2021_wedge.retrofit.RetrofitInterface;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import retrofit2.Call;
 import retrofit2.Callback;
-import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
@@ -33,8 +41,6 @@ public class Login extends AppCompatActivity {
     TextView join;
     EditText email, pw;
     int check = 0;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,8 +55,6 @@ public class Login extends AppCompatActivity {
         editor.clear();
 
 
-
-
         //사장님 로그인
         CheckBox checkBox = (CheckBox) findViewById(R.id.checkBox);
         checkBox.setOnClickListener(new CheckBox.OnClickListener() {
@@ -63,20 +67,57 @@ public class Login extends AppCompatActivity {
 
         //로그인 버튼
         login = findViewById(R.id.imageButton);
+        login.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String userID = email.getText().toString();
+                String userPass = pw.getText().toString();
 
-        login.setOnClickListener(v -> {
-            editor.putString("user_email", email.getText().toString());
-            editor.putString("user_pwd", pw.getText().toString());
-            editor.apply();
+                if(check % 2 == 0) {
+                    Response.Listener<String> responseListener = new Response.Listener<String>() {
+                        @Override
+                        public void onResponse(String response) {
+                            try {
+                                JSONObject jsonObject = new JSONObject(response);
+                                boolean success = jsonObject.getBoolean("success");
 
-            if(check % 2 == 0){ //사장님로그인인지 판단(수정필요)
-                Intent store = new Intent(getApplicationContext(),  MainActivity.class);
-                startActivity(store);
+                                if (success) {//로그인 성공시
+                                    String userID = jsonObject.getString("userID");
+                                    String userPass = jsonObject.getString("userPassword");
+                                    String userName = jsonObject.getString("userName");
+                                    String userTel = jsonObject.getString("userTel");
+
+                                    Toast.makeText(getApplicationContext(), userName+"님 환영합니다.", Toast.LENGTH_SHORT).show();
+                                    Intent intent = new Intent(Login.this, MainActivity.class);
+
+                                    editor.putString("userName",userName);
+                                    editor.putString("userID", userID);
+                                    editor.putString("userPass", userPass);
+                                    editor.putString("userTel", userTel);
+                                    editor.apply();
+
+                                    startActivity(intent);
+
+                                } else {//로그인 실패시
+                                    Toast.makeText(getApplicationContext(), "로그인 실패", Toast.LENGTH_SHORT).show();
+                                    return;
+                                }
+
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    };
+                    LoginRequest loginRequest = new LoginRequest( userID, userPass, responseListener );
+                    RequestQueue queue = Volley.newRequestQueue( Login.this );
+                    queue.add( loginRequest );
+                }else{
+                    Intent intent = new Intent(getApplicationContext(), StoreManagement.class);
+                    startActivity(intent);
+                }
             }
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(intent);
-
         });
+
 
         FrameLayout sign = findViewById(R.id.signup);
         sign.setVisibility(View.INVISIBLE);
