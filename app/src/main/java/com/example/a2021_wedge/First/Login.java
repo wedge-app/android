@@ -42,6 +42,8 @@ public class Login extends AppCompatActivity {
     EditText email, pw;
     int check = 0;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,6 +55,8 @@ public class Login extends AppCompatActivity {
         SharedPreferences pref = getSharedPreferences("user_info",MODE_PRIVATE);
         SharedPreferences.Editor editor = pref.edit();
         editor.clear();
+
+
 
 
         //사장님 로그인
@@ -67,57 +71,20 @@ public class Login extends AppCompatActivity {
 
         //로그인 버튼
         login = findViewById(R.id.imageButton);
-        login.setOnClickListener( new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String userID = email.getText().toString();
-                String userPass = pw.getText().toString();
 
-                if(check % 2 == 0) {
-                    Response.Listener<String> responseListener = new Response.Listener<String>() {
-                        @Override
-                        public void onResponse(String response) {
-                            try {
-                                JSONObject jsonObject = new JSONObject(response);
-                                boolean success = jsonObject.getBoolean("success");
+        login.setOnClickListener(v -> {
+            editor.putString("user_email", email.getText().toString());
+            editor.putString("user_pwd", pw.getText().toString());
+            editor.apply();
 
-                                if (success) {//로그인 성공시
-                                    String userID = jsonObject.getString("userID");
-                                    String userPass = jsonObject.getString("userPassword");
-                                    String userName = jsonObject.getString("userName");
-                                    String userTel = jsonObject.getString("userTel");
-
-                                    Toast.makeText(getApplicationContext(), userName+"님 환영합니다.", Toast.LENGTH_SHORT).show();
-                                    Intent intent = new Intent(Login.this, MainActivity.class);
-
-                                    editor.putString("userName",userName);
-                                    editor.putString("userID", userID);
-                                    editor.putString("userPass", userPass);
-                                    editor.putString("userTel", userTel);
-                                    editor.apply();
-
-                                    startActivity(intent);
-
-                                } else {//로그인 실패시
-                                    Toast.makeText(getApplicationContext(), "로그인 실패", Toast.LENGTH_SHORT).show();
-                                    return;
-                                }
-
-                            } catch (JSONException e) {
-                                e.printStackTrace();
-                            }
-                        }
-                    };
-                    LoginRequest loginRequest = new LoginRequest( userID, userPass, responseListener );
-                    RequestQueue queue = Volley.newRequestQueue( Login.this );
-                    queue.add( loginRequest );
-                }else{
-                    Intent intent = new Intent(getApplicationContext(), StoreManagement.class);
-                    startActivity(intent);
-                }
+            if(check % 2 == 0){ //사장님로그인인지 판단(수정필요)
+                Intent store = new Intent(getApplicationContext(),  MainActivity.class);
+                startActivity(store);
             }
-        });
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
 
+        });
 
         FrameLayout sign = findViewById(R.id.signup);
         sign.setVisibility(View.INVISIBLE);
