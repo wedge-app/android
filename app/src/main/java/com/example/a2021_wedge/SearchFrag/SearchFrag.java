@@ -2,6 +2,8 @@ package com.example.a2021_wedge.SearchFrag;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+
+import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.LayoutInflater;
@@ -17,14 +19,33 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.DefaultItemAnimator;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.a2021_wedge.First.Login;
 import com.example.a2021_wedge.MyPageFrag.PersonalInfoActivity;
 import com.example.a2021_wedge.R;
 import com.example.a2021_wedge.enterPage;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+
 public class SearchFrag extends Fragment {
+
+    private ArrayList<searchItem> list = new ArrayList<>();
+    private RecyclerView recyclerView;
+    private searchAdapter adapter;
+    String storename;
     EditText search;
     ImageButton s, enter;
 
@@ -36,15 +57,22 @@ public class SearchFrag extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.frag_search, container, false);
 
+        RecyclerView recyclerView = v.findViewById(R.id.searchview);
+        recyclerView.setHasFixedSize(true);
+
+        adapter = new searchAdapter(list);
+
+        RecyclerView.LayoutManager mLayoutm = new LinearLayoutManager(getActivity());
+        recyclerView.setLayoutManager(mLayoutm);
+        recyclerView.scrollToPosition(0);
+
+        recyclerView.setItemAnimator(new DefaultItemAnimator());
+        recyclerView.setAdapter(adapter);
+
+
+
         a = v.findViewById(R.id.textView9);
         a1 = v.findViewById(R.id.textView11);
-        a2 = v.findViewById(R.id.textView12);
-        a3 = v.findViewById(R.id.textView13);
-
-        b = v.findViewById(R.id.textView10);
-        b1 = v.findViewById(R.id.textView14);
-        b2 = v.findViewById(R.id.textView15);
-        b3 = v.findViewById(R.id.textView16);
 
 
         //검색 가게 결과(검색어를 데베와 비교하여 결과 출력)
@@ -58,8 +86,7 @@ public class SearchFrag extends Fragment {
         enter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), enterPage.class);
-                startActivity(intent);
+
             }
         });
 
@@ -112,6 +139,58 @@ public class SearchFrag extends Fragment {
         });
 
 
+
+
         return v;
     }
+
+//    public void clickBtn() {
+//        //json 파일 읽어와서 분석하기
+//        //assets폴더의 파일을 가져오기 위해
+//        //창고관리자(AssetManager) 얻어오기
+//        AssetManager assetManager= getAssets();
+//
+//        //assets/ youngsangu.json 파일 읽기 위한 InputStream
+//        try {
+//            InputStream is= assetManager.open("youngsangu.json");
+//            InputStreamReader isr= new InputStreamReader(is);
+//            BufferedReader reader= new BufferedReader(isr);
+//
+//            StringBuffer buffer= new StringBuffer();
+//            String line= reader.readLine();
+//            while (line!=null){
+//                buffer.append(line+"\n");
+//                line=reader.readLine();
+//            }
+//
+//            String jsonData= buffer.toString();
+//
+//            //json 데이터가 []로 시작하는 배열일때..
+//            JSONArray jsonArray= new JSONArray(jsonData);
+//
+//            for(int i=0; i<jsonArray.length();i++){
+//                JSONObject jo=jsonArray.getJSONObject(i);
+//
+//                storename= jo.getString("업소명");
+//                list.add(new searchItem(storename, ContextCompat.getDrawable(getContext(), R.drawable.button_enter)));
+//            }
+//
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        } catch (JSONException e) {
+//            e.printStackTrace();
+//        }
+//    }
+//
+//
+//    @Override
+//    public void onCreate(@Nullable Bundle savedInstanceState) {
+//        super.onCreate(savedInstanceState);
+//        clickBtn();
+//    }
+
+//    private  void prepareData(){
+//        list.add(new searchItem(storename, ContextCompat.getDrawable(getContext(), R.drawable.button_enter)));
+//
+//    }
 }
