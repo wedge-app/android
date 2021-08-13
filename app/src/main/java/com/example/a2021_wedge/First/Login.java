@@ -2,10 +2,13 @@ package com.example.a2021_wedge.First;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.FrameLayout;
@@ -93,7 +96,6 @@ public class Login extends AppCompatActivity {
 
                             } else {//로그인 실패시
                                 Toast.makeText(getApplicationContext(), "로그인 실패", Toast.LENGTH_SHORT).show();
-                                return;
                             }
 
                         } catch (JSONException e) {
@@ -131,36 +133,54 @@ public class Login extends AppCompatActivity {
             gene.setVisibility(View.VISIBLE);
             store.setVisibility(View.VISIBLE);
 
-            x.setOnClickListener(new CheckBox.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    sign.setVisibility(View.INVISIBLE);
-                    x.setVisibility(View.INVISIBLE);
-                    q.setVisibility(View.INVISIBLE);
-                    gene.setVisibility(View.INVISIBLE);
-                    store.setVisibility(View.INVISIBLE);
-                }
+            x.setOnClickListener(v1 -> {
+                sign.setVisibility(View.INVISIBLE);
+                x.setVisibility(View.INVISIBLE);
+                q.setVisibility(View.INVISIBLE);
+                gene.setVisibility(View.INVISIBLE);
+                store.setVisibility(View.INVISIBLE);
             });
 
             //일반 회원 가입
-            gene.setOnClickListener(new CheckBox.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent intent = new Intent(getApplicationContext(), join.class);
-                    startActivity(intent);
-                }
+            gene.setOnClickListener(v12 -> {
+                Intent intent = new Intent(getApplicationContext(), join.class);
+                startActivity(intent);
             });
 
             //사장님 가입
-            store.setOnClickListener(new CheckBox.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent intent = new Intent(getApplicationContext(), Storejoin1.class);
-                    startActivity(intent);
-                }
+            store.setOnClickListener(v13 -> {
+                Intent intent = new Intent(getApplicationContext(), Storejoin1.class);
+                startActivity(intent);
             });
 
         });
+    }
+
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent ev) {
+        View view = getCurrentFocus();
+        if (view != null && (ev.getAction() == MotionEvent.ACTION_UP || ev.getAction() == MotionEvent.ACTION_MOVE) && view instanceof EditText && !view.getClass().getName().startsWith("android.webkit.")) {
+            int[] scrooges = new int[2];
+            view.getLocationOnScreen(scrooges);
+            float x = ev.getRawX() + view.getLeft() - scrooges[0];
+            float y = ev.getRawY() + view.getTop() - scrooges[1];
+            if (x < view.getLeft() || x > view.getRight() || y < view.getTop() || y > view.getBottom())
+                ((InputMethodManager) this.getSystemService(Context.INPUT_METHOD_SERVICE)).hideSoftInputFromWindow((this.getWindow().getDecorView().getApplicationWindowToken()), 0);
+        }
+        return super.dispatchTouchEvent(ev);
+    }
+
+    private long time= 0;
+    @Override
+    public void onBackPressed() {
+        if (System.currentTimeMillis() - time >= 2000) {
+            time = System.currentTimeMillis();
+            Toast.makeText(getApplicationContext(), "뒤로 버튼을 한번 더 누르면 종료합니다.", Toast.LENGTH_SHORT).show();
+        } else if (System.currentTimeMillis() - time < 2000) {
+            finishAffinity();
+            System.runFinalization();
+            System.exit(0);
+        }
     }
 
 }

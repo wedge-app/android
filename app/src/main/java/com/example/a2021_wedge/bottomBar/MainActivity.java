@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+import android.widget.Toast;
 
 import com.example.a2021_wedge.HomeFrag.HomeFrag;
 import com.example.a2021_wedge.MyPageFrag.MyPageFrag;
@@ -59,6 +60,19 @@ public class MainActivity extends AppCompatActivity  {
 
         }
 
+    }
+
+    private long time= 0;
+    @Override
+    public void onBackPressed() {
+        if (System.currentTimeMillis() - time >= 2000) {
+            time = System.currentTimeMillis();
+            Toast.makeText(getApplicationContext(), "뒤로 버튼을 한번 더 누르면 종료합니다.", Toast.LENGTH_SHORT).show();
+        } else if (System.currentTimeMillis() - time < 2000) {
+            finishAffinity();
+            System.runFinalization();
+            System.exit(0);
+        }
     }
 
 }

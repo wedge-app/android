@@ -15,6 +15,7 @@ import android.view.View;
 import android.webkit.JavascriptInterface;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.Toast;
 
 import com.example.a2021_wedge.databinding.ActivityStoresublistBinding;
 
@@ -58,6 +59,16 @@ public class storesublist extends AppCompatActivity {
         browser.loadUrl("https://www.juso.go.kr/addrlink/addrLinkUrlSearch.do");
 
     }
-
-
+    private long time= 0;
+    @Override
+    public void onBackPressed() {
+        if (System.currentTimeMillis() - time >= 2000) {
+            time = System.currentTimeMillis();
+            Toast.makeText(getApplicationContext(), "뒤로 버튼을 한번 더 누르면 종료합니다.", Toast.LENGTH_SHORT).show();
+        } else if (System.currentTimeMillis() - time < 2000) {
+            finishAffinity();
+            System.runFinalization();
+            System.exit(0);
+        }
+    }
 }
