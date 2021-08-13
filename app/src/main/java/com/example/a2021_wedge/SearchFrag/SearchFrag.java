@@ -159,12 +159,6 @@ public class SearchFrag extends Fragment {
 //                    result.setVisibility(View.VISIBLE);
                     hideKeyboard();
 
-                }else{
-                    a.setVisibility(View.VISIBLE);
-                    recyclerView.setVisibility(View.VISIBLE);
-                    recyclerView2.setVisibility(View.INVISIBLE);
-//                    result.setVisibility(View.INVISIBLE);
-                    hideKeyboard();
                     String search_word = search.getText().toString();
 
                     Response.Listener<String> responseListener = response -> {
@@ -188,6 +182,14 @@ public class SearchFrag extends Fragment {
                     SearchRequest SearchRequest = new SearchRequest(search_word, responseListener);
                     RequestQueue queue = Volley.newRequestQueue(getContext());
                     queue.add(SearchRequest);
+
+                }else{
+                    a.setVisibility(View.VISIBLE);
+                    recyclerView.setVisibility(View.VISIBLE);
+                    recyclerView2.setVisibility(View.INVISIBLE);
+//                    result.setVisibility(View.INVISIBLE);
+                    hideKeyboard();
+
 
                 }
             }

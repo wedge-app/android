@@ -9,7 +9,7 @@ import java.util.Map;
 
 public class SearchRequest extends StringRequest {
     //서버 URL 설정(php 파일 연동)
-    final static private  String URL = "http://mywedge21.dothome.co.kr/dbcon.php";
+    final static private  String URL = "http://mywedge21.dothome.co.kr/mywedge21_select.php";
     private Map<String, String> map;
 
     public SearchRequest(String name, Response.Listener<String> listener) {
