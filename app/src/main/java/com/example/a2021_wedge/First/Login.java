@@ -15,12 +15,11 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.toolbox.Volley;
+
 import com.example.a2021_wedge.HomeFrag.HomeFrag;
 import com.example.a2021_wedge.R;
 import com.example.a2021_wedge.Sajang.StoreManagement;
+import com.example.a2021_wedge.Sajang.WaitingList;
 import com.example.a2021_wedge.Storejoin1;
 import com.example.a2021_wedge.bottomBar.MainActivity;
 import com.example.a2021_wedge.retrofit.LoginRequest;
@@ -64,8 +63,8 @@ public class Login extends AppCompatActivity {
         checkBox.setOnClickListener(new CheckBox.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(check % 2 == 0) check++;
-                else if(check % 2 != 0) check--;
+                if(check == 0) check++;
+                else check--;
             }
         });
 
@@ -77,11 +76,11 @@ public class Login extends AppCompatActivity {
             editor.putString("user_pwd", pw.getText().toString());
             editor.apply();
 
-            if(check % 2 == 0){ //사장님로그인인지 판단(수정필요)
+            if(check == 0){ //사장님로그인인지 판단(수정필요)
                 Intent store = new Intent(getApplicationContext(),  MainActivity.class);
                 startActivity(store);
             }
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                Intent intent = new Intent(getApplicationContext(), WaitingList.class);
                 startActivity(intent);
 
         });
