@@ -57,23 +57,20 @@ public class SearchFrag extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.frag_search, container, false);
 
-        RecyclerView recyclerView = v.findViewById(R.id.searchview);
-        recyclerView.setHasFixedSize(true);
-
-        adapter = new searchAdapter(list);
-
-        RecyclerView.LayoutManager mLayoutm = new LinearLayoutManager(getActivity());
-        recyclerView.setLayoutManager(mLayoutm);
-        recyclerView.scrollToPosition(0);
-
-        recyclerView.setItemAnimator(new DefaultItemAnimator());
-        recyclerView.setAdapter(adapter);
-
-
-
-        a = v.findViewById(R.id.textView9);
-        a1 = v.findViewById(R.id.textView11);
-
+//        RecyclerView recyclerView = v.findViewById(R.id.searchview);
+//        recyclerView.setHasFixedSize(true);
+//
+//        adapter = new searchAdapter(list);
+//
+//        RecyclerView.LayoutManager mLayoutm = new LinearLayoutManager(getActivity());
+//        recyclerView.setLayoutManager(mLayoutm);
+//        recyclerView.scrollToPosition(0);
+//
+//        recyclerView.setItemAnimator(new DefaultItemAnimator());
+//        recyclerView.setAdapter(adapter);
+//
+//        a = v.findViewById(R.id.textView9);
+//        a1 = v.findViewById(R.id.textView11);
 
         //검색 가게 결과(검색어를 데베와 비교하여 결과 출력)
         result = v.findViewById(R.id.textView17);
@@ -95,7 +92,6 @@ public class SearchFrag extends Fragment {
         line.setVisibility(View.INVISIBLE);
 
         bline = v.findViewById(R.id.imageView12);
-
 
         //검색창
         search = v.findViewById(R.id.editTextTextPersonName5);
@@ -138,7 +134,23 @@ public class SearchFrag extends Fragment {
             }
         });
 
+        RecyclerView recyclerView = v.findViewById(R.id.lately_search_list);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        LatelySearchListAdapter adapter = new LatelySearchListAdapter();
 
+        adapter.addItem(new ItemLatelySearch("1"));
+        adapter.addItem(new ItemLatelySearch("1"));
+        adapter.addItem(new ItemLatelySearch("1"));
+        adapter.addItem(new ItemLatelySearch("1"));
+        adapter.addItem(new ItemLatelySearch("1"));
+        adapter.addItem(new ItemLatelySearch("1"));
+
+
+        recyclerView.setAdapter(adapter);
+
+        adapter.setOnItemClickListener((holder, view, position) -> {
+            System.out.println("클릭됨");
+        });
 
 
         return v;
