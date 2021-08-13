@@ -2,11 +2,9 @@ package com.example.a2021_wedge.First;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -16,23 +14,18 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
-import com.example.a2021_wedge.HomeFrag.HomeFrag;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.toolbox.Volley;
 import com.example.a2021_wedge.R;
-import com.example.a2021_wedge.Sajang.StoreManagement;
 import com.example.a2021_wedge.Sajang.WaitingList;
 import com.example.a2021_wedge.Storejoin1;
 import com.example.a2021_wedge.bottomBar.MainActivity;
 import com.example.a2021_wedge.retrofit.LoginRequest;
-import com.example.a2021_wedge.retrofit.RetrofitClient;
-import com.example.a2021_wedge.retrofit.RetrofitInterface;
+
 
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 
 
 public class Login extends AppCompatActivity {
@@ -56,8 +49,6 @@ public class Login extends AppCompatActivity {
         editor.clear();
 
 
-
-
         //사장님 로그인
         CheckBox checkBox = (CheckBox) findViewById(R.id.checkBox);
         checkBox.setOnClickListener(new CheckBox.OnClickListener() {
@@ -70,20 +61,54 @@ public class Login extends AppCompatActivity {
 
         //로그인 버튼
         login = findViewById(R.id.imageButton);
-
         login.setOnClickListener(v -> {
-            editor.putString("user_email", email.getText().toString());
-            editor.putString("user_pwd", pw.getText().toString());
-            editor.apply();
+            String userID = email.getText().toString();
+            String userPass = pw.getText().toString();
 
-            if(check == 0){ //사장님로그인인지 판단(수정필요)
-                Intent store = new Intent(getApplicationContext(),  MainActivity.class);
-                startActivity(store);
-            }
+            if (check == 0) { //사장님로그인인지 판단(수정필요){
+                Response.Listener<String> responseListener = new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        try {
+                            JSONObject jsonObject = new JSONObject(response);
+                            boolean success = jsonObject.getBoolean("success");
+
+                            if (success) {//로그인 성공시
+                                System.out.println("연결성공");
+                                String userID = jsonObject.getString("userID");
+                                String userPass = jsonObject.getString("userPassword");
+                                String userName = jsonObject.getString("userName");
+                                String userTel = jsonObject.getString("userTel");
+
+                                Intent intent = new Intent(Login.this, MainActivity.class);
+
+                                editor.putString("userID", userID);
+                                editor.putString("userPass", userPass);
+                                editor.putString("userName", userName);
+                                editor.putString("userTel", userTel);
+                                editor.apply();
+
+                                Toast.makeText(getApplicationContext(), userName+"님 환영합니다.", Toast.LENGTH_SHORT).show();
+                                startActivity(intent);
+
+                            } else {//로그인 실패시
+                                Toast.makeText(getApplicationContext(), "로그인 실패", Toast.LENGTH_SHORT).show();
+                                return;
+                            }
+
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                };
+                LoginRequest loginRequest = new LoginRequest(userID, userPass, responseListener);
+                RequestQueue queue = Volley.newRequestQueue(Login.this);
+                queue.add(loginRequest);
+            }else {
                 Intent intent = new Intent(getApplicationContext(), WaitingList.class);
                 startActivity(intent);
-
-        });
+            }
+    });
 
         FrameLayout sign = findViewById(R.id.signup);
         sign.setVisibility(View.INVISIBLE);
