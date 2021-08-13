@@ -12,7 +12,6 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.a2021_wedge.R;
-import com.example.a2021_wedge.Sajang.StoreManagement;
 
 public class GrowingPotatoActivity extends AppCompatActivity {
     ImageButton back;
@@ -22,7 +21,7 @@ public class GrowingPotatoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_growing_potato);
-        b = findViewById(R.id.button);
+        b = findViewById(R.id.button_ps);
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
