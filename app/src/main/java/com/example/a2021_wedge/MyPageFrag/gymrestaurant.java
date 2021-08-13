@@ -6,33 +6,46 @@ import android.view.View;
 import android.content.Intent;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.example.a2021_wedge.MyPageFrag.Potato.GrowingPotatoActivity;
 import com.example.a2021_wedge.R;
+import com.example.a2021_wedge.Sajang.StoreManagement;
+import com.example.a2021_wedge.enterPage;
+
+import java.util.ArrayList;
 
 public class gymrestaurant extends AppCompatActivity {
 
-    private Spinner spinner;
-    private TextView textView11;
+    private ListView gym_listview;
+    ArrayAdapter<String> adapter2;
+    ArrayList<String> listItem2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gymrestaurant);
 
-        spinner = (Spinner)findViewById(R.id.spinner);
-        textView11 = (TextView)findViewById(R.id.textView11);
+        gym_listview = (ListView) findViewById(R.id.gym_listview);
 
-        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                textView11.setText(parent.getItemAtPosition(position).toString());
-            }
+        listItem2 = new ArrayList<String>();
+        listItem2.add("동대문 엽기떡볶이 성신여대점");
 
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) { }
+        adapter2 = new ArrayAdapter<String>(getApplicationContext(),android.R.layout.simple_list_item_1,listItem2);
+        gym_listview = findViewById(R.id.gym_listview);
+        gym_listview.setAdapter(adapter2);
+
+        gym_listview.setOnItemClickListener((adapterView, view, i, l) -> {
+
+            Intent intent = new Intent(gymrestaurant.this, enterPage.class);
+            startActivity(intent);
         });
+
     }
+
 }

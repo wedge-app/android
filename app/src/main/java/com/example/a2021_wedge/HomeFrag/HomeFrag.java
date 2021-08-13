@@ -1,5 +1,6 @@
 package com.example.a2021_wedge.HomeFrag;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -13,13 +14,19 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 
+import com.example.a2021_wedge.MyPageFrag.Potato.GrowingPotatoActivity;
 import com.example.a2021_wedge.R;
+import com.example.a2021_wedge.Sajang.StoreManagement;
+import com.example.a2021_wedge.bottomBar.MainActivity;
+import com.example.a2021_wedge.enterPage;
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -27,6 +34,7 @@ import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.MapsInitializer;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 public class HomeFrag extends Fragment implements OnMapReadyCallback  {
@@ -147,7 +155,10 @@ public class HomeFrag extends Fragment implements OnMapReadyCallback  {
     public void onMapReady(GoogleMap googleMap) {
         //37.591308, 127.022128 성신여대
         //37.59193, 127.01847 언앨리셰프
+        //37.59210, 127.01841 제순식당
         GoogleMap gMap = googleMap;
+
+
 
         MapsInitializer.initialize(this.getActivity());
         double[][] location = {{37.59193, 127.01847},{37.59210, 127.01841}};
@@ -158,14 +169,26 @@ public class HomeFrag extends Fragment implements OnMapReadyCallback  {
             // 1. 마커 옵션 설정 (만드는 과정)
             MarkerOptions makerOptions = new MarkerOptions();
             latLng_new = new LatLng(location[i][0], location[i][1]);
-            makerOptions // LatLng에 대한 어레이를 만들어서 이용할 수도 있다.
-                    .position(latLng_new); // 타이틀.
+            makerOptions.position(latLng_new); //
 
             // 2. 마커 생성 (마커를 나타냄)
             gMap.addMarker(makerOptions);
             googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng_new,18));
 
         }
+
+        gMap.setOnMarkerClickListener(marker -> {
+            // Triggered when user click any marker on the map
+
+            if(isOpenPage){
+                linear.startAnimation(bottom);
+            }else{
+                linear.setVisibility(View.VISIBLE);
+                linear.startAnimation(top);
+
+            }
+            return false;
+        });
 
 
         /*LatLng latLng = new LatLng(37.59193, 127.01847);

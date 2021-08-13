@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.a2021_wedge">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -16,10 +17,13 @@
         android:theme="@style/Theme.2021_Wedge"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".StorePS"
+            android:exported="true" />
+        <activity
             android:name=".storesublist"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_storesublist"
-            android:theme="@style/Theme.2021_Wedge.Fullscreen"/>
+            android:theme="@style/Theme.2021_Wedge.Fullscreen" />
         <activity
             android:name=".storejoin2"
             android:configChanges="orientation|keyboardHidden|screenSize"
@@ -77,7 +81,7 @@
         <activity android:name=".MyPageFrag.gymrestaurant" />
         <activity android:name=".MyPageFrag.Potato.LevelupPotato1" />
         <activity android:name=".MyPageFrag.Potato.LevelupPotato2" />
-        <activity android:name=".Sajang.WaitingList"/>
+        <activity android:name=".Sajang.WaitingList" />
     </application>
 
 </manifest>

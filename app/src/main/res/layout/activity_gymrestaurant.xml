@@ -32,45 +32,15 @@
             android:layout_marginTop="10dp"
             android:background="@drawable/yellowbox"
             android:entries="@array/array_list"
-            android:gravity="center" />
+            android:gravity="center"
+            android:minHeight="48dp" />
 
-        <TextView
-            android:id="@+id/textView8"
+        <ListView
+            android:id="@+id/gym_listview"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="20dp"
-            android:gravity="left"
-            android:text="엽기떡볶이 성신여대점"
-            android:textColor="#000000"
-            android:textSize="24dp" />
+            android:layout_height="match_parent"
+            android:layout_margin="20sp" />
 
-        <ImageView
-            android:id="@+id/imageView12"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            android:layout_marginTop="20dp"
-            app:srcCompat="@drawable/greyline" />
-
-        <TextView
-            android:id="@+id/textView11"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="20dp"
-            android:gravity="left"
-            android:text="짜장면"
-            android:textColor="#000000"
-            android:textSize="24dp" />
-
-        <ImageView
-            android:id="@+id/imageView13"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            android:layout_marginTop="20dp"
-            app:srcCompat="@drawable/greyline" />
     </LinearLayout>
 
     <FrameLayout
@@ -83,17 +53,20 @@
 
             <ImageButton
                 android:id="@+id/imageButton5"
-                android:layout_width="17dp"
-                android:layout_height="17dp"
+                android:layout_width="27dp"
+                android:layout_height="23dp"
                 android:layout_marginLeft="267dp"
                 android:layout_marginTop="103dp"
                 android:background="#FFC812"
-                app:srcCompat="@drawable/selectionline" />
+                android:minWidth="48dp"
+                android:minHeight="48dp"
+                app:srcCompat="@drawable/selectionline"
+                tools:ignore="SpeakableTextPresentCheck" />
+
         </LinearLayout>
     </FrameLayout>
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="20sp"
@@ -103,9 +76,11 @@
             android:id="@+id/back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/back"
             android:background="#FFFFFF"
-            android:contentDescription="@string/todo" />
+            android:contentDescription="@string/todo"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            app:srcCompat="@drawable/back" />
 
     </LinearLayout>
 </FrameLayout>

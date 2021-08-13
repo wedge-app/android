@@ -9,183 +9,182 @@
     tools:context=".enterPage">
 
 
-<FrameLayout
-android:layout_width="match_parent"
-android:layout_height="match_parent">
-
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical">
-
-    <ImageButton
-        android:id="@+id/back3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="20dp"
-        android:background="#FFFFFF"
-        android:contentDescription="@string/todo"
-        app:srcCompat="@drawable/back" />
-
-    <TextView
-        android:id="@+id/textView8"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="10dp"
-        android:layout_weight="0.8"
-        android:text="동대문엽기떡볶이 성신여대점"
-        android:textColor="#000000"
-        android:textSize="28sp"
-        android:textStyle="bold" />
-
-    <ImageView
-        android:id="@+id/imageView11"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/shop_line" />
-
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginLeft="80dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="40dp"
-        android:layout_weight="1"
-        android:text="현재 대기        팀"
-        android:textColor="#000000"
-        android:textSize="25sp" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:layout_marginBottom="30dp"
-        >
-
-        <ImageButton
-            android:id="@+id/imageButton6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginRight="-10dp"
-            android:layout_marginLeft="10dp"
-            android:background="#ffffff"
-            app:srcCompat="@drawable/shop_info" />
-
-        <ImageButton
-            android:id="@+id/imageButton7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginRight="-10dp"
-            android:background="#ffffff"
-            app:srcCompat="@drawable/shop_menu" />
-
-        <ImageButton
-            android:id="@+id/imageButton8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginRight="10dp"
-            android:background="#ffffff"
-            app:srcCompat="@drawable/shop_review" />
-    </LinearLayout>
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="70dp"
-        >
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="@drawable/shop_yellow"
-            >
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/back3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:background="#FFFFFF"
+                android:contentDescription="@string/todo"
+                app:srcCompat="@drawable/back" />
 
             <TextView
-                android:id="@+id/textView21"
+                android:id="@+id/textView8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginBottom="10dp"
+                android:layout_weight="0.8"
+                android:text="동대문엽기떡볶이 성신여대점"
+                android:textColor="#000000"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imageView11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/shop_line" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="80dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="40dp"
                 android:layout_weight="1"
-                android:text="영업 시간 : AM 11 - PM 10"
+                android:text="현재 대기        팀"
                 android:textColor="#000000"
                 android:textSize="25sp" />
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginBottom="30dp"
+                >
+
+                <ImageButton
+                    android:id="@+id/imageButton6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginRight="-10dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="#ffffff"
+                    app:srcCompat="@drawable/shop_info" />
+
+                <ImageButton
+                    android:id="@+id/imageButton7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginRight="-10dp"
+                    android:background="#ffffff"
+                    app:srcCompat="@drawable/shop_menu" />
+
+                <ImageButton
+                    android:id="@+id/imageButton8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginRight="10dp"
+                    android:background="#ffffff"
+                    app:srcCompat="@drawable/shop_review" />
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="70dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/shop_yellow"
+                    >
+
+                    <TextView
+                        android:id="@+id/textView21"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="1"
+                        android:textColor="#000000"
+                        android:textSize="25sp" />
+
+                </LinearLayout>
+            </ScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imageButton11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#ffffff"
+                    app:srcCompat="@drawable/shop_white" />
+
+                <ImageButton
+                    android:id="@+id/imageButton9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#ffffff"
+                    android:layout_marginRight="-12dp"
+                    app:srcCompat="@drawable/shop_waitbox" />
+            </LinearLayout>
+
         </LinearLayout>
-    </ScrollView>
 
-    <LinearLayout
+    </FrameLayout>
+
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal">
+        android:layout_height="match_parent">
 
-        <ImageButton
-            android:id="@+id/imageButton11"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="#ffffff"
-            app:srcCompat="@drawable/shop_white" />
+            android:orientation="vertical">
 
-        <ImageButton
-            android:id="@+id/imageButton9"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="#ffffff"
-            android:layout_marginRight="-12dp"
-            app:srcCompat="@drawable/shop_waitbox" />
-    </LinearLayout>
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="160dp"
+                android:layout_marginTop="117dp"
+                android:layout_marginBottom="100dp"
+                android:layout_weight="1"
+                android:text="3"
+                android:textColor="#000000"
+                android:textSize="25sp" />
 
-</LinearLayout>
+            <ImageView
+                android:id="@+id/imageView15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="415dp"
+                android:layout_marginRight="280dp"
+                android:layout_weight="1"
+                android:background="#ffffff"
+                app:srcCompat="@drawable/shop_star" />
 
-</FrameLayout>
-
- <FrameLayout
-android:layout_width="match_parent"
-android:layout_height="match_parent">
-
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical">
-
-    <TextView
-        android:id="@+id/textView18"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginLeft="160dp"
-        android:layout_marginTop="117dp"
-        android:layout_marginBottom="100dp"
-        android:layout_weight="1"
-        android:text="3"
-        android:textColor="#000000"
-        android:textSize="25sp" />
-
-    <ImageView
-        android:id="@+id/imageView15"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="415dp"
-        android:layout_marginRight="280dp"
-        android:layout_weight="1"
-        android:background="#ffffff"
-        app:srcCompat="@drawable/shop_star" />
-
-</LinearLayout>
-</FrameLayout>
+        </LinearLayout>
+    </FrameLayout>
 </FrameLayout>

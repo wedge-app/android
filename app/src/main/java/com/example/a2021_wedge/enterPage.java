@@ -5,6 +5,8 @@ import android.annotation.SuppressLint;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.MotionEvent;
@@ -14,11 +16,16 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.Serializable;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
 
 public class enterPage extends AppCompatActivity {
     ImageButton info, menu, review, like, wait,back;
     ImageView grey_star;
     TextView wait_num, story;
+    ArrayList<String> menuItem;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,13 +65,32 @@ public class enterPage extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //story.setText("");
+                SharedPreferences test = getSharedPreferences("test", MODE_PRIVATE);
+
+                String openHour = test.getString("hour1", null);
+                String openMin = test.getString("min1", null);
+                String closeHour = test.getString("hour2", null);
+                String closeMin = test.getString("min2", null);
+                story.setText("영업 시간 : " + openHour + "시 " + openMin + "분 ~ " +
+                        closeHour + "시 " + closeMin +"분");
             }
         });
+
+        Intent menu_intent = getIntent();
 
         menu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                story.setText("엽기떡볶이 4인 세트");
+                story.setText("");
+                ArrayList<String> menuItem = (ArrayList<String>)menu_intent.getStringArrayListExtra("menu");
+                Serializable s = menu_intent.getSerializableExtra("menu");
+
+                for(int i = 0; i < menuItem.size(); i++)
+                {
+                    story.append("- " + menuItem.get(i));
+                }
+
+
             }
         });
 

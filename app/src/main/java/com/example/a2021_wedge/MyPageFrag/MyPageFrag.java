@@ -96,7 +96,7 @@ public class MyPageFrag extends Fragment {
 
         favorite_store = v.findViewById(R.id.favorite_store);
         favorite_store.setOnClickListener(v1 -> {
-            Intent intent = new Intent(getActivity(), FavoriteStoreActivity.class);
+            Intent intent = new Intent(getActivity(), gymrestaurant.class);
             startActivity(intent);
         });
 
