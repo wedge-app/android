@@ -12,7 +12,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical">
 
             <EditText
@@ -31,6 +31,24 @@
                 android:paddingHorizontal="30dp"
                 android:textColor="#8F9090"
                 android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:text="최근 검색"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="20sp"  />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/lately_search_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="35dp"/>
 
 
         </LinearLayout>
@@ -91,5 +109,4 @@
                 app:srcCompat="@drawable/greyline" />
         </LinearLayout>
     </FrameLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
