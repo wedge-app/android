@@ -1,59 +1,35 @@
 package com.example.a2021_wedge.SearchFrag;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 
-import android.content.SharedPreferences;
-import android.content.res.AssetManager;
 import android.os.Bundle;
-import android.os.Handler;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.toolbox.Volley;
-import com.example.a2021_wedge.First.Login;
-import com.example.a2021_wedge.First.join;
-import com.example.a2021_wedge.MyPageFrag.PersonalInfoActivity;
 import com.example.a2021_wedge.R;
 import com.example.a2021_wedge.enterPage;
-import com.example.a2021_wedge.retrofit.RegisterRequest;
-import com.example.a2021_wedge.retrofit.SearchRequest;
 import com.example.a2021_wedge.retrofit.storesearchRequest;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
 
 public class SearchFrag extends Fragment {
 
@@ -69,7 +45,7 @@ public class SearchFrag extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.frag_search, container, false);
 
-        RecyclerView recyclerView = v.findViewById(R.id.lately_search_list);
+        RecyclerView recyclerView = v.findViewById(R.id.totalList);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         LatelySearchListAdapter adapter = new LatelySearchListAdapter();
 
@@ -91,6 +67,7 @@ public class SearchFrag extends Fragment {
         recyclerView2.setLayoutManager(new LinearLayoutManager(getContext()));
         SearchListAdapter adapter2 = new SearchListAdapter();
         recyclerView2.setVisibility(View.INVISIBLE);
+
 
 //        adapter2.addItem(new ItemSearchList("2"));
 //        adapter2.addItem(new ItemSearchList("2"));
@@ -193,7 +170,6 @@ public class SearchFrag extends Fragment {
                     storesearchRequest SearchRequest = new  storesearchRequest(search_word, responseListener);
                     RequestQueue queue = Volley.newRequestQueue(getContext());
                     queue.add(SearchRequest);
-
                 }else{
                     a.setVisibility(View.VISIBLE);
                     recyclerView.setVisibility(View.VISIBLE);

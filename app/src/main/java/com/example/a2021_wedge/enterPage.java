@@ -16,6 +16,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.a2021_wedge.SearchFrag.SearchFrag;
+
 import java.io.Serializable;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
@@ -33,9 +35,6 @@ public class enterPage extends AppCompatActivity {
 
         setContentView(R.layout.activity_enter_page);
 
-        //뒤로가기
-        back = findViewById(R.id.back3);
-        back.setOnClickListener(v -> onBackPressed());
 
         Intent intent = getIntent(); /*데이터 수신*/
         String sname = intent.getExtras().getString("name");
@@ -43,6 +42,16 @@ public class enterPage extends AppCompatActivity {
         String sintro = intent.getExtras().getString("intro");
         String saddr = intent.getExtras().getString("addr");
         String smenu = intent.getExtras().getString("menu");
+
+        //뒤로가기
+        back = findViewById(R.id.back3);
+        back.setOnClickListener(v -> {
+                    Intent intent2 = new Intent(this, SearchFrag.class);
+                    intent2.putExtra("ssname",sname);
+                    startActivity(intent2);
+                    //onBackPressed();
+                }
+        );
 
         info = findViewById(R.id.imageButton6);
         menu = findViewById(R.id.imageButton7);
@@ -77,7 +86,7 @@ public class enterPage extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 SharedPreferences test = getSharedPreferences("test", MODE_PRIVATE);
-                story.setText(" 사장님의 말 : "+sintro+"\n 전화 : "+stel+"\n 가게 위치 :"+saddr);
+                story.setText(" 사장님의 말 : "+sintro+"\n\n 전화 : "+stel+"\n\n 가게 위치 :"+saddr);
 //                String openHour = test.getString("hour1", null);
 //                String openMin = test.getString("min1", null);
 //                String closeHour = test.getString("hour2", null);
