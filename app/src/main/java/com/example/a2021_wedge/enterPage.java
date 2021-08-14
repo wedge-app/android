@@ -39,11 +39,11 @@ public class enterPage extends AppCompatActivity {
     ImageView grey_star;
     TextView wait_num, story, story2, Name;
     ArrayList<String> menuItem;
+    int i = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_enter_page);
 
 
@@ -59,7 +59,6 @@ public class enterPage extends AppCompatActivity {
 
         ImageView star = findViewById(R.id.star);
         star.setOnClickListener(v -> {
-
             Response.Listener<String> responseListener = response -> {
                 System.out.println("Listener 진입 성공/ response 값 : " + response);
                 try {
@@ -96,7 +95,6 @@ public class enterPage extends AppCompatActivity {
 
         info = findViewById(R.id.imageButton6);
         menu = findViewById(R.id.imageButton7);
-        review = findViewById(R.id.imageButton8);
 
         //가게 이름
         Name = findViewById(R.id.textView8);
@@ -115,11 +113,16 @@ public class enterPage extends AppCompatActivity {
         //회색 별 버튼
         like = findViewById(R.id.imageButton11);
         grey_star = findViewById(R.id.imageView15);
-
         like.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                grey_star.setImageResource(R.drawable.shop_star2);
+                if(i == 0){
+                    grey_star.setImageResource(R.drawable.shop_star2);
+                    i++;
+                }else if(i == 0){
+                    grey_star.setImageResource(R.drawable.shop_star);
+                    i--;
+                }
             }
         });
 
@@ -127,13 +130,13 @@ public class enterPage extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 SharedPreferences test = getSharedPreferences("test", MODE_PRIVATE);
-                story.setText(" 사장님의 말 : "+sintro+"\n\n 전화 : "+stel+"\n\n 가게 위치 :"+saddr);
-//                String openHour = test.getString("hour1", null);
-//                String openMin = test.getString("min1", null);
-//                String closeHour = test.getString("hour2", null);
-//                String closeMin = test.getString("min2", null);
-//                story.setText("영업 시간 : " + openHour + "시 " + openMin + "분 ~ " +
-//                        closeHour + "시 " + closeMin +"분");
+                story.setText(" 사장님의 말 : "+sintro+"\n\n 전화 : "+stel+"\n\n 가게 위치 :"+saddr+"\n");
+                String openHour = test.getString("hour1", null);
+                String openMin = test.getString("min1", null);
+                String closeHour = test.getString("hour2", null);
+                String closeMin = test.getString("min2", null);
+                story2.append("영업 시간 : " + openHour + "시 " + openMin + "분 ~ " +
+                        closeHour + "시 " + closeMin +"분");
             }
         });
 
@@ -143,22 +146,16 @@ public class enterPage extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 story.setText(smenu);
+                story2.setText("");
 //                ArrayList<String> menuItem = (ArrayList<String>)menu_intent.getStringArrayListExtra("menu");
 //                Serializable s = menu_intent.getSerializableExtra("menu");
 //
 //                for(int i = 0; i < menuItem.size(); i++)
 //                {
-//                    story.append("- " + menuItem.get(i));
+//                    story2.append("- " + menuItem.get(i));
 //                }
 
 
-            }
-        });
-
-        review.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                story.setText("완전 최고예요!"+"\n"+"자주 시켜먹어요! 너무 맛있어요~");
             }
         });
 

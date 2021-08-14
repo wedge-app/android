@@ -76,7 +76,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:layout_marginRight="-10dp"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginLeft="60dp"
                     android:background="#ffffff"
                     app:srcCompat="@drawable/shop_info" />
 
@@ -85,18 +85,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:layout_marginRight="-10dp"
+                    android:layout_marginRight="60dp"
                     android:background="#ffffff"
                     app:srcCompat="@drawable/shop_menu" />
 
-                <ImageButton
-                    android:id="@+id/imageButton8"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:layout_marginRight="10dp"
-                    android:background="#ffffff"
-                    app:srcCompat="@drawable/shop_review" />
             </LinearLayout>
 
             <ScrollView
@@ -195,7 +187,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="415dp"
-                android:layout_marginRight="280dp"
+                android:layout_marginRight="300dp"
                 android:layout_weight="1"
                 android:background="#ffffff"
                 app:srcCompat="@drawable/shop_star"
