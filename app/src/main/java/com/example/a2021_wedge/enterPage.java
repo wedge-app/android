@@ -3,8 +3,10 @@ package com.example.a2021_wedge;
 import android.annotation.SuppressLint;
 
 import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -16,7 +18,16 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.toolbox.Volley;
+import com.example.a2021_wedge.First.join;
 import com.example.a2021_wedge.SearchFrag.SearchFrag;
+import com.example.a2021_wedge.retrofit.LikeStoreRequest;
+import com.example.a2021_wedge.retrofit.RegisterRequest;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.Serializable;
 import java.lang.reflect.Array;
@@ -43,12 +54,42 @@ public class enterPage extends AppCompatActivity {
         String saddr = intent.getExtras().getString("addr");
         String smenu = intent.getExtras().getString("menu");
 
+        SharedPreferences pref = this.getApplication().getSharedPreferences("user_info", Context.MODE_PRIVATE);
+        String uname = pref.getString("userName","");
+
+        ImageView star = findViewById(R.id.star);
+        star.setOnClickListener(v -> {
+
+            Response.Listener<String> responseListener = response -> {
+                System.out.println("Listener 진입 성공/ response 값 : " + response);
+                try {
+                    JSONObject jsonObject = new JSONObject(response);
+                    boolean success = jsonObject.getBoolean("success");
+
+                    if (success) {
+                        System.out.println("연결 성공");
+                        onBackPressed();
+                    } else {
+                        System.out.println("연결 실패");
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            };
+            System.out.println(sname+uname);
+            //서버로 Volley를 이용해서 요청
+            LikeStoreRequest likestorerequest = new LikeStoreRequest(uname, sname, responseListener);
+            RequestQueue queue = Volley.newRequestQueue(enterPage.this);
+            queue.add(likestorerequest);
+        });
+
         //뒤로가기
         back = findViewById(R.id.back3);
         back.setOnClickListener(v -> {
-                    Intent intent2 = new Intent(this, SearchFrag.class);
-                    intent2.putExtra("ssname",sname);
-                    startActivity(intent2);
+            finish();
+//                    Intent intent2 = new Intent(this, SearchFrag.class);
+//                    intent2.putExtra("ssname",sname);
+//                    startActivity(intent2);
                     //onBackPressed();
                 }
         );

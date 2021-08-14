@@ -3,6 +3,7 @@ package com.example.a2021_wedge.SearchFrag;
 import android.content.Context;
 import android.content.Intent;
 
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -28,8 +29,17 @@ import com.example.a2021_wedge.R;
 import com.example.a2021_wedge.enterPage;
 import com.example.a2021_wedge.retrofit.storesearchRequest;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.util.Arrays;
+
 
 public class SearchFrag extends Fragment {
 
@@ -39,43 +49,78 @@ public class SearchFrag extends Fragment {
 
     TextView a,a1,a2,a3,b,b1,b2,b3,result;
     String sname="", stel="", sintro="", saddr="", smenu="";
+    static String[] sstorename;
+    static String[] storetel;
+    static String[] storeintro;
+    static String[] storeaddr;
+    static String[] storemenu;
+    static String res ="";
 
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.frag_search, container, false);
 
+
+        new BackgroundTask().execute();
+        System.out.println("res 값 : "+res);
+
         RecyclerView recyclerView = v.findViewById(R.id.totalList);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         LatelySearchListAdapter adapter = new LatelySearchListAdapter();
 
-        adapter.addItem(new ItemLatelySearch("1"));
-        adapter.addItem(new ItemLatelySearch("1"));
-        adapter.addItem(new ItemLatelySearch("1"));
-        adapter.addItem(new ItemLatelySearch("1"));
-        adapter.addItem(new ItemLatelySearch("1"));
-        adapter.addItem(new ItemLatelySearch("1"));
+        try{
+            //JSONObject타입으로 가져옵니다(한글만 됨)
+            JSONObject jsonObject = new JSONObject(res);
+
+            //List.php 웹페이지에서 response라는 변수명으로 JSON 배열을 만들었음..
+            JSONArray jsonArray = jsonObject.getJSONArray("response");
+            int count = 0;
+
+            System.out.println("JSON 배열 길이 : "+jsonArray.length());
+
+            sstorename = new String[jsonArray.length()];
+            storetel = new String[jsonArray.length()];
+            storeintro = new String[jsonArray.length()];
+            storeaddr = new String[jsonArray.length()];
+            storemenu = new String[jsonArray.length()];
+
+            //JSON 배열 길이만큼 반복문을 실행
+            while(count < jsonArray.length()){
+                JSONObject object = jsonArray.getJSONObject(count);
+                sstorename[count] = object.getString("name");
+                storetel[count] = object.getString("tel");
+                storeintro[count] = object.getString("intro");
+                storeaddr[count] = object.getString("addr");
+                storemenu[count] = object.getString("menu");
+                adapter.addItem(new ItemLatelySearch(sstorename[count]));
+                count++;
+            }
+        }catch(Exception e){
+            e.printStackTrace();
+        }
 
 
         recyclerView.setAdapter(adapter);
 
         adapter.setOnItemClickListener((holder, view, position) -> {
             System.out.println("클릭됨");
+            System.out.println("선택된 인덱스 : "+position);
+            Intent intent = new Intent(getActivity(), enterPage.class);
+            intent.putExtra("name",sstorename[position]);
+            intent.putExtra("tel",storetel[position]);
+            intent.putExtra("intro",storeintro[position]);
+            intent.putExtra("addr",storeaddr[position]);
+            intent.putExtra("menu",storemenu[position]);
+            startActivity(intent);
         });
+
 
         RecyclerView recyclerView2 = v.findViewById(R.id.search_list);
         recyclerView2.setLayoutManager(new LinearLayoutManager(getContext()));
         SearchListAdapter adapter2 = new SearchListAdapter();
         recyclerView2.setVisibility(View.INVISIBLE);
 
-
-//        adapter2.addItem(new ItemSearchList("2"));
-//        adapter2.addItem(new ItemSearchList("2"));
-//        adapter2.addItem(new ItemSearchList("2"));
-//        adapter2.addItem(new ItemSearchList("2"));
-//        adapter2.addItem(new ItemSearchList("2"));
-//        adapter2.addItem(new ItemSearchList("2"));
-//        adapter2.addItem(new ItemSearchList("2"));
 
         recyclerView2.setAdapter(adapter2);
 
@@ -252,6 +297,63 @@ public class SearchFrag extends Fragment {
             inputManager.hideSoftInputFromWindow(getActivity().getCurrentFocus().getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
         }
     }
+
+
+    //모든 가게에 대한 정보를 가져오기 위한 스레드
+    public class BackgroundTask extends AsyncTask<Void, Void, String> {
+        String target;
+
+        @Override
+        protected void onPreExecute() {
+            //파싱으로 가져올 웹페이지
+            target = "http://mywedge21.dothome.co.kr/showstores.php";
+        }
+
+        @Override
+        protected String doInBackground(Void... voids) {
+            try{
+                URL url = new URL(target);//URL 객체 생성
+
+                //URL을 이용해서 웹페이지에 연결하는 부분
+                HttpURLConnection httpURLConnection = (HttpURLConnection)url.openConnection();
+
+                //바이트단위 입력스트림 생성 소스는 httpURLConnection
+                InputStream inputStream = httpURLConnection.getInputStream();
+
+                //웹페이지 출력물을 버퍼로 받음 버퍼로 하면 속도가 더 빨라짐
+                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
+                String temp;
+
+                //문자열 처리를 더 빠르게 하기 위해 StringBuilder클래스를 사용함
+                StringBuilder stringBuilder = new StringBuilder();
+
+                //한줄씩 읽어서 stringBuilder에 저장함
+                while((temp = bufferedReader.readLine()) != null){
+                    stringBuilder.append(temp + "\n");//stringBuilder에 넣어줌
+                }
+
+                //사용했던 것도 다 닫아줌
+                bufferedReader.close();
+                inputStream.close();
+                httpURLConnection.disconnect();
+                return stringBuilder.toString().trim();//trim은 앞뒤의 공백을 제거함
+            }catch(Exception e){
+                e.printStackTrace();
+            }
+            return null;
+        }
+
+        @Override
+        protected void onProgressUpdate(Void... values) {
+            super.onProgressUpdate(values);
+        }
+
+        @Override
+        protected void onPostExecute(String result) {
+            res = result;
+        }
+    }
+
 
 
 }
