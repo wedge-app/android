@@ -37,6 +37,13 @@ public class enterPage extends AppCompatActivity {
         back = findViewById(R.id.back3);
         back.setOnClickListener(v -> onBackPressed());
 
+        Intent intent = getIntent(); /*데이터 수신*/
+        String sname = intent.getExtras().getString("name");
+        String stel = intent.getExtras().getString("tel");
+        String sintro = intent.getExtras().getString("intro");
+        String saddr = intent.getExtras().getString("addr");
+        String smenu = intent.getExtras().getString("menu");
+
         info = findViewById(R.id.imageButton6);
         menu = findViewById(R.id.imageButton7);
         review = findViewById(R.id.imageButton8);
@@ -66,13 +73,13 @@ public class enterPage extends AppCompatActivity {
             public void onClick(View view) {
                 //story.setText("");
                 SharedPreferences test = getSharedPreferences("test", MODE_PRIVATE);
-
-                String openHour = test.getString("hour1", null);
-                String openMin = test.getString("min1", null);
-                String closeHour = test.getString("hour2", null);
-                String closeMin = test.getString("min2", null);
-                story.setText("영업 시간 : " + openHour + "시 " + openMin + "분 ~ " +
-                        closeHour + "시 " + closeMin +"분");
+                story.setText(sintro);
+//                String openHour = test.getString("hour1", null);
+//                String openMin = test.getString("min1", null);
+//                String closeHour = test.getString("hour2", null);
+//                String closeMin = test.getString("min2", null);
+//                story.setText("영업 시간 : " + openHour + "시 " + openMin + "분 ~ " +
+//                        closeHour + "시 " + closeMin +"분");
             }
         });
 
@@ -81,7 +88,7 @@ public class enterPage extends AppCompatActivity {
         menu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                story.setText("");
+                story.setText(smenu);
                 ArrayList<String> menuItem = (ArrayList<String>)menu_intent.getStringArrayListExtra("menu");
                 Serializable s = menu_intent.getSerializableExtra("menu");
 

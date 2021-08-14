@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 
+import android.content.SharedPreferences;
 import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.os.Handler;
@@ -42,6 +43,7 @@ import com.example.a2021_wedge.R;
 import com.example.a2021_wedge.enterPage;
 import com.example.a2021_wedge.retrofit.RegisterRequest;
 import com.example.a2021_wedge.retrofit.SearchRequest;
+import com.example.a2021_wedge.retrofit.storesearchRequest;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -60,6 +62,7 @@ public class SearchFrag extends Fragment {
     ImageButton s, enter;
 
     TextView a,a1,a2,a3,b,b1,b2,b3,result;
+    String sname="", stel="", sintro="", saddr="", smenu="";
 
 
     @Override
@@ -89,19 +92,16 @@ public class SearchFrag extends Fragment {
         SearchListAdapter adapter2 = new SearchListAdapter();
         recyclerView2.setVisibility(View.INVISIBLE);
 
-        adapter2.addItem(new ItemSearchList("2"));
-        adapter2.addItem(new ItemSearchList("2"));
-        adapter2.addItem(new ItemSearchList("2"));
-        adapter2.addItem(new ItemSearchList("2"));
-        adapter2.addItem(new ItemSearchList("2"));
-        adapter2.addItem(new ItemSearchList("2"));
-        adapter2.addItem(new ItemSearchList("2"));
+//        adapter2.addItem(new ItemSearchList("2"));
+//        adapter2.addItem(new ItemSearchList("2"));
+//        adapter2.addItem(new ItemSearchList("2"));
+//        adapter2.addItem(new ItemSearchList("2"));
+//        adapter2.addItem(new ItemSearchList("2"));
+//        adapter2.addItem(new ItemSearchList("2"));
+//        adapter2.addItem(new ItemSearchList("2"));
 
         recyclerView2.setAdapter(adapter2);
 
-        adapter2.setOnItemClickListener((holder, view, position) -> {
-            System.out.println("클릭됨2");
-        });
 
         a = v.findViewById(R.id.textView9);
 
@@ -169,6 +169,13 @@ public class SearchFrag extends Fragment {
 
                             if (success) {
                                 System.out.println("연결 성공");
+                                sname = jsonObject.getString("name");
+                                stel = jsonObject.getString("tel");
+                                sintro = jsonObject.getString("intro");
+                                saddr = jsonObject.getString("addr");
+                                smenu = jsonObject.getString("menu");
+                                adapter2.addItem(new ItemSearchList(sname));
+                                adapter2.notifyDataSetChanged();
                             } else {
                                 System.out.println("연결 실패");
 
@@ -179,7 +186,10 @@ public class SearchFrag extends Fragment {
                     };
 
                     //서버로 Volley를 이용해서 요청
-                    SearchRequest SearchRequest = new SearchRequest(search_word, responseListener);
+//                    SearchRequest SearchRequest = new SearchRequest(search_word, responseListener);
+//                    RequestQueue queue = Volley.newRequestQueue(getContext());
+//                    queue.add(SearchRequest);
+                    storesearchRequest SearchRequest = new  storesearchRequest(sname, responseListener);
                     RequestQueue queue = Volley.newRequestQueue(getContext());
                     queue.add(SearchRequest);
 
@@ -193,6 +203,17 @@ public class SearchFrag extends Fragment {
 
                 }
             }
+        });
+
+        adapter2.setOnItemClickListener((holder, view, position) -> {
+            System.out.println("클릭됨2");
+            Intent intent = new Intent(getActivity(), enterPage.class);
+            intent.putExtra("name",sname); /*송신*/
+            intent.putExtra("tel",stel);
+            intent.putExtra("intro",sintro);
+            intent.putExtra("addr",saddr);
+            intent.putExtra("menu",smenu);
+            startActivity(intent);
         });
 
         return v;

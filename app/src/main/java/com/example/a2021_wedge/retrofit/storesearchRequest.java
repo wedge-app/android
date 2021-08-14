@@ -8,20 +8,15 @@ import com.android.volley.toolbox.StringRequest;
 import java.util.HashMap;
 import java.util.Map;
 
-public class storesRequest extends StringRequest {
+public class storesearchRequest extends StringRequest {
     //서버 URL 설정(php 파일 연동)
-    final static private  String URL = "http://mywedge21.dothome.co.kr/stores.php";
+    final static private  String URL = "http://mywedge21.dothome.co.kr/searchstore.php";
     private Map<String, String> map;
 
 
-    public storesRequest(String ID, String PW, String userName, String Tel, String addr,  String name, Response.Listener<String> listener) {
+    public storesearchRequest(String name, Response.Listener<String> listener) {
         super(Request.Method.POST, URL, listener, null);
         map = new HashMap<>();
-        map.put("ID", ID);
-        map.put("PW", PW);
-        map.put("userName", userName);
-        map.put("Tel", Tel);
-        map.put("addr", addr);
         map.put("name", name);
     }
 
