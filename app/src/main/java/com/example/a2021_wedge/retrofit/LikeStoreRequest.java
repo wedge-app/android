@@ -7,15 +7,16 @@ import com.android.volley.toolbox.StringRequest;
 import java.util.HashMap;
 import java.util.Map;
 
-public class SearchRequest extends StringRequest {
+public class LikeStoreRequest extends StringRequest {
     //서버 URL 설정(php 파일 연동)
-    final static private  String URL = "http://mywedge21.dothome.co.kr/mywedge21_select.php";
+    final static private  String URL = "http://mywedge21.dothome.co.kr/likestore.php";
     private Map<String, String> map;
 
-    public SearchRequest(String name, Response.Listener<String> listener) {
+    public LikeStoreRequest(String uname, String sname, Response.Listener<String> listener) {
         super(Method.POST, URL, listener, null);
         map = new HashMap<>();
-        map.put("name", name);
+        map.put("uname", uname);
+        map.put("sname", sname);
     }
 
     @Override
