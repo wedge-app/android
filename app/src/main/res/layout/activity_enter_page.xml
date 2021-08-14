@@ -37,7 +37,6 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="10dp"
                 android:layout_weight="0.8"
-                android:text="동대문엽기떡볶이 성신여대점"
                 android:textColor="#000000"
                 android:textSize="28sp"
                 android:textStyle="bold" />
@@ -112,6 +111,19 @@
 
                     <TextView
                         android:id="@+id/textView21"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="1"
+                        android:textColor="#000000"
+                        android:textSize="25sp" />
+
+                    <TextView
+                        android:id="@+id/textView12"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
