@@ -15,6 +15,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.Toast;
+import com.example.a2021_wedge.arrClass;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -22,6 +23,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.example.a2021_wedge.MyPageFrag.Potato.GrowingPotatoActivity;
 import com.example.a2021_wedge.R;
 import com.example.a2021_wedge.Sajang.StoreManagement;
@@ -36,6 +44,14 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.HashMap;
+import java.util.Map;
+
+import jxl.Workbook;
+import jxl.read.biff.BiffException;
 
 public class HomeFrag extends Fragment implements OnMapReadyCallback  {
     View v;
@@ -52,6 +68,7 @@ public class HomeFrag extends Fragment implements OnMapReadyCallback  {
     public void onCreate(Bundle savedInstanceState) {
         setHasOptionsMenu(true);
         super.onCreate(savedInstanceState);
+
     }
 
     boolean isOpenPage = false;
@@ -60,6 +77,7 @@ public class HomeFrag extends Fragment implements OnMapReadyCallback  {
     Button btn_slide;
 
     String[] items = {"한식", "중식", "양식", "일식", "패스트푸드"};
+    static double[][] location_arr;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -84,6 +102,7 @@ public class HomeFrag extends Fragment implements OnMapReadyCallback  {
 //                textView.setText("선택 : ");
             }
         });
+
 
         linear = v.findViewById(R.id.linear);
         linear.setVisibility(View.INVISIBLE);
@@ -159,21 +178,20 @@ public class HomeFrag extends Fragment implements OnMapReadyCallback  {
         GoogleMap gMap = googleMap;
 
 
-
         MapsInitializer.initialize(this.getActivity());
-        double[][] location = {{37.59193, 127.01847},{37.59210, 127.01841}};
         LatLng latLng_new;
 
         // for loop를 통한 n개의 마커 생성
-        for (int i = 0; i < location.length; i++) {
+        for (int i = 0; i < arrClass.location_arr.length; i++) {
             // 1. 마커 옵션 설정 (만드는 과정)
             MarkerOptions makerOptions = new MarkerOptions();
-            latLng_new = new LatLng(location[i][0], location[i][1]);
+            latLng_new = new LatLng(arrClass.location_arr[i][0], arrClass.location_arr[i][1]);
             makerOptions.position(latLng_new); //
+
 
             // 2. 마커 생성 (마커를 나타냄)
             gMap.addMarker(makerOptions);
-            googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng_new,18));
+            googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng_new,16));
 
         }
 
@@ -188,6 +206,8 @@ public class HomeFrag extends Fragment implements OnMapReadyCallback  {
 
             }
             return false;
+
+
         });
 
 

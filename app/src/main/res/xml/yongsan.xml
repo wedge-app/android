@@ -1,0 +1,3458 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<results xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<data>
+		<item>
+			<type>3</type>
+			<thema>일본</thema>
+			<name>도쿄살롱</name>
+			<tel>02-792-3068</tel>
+			<address1>서울특별시 용산구 회나무로 74</address1>
+			<address2>1층 이태원동</address2>
+			<menu>주요메뉴 : 야끼토리6품 17,000, 매운차돌해물짬뽕 18,000
+추천메뉴 : 야끼토리6품 17,000</menu>
+			<lat>37.54040696</lat>
+			<lng>126.9947589</lng>
+			<tip>매일 신선한 재료로 정성껏 만든 수제꼬치</tip>
+		</item>
+		<item>
+			<type>4</type>
+			<thema>프랑스</thema>
+			<name>바이휴고</name>
+			<tel>070-4063-1642</tel>
+			<address1>서울특별시 용산구 이태원로17길 23-13</address1>
+			<address2>1층 이태원동</address2>
+			<menu>주요메뉴 : 스트립도인 스테이크 41,000, 샴피뇽 파스타 22,000, 에스까르고 11,000추천메뉴 : 스트립도인 스테이크 41,000</menu>
+			<lat>37.53546566</lat>
+			<lng>126.9911929</lng>
+			<tip>캐쥬얼한 프렌치 레스토랑</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>카메룬</thema>
+			<name>Africanport</name>
+			<tel>02-792-9214</tel>
+			<address1>서울특별시 용산구 이태원로14길 29-1</address1>
+			<address2>2층 이태원동</address2>
+			<menu>주요메뉴 : 오크로 15,000, 졸러프라이스 15,000추천메뉴 : 오크로 15,000</menu>
+			<lat>37.53319874</lat>
+			<lng>126.9912158</lng>
+			<tip>아프리카의 품속으로</tip>
+		</item>
+		<item>
+			<type>4</type>
+			<thema>미국</thema>
+			<name>매덕스피자이태원점</name>
+			<tel>02-792-2420</tel>
+			<address1>서울특별시 용산구 이태원로26길 26</address1>
+			<address2>2층 이태원동</address2>
+			<menu>주요메뉴 : 마르게리타피자(한조각 6,700/한판 49,000), 맥앤치즈베이컨피자(한조각 6,500/ 한판 48,000), 하와이안피자(한조각 6,500/ 한판 48,000)추천메뉴 : 마르게리타피자(한조각 6,700/한판 49,000)
+</menu>
+			<lat>37.53334665</lat>
+			<lng>126.9935239</lng>
+			<tip>뉴욕스타일의 조각피자</tip>
+		</item>
+		<item>
+			<type>4</type>
+			<thema>미국</thema>
+			<name>미트볼라운지</name>
+			<tel>02-790-1102</tel>
+			<address1>서울특별시 용산구 이태원로54길 36</address1>
+			<address2>1층 한남동</address2>
+			<menu>주요메뉴 : 클래식 토마토소스와 미국엄마손맛 소고기미트볼플래터 25,000, 육즙이 팡팡 터지는 스테이크가 올라간 필라프 15,000추천메뉴 : 소고기플래터 25,000</menu>
+			<lat>37.53678504</lat>
+			<lng>127.0016067</lng>
+			<tip>Fast casual dining pub 미트볼전문점으로 다양한 미국식 퓨전음식과 맥주를 트렌디하게 즐길 수 있습니다</tip>
+		</item>
+		<item>
+			<type>4</type>
+			<thema>이탈리아</thema>
+			<name>스테이지비</name>
+			<tel>02-6399-7545</tel>
+			<address1>서울특별시 용산구 이태원로 294</address1>
+			<address2>2층 한남동</address2>
+			<menu>주요메뉴 : 립아이스테이크 38,000 키조개샐러드 21,000 크랩크림파스타 27,000추천메뉴 : 립아이스테이크 38,000</menu>
+			<lat>37.54086836</lat>
+			<lng>127.0024848</lng>
+			<tip>외식과 문화가 공존하는 예술의 공간</tip>
+		</item>
+		<item>
+			<type>3</type>
+			<thema>일본</thema>
+			<name>솔로스키친</name>
+			<tel>02-6399-7447</tel>
+			<address1>서울특별시 용산구 이태원로 294</address1>
+			<address2>2층 한남동</address2>
+			<menu>주요메뉴 : 치킨가라아게덮밥 10,500 새우야채덮밥 11,000
+추천메뉴 : 치킨가라아게덮밥 10,500</menu>
+			<lat>37.54086836</lat>
+			<lng>127.0024848</lng>
+			<tip>'혼공족'을 위해 간편하게 테이크아웃해서 어디서든 편안하게 먹을 수 있는 건강한 한그릇 메뉴</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>요르단</thema>
+			<name>아라베스크이태원</name>
+			<tel>02-790-6910</tel>
+			<address1>서울특별시 용산구 이태원로 227</address1>
+			<address2>2층 한남동</address2>
+			<menu>주요메뉴 : 치킨/양고기 만디 18,000, 치킨/양고기 만사프 20,000추천메뉴 : 치킨/양고기 만디 18,000</menu>
+			<lat>37.53563537</lat>
+			<lng>126.998855</lng>
+			<tip>할랄요리 전문점, 아랍요리 전문점</tip>
+		</item>
+		<item>
+			<type>4</type>
+			<thema>미국</thema>
+			<name>앤와이비엔비버거엔베이글</name>
+			<tel>02-553-7792</tel>
+			<address1>서울특별시 용산구 이태원로55나길 6</address1>
+			<address2>1층 한남동</address2>
+			<menu>주요메뉴 : The B&amp;amp;B 14,500 Uptown Girl 16,500 The Budda Gump 25,000추천메뉴 : The B&amp;amp;B 14,500</menu>
+			<lat>37.53666612</lat>
+			<lng>126.9990948</lng>
+			<tip>한국에서 느낄 수 있는 뉴욕 맨하탄의 버거 맛</tip>
+		</item>
+		<item>
+			<type>3</type>
+			<thema>일본</thema>
+			<name>유타로</name>
+			<tel>02-797-5776</tel>
+			<address1>서울특별시 용산구 이태원로 216</address1>
+			<address2>1층 한남동</address2>
+			<menu>주요메뉴 : 시로 7,000, 쿠로 8,000추천메뉴 : 시로 7,000</menu>
+			<lat>37.53468751</lat>
+			<lng>126.9981354</lng>
+			<tip>먹는 것 이상의 맛있는 즐거운, 하키타 일본라면</tip>
+		</item>
+		<item>
+			<type>3</type>
+			<thema>일본</thema>
+			<name>후지야마소바</name>
+			<tel>02-749-4129</tel>
+			<address1>서울특별시 용산구 이태원로 208</address1>
+			<address2>1층 6,7호 한남동</address2>
+			<menu>주요메뉴 : 자루소바 3,800, 키츠네우동 3,800추천메뉴 : 지루소바 3,800</menu>
+			<lat>37.53453972</lat>
+			<lng>126.9970583</lng>
+			<tip>일본에서 먹어본 맛을 즐길 수 있어요</tip>
+		</item>
+		<item>
+			<type>4</type>
+			<thema>이탈리아</thema>
+			<name>일키아쏘</name>
+			<tel>02-792-5588</tel>
+			<address1>서울특별시 용산구 이태원로55가길 21</address1>
+			<address2>1층 3호 한남동</address2>
+			<menu>주요메뉴 : 티본스테이크(600g부터 가능 100g당 15,000), 프로슈토 20,000추천메뉴 : 티본스테이크(600g부터 가능 100g당 15,000)</menu>
+			<lat>37.53737971</lat>
+			<lng>127.000258</lng>
+			<tip>한남동에 위치한 이탈리아 본고장의 맛과 분위기를 느낄 수 있는 이탈리아 레스토랑</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>베트남</thema>
+			<name>포하우스</name>
+			<tel>02-793-5220</tel>
+			<address1>서울특별시 용산구 이태원로20길 2-12</address1>
+			<address2>2층 이태원동</address2>
+			<menu>주요메뉴 : 베트남쌀국수 8,000~11,000, 팟타이 12,000
+추천메뉴 : 베트남쌀국수 8,000~11,000</menu>
+			<lat>37.53393038</lat>
+			<lng>126.9915235</lng>
+			<tip>베트남쌀국수가 맛있는 이태원 포하우스</tip>
+		</item>
+		<item>
+			<type>4</type>
+			<thema>미국</thema>
+			<name>매덕스피자한남점</name>
+			<tel>02-790-2420</tel>
+			<address1>서울특별시 용산구 독서당로29길 5-6</address1>
+			<address2>G동 2층 202호 한남동, 리플레이스 한남</address2>
+			<menu>주요메뉴 : 마르게리타피자(한조각 6,700/한판 49,000), 맥앤치즈베이컨피자(한조각 6,500/ 한판 48,000), 하와이안피자(한조각 6,500/ 한판 48,000)추천메뉴 : 마르게리타피자(한조각 6,700/한판 49,000)
+</menu>
+			<lat>37.53695027</lat>
+			<lng>127.0115182</lng>
+			<tip>뉴욕스타일의 조각피자</tip>
+		</item>
+		<item>
+			<type>4</type>
+			<thema>미국</thema>
+			<name>빌리스팬케이크</name>
+			<tel>02-790-3315</tel>
+			<address1>서울특별시 용산구 녹사평대로46길 16-4</address1>
+			<address2>2층 이태원동</address2>
+			<menu>주요메뉴 : 오리지널 팬케이크 8,300, 티라미수 팬케이크 14,900추천메뉴 : 오리지널 팬케이크 8,300</menu>
+			<lat>37.53713401</lat>
+			<lng>126.9877893</lng>
+			<tip>맛있는 팬케이크와 루프탑이 있는 경리단 대표카페</tip>
+		</item>
+		<item>
+			<type>6</type>
+			<thema>일본</thema>
+			<name>도쿄빙수경리단길점</name>
+			<tel>070-7812-9584</tel>
+			<address1>서울특별시 용산구 녹사평대로46길 10</address1>
+			<address2>1층 이태원동</address2>
+			<menu>주요메뉴 : 토마토빙수 8,900 말차빙수 10,500 키리모찌 6,500추천메뉴 : 토마토빙수 8,900</menu>
+			<lat>37.53726011</lat>
+			<lng>126.9874137</lng>
+			<tip>지구상에서 가장 맛있는 빙수가 있는 도쿄빙수</tip>
+		</item>
+		<item>
+			<type>2</type>
+			<thema>중국</thema>
+			<name>누랑즈뉘</name>
+			<tel>02-797-0709</tel>
+			<address1>서울특별시 용산구 녹사평대로46길 34-2</address1>
+			<address2>1층 이태원동</address2>
+			<menu>주요메뉴 : 항정살탕수육 20,700, 멘보샤 15,700추천메뉴 : 항정살 탕수육 20,700</menu>
+			<lat>37.53745125</lat>
+			<lng>126.9886492</lng>
+			<tip>칠석, 견우직녀가 일년에 한번 만나는 뜻깊고 소중한 시간인 만큼, 누랑즈뉘에서 인연과 낭만을 공유할 수 있는 여유로운 시간이 되기를 기원합니다.</tip>
+		</item>
+		<item>
+			<type>4</type>
+			<thema>미국</thema>
+			<name>로코스핑크솔트</name>
+			<tel>02-792-3235</tel>
+			<address1>서울특별시 용산구 녹사평대로26가길 14</address1>
+			<address2>1층 이태원동</address2>
+			<menu>주요메뉴 : 루벤 샌드위치 11,900, 브리스켓 샌드위치 11,900추천메뉴 : 루벤 샌드위치 11,900</menu>
+			<lat>37.53230503</lat>
+			<lng>126.9924288</lng>
+			<tip>고기가 듬뿍 들어있는 미국식 수제버거 맛집</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>인도</thema>
+			<name>타지펠리스</name>
+			<tel>02-790-5786</tel>
+			<address1>서울특별시 용산구 우사단로 39</address1>
+			<address2>인도요리 부페</address2>
+			<menu>주요메뉴 : 인도요리 부페추천메뉴 : 인도요리 부페</menu>
+			<lat>37.53369994</lat>
+			<lng>126.9954472</lng>
+		</item>
+		<item>
+			<type>4</type>
+			<thema>이탈리아</thema>
+			<name>비스테까 토레엔</name>
+			<tel>02-797-7746</tel>
+			<address1>서울특별시 용산구 회나무로 66</address1>
+			<address2>지상 3층 이태원동</address2>
+			<menu>주요메뉴 : 포터하우스 스테이크 100g당 26,000원(최소주문700g), 토마토소스의 바닷가재 스파게티38,000원, 티라미수 12,000원추천메뉴 : 포터하우스 스테이크 100g당 26,000원(최소주문700g)</menu>
+			<lat>37.54011499</lat>
+			<lng>126.9938492</lng>
+			<tip>서울에서 N타워가 가장 아름답게 보이는 torre N</tip>
+		</item>
+		<item>
+			<type>4</type>
+			<thema>이탈리아</thema>
+			<name>골든불</name>
+			<tel>02-794-7073</tel>
+			<address1>서울특별시 용산구 이태원로42길 60</address1>
+			<menu>주요메뉴 : 한우1+스테이크(250g) 47,500, 만조샐러드 15,000, 가지그라탕 10,000추천메뉴 : 한우1+스테이크(250g) 47,500</menu>
+			<lat>37.53707697</lat>
+			<lng>127.0013804</lng>
+			<tip>steak가 맛있는 집</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>태국</thema>
+			<name>부아</name>
+			<tel>02-792-3340</tel>
+			<address1>서울특별시 용산구 보광로59길 9</address1>
+			<menu>주요메뉴 : 레드오리커리 28,000원, 팟타이 12,000원, 타이커피 6,000원추천메뉴 : 레드오리커리 28,000원</menu>
+			<lat>37.53386563</lat>
+			<lng>126.9934514</lng>
+			<tip>미슐랭 빕구르망에서 선정된 고전타이 음식점 부아</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>태국</thema>
+			<name>낭낭</name>
+			<tel>02-792-3340</tel>
+			<address1>서울특별시 용산구 보광로59길 9</address1>
+			<menu>주요메뉴 : 카오쏘이 8,000, 꾸웨이띠여우 똠양누들 8,000추천메뉴 : 카오쏘이 8,000</menu>
+			<lat>37.53386563</lat>
+			<lng>126.9934514</lng>
+			<tip>국내에서 처음 선보이는 태국북부지방 국수 전문점</tip>
+		</item>
+		<item>
+			<type>2</type>
+			<thema>대만</thema>
+			<name>우육미엔 이태원점</name>
+			<tel>02-798-5556</tel>
+			<address1>서울특별시 용산구 이태원로55가길 26-8</address1>
+			<menu>주요메뉴 : 마라우육미엔 10,500원, 꿔바로우 12,000원, 자샤랑군 6,000원추천메뉴 :&amp;nbsp; 마라우육미엔 10,500원</menu>
+			<lat>37.53751306</lat>
+			<lng>126.9999004</lng>
+			<tip>대만현지 30년 경력의 Tony Kang쉐프와 국내 3인이 모여 대만 본토보다 맛있는 우육면을 만들자는 각오로 오랫동안 연구하고 대만을 넘나들며 합작하여 만들었습니다.</tip>
+		</item>
+		<item>
+			<type>4</type>
+			<thema>이탈리아</thema>
+			<name>파스타 프레스카</name>
+			<tel>02-795-6004</tel>
+			<address1>서울특별시 용산구 이태원로55나길 6</address1>
+			<menu>주요메뉴 : Braised pork shark 25,000원, Lasahna 17,000원, Caprese 13,000원추천메뉴 : Braised pork shark 25,000원</menu>
+			<lat>37.53666612</lat>
+			<lng>126.9990948</lng>
+			<tip>생면파스타와 이탈리안 가정식요리를 드실 수 있는 곳</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>베트남</thema>
+			<name>베트남고향식당3호점</name>
+			<tel>02-796-7436</tel>
+			<address1>서울특별시 용산구 회나무로 66</address1>
+			<menu>주요메뉴 : 소고기쌀국수 9,000원, 만두튀김 10,000원, 볶음밥 10,000원추천메뉴 : 소고기쌀국수 9,000원</menu>
+			<lat>37.54011499</lat>
+			<lng>126.9938492</lng>
+			<tip>베트남 현지의 맛, 고향의 맛을 느껴보세요.</tip>
+		</item>
+		<item>
+			<type>3</type>
+			<thema>일본</thema>
+			<name>유다 야키토리</name>
+			<tel>02-388-5081</tel>
+			<address1>서울특별시 용산구 이태원로 230-2</address1>
+			<menu>주요메뉴 : 사시미 40,000원 ~ 80,000원, 꼬치모듬 19,800원, 나베22,000원추천메뉴 : 사시미 40,000원 ~ 80,000원</menu>
+			<lat>37.53558131</lat>
+			<lng>126.9994162</lng>
+			<tip>최고의 야끼도리 전문점</tip>
+		</item>
+		<item>
+			<type>3</type>
+			<thema>일본</thema>
+			<name>도쿄쟁반</name>
+			<tel>02-3785-0913</tel>
+			<address1>서울특별시 용산구 이태원로54길 58-9</address1>
+			<menu>주요메뉴 : 함박스테이크 15,000원, 카레우동 9,000원추천메뉴 : 함박스테이크 15,000원</menu>
+			<lat>37.53562096</lat>
+			<lng>127.0006653</lng>
+			<tip>식물들과 함께하는 도쿄가정식</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>태국</thema>
+			<name>소이연남 한남점</name>
+			<tel>02-792-5130</tel>
+			<address1>서울특별시 용산구 한남대로20길 47-10</address1>
+			<menu>주요메뉴 : 소고기국수 8,500원, 소이뽀삐아 12,000원, 가이양 13,000원(반마리), 24,000원(한마리)추천메뉴 :&amp;nbsp; 소고기국수 8,500원</menu>
+			<lat>37.53520608</lat>
+			<lng>127.0099204</lng>
+			<tip>한국에서 가장 핫한 태국음식점</tip>
+		</item>
+		<item>
+			<type>3</type>
+			<thema>일본</thema>
+			<name>하나마치</name>
+			<tel>0505-1440-8556</tel>
+			<address1>서울특별시 용산구 이태원로54길 52</address1>
+			<menu>주요메뉴 : 연어사시미 25,000, 갈비야사이 22,000, 차돌박이 숙주볶음 17,000추천메뉴 : 연어사시미 25,000</menu>
+			<lat>37.53622282</lat>
+			<lng>127.0011948</lng>
+			<tip>꽃길 그대와 함께 하겠습니다.</tip>
+		</item>
+		<item>
+			<type>4</type>
+			<thema>멕시코</thema>
+			<name>감성타코 한남점</name>
+			<tel>02-798-8889</tel>
+			<address1>서울특별시 용산구 독서당로29길 5-6</address1>
+			<address2>G동 301호 한남동, 리플레이스 한남</address2>
+			<menu>주요메뉴 : 감성 그릴드 파히타 - 38,000원브리또 - 13,000 ~ 14,000원퀘사디아 - 13,000 ~ 14,000원추천메뉴 : 감성 그릴드 파히타 - 38,000원</menu>
+			<lat>37.53695027</lat>
+			<lng>127.0115182</lng>
+			<tip>멋진 공간에서 멕시코요리를 즐길 수 있는 곳</tip>
+		</item>
+		<item>
+			<type>3</type>
+			<thema>일본</thema>
+			<name>노리테이블</name>
+			<tel>02-792-4427</tel>
+			<address1>서울특별시 용산구 녹사평대로40나길 1</address1>
+			<address2>지하1층 이태원동</address2>
+			<menu>주요메뉴 : 핸드롤 데마끼(2개) - 4,000 ~ 10,000원마끼(6개!8개) - 6,000 ~ 15,000원홍합에피타이저 - 8,000원추천메뉴 : 핸드롤 데마끼(2개) - 4,000 ~ 10,000원</menu>
+			<lat>37.53461123</lat>
+			<lng>126.9880296</lng>
+			<tip>캐쥬얼 일식 및 사케바</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>중동(파키스탄)</thema>
+			<name>더 할랄 가이즈</name>
+			<tel>02-794-8308</tel>
+			<address1>서울특별시 용산구 이태원로 187</address1>
+			<address2>지상2층 이태원동</address2>
+			<menu>주요메뉴 : 치킨&amp;amp;자이로 플레터(M)-9,900원자이로샌드위치-8,900원추천메뉴 : 치킨&amp;amp;자이로 플래터(M)-9,900원</menu>
+			<lat>37.53472705</lat>
+			<lng>126.9947819</lng>
+			<tip>뉴욕 최고의 스트릿 푸드</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>베트남</thema>
+			<name>반미리</name>
+			<tel>070-8289-4190</tel>
+			<address1>서울특별시 용산구 회나무로 66</address1>
+			<address2>지상1층 이태원동</address2>
+			<menu>주요메뉴 : 반미 샌드위치-8,000원바나나튀김-5,000원추천메뉴 : 반미샌드위치-8,000원</menu>
+			<lat>37.54011499</lat>
+			<lng>126.9938492</lng>
+			<tip>베트남 샌드위치 전문점</tip>
+		</item>
+		<item>
+			<type>4</type>
+			<thema>미국</thema>
+			<name>이태원 더 버거</name>
+			<tel>02-797-8940</tel>
+			<address1>서울특별시 용산구 녹사평대로32길 22</address1>
+			<address2>지상1층 이태원동</address2>
+			<menu>주요메뉴 : 이태원더버거-19,800원빅더블버거-12,900원레튜스아보카도버거-10,900원그릴쉬림프버거-12,900원추천메뉴 : 이태원더버거-19,800원</menu>
+			<lat>37.53343651</lat>
+			<lng>126.9900346</lng>
+			<tip>숯불에 구워 육즙이 풍부하고 스모크향의 맛을 느낄 수 있는 수제버거</tip>
+		</item>
+		<item>
+			<type>3</type>
+			<thema>일본</thema>
+			<name>토키바야마</name>
+			<tel>02-797-1028</tel>
+			<address1>서울특별시 용산구 녹사평대로40다길 2</address1>
+			<address2>지상2층 이태원동, 그린빌라트</address2>
+			<menu>주요메뉴 : 토리니쿠 창코나베- (소)18,000원 ~사시미-19,000원 ~친미 모리아와세-22,000원 ~추천메뉴 : 토리니쿠 창코나베-(소)18,000 ~
+</menu>
+			<lat>37.53496086</lat>
+			<lng>126.988455</lng>
+			<tip>도쿄의 '토키바야마' 한국 분점</tip>
+		</item>
+		<item>
+			<type>4</type>
+			<thema>미국</thema>
+			<name>플라잉볼 익스프레스 이태원점</name>
+			<tel>02-790-0511</tel>
+			<address1>서울특별시 용산구 녹사평대로40길 59-2</address1>
+			<address2>지상2층 이태원동</address2>
+			<menu>주요메뉴 : 클래식버거-8,500원시그니쳐번-5,500원추천메뉴 : 클래식버거-8,500원</menu>
+			<lat>37.53445277</lat>
+			<lng>126.9892832</lng>
+			<tip>최고의 맛은 번으로 결정된다.</tip>
+		</item>
+		<item>
+			<type>6</type>
+			<thema>미국</thema>
+			<name>크리에잇쿠키</name>
+			<tel>02-792-8890</tel>
+			<address1>서울특별시 용산구 회나무로 36</address1>
+			<address2>지상1층 이태원동</address2>
+			<menu>주요메뉴 : 코코넛 초코칩쿠키-2,000원클래식 초코칩쿠키-1,900원누텔라 피넛버터쿠키-2,500추천메뉴 : 코코넛 초코칩쿠키-2,000원</menu>
+			<lat>37.53962103</lat>
+			<lng>126.9905995</lng>
+			<tip>유기농 밀로 만든 미국식 쿠키 전문점</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>이탈리아</thema>
+			<name>dubstep B (덥스텝 비)</name>
+			<tel>02-796-7015</tel>
+			<address1>서울특별시 용산구 이태원로 243</address1>
+			<address2>1층 (한남동)</address2>
+			<menu>주요메뉴 : 수제버거, 연어 스테이크, 파스타, 함박 스테이크, 세계맥주와 와인추천메뉴 : 수제버거, 파스타, 연어 스테이크, 함박 스테이크, 그외 안주류 모두 맛있습니다. ^ ^</menu>
+			<lat>37.53680307</lat>
+			<lng>127.0000181</lng>
+			<tip>외국의 다양한 국적 분들도 무난하게 식사를 즐기실수 있는 메뉴들로 구성되어 있습니다. 깔끔하고 정갈한 내부 인테리어와 예쁜 테라스가 있는 dubstep B는 Dining &amp; Pub이지만, 조만간 커피도 됩니다.  ^ ^;;  `dubstep B`는 연인들의 데이트 코스로  `성지`와도 같은 곳입니다.</tip>
+		</item>
+		<item>
+			<type>4</type>
+			<thema>이탈리아</thema>
+			<name>알레딴떼</name>
+			<tel>02-792-1881</tel>
+			<address1>서울특별시 용산구 회나무로13나길 8</address1>
+			<address2>지하1층, 지상1~3층 (이태원동)</address2>
+			<menu>주요메뉴 : 마르게리따 피자 13,000원찰옥수수 범벅 리코타 샐러드 14,000원옹심이 뇨끼의 이태리 해물탕 25,000원추천메뉴 : 마르게리따 피자 13,000원</menu>
+			<lat>37.54126082</lat>
+			<lng>126.9902554</lng>
+			<tip>나폴리 스테파노 페라리 화덕, 100%장작, 유럽 현지 경험 셰프</tip>
+		</item>
+		<item>
+			<type>4</type>
+			<thema>이탈리아</thema>
+			<name>스윗비</name>
+			<tel>02-792-0749</tel>
+			<address1>서울특별시 용산구 회나무로32길 2-1</address1>
+			<address2>지상1층 (이태원동)</address2>
+			<menu>주요메뉴 : 캐릭터타입 아이스크림 5,300원기본 아이스크림 4,000원소스타입 아이스크림 5,300원추천메뉴 : 캐릭터타입 아이스크림 5,300원</menu>
+			<lat>37.53979415</lat>
+			<lng>126.9923782</lng>
+			<tip>프리미엄 이탈리안 아이스크림 전문점</tip>
+		</item>
+		<item>
+			<type>4</type>
+			<thema>프랑스</thema>
+			<name>르푸도레</name>
+			<tel>02-797-8893</tel>
+			<address1>서울특별시 용산구 이태원로23길 34</address1>
+			<address2>지상1층 (이태원동)</address2>
+			<menu>주요메뉴 : 르방 바게트 4,500원크로아상 4,200원마스카포네 크림 크로아상 4,500원추천메뉴 : 크로아상 4,500원</menu>
+			<lat>37.53566032</lat>
+			<lng>126.991831</lng>
+			<tip>아담하고 이쁜 프렌치 빵 전문점</tip>
+		</item>
+		<item>
+			<type>4</type>
+			<thema>이탈리아</thema>
+			<name>그린내</name>
+			<tel>02-794-8793</tel>
+			<address1>서울특별시 용산구 녹사평대로 222</address1>
+			<address2>지상2층 (이태원동)</address2>
+			<menu>주요메뉴 : 곤돌리에 로제 파스타 17,600원봉골레 16,500원꽃등심 토마토 리조또 19,800원추천메뉴 : 곤돌리에 로제 파스타 17,600원</menu>
+			<lat>37.53734296</lat>
+			<lng>126.9870652</lng>
+			<tip>윤현찬 셰프의 이탈리아 파스타 전문점</tip>
+		</item>
+		<item>
+			<type>4</type>
+			<thema>러시아</thema>
+			<name>마트료시카</name>
+			<tel>070-7591-1112</tel>
+			<address1>서울특별시 용산구 이태원로 238</address1>
+			<address2>지상2층 (한남동)</address2>
+			<menu>주요메뉴 : 올리비에 샐러드 9,000원보르쉬 8,000원마트료시카 스페셜(모듬고기) 60,000원추천메뉴 : 마트료시카 스페셜(모듬고기) 60,000원</menu>
+			<lat>37.53597055</lat>
+			<lng>126.9999728</lng>
+			<tip>한남동 러시아 음식 전문점</tip>
+		</item>
+		<item>
+			<type>3</type>
+			<thema>일본</thema>
+			<name>스시고코로</name>
+			<tel>02-790-1182</tel>
+			<address1>서울특별시 용산구 한남대로 60</address1>
+			<address2>D동 108호 (한남동, 금호리첸시아)</address2>
+			<menu>주요메뉴 : 런치 스시 코스 45,000원디너 오마카세 110,000원
+추천메뉴 : 런치 스시 코스 45,000원</menu>
+			<lat>37.53446021</lat>
+			<lng>127.0078747</lng>
+			<tip>즐겁게 맛있는 시스릴 즐길 수 있는 곳</tip>
+		</item>
+		<item>
+			<type>4</type>
+			<thema>이탈리아</thema>
+			<name>포카사</name>
+			<tel>02-2038-2488</tel>
+			<address1>서울특별시 용산구 이태원로49길 14-2</address1>
+			<address2>지상1~2층 (한남동)</address2>
+			<menu>주요메뉴 : 포카치아 샌드위치 8,000원파스타치오 에끌레어 5,500원이탈리아노 마로키노 5,000원추천메뉴 : 포카치아 샌드위치 8,000원</menu>
+			<lat>37.53724997</lat>
+			<lng>126.9997149</lng>
+			<tip>정통 이탈리안 델리 카페</tip>
+		</item>
+		<item>
+			<type>4</type>
+			<thema>독일</thema>
+			<name>스톤그라운드</name>
+			<tel>02-790-8906</tel>
+			<address1>서울특별시 용산구 이태원로49길 14-3</address1>
+			<address2>지상1층 (한남동)</address2>
+			<menu>주요메뉴 : 독일식 프뢰첸 빵 (2,000~2,200원)샌드위치 (7,500~8,500원)케이크 (6,000~9,000원)추천메뉴 : 독일식 브뢰첸 빵 (2,000~2,200원)</menu>
+			<lat>37.53726438</lat>
+			<lng>126.9995881</lng>
+			<tip>갓 구운 독일식 빵과 건강 샌드위치</tip>
+		</item>
+		<item>
+			<type>4</type>
+			<thema>미국</thema>
+			<name>다운타우너</name>
+			<tel>070-8820-3696</tel>
+			<address1>서울특별시 용산구 이태원로42길 28-4</address1>
+			<address2>지상1층 (한남동)</address2>
+			<menu>주요메뉴 : 치즈버거 6,800원베이컨 치즈버거 7,800원아보카도 버거 9,300추천메뉴 : 아보카도 버거 9,300</menu>
+			<lat>37.53588045</lat>
+			<lng>127.0003937</lng>
+			<tip>한남동 수제버거</tip>
+		</item>
+		<item>
+			<type>4</type>
+			<thema>이탈리아</thema>
+			<name>오만지아</name>
+			<tel>02-749-2900</tel>
+			<address1>서울특별시 용산구 유엔빌리지길 14</address1>
+			<address2>지층 (한남동)</address2>
+			<menu>주요메뉴 : 모듬 해산물 샐러드 43,000원버섯파스타 25,000원한우채끝등심스테이크(300g) 110,000원추천메뉴 : 모듬 해산물 샐러드 43,000원</menu>
+			<lat>37.53397352</lat>
+			<lng>127.0098297</lng>
+			<tip>시칠리아 스타일의 이태리 정통레스토랑</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>이집트</thema>
+			<name>카이로 바베큐</name>
+			<tel>02-798-1253</tel>
+			<address1>서울특별시 용산구 우사단로10길 45</address1>
+			<address2>지상1층 (한남동)</address2>
+			<menu>주요메뉴 : 훈제연어 10,000훈제새우 10,000훈제양갈비 10,000추천메뉴 : 훈제양갈비 10,000</menu>
+			<lat>37.53294317</lat>
+			<lng>126.9980676</lng>
+			<tip>이집트 음식 전문점</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>이탈리아</thema>
+			<name>핏제리아디부자 1호점</name>
+			<tel>02-794-9474</tel>
+			<address1>서울특별시 용산구 이태원로55가길 28</address1>
+			<address2>핏제리아디부자 1호점</address2>
+			<menu>주요메뉴 : 부자클래시카 19,600, 라자냐클래시카 21,500, 부자샐러드 14,900추천메뉴 : 부자클래시카 19,600</menu>
+			<lat>37.53726438</lat>
+			<lng>126.9998009</lng>
+			<tip>PIZZERIA D’BUZZA(부자피자)는 최상급에 식재료를 사용하여 만드는 이탈리아 정통방식의 레스토랑입니다. 정통 화덕피자를 누구나 캐쥬얼하고 편하게 즐길 수 있도록 만들었으며 보다 합리적인 가격에 제공해드리고자 합니다.</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>베트남</thema>
+			<name>사이공그릴</name>
+			<tel>02-749-7783</tel>
+			<address1>서울특별시 용산구 독서당로 67</address1>
+			<address2>이춘근치과의원 2층</address2>
+			<menu>주요메뉴 : 야채롤 3,000원 새우치즈춘권 7,000원 짜죠 7,000원 소고기쌀국수 9,500원, 피쉬볼쌀국수 12,000원, 똠얌꿍쌀국수 14,000원, 스지쌀국수 13,000원, 해물쌀국수 15,000원 파인애플볶음밥 14,000원, 나시고렝 15,000원 레몬그라스키친커리 16,000원, 그린커리 16,000원, 팟타이 15,000원, 미고렝 15,000원추천메뉴 : 런치세트 1인 12,000~ 17,000원 디너코스세트 1인 30,000원, 월남쌈 1인27,000원</menu>
+			<lat>37.5338367</lat>
+			<lng>127.0081461</lng>
+			<tip>베트남 및 동남아시아요리의 수준급 요리를 맛볼수 있습니다.</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>이탈리아</thema>
+			<name>더 젤 </name>
+			<tel>02-797-6846</tel>
+			<address1>서울특별시 용산구 회나무로 67</address1>
+			<address2>1층 (이태원동)</address2>
+			<menu>주요메뉴 : 한우 티본 스테이크 1KG 239,000원칡소 스테이크 90,000원파스타 23,000원추천메뉴 : 자하젓파스타 - 27,000원</menu>
+			<lat>37.54036368</lat>
+			<lng>126.9941162</lng>
+			<tip>미국 타임지가 선정한 한국 대표 와인다이닝레스토랑. 아름다운 남산 전망과 한우 스테이크를 와인과 함께 즐길 수 있고 경리단길 24년 역사와 전통을 자랑하는 한국 와인 문화의 성지</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>호주</thema>
+			<name>더플라잉팬블루</name>
+			<tel>02-793-5285</tel>
+			<address1>서울특별시 용산구 이태원로27가길 13</address1>
+			<address2>지하1층 (이태원동)</address2>
+			<menu>주요메뉴 : 플라잉팬의 아침 15,000, 이태원 팬케잌 17,000, 아보카도 치킨 샌드위치 15,000추천메뉴 : 플라잉팬의 아침 15,000</menu>
+			<lat>37.53495049</lat>
+			<lng>126.9945692</lng>
+			<tip>여러나라의 다양한 음식문화를 더플라잉팬블루의 감각으로 세련되고 모던하게 재해석하여 선보이고자 합니다</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>미국</thema>
+			<name>래미스(Ramie`s)</name>
+			<tel>02-6237-2020</tel>
+			<address1>서울특별시 용산구 이태원로27가길 16</address1>
+			<address2>지하1~지상2층 (이태원동)</address2>
+			<menu>주요메뉴 : Small Plate(Slider(Pork Belly, Beef, Pulled Pork),Chicken Drum Stick, Grilled Cheese) 6,000, Steak 30,000, Pulled Pork 16,000
+추천메뉴 : Small Plate(Slider(Pork Belly, Beef, Pulled Pork),Chicken Drum Stick, Grilled Cheese) 6,000</menu>
+			<lat>37.53516312</lat>
+			<lng>126.9944198</lng>
+			<tip>New American Plates, Small Plates</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>이탈리아</thema>
+			<name>나인티모</name>
+			<tel>02-790-4285</tel>
+			<address1>서울특별시 용산구 이태원로27가길 18</address1>
+			<address2>지하1층 (이태원동)</address2>
+			<menu>주요메뉴 : 나티보 17,000, 새우크림스파게티 18,000, 나인티모피자 19,000 추천메뉴 : 나티보 17,000</menu>
+			<lat>37.5351559</lat>
+			<lng>126.9942705</lng>
+			<tip>한국인 입맛에 맞춘 맛있는 이탈리안 레스토랑</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>이탈리아</thema>
+			<name>(주)마이첼시</name>
+			<tel>02-749-1373</tel>
+			<address1>서울특별시 용산구 이태원로27가길 40</address1>
+			<address2>1층 (이태원동)</address2>
+			<menu>주요메뉴 : 브런치, 샐러드, 피자, 파스타 각 10,000~20,000,미트토마토 파스타 17,000, 스테이크 30,000~40,000, Beef Steak(250g) 37,000 추천메뉴 : Beef Steak(250g) 37,000 </menu>
+			<lat>37.53505492</lat>
+			<lng>126.9929897</lng>
+			<tip>빈티지한 분위기 피자, 파스타 맛집으로 유명한 레스토랑</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>그리스</thema>
+			<name>산토리니</name>
+			<tel>02-790-3474</tel>
+			<address1>서울특별시 용산구 이태원로27가길 43</address1>
+			<address2>2~3층 (이태원동)</address2>
+			<menu>주요메뉴 : 기로스 22,000, 무사까 23,000, 새우사가나끼 17,000추천메뉴 : 기로스 22,000</menu>
+			<lat>37.53482786</lat>
+			<lng>126.9928992</lng>
+			<tip>정통 웰빙 지중해 식단</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>미국</thema>
+			<name>팻앨버트</name>
+			<tel>02-749-3336</tel>
+			<address1>서울특별시 용산구 이태원로27가길 50</address1>
+			<address2>1층 (이태원동)</address2>
+			<menu>주요메뉴 : Fish&amp;amp;Chips 15,000, Monterey Chicken 14,000, Smokin'Jalapeno Buger 13,000추천메뉴 : Smokin'Jalapeno Buger 13,000</menu>
+			<lat>37.53506931</lat>
+			<lng>126.9925552</lng>
+			<tip>이태원 초창기의 펍, 외국인들 사이에서 알려짐, 저렴하고 맛있는 음식과 술</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>중국</thema>
+			<name>쟈니덤플링2호점</name>
+			<tel>02-790-8839</tel>
+			<address1>서울특별시 용산구 이태원로27가길 9</address1>
+			<address2>1층 (이태원동)</address2>
+			<menu>주요메뉴 : 군만두 7,000, 만두국 7,000추천메뉴 : 만두국 7,000</menu>
+			<lat>37.53496491</lat>
+			<lng>126.9947819</lng>
+			<tip>만두 귀신들의 성지</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>미국</thema>
+			<name>인더랩(In The Lab)</name>
+			<tel>070-7718-0190</tel>
+			<address1>서울특별시 용산구 이태원로45길 34</address1>
+			<address2>2층 (한남동)</address2>
+			<menu>주요메뉴 : 갈릭스테이크 20,000, 멕시칸 랩(샌드위치) 11,000, 와규버거 11,000추천메뉴 : 와규버거 11,000</menu>
+			<lat>37.53660843</lat>
+			<lng>126.9978186</lng>
+			<tip>IN THE LAB : 요리연구소. 다양한 요리를 연구, 접목시켜 새로운 요리를 만들어내는 Mix &amp; Match Restaurant </tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>일본</thema>
+			<name>타베모노</name>
+			<tel>02-790-2023</tel>
+			<address1>서울특별시 용산구 이태원로45길 4</address1>
+			<address2>지하1층 (한남동)</address2>
+			<menu>주요메뉴 : 모듬초밥 13피스 9,800, 10피스 7,600, 연어사시미 19,000, 생연어롤 7,800, 연어초밥 7,000추천메뉴 : 연어사시미 19,000</menu>
+			<lat>37.5361976</lat>
+			<lng>126.9993438</lng>
+			<tip>신선한 초밥과 롤을 맛있게 드실 수 있는 음식점</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>프랑스</thema>
+			<name>루틴</name>
+			<tel>02-790-6686</tel>
+			<address1>서울특별시 용산구 이태원로54길 13</address1>
+			<address2>1층 (한남동)</address2>
+			<menu>주요메뉴 : 뿔레 까슐레 22,000, 돼지안심 로스트 26,000, 포크찹 스테이크 추천메뉴 : 뿔레 까슐레 22,000</menu>
+			<lat>37.53772928</lat>
+			<lng>127.0021769</lng>
+			<tip>프랑스 가정식</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>태국</thema>
+			<name>스파이시바이트(Spicy Bite)</name>
+			<tel>070-4028-8011</tel>
+			<address1>서울특별시 용산구 이태원로54길 13</address1>
+			<address2>(한남동)</address2>
+			<menu>주요메뉴 : 바삭한 게튀김 10,000, 새콤달콤 바삭한 삼겹살 18,000, 홈메이드 그린커리 치킨 16,000추천메뉴 : 바삭한 게튀김 10,000</menu>
+			<lat>37.53772928</lat>
+			<lng>127.0021769</lng>
+			<tip>동남1 퓨전식당</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>일본</thema>
+			<name>라운드 어바웃(ROUND ABOUT)</name>
+			<tel>070-5055-2258</tel>
+			<address1>서울특별시 용산구 이태원로54길 46</address1>
+			<address2>1층 (한남동)</address2>
+			<menu>주요메뉴 : 일본카레 8,000, 스파이시에비카레 9,000, 돈가츠정식 12,000추천메뉴 : 일본카레 8,000</menu>
+			<lat>37.53643906</lat>
+			<lng>127.0013804</lng>
+			<tip>카레전문점으로 카레를 제외한 요일별로 다른 일본가정석을 즐길 수 있는 매장입니다</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>이탈리아</thema>
+			<name>알밤(ALBAM)</name>
+			<tel>070-8773-8479</tel>
+			<address1>서울특별시 용산구 이태원로54길 47</address1>
+			<address2>1층 (한남동)</address2>
+			<menu>주요메뉴 : 홈메이드 리코타 샐러드 15,000, 까르보나라 15,000, 함박스테이크 10,000추천메뉴 : 까르보나라 15,000</menu>
+			<lat>37.53627327</lat>
+			<lng>127.0014437</lng>
+			<tip>한국식재료를 이용해 편안한 가정에서 즐길 수있는 가정식 양식 레스토랑</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>미국</thema>
+			<name>스모키러버스</name>
+			<tel>02-792-1772</tel>
+			<address1>서울특별시 용산구 이태원로54길 53</address1>
+			<address2>1층 (한남동)</address2>
+			<menu>주요메뉴 : 바비큐 플레이트(2인용) 29,000, 수제베이컨샌드위치 9,000, 마오 핫 윙 7,500추천메뉴 : 바비큐 플레이트(2인용) 29,000</menu>
+			<lat>37.53600658</lat>
+			<lng>127.0012898</lng>
+			<tip>스모키러버는 아메리칸 바비큐 다이닝입니다</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>중국</thema>
+			<name>자리</name>
+			<tel>070-8278-2947</tel>
+			<address1>서울특별시 용산구 이태원로54길 5-5</address1>
+			<address2>1층 (한남동)</address2>
+			<menu>주요메뉴 : 목화솜 탕수육 19,000, JARI 짬뽕 10,000, 민트새우 19,000추천메뉴 : 목화솜 탕수육 19,000</menu>
+			<lat>37.53802841</lat>
+			<lng>127.0022041</lng>
+			<tip>밀가루를 사용하지 않는 건강한 중국요리 드시러 오세요</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>이탈리아</thema>
+			<name>아방뮤제</name>
+			<tel>02-790-7392</tel>
+			<address1>서울특별시 용산구 이태원로55가길 13</address1>
+			<address2>1층 (한남동, 스카이빌)</address2>
+			<menu>주요메뉴 : 안심스테이크 38,000, 리코타시금치페스츄리21,000, 화이트트러플트리폴리네파스타20,000, 엔쵸비차파스타 20,000추천메뉴 : 화이트트러플트리폴리네파스타20,000</menu>
+			<lat>37.53766803</lat>
+			<lng>127.0004978</lng>
+			<tip>컨템퍼쳐리 계절식재료를 이용한 트렌드한 음식과 분위기를 제공</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>체코</thema>
+			<name>펍앤그릴 프라하</name>
+			<tel>02-796-2181</tel>
+			<address1>서울특별시 용산구 이태원로19길 9</address1>
+			<address2>1층 (이태원동)</address2>
+			<menu>주요메뉴 : 수제 소시지16,000~18,000, 포크커틀렛(wiener schitzel) 18,000, 돼지목삼겹구이(Marinade Boston Butt) 22,000추천메뉴 : 포크커틀렛(wiener schitzel) 18,000</menu>
+			<lat>37.53489987</lat>
+			<lng>126.9917361</lng>
+			<tip>체코스타일의 슈니첼과 직접 수입한 체코 생맥주를 즐길 수 있는 곳</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>이탈리아</thema>
+			<name>만조네(Mangione)</name>
+			<tel>02-6095-3757</tel>
+			<address1>서울특별시 용산구 이태원로20길 13</address1>
+			<address2>지하1층 (이태원동)</address2>
+			<menu>주요메뉴 : 가락시장 해산물 파스타 19,000, 라자냐 19,000, T본 스테이크(800g) 150,000추천메뉴 : 라자냐 19,000</menu>
+			<lat>37.53371778</lat>
+			<lng>126.9921571</lng>
+			<tip>이탈리아 가정식 레스토랑입니다</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>미국</thema>
+			<name>길티플레져(Guilty Pleasure)</name>
+			<tel>02-794-4332</tel>
+			<address1>서울특별시 용산구 이태원로20길 2-10</address1>
+			<address2>1층 (이태원동)</address2>
+			<menu>주요메뉴 : mac&amp;amp;cheese 12,000, Butermilk Fried Chicken 19,000, Phily Cheese Steak 18,000추천메뉴 : Butermilk Fried Chicken 19,000</menu>
+			<lat>37.53403849</lat>
+			<lng>126.9915008</lng>
+			<tip>Traditional American Classic Style</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>일본</thema>
+			<name>스시원(one)</name>
+			<tel>02-798-8588</tel>
+			<address1>서울특별시 용산구 이태원로20길 24</address1>
+			<address2>1층 (이태원동)</address2>
+			<menu>주요메뉴 : 초밥 16,000, 돈까스 9,000, 사시미 43,000추천메뉴 : 사시미 43,000</menu>
+			<lat>37.5332817</lat>
+			<lng>126.9922431</lng>
+			<tip>이자카야</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>영국</thema>
+			<name>더블린나나스트리트</name>
+			<tel>02-749-9553</tel>
+			<address1>서울특별시 용산구 독서당로20길 5</address1>
+			<address2>1층 (한남동)</address2>
+			<menu>주요메뉴 : 나나버거 15,000, 피쉬앤칩스 20,000, 캐사디어스 13,000추천메뉴 : 피쉬앤칩스 20,000</menu>
+			<lat>37.53374652</lat>
+			<lng>127.0091825</lng>
+			<tip>생 대구를 사용해서 신선한 음식점, 버거도 한우를 사용</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>프랑스</thema>
+			<name>도르프</name>
+			<tel>02-797-7870</tel>
+			<address1>서울특별시 용산구 독서당로20길 9</address1>
+			<address2>1층 (한남동)</address2>
+			<menu>주요메뉴 : 머쉬룸파이16,000, 어니언수프 12,000, 꼬꼬뱅 25,000추천메뉴 : 꼬꼬뱅 25,000</menu>
+			<lat>37.53359876</lat>
+			<lng>127.0091463</lng>
+			<tip>프랑스 가정식 요리를 맛볼 수 있는 음식점</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>유럽</thema>
+			<name>아벡누</name>
+			<tel>02-749-7303</tel>
+			<address1>서울특별시 용산구 독서당로29길 5-6</address1>
+			<address2>2층 (한남동)</address2>
+			<menu>주요메뉴 : 꼬꼬뱅 18,000, 까비요 코코트 20,000, 제스퍼 스테이크 32,000추천메뉴 : 제스퍼 스테이크 32,000</menu>
+			<lat>37.53695027</lat>
+			<lng>127.0115182</lng>
+			<tip>유러피안 키친</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>이탈리아</thema>
+			<name>스티키팟한남점</name>
+			<tel>02-795-6255</tel>
+			<address1>서울특별시 용산구 독서당로29길 5-6</address1>
+			<address2>2층 (한남동)</address2>
+			<menu>주요메뉴 : 스티키팟 그릴치킨 25,000, 블랙 프라이드 키친 23,000, 연근칩 트러플 버섯크림 파스타 16,000추천메뉴 : 연근칩 트러플 버섯크림 파스타 16,000</menu>
+			<lat>37.53695027</lat>
+			<lng>127.0115182</lng>
+			<tip>이색 치킨(새롭게 선보이는 이색스타일 치킨, 부띠크 치킨과 펍의 조화)</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>터키</thema>
+			<name>미스터케밥 본점</name>
+			<tel>070-7758-1997</tel>
+			<address1>서울특별시 용산구 이태원로 191</address1>
+			<address2>1~2층 (이태원동)</address2>
+			<menu>주요메뉴 : 터키 케밥 닭고기 5,500, 점보 케밥 양고기 7,000, 필라프 케밥 양고기 9,000, 치즈 토스트 케밥 닭고기 7,500, 팔라펠 랩 6,500 추천메뉴 : 터키 케밥 닭고기 5,500</menu>
+			<lat>37.53477753</lat>
+			<lng>126.9952978</lng>
+			<tip>다양한 터키 케밥과 할랄 음식의 대표적 음식점</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>터키</thema>
+			<name>미스터케밥 2호점</name>
+			<tel>070-7532-1997</tel>
+			<address1>서울특별시 용산구 우사단로 42</address1>
+			<address2>(이태원동)</address2>
+			<menu>주요메뉴 : 터키 케밥 닭고기 5,500, 점보 케밥 믹스 닭 양고기 8,000, 박스 케밥 닭고기 7,500, 치즈 토스트 케밥 양고기 8,000, 팔라펠 랩 6,500추천메뉴 : 점보 케밥 믹스 닭&amp;amp;양고기 8,000</menu>
+			<lat>37.53395223</lat>
+			<lng>126.995764</lng>
+			<tip>다양한 터키 케밥과 할랄 음식의 대표적 음식점</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>터키</thema>
+			<name>술탄베이케밥</name>
+			<tel>02-749-3890</tel>
+			<address1>서울특별시 용산구 보광로 126</address1>
+			<address2>(이태원동)</address2>
+			<menu>주요메뉴 : 터키 케밥 닭고기 5,500, 톰빅 케밥 양고기 7,000, 이네골 케밥 9,900, 라흐마준 랩 9,900, 술탄피데 10,900추천메뉴 : 이네골 케밥 9,900</menu>
+			<lat>37.53402424</lat>
+			<lng>126.9942253</lng>
+			<tip>다양한 터키 케밥과 할랄 음식의 대표적 음식점</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>미국</thema>
+			<name>디트로이트</name>
+			<tel>02-792-1231</tel>
+			<address1>서울특별시 용산구 이태원로19길 20</address1>
+			<address2>1층 (이태원동)</address2>
+			<menu>주요메뉴 : 피자 19,800~27,800, 파스타 9,800~12,000, 샐러드 9,800~13,000추천메뉴 : 피자 19,800~27,800</menu>
+			<lat>37.53533596</lat>
+			<lng>126.9918944</lng>
+			<tip>담백한 시카고 피자와 파스타</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>이탈리아</thema>
+			<name>오마일</name>
+			<tel>02-796-0258</tel>
+			<address1>서울특별시 용산구 독서당로 70</address1>
+			<address2>(한남동)</address2>
+			<menu>주요메뉴 : block pane 27,900, 김치볶음밥 13,000, 떡볶이 15,000추천메뉴 : block pane 27,900</menu>
+			<lat>37.53359879</lat>
+			<lng>127.0086982</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>중국</thema>
+			<name>웨스턴차이나</name>
+			<tel>02-795-6751</tel>
+			<address1>서울특별시 용산구 독서당로 73</address1>
+			<address2>(한남동, 성아맨숀)</address2>
+			<menu>주요메뉴 : 짜장면 6,000, 하얀삼선짬뽕 8,000, 해물야채소면 8,000추천메뉴 : 하얀삼선짬뽕 8,000</menu>
+			<lat>37.53419708</lat>
+			<lng>127.008386</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>베트남</thema>
+			<name>굿모닝베트남</name>
+			<tel>02-797-3933</tel>
+			<address1>서울특별시 용산구 독서당로 73</address1>
+			<address2>1층 (한남동, 성아맨숀)</address2>
+			<menu>주요메뉴 : 소고기 볶음면 12,000, 해산물 볶음밥 11,500, 안심쌀국수 9,500추천메뉴 : 소고기 볶음면 12,000</menu>
+			<lat>37.53419708</lat>
+			<lng>127.008386</lng>
+			<tip>수입한는 건면과 달리 저희업소는 생면을 씁니다</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>일본</thema>
+			<name>함바그또카레야</name>
+			<tel>02-793-8582</tel>
+			<address1>서울특별시 용산구 독서당로 76</address1>
+			<address2>(한남동)</address2>
+			<menu>주요메뉴 : 함박스테이크 10,000, 일본식카레 7,000, 함박스테이크 카레 12,500추천메뉴 : 함박스테이크 10,000</menu>
+			<lat>37.53392312</lat>
+			<lng>127.0090739</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>이탈리아</thema>
+			<name>퀸스파크 한남점</name>
+			<tel>02-796-9580</tel>
+			<address1>서울특별시 용산구 독서당로 80</address1>
+			<address2>1~2층 (한남동)</address2>
+			<menu>주요메뉴 : 파이어 온더 스테이크 38,000, 꽃게 파스타 24,500, 해산물 파스타 스튜 20,500추천메뉴 : 꽃게파스타 24,500</menu>
+			<lat>37.53401319</lat>
+			<lng>127.0094676</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>인도</thema>
+			<name>챠크라</name>
+			<tel>02-796-2255</tel>
+			<address1>서울특별시 용산구 독서당로 83</address1>
+			<address2>(한남동)</address2>
+			<menu>주요메뉴 : 사모사 9,900, 탄두리 치킨 9,900, 카레 13,200추천메뉴 : 사모사 9,900</menu>
+			<lat>37.53449611</lat>
+			<lng>127.0096849</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>이탈리아</thema>
+			<name>아날로그키친</name>
+			<tel>02-749-2927</tel>
+			<address1>서울특별시 용산구 독서당로 67</address1>
+			<address2>(한남동)</address2>
+			<menu>주요메뉴 : 베이컨 오일 파스타 13,000, 까르보나라 13,000, 토마토아라비아파스타 13,000추천메뉴 : 베이컨오일파스타 13,000</menu>
+			<lat>37.5338367</lat>
+			<lng>127.0081461</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>미국</thema>
+			<name>바나나그릴</name>
+			<tel>02-792-3088</tel>
+			<address1>서울특별시 용산구 독서당로 67</address1>
+			<address2>(한남동)</address2>
+			<menu>주요메뉴 : 베이컨 오일 파스타 13,000, 까르보나라 13,000, 토마토아라비아파스타 13,000추천메뉴 : 베이컨오일파스타 13,000</menu>
+			<lat>37.5338367</lat>
+			<lng>127.0081461</lng>
+			<tip>아메리칸 스타일의 수제버거집입니다</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>베트남</thema>
+			<name>사이공그릴</name>
+			<tel>02-749-7783</tel>
+			<address1>서울특별시 용산구 독서당로 67</address1>
+			<address2>2층 (한남동)</address2>
+			<menu>주요메뉴 : 소고기 쌀국수 9,500, 닭고기 볶음밥 12,000, 짜죠 7,000추천메뉴 : 닭고기 볶음밥 12,000</menu>
+			<lat>37.5338367</lat>
+			<lng>127.0081461</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>베트남</thema>
+			<name>타마린드</name>
+			<tel>02-794-8780</tel>
+			<address1>서울특별시 용산구 대사관로5길 12</address1>
+			<address2>1층 (한남동)</address2>
+			<menu>주요메뉴 : 월남쌈 24,000, 소고기쌀국수 13,000, 탕수갈비 26,000추천메뉴 : 월남쌈 24,000</menu>
+			<lat>37.53484249</lat>
+			<lng>127.0008599</lng>
+			<tip>월남쌈과 베트남 파스타가 맛있는 집</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>미국</thema>
+			<name>샐러드셀러</name>
+			<tel>02-794-0282</tel>
+			<address1>서울특별시 용산구 대사관로5길 28</address1>
+			<address2>2층 (한남동)</address2>
+			<menu>주요메뉴 : 아보카도 샐러드 12,500, 케일코코6,500, 치폴레 수프 6,500추천메뉴 : 아보카도 샐러드 12,500</menu>
+			<lat>37.53544436</lat>
+			<lng>127.0003937</lng>
+			<tip>우리는 신선한 재료로 직접 샐러드를 만들고 샐러드 드레싱과 샌드위치 스프레드, 리코타 치즈 등을 직접 만들어 사용하고 있습니다</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>일본</thema>
+			<name>42사이</name>
+			<tel>02-790-1142</tel>
+			<address1>서울특별시 용산구 독서당로 116</address1>
+			<address2>지하1층 (한남동)</address2>
+			<menu>주요메뉴 : 생강돼지 구이 참나문 28,000, 가지말이 커틀릿 25,000, 유자마요 광어 30,000추천메뉴 : 생강돼지 구이 참나문 28,000</menu>
+			<lat>37.53641682</lat>
+			<lng>127.0121563</lng>
+			<tip>신선한 제철 식자제를 사용하는 음식점</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>일본</thema>
+			<name>야스라기</name>
+			<tel>02-749-5675</tel>
+			<address1>서울특별시 용산구 독서당로 39</address1>
+			<address2>1층 (한남동, 신성미소시티)</address2>
+			<menu>주요메뉴 : 스끼야끼(2인분) 10,000, 오마카세 요리 50,000, 오꼬노미야끼 12,000추천메뉴 : 오마카세 요리 50,000</menu>
+			<lat>37.53159508</lat>
+			<lng>127.0070009</lng>
+			<tip>오사카 요리의 맛집</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>일본</thema>
+			<name>81번옥</name>
+			<tel>070-8119-6770</tel>
+			<address1>서울특별시 용산구 대사관로34길 74</address1>
+			<address2>1층 (한남동)</address2>
+			<menu>주요메뉴 : 소유 7,000, 미소 8,000, 탄탄멘 9,000, 점보라멘 20,000추천메뉴 : 소유7,000</menu>
+			<lat>37.53012828</lat>
+			<lng>127.0065211</lng>
+			<tip>소유,  미소가 유명한 맛집(점보라멘)</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>중국</thema>
+			<name>래리성</name>
+			<tel>02-795-1378</tel>
+			<address1>서울특별시 용산구 대사관로34길 66</address1>
+			<address2>2층 (한남동)</address2>
+			<menu>주요메뉴 : 오룡해삼 56,000, 양장피 29,000, 굴짬뽕 7,000추천메뉴 : 오룡해삼 56,000</menu>
+			<lat>37.53034453</lat>
+			<lng>127.006322</lng>
+			<tip>오룡해삼과 양장피가 맛있는 집</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>페루</thema>
+			<name>티그레</name>
+			<tel>02-790-4511</tel>
+			<address1>서울특별시 용산구 대사관로31길 31</address1>
+			<address2>1층 (한남동)</address2>
+			<menu>주요메뉴 : 세비체 12,000, 차우파 19,000, 안티쿠쵸 15,000추천메뉴 : 세비체 12,000</menu>
+			<lat>37.53477387</lat>
+			<lng>127.0058246</lng>
+			<tip>페루음식입니다</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>미국</thema>
+			<name>세컨드키친 한남</name>
+			<tel>02-794-7435</tel>
+			<address1>서울특별시 용산구 한남대로18길 22</address1>
+			<address2>1~2층 (한남동)</address2>
+			<menu>주요메뉴 : 브런치(음료,디저트) 24,500, 낫 길티 플레져 코스 55,000, 낫 길티 플레져 코스 디너 66,000, 월도프샐러드 19,000,&lt;br&gt;저온조리삼겹살 34,000, 한우채끝스테이크 45,000추천메뉴 : 낫 길티 플레져 코스 디너 66,000</menu>
+			<lat>37.53439168</lat>
+			<lng>127.0085444</lng>
+			<tip>다양한 국적과 연령이 찾는 뉴아메리칸 다이닝 레스토랑, 매년 1만병정도의 와인을 판매 할만큼 음식과 와인의 페어링으로 유명한 공간이다. 와인과 페어링하기 좋은 다이닝 메뉴는 물론 브런치 메뉴까지 선택의 폭이 넓다. 바닥에서 천장까지 11미터에 달하는 공간감과 시간에 따라 다르게 조명과 음악의 변화로 분위기를 다르게 연출하는 내부신도 독특하다.</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>일본</thema>
+			<name>미카</name>
+			<tel>02-793-7982</tel>
+			<address1>서울특별시 용산구 회나무로 9</address1>
+			<address2>1층 (이태원동)</address2>
+			<menu>주요메뉴 : 와규찹스테이크 25,000, 특선오코노미야끼 18,000, 치킨난방쯔께 18,000추천메뉴 : 와규찹스테이크 25,000</menu>
+			<lat>37.53866932</lat>
+			<lng>126.9878615</lng>
+			<tip>전통일본요리와 현대적인 감각의 퓨전요리</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>일본</thema>
+			<name>오지상함박스테이크</name>
+			<tel>070-4407-0712</tel>
+			<address1>서울특별시 용산구 회나무로 9</address1>
+			<address2>1층 (이태원동)</address2>
+			<menu>주요메뉴 : 오리지널 함바그 12,500, 텐더 함바그13,500 베이컨 토핑 2,000추천메뉴 : 오리지널 함바그 12,500</menu>
+			<lat>37.53866932</lat>
+			<lng>126.9878615</lng>
+			<tip>2011년 오픈하여 매일 매장에서 직접 소고기를 반죽하여 제공하는 함박스테이크 전문점입니다</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>파키스탄</thema>
+			<name>알사바페르시안퀸</name>
+			<tel>02-792-1488</tel>
+			<address1>서울특별시 용산구 회나무로44길 40</address1>
+			<address2>2층 (이태원동)</address2>
+			<menu>주요메뉴 : chana dal curry(병아리콩커리) 12,000, chicken muttani(치킨커리) 18,000, mutton dalfrezy(양고기커리) 19,000추천메뉴 : chana dal curry(병아리콩커리) 12,000</menu>
+			<lat>37.53958167</lat>
+			<lng>126.9953926</lng>
+			<tip>점심메뉴(3~5시) 샐러드, 밥(or로티), 커리 제공, 1979년부터 용산에서 인도, 파키스탄 정통커리 운영</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>유럽</thema>
+			<name>포르게따</name>
+			<tel>02-797-8808</tel>
+			<address1>서울특별시 용산구 회나무로 3</address1>
+			<address2>1층 (이태원동)</address2>
+			<menu>주요메뉴 : chipotle porchetta sandwich(치포틀레뽀르게따샌드위치)9,200, Grilled veggie sandwich(그릴드베지샌드위치) 8,500, basil pesto chicken salad(바질페스토치킨샐러드) 1,500추천메뉴 : chipotle porchetta sandwich(치포틀레뽀르게따샌드위치)9,200 </menu>
+			<lat>37.53858638</lat>
+			<lng>126.9874044</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>일본</thema>
+			<name>이치더힐</name>
+			<tel>02-794-2664</tel>
+			<address1>서울특별시 용산구 회나무로 3</address1>
+			<address2>2층 (이태원동)</address2>
+			<menu>주요메뉴 : 밀푀유나베 30,000, 모듬사시미(1~2인) 39,000, 게살크림고로케 15,000 추천메뉴 : 밀푀유나베 30,000</menu>
+			<lat>37.53858638</lat>
+			<lng>126.9874044</lng>
+			<tip>편안한 좌석과 좋은 서비스!</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>유럽</thema>
+			<name>피어39</name>
+			<tel>02-749-0339</tel>
+			<address1>서울특별시 용산구 회나무로 3</address1>
+			<address2>1층 (이태원동)</address2>
+			<menu>주요메뉴 : 파스타 16,000~, 스테이크 25,000~, 생맥주 10,000, 와인 55,000~ 추천메뉴 : 파스타 16,000</menu>
+			<lat>37.53858638</lat>
+			<lng>126.9874044</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>멕시코</thema>
+			<name>(주)어번그룹 바토스 이태원점</name>
+			<tel>02-797-8226</tel>
+			<address1>서울특별시 용산구 이태원로15길 1</address1>
+			<address2>(이태원동)</address2>
+			<menu>주요메뉴 : 김치 까르니따 프라이스 12,500, 망고 쉬림프 퀘사디아 16,900, &lt;br&gt;칠리 라임 쉬림프 타코(2) 8,900추천메뉴 : 김치 까르니따 프라이스 12,500 </menu>
+			<lat>37.53461864</lat>
+			<lng>126.9901929</lng>
+			<tip>뉴욕타임즈, CNN, 월드스트리트저널에 최고의 레스토랑 소개되고 있습니다 서울 방문시 꼭 들러야하는 레스토랑입니다. 단순한 퓨전이 아니라 자연스럽게 접해온 코리안 멕시칸 서울의 독창적인 음식입니다.</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>이탈리아</thema>
+			<name>고블앤고</name>
+			<tel>02-790-5390</tel>
+			<address1>서울특별시 용산구 이태원로19길 12</address1>
+			<address2>(이태원동)</address2>
+			<menu>주요메뉴 : 오믈렛 18,000, 버거스테이크 17,500 햄치즈 프렌치 토스트 18,000추천메뉴 : 오믈렛 18,000</menu>
+			<lat>37.53499719</lat>
+			<lng>126.9919805</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>세르비아</thema>
+			<name>벨그레이드(Belgrade)</name>
+			<tel>02-796-6933</tel>
+			<address1>서울특별시 용산구 이태원로19길 19</address1>
+			<address2>(이태원동)</address2>
+			<menu>주요메뉴 : 체바피 13,900, 롤치킨 12,900, 벨그레이드 플라터 49,000추천메뉴 : 벨그레이드 플라터 49,000</menu>
+			<lat>37.53526027</lat>
+			<lng>126.9917315</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>이탈리아/일본</thema>
+			<name>스탠다드키친</name>
+			<tel>02-795-3375</tel>
+			<address1>서울특별시 용산구 한남대로 164</address1>
+			<address2>1층 (한남동)</address2>
+			<menu>주요메뉴 : 안심크림 리구또 22,500, 아스파라거스오일파스타 18,500, 햄버그라이스 15,500추천메뉴 : 아스파라거스 오일 파스타 18,500</menu>
+			<lat>37.54255503</lat>
+			<lng>127.0024758</lng>
+			<tip>이탈리아&amp;일본 가정식</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>이탈리아</thema>
+			<name>두에꼬제</name>
+			<tel>02-795-1405</tel>
+			<address1>서울특별시 용산구 한남대로 60</address1>
+			<address2>S동 1층 (한남동, 금호리첸시아)</address2>
+			<menu>주요메뉴 : 고르곤졸라 피자 26,000, 루에꼬제피자 23,000,  할라피뇨 파스타 14,000, 게살크림파스타 16,000추천메뉴 : 고르곤졸라피자 26,000</menu>
+			<lat>37.53446021</lat>
+			<lng>127.0078747</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>멕시코</thema>
+			<name>도스타코스</name>
+			<tel>02-797-8525</tel>
+			<address1>서울특별시 용산구 한남대로18길 26</address1>
+			<address2>지하1층 (한남동)</address2>
+			<menu>주요메뉴 : 소프트타코 9,500, 고기라이스부리또 8,500, 나초피에스타 9,500추천메뉴 : 소프트타코 9,500</menu>
+			<lat>37.53454304</lat>
+			<lng>127.0086531</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>이탈리아</thema>
+			<name>갈로(Gallo)</name>
+			<tel>02-793-8885</tel>
+			<address1>서울특별시 용산구 한남대로18길 26</address1>
+			<address2>(한남동)</address2>
+			<menu>주요메뉴 : napoli pizza 11,000~25,000, pasta 17,000, stake 35,000추천메뉴 : napoli pizza 11,000~25,000</menu>
+			<lat>37.53454304</lat>
+			<lng>127.0086531</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>이탈리아</thema>
+			<name>도마622</name>
+			<tel>02-793-9288</tel>
+			<address1>서울특별시 용산구 한남대로20길 21-13</address1>
+			<address2>지하1~2층 (한남동)</address2>
+			<menu>주요메뉴 : 마레샐러드 38,000, 라구파스타 27,000, 한우오미자초밥 28,000, 봉골레파스타 28,000추천메뉴 : 봉골레파스타 28,000</menu>
+			<lat>37.53538997</lat>
+			<lng>127.0088342</lng>
+			<tip>한남동 핫플레이스, 이탈리아 정통레스토랑 도마622</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>일본</thema>
+			<name>마인드</name>
+			<tel>02-797-9216</tel>
+			<address1>서울특별시 용산구 한남대로20길 36</address1>
+			<address2>1층 (한남동)</address2>
+			<menu>주요메뉴 : 사시미 77,000, 한우채끝스테이크 43,000, 광어오리 말이 40,000추천메뉴 : 사시미 77,000</menu>
+			<lat>37.53484577</lat>
+			<lng>127.0087979</lng>
+			<tip>한국을 대표하는 맛집평가서 BLUE RIBBORN SURVEY에 등재된 식당입니다. 오뎅바가 유명하며 영어 메뉴판이 준비되어 있고 맛과 분위기가 검증된 식당입니다. BLUE RIBBORN SURVEY는 대한민국 대표 식당을 소개하는 곳입니다.</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>이탈리아</thema>
+			<name>리스퀘어</name>
+			<tel>02-797-7874</tel>
+			<address1>서울특별시 용산구 한남대로20길 61</address1>
+			<address2>지하1층 (한남동)</address2>
+			<menu>주요메뉴 : 샤또브리앙스테이크 58,000, 런치코스메뉴 45,000, 콥샐러드 21,000추천메뉴 : 샤또브리앙스테이크 58,000</menu>
+			<lat>37.53494296</lat>
+			<lng>127.0102326</lng>
+			<tip>국내상 최상급 숙성한우 암소 스테이크</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>유럽</thema>
+			<name>그린바스켓</name>
+			<tel>02-749-5055</tel>
+			<address1>서울특별시 용산구 한남대로21길 24</address1>
+			<address2>지하1층 (한남동)</address2>
+			<menu>주요메뉴 : Bretticus salad 13,500, 버섯크림파스타 10,500, 닭가슴살샌드위치&amp;amp;미니샐러드 8,500
+추천메뉴 : Bretticus salad 13,500</menu>
+			<lat>37.53383682</lat>
+			<lng>127.0061639</lng>
+			<tip>고객들이 골라먹는 샐러드(자기만의 샐러드)</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>일본</thema>
+			<name>코쿠라</name>
+			<tel>02-6013-8012</tel>
+			<address1>서울특별시 용산구 한남대로27가길 32</address1>
+			<address2>1층 (한남동)</address2>
+			<menu>주요메뉴 : 돼지생강구이(부타쇼가야끼)13,000, 메로조림 17,000,&lt;br&gt;새우갈릭버터구이(에비갈릭버터야끼) 16,000추천메뉴 : 돼지생강구이(부타쇼가야끼)13,000</menu>
+			<lat>37.53810409</lat>
+			<lng>127.0025662</lng>
+			<tip>한강진역에서 가까운 한남동 일본일식주점, 식사처입니다</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>이탈리아</thema>
+			<name>엘본더테이블 이태원점</name>
+			<tel>02-790-0700</tel>
+			<address1>서울특별시 용산구 이태원로 270</address1>
+			<address2>(한남동)</address2>
+			<menu>주요메뉴 : Lunch A(스테이크 메인 디쉬 제공) 50,000, B 65,000, Dinner set(스테이크 메인 디쉬 제공) 85,000추천메뉴 : Lunch A(스테이크 메인 디쉬 제공) 50,000, B 65,000</menu>
+			<lat>37.53846089</lat>
+			<lng>127.0020367</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>중국</thema>
+			<name>챠이(Chai)797이태원점</name>
+			<tel>02-749-7972</tel>
+			<address1>서울특별시 용산구 이태원로 270</address1>
+			<address2>(한남동)</address2>
+			<menu>주요메뉴 : 쇼마이(딤섬) 8,000, 북경식 탕수육 25,000, 호두줄 크림 새우 35,000추천메뉴 : 북경식 탕수육 25,000</menu>
+			<lat>37.53846089</lat>
+			<lng>127.0020367</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>이탈리아</thema>
+			<name>베라나폴리</name>
+			<tel>02-796-7223</tel>
+			<address1>서울특별시 용산구 이태원로 272</address1>
+			<address2>(한남동)</address2>
+			<menu>주요메뉴 : 마르게리따 19,500, 마리나라 14,000, 안심스테이크 47,000추천메뉴 : 마르게리따 19,500</menu>
+			<lat>37.53871317</lat>
+			<lng>127.0020774</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>이탈리아</thema>
+			<name>패션5라뜰리에</name>
+			<tel>02-2071-9507</tel>
+			<address1>서울특별시 용산구 이태원로 272</address1>
+			<address2>(한남동)</address2>
+			<menu>주요메뉴 : 레몬치킨 샐러드 15,000, 뚝배기 파스타 24,000, 데미그라소스 쥬시비프 25,000추천메뉴 : 뚝배기 파스타 24,000</menu>
+			<lat>37.53871317</lat>
+			<lng>127.0020774</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>미국</thema>
+			<name>아피아</name>
+			<tel>02-6497-1100</tel>
+			<address1>서울특별시 용산구 이태원로 143-10</address1>
+			<address2>(이태원동)</address2>
+			<menu>주요메뉴 : Choppen salad 19,500, BBQ pork belly 45,000, marinated ouves 9,500추천메뉴 : BBQ pork belly 45,000</menu>
+			<lat>37.53467985</lat>
+			<lng>126.9895231</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>이탈리아</thema>
+			<name>스매싱펍</name>
+			<tel>02-797-2231</tel>
+			<address1>서울특별시 용산구 이태원로 145</address1>
+			<address2>(이태원동)</address2>
+			<menu>주요메뉴 : 고르곤졸라 23,000, 치즈칠리새우튀김 24,000, 소시지 23,000추천메뉴 : 고르곤졸라 23,000</menu>
+			<lat>37.53458978</lat>
+			<lng>126.9899077</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>태국</thema>
+			<name>왕타이</name>
+			<tel>02-749-2746~7</tel>
+			<address1>서울특별시 용산구 이태원로 151</address1>
+			<address2>(이태원동)</address2>
+			<menu>주요메뉴 : 똠양꿍 16,000, 팥타이꿍 14,000, 뿌팥퐁가리 28,000추천메뉴 : 똠양꿍 16,000</menu>
+			<lat>37.53448173</lat>
+			<lng>126.9907224</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>인도</thema>
+			<name>아그라(Agra)</name>
+			<tel>070-8230-4230</tel>
+			<address1>서울특별시 용산구 이태원로 153</address1>
+			<address2>(이태원동)</address2>
+			<menu>주요메뉴 : 탄두리치킨 21,800, 허니 망고 브레드, 흑임자 어쉬룸 브레드 21,800, 각종 커리 18,700추천메뉴 : 탄두리치킨 21,800</menu>
+			<lat>37.53459708</lat>
+			<lng>126.9909894</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>미국</thema>
+			<name>(주)오리지널팬케이크하우스(이태원점)</name>
+			<tel>02-795-7481</tel>
+			<address1>서울특별시 용산구 이태원로 153</address1>
+			<address2>(이태원동)</address2>
+			<menu>주요메뉴 : 애플팬케이크 20,000 터치베이비 16,000 치킨텐더스트립 8,000추천메뉴 : 더치베이비 16000원 / 프라이드 치킨 와플 18000원</menu>
+			<lat>37.53459708</lat>
+			<lng>126.9909894</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>브라질</thema>
+			<name>따봉브라질(TABOMBRAZIL)</name>
+			<tel>02-797-3363</tel>
+			<address1>서울특별시 용산구 이태원로 161</address1>
+			<address2>(이태원동)</address2>
+			<menu>주요메뉴 : 무제한 고기리필(제한시간 2시간) 31,900, 카스 무제한 7,900추천메뉴 : 무제한 고기리필(제한시간 2시간) 31,900</menu>
+			<lat>37.53453947</lat>
+			<lng>126.9918131</lng>
+			<tip>7가지 고기와 파인애플을 무제한으로 즐길 수 있습니다. 고기는 항상 옳아요.</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>미국</thema>
+			<name>에이치엘씨(유)</name>
+			<tel>02-793-0802</tel>
+			<address1>서울특별시 용산구 이태원로 179</address1>
+			<address2>(이태원동)</address2>
+			<menu>주요메뉴 : 사천치킨 16,900, 몽골리아비프 19,500, 스윗 스파이시 랍스타 80,000추천메뉴 : 사천치킨 16,900</menu>
+			<lat>37.5348135</lat>
+			<lng>126.9937364</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>미국</thema>
+			<name>라일리스탭하우스(주)</name>
+			<tel>02-792-6590</tel>
+			<address1>서울특별시 용산구 이태원로 187</address1>
+			<address2>(이태원동)</address2>
+			<menu>주요메뉴 : 포크김치나초 12,000, 스카치에그 12,000, 라일리스립플래터 17,000추천메뉴 : 포크김치나초 12,000</menu>
+			<lat>37.53472705</lat>
+			<lng>126.9947819</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>터키</thema>
+			<name>알리바바</name>
+			<tel>02-790-7754</tel>
+			<address1>서울특별시 용산구 이태원로 203</address1>
+			<address2>(이태원동)</address2>
+			<menu>주요메뉴 : 코샤리 10,000, 팔라펠 10,000, 코프타 17,000추천메뉴 : 코샤리 10,000</menu>
+			<lat>37.53482082</lat>
+			<lng>126.9966193</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>멕시코</thema>
+			<name>온더보더 이태원점</name>
+			<tel>02-792-0682</tel>
+			<address1>서울특별시 용산구 이태원로 211</address1>
+			<address2>(한남동)</address2>
+			<menu>주요메뉴 : 보더샘플러 28,500, 얼티밋화이타 33,500, 더블스텍클럽 퀘사디아 24,500추천메뉴 : 보더샘플러 28,500</menu>
+			<lat>37.53498662</lat>
+			<lng>126.9972755</lng>
+			<tip>신선한 재료와 홈메이드 방식을 추구하는 정통 멕시칸 레스토랑 온더보더(ON THE BORDER)입니다.  서울 속 작은 멕시코로 여러분을 초대합니다</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>태국</thema>
+			<name>(주)타이가든</name>
+			<tel>02-792-8836</tel>
+			<address1>서울특별시 용산구 이태원로 223</address1>
+			<address2>(한남동)</address2>
+			<menu>주요메뉴 : 똠양꿍 16,500, 팟타이꿍 14,300, 푸님팟퐁가리 36,300 추천메뉴 : 똠양꿍 16,500</menu>
+			<lat>37.53547318</lat>
+			<lng>126.9985337</lng>
+			<tip>20년 전통의 태국전문 음식점, 태국보다 더 태국적인 맛을 자랑하는 음식점 </tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>베트남</thema>
+			<name>포호아이태원점</name>
+			<tel>02-792-8866</tel>
+			<address1>서울특별시 용산구 이태원로 227</address1>
+			<address2>(한남동)</address2>
+			<menu>주요메뉴 : 양지 쌀국수 8,500, 차돌박이 쌀국수 8,500, 양지, 차돌박이 쌀국수 8,500추천메뉴 : 양지, 차돌박이 쌀국수 8,500</menu>
+			<lat>37.53563537</lat>
+			<lng>126.998855</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>태국</thema>
+			<name>어메이징타이</name>
+			<tel>02-796-7377</tel>
+			<address1>서울특별시 용산구 이태원로 238</address1>
+			<address2>(한남동)</address2>
+			<menu>주요메뉴 : 똠양꿍 13,000, 팟타이 12,000, 뿌님팟뽕커리 25,000추천메뉴 : 똠양꿍 13,000</menu>
+			<lat>37.53597055</lat>
+			<lng>126.9999728</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>미국</thema>
+			<name>도미니크(dominic)</name>
+			<tel>02-790-7588</tel>
+			<address1>서울특별시 용산구 이태원로 242</address1>
+			<address2>(한남동)</address2>
+			<menu>주요메뉴 : 스테이크 42,000, 크림스핀이치 13,000, 파스타 18,000추천메뉴 : 스테이크 42,000</menu>
+			<lat>37.53625887</lat>
+			<lng>127.000344</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>이탈리아</thema>
+			<name>트레비아(Trevia)</name>
+			<tel>02-795-6004</tel>
+			<address1>서울특별시 용산구 이태원로 247</address1>
+			<address2>(한남동)</address2>
+			<menu>주요메뉴 : Tre di Olori pasta 18,500, Lasagne 14,500, Margherita con Bufala 22,000 추천메뉴 : Tre di Olori pasta 18,500, Lasagne 14,500, Margherita con Bufala 22,000</menu>
+			<lat>37.5369184</lat>
+			<lng>127.000258</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>이탈리아</thema>
+			<name>시화담그릴</name>
+			<tel>02-793-7272</tel>
+			<address1>서울특별시 용산구 이태원로 254</address1>
+			<address2>(한남동)</address2>
+			<menu>주요메뉴 : 김치파스타 12,000, 깔라마리 13,000, 코리안런치 박스 12,000추천메뉴 : 코리안런치 박스 12,000</menu>
+			<lat>37.53722834</lat>
+			<lng>127.0011767</lng>
+			<tip>모던 한식과 와인의 만남</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>일본</thema>
+			<name>라멘81</name>
+			<tel>02-749-6848</tel>
+			<address1>서울특별시 용산구 이태원로 258</address1>
+			<address2>(한남동)</address2>
+			<menu>주요메뉴 : 쇼유 7,000, 미소 8,000, 시오 7,000추천메뉴 : 쇼유 7,000</menu>
+			<lat>37.53750584</lat>
+			<lng>127.0013713</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>이탈리아</thema>
+			<name>핏제리아디부자 2호점</name>
+			<tel>02-795-9474</tel>
+			<address1>서울특별시 용산구 이태원로 267</address1>
+			<address2>르베르지 건물 3층 (한남동)</address2>
+			<menu>주요메뉴 : 부자클리시카 19,600, 라자냐클리시카 21,500, 부자샐러드 14,900추천메뉴 : 부자클리시카 19,600</menu>
+			<lat>37.53849695</lat>
+			<lng>127.0011315</lng>
+			<tip>PIZZERIA D’BUZZA(부자피자)는 최상급에 식재료를 사용하여 만드는 이탈리아 정통방식의 레스토랑입니다. 정통 화덕피자를 누구나 캐쥬얼하고 편하게 즐길 수 있도록 만들었으며 보다 합리적인 가격에 제공해드리고자 합니다.</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>미국</thema>
+			<name>길버트버거앤프라이즈이태원</name>
+			<tel>02-792-7676</tel>
+			<address1>서울특별시 용산구 녹사평대로40길 55-2</address1>
+			<address2>(이태원동)</address2>
+			<menu>주요메뉴 : Mr.프레지던트10,500~12,500, 길버트 10,500~12,500, 칠리치즈프라이즈 11,000추천메뉴 : 길버트 10,500~12,500</menu>
+			<lat>37.53455366</lat>
+			<lng>126.9889393</lng>
+			<tip>미국 본토 버거를 즐길 수 있는 곳</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>홍콩</thema>
+			<name>차찬텡</name>
+			<tel>070-5043-4243</tel>
+			<address1>서울특별시 용산구 녹사평대로46가길 8</address1>
+			<address2>지하1층 (이태원동)</address2>
+			<menu>주요메뉴 : 탄탄면 10,500, 소고기차우펀13,500, 미나춘권 5,000추천메뉴 : 탄탄면 10,500</menu>
+			<lat>37.53692502</lat>
+			<lng>126.9882329</lng>
+			<tip>(차)와 (찬)식사를 함께 즐기는 공간(텡), 홍콩식 누들카페</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>미국</thema>
+			<name>오베이(5Bey)</name>
+			<tel>02-794-5239</tel>
+			<address1>서울특별시 용산구 녹사평대로46길 10</address1>
+			<address2>2층 (이태원동)</address2>
+			<menu>주요메뉴 : 맨하탄버거 10,500, 캡틴아메리카 10,500, 그랜드슬램9,500추천메뉴 : 맨하탄버거 10,500</menu>
+			<lat>37.53726011</lat>
+			<lng>126.9874137</lng>
+			<tip>LA푸드트럭</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>호주</thema>
+			<name>그데이</name>
+			<tel>02-749-0085</tel>
+			<address1>서울특별시 용산구 녹사평대로46길 10</address1>
+			<address2>1층 (이태원동)</address2>
+			<menu>주요메뉴 : vluru Paninni 11,800, Magic Mushroom Jaffle 6,000, Stoned konla Jaffle 5,500추천메뉴 : Magic Mushroom Jaffle 6,000</menu>
+			<lat>37.53726011</lat>
+			<lng>126.9874137</lng>
+			<tip>Austrain style의 샌드위치 카페입니다</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>이탈리아</thema>
+			<name>빌리스테이블</name>
+			<tel>02-790-3312</tel>
+			<address1>서울특별시 용산구 녹사평대로46길 16-4</address1>
+			<address2>1층 (이태원동)</address2>
+			<menu>주요메뉴 : 시금치피자 21,000, 새우크림파스타 19,500, 블루베리리코타샐러드 17,000추천메뉴 : 시금치피자21,000</menu>
+			<lat>37.53713401</lat>
+			<lng>126.9877893</lng>
+			<tip>경리단길에서 파스타 제일 잘 하는 집</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>태국</thema>
+			<name>까올리포차나</name>
+			<tel>070-8872-1995</tel>
+			<address1>서울특별시 용산구 녹사평대로52길 7</address1>
+			<address2>1층 (이태원동)</address2>
+			<menu>주요메뉴 : 팟타이 10,000~12,000, 똠양꿍 18,000, 탈데팟퐁가리 25,000추천메뉴 : 탈데팟퐁가리 25,000</menu>
+			<lat>37.5391198</lat>
+			<lng>126.9876668</lng>
+			<tip>이태원 태국 음식 전문점</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>일본</thema>
+			<name>맷크로켓</name>
+			<tel>02-790-0123</tel>
+			<address1>서울특별시 용산구 녹사평대로54길 16</address1>
+			<address2>1층 (이태원동)</address2>
+			<menu>주요메뉴 : 생선크로켓 4,000, 게살크림크로켓 4,000, 양송이튀김 6,000추천메뉴 : 게살크림크로켓 4,000</menu>
+			<lat>37.53913786</lat>
+			<lng>126.9881013</lng>
+			<tip>홈메이드 형식으로 소스,크로켓 모두 수제로 만들어집니다</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>쿠바</thema>
+			<name>삼이공(320)</name>
+			<tel>02-794-0310</tel>
+			<address1>서울특별시 용산구 녹사평대로54길 17</address1>
+			<address2>1층 (이태원동)</address2>
+			<menu>주요메뉴 : 쿠바노스(쿠바식 소스에 재운 고기가 들어가는 샌드위치) 12,000, 소호샌드위치(햄과 팔라피뇨가 들어가는 샌드위치) 11,000추천메뉴 : 쿠바노스 12,000</menu>
+			<lat>37.53920996</lat>
+			<lng>126.9883049</lng>
+			<tip>영화 `아메리칸 쉐프`에 등장한 쿠바식 샌드위치점</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>그리스</thema>
+			<name>엘그레코스</name>
+			<tel>070-8263-8678</tel>
+			<address1>서울특별시 용산구 녹사평대로54길 23</address1>
+			<address2>1층 (이태원동)</address2>
+			<menu>주요메뉴 : 기로스 플레이트 14,500, 양고기 기로스 피타 11,500, 팔라펠 플레이트 13,500추천메뉴 : 기로스 플레이트 14,500</menu>
+			<lat>37.53916314</lat>
+			<lng>126.9886082</lng>
+			<tip>이태원의 그리스 정통 음식적</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>미국</thema>
+			<name>자매즈(JAMEZ)</name>
+			<tel>02-797-8520</tel>
+			<address1>서울특별시 용산구 우사단로14길 48</address1>
+			<address2>(한남동)</address2>
+			<menu>주요메뉴 : 피자 11,000~15,000, 수제버거 10,000~16,000, 샐러드 10,000추천메뉴 : 피자 11,000~15,000</menu>
+			<lat>37.53421538</lat>
+			<lng>126.9983119</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>이탈리아</thema>
+			<name>로얄맨션</name>
+			<tel>02-792-2655</tel>
+			<address1>서울특별시 용산구 유엔빌리지길 11</address1>
+			<address2>2층 (한남동, TWIN VILL)</address2>
+			<menu>주요메뉴 : 한우스테이크 39,000, 리코타 샐러드 피자 21,000, 흑임자 크림소스 19,500추천메뉴 : 한우스테이크 39,000</menu>
+			<lat>37.53398428</lat>
+			<lng>127.0103954</lng>
+			<tip>한남동 유엔빌리지 내 위치 편안한 공간에서 퓨전 이탈리안을 즐기실 수 있습니다.</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>미국</thema>
+			<name>지노스 피자(Gino`s Pizza)</name>
+			<tel>02-792-2234</tel>
+			<address1>서울특별시 용산구 녹사평대로40길 46</address1>
+			<address2>(이태원동)</address2>
+			<menu>주요메뉴 : 페페로니 20,000~28,000, 뉴욕스프링 28,000~40,000, 브루클린베스트 28,000~40,000추천메뉴 : 뉴욕스프링 28,000~40,000</menu>
+			<lat>37.53439861</lat>
+			<lng>126.9882107</lng>
+			<tip>Gino`s NewYork Pizza</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>미국</thema>
+			<name>매니멀스모크하우스</name>
+			<tel>02-790-6788</tel>
+			<address1>서울특별시 용산구 녹사평대로40길 47</address1>
+			<address2>2층 (이태원동)</address2>
+			<menu>주요메뉴 : 세트(브리스킷, 풀드포크, 치킨, 립, 안두이소시지, 맥앳치즈, 허니버터) 1인당 20,000추천메뉴 : 세트(브리스킷, 풀드포크, 치킨, 립, 안두이소시지, 맥앳치즈, 허니버터) 1인당 20,000</menu>
+			<lat>37.53452117</lat>
+			<lng>126.9884731</lng>
+			<tip>미국식 전총 훈연 바비큐</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>태국</thema>
+			<name>(주)부다스벨리</name>
+			<tel>02-796-9330</tel>
+			<address1>서울특별시 용산구 녹사평대로40길 48</address1>
+			<address2>1~2층 (이태원동)</address2>
+			<menu>주요메뉴 : 파타이 11,000, 푸닝팟퐁가리 33,000, 똠양꿍 17,600추천메뉴 : 파타이 11,000</menu>
+			<lat>37.53439142</lat>
+			<lng>126.9883781</lng>
+			<tip>아름다운 뷰와 분위기를 느낄 수 있는 타이레스토랑</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>스페인</thema>
+			<name>따뻬오(Tapeo)</name>
+			<tel>02-794-2848</tel>
+			<address1>서울특별시 용산구 녹사평대로40길 52</address1>
+			<address2>1층 (이태원동)</address2>
+			<menu>주요메뉴 : 빠에야 20,000~58,000, 이베리코되지목살구이 20,000, 감바스 알 아히요 14,000추천메뉴 : 빠에야 20,000~58,000</menu>
+			<lat>37.5343554</lat>
+			<lng>126.9885727</lng>
+			<tip>스페니쉬 타파스바</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>독일</thema>
+			<name>써스티 몽크 이태원점</name>
+			<tel>02-792-6751</tel>
+			<address1>서울특별시 용산구 녹사평대로40길 52</address1>
+			<address2>1층 (이태원동)</address2>
+			<menu>주요메뉴 : Haxen(학센) 3,400, Monk plate(몽크플레이트) 3,600, Weihenstephan Hefeweissbier(바이엔슈테판 헤페바이스비어) 9,500, Weihenstephan Dunkelweissbier(바이엔슈테판 둔켈바이스비어) 9,500 추천메뉴 : Weihenstephan Hefeweissbier(바이엔슈테판 헤페바이스비어) 9,500</menu>
+			<lat>37.5343554</lat>
+			<lng>126.9885727</lng>
+			<tip>1000년 역사의 독일 정통 바이엔슈테판 맥주</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>미국</thema>
+			<name>킨덜스</name>
+			<tel>02-720-2550</tel>
+			<address1>서울특별시 용산구 녹사평대로40길 52</address1>
+			<address2>지하1층 (이태원동)</address2>
+			<menu>주요메뉴 : Fours 플래더 34,900, 킨덜스 버거 11,900, 스테이크샌드위치 13,500, 스피나지앤치즈 8,900 추천메뉴 : Fours 플래더 34,900</menu>
+			<lat>37.5343554</lat>
+			<lng>126.9885727</lng>
+			<tip>전통 오리지널 BBQ&amp;Grill 레스토랑</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>베트남</thema>
+			<name>포88(Pho88)</name>
+			<tel>02-790-8338</tel>
+			<address1>서울특별시 용산구 녹사평대로32길 39</address1>
+			<address2>1층 (이태원동)</address2>
+			<menu>주요메뉴 : 베트남쌀국수 6,000, 갈비밥 6,000, 반미 5,000, 짜조 3,500추천메뉴 : 베트남 쌀국수 6,000 </menu>
+			<lat>37.53308337</lat>
+			<lng>126.990718</lng>
+			<tip>베트남 쌀국수, 가성비</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>요르단</thema>
+			<name>페트라</name>
+			<tel>02-790-4433</tel>
+			<address1>서울특별시 용산구 녹사평대로40길 33</address1>
+			<address2>(이태원동)</address2>
+			<menu>주요메뉴 : 팔라펠 11,000, 타볼리샐러드 7,000, 라이스 양갈비케밥 24,000 양고기 비리아니 18,000추천메뉴 : 양고기비리아니 18,000</menu>
+			<lat>37.53465445</lat>
+			<lng>126.9877218</lng>
+			<tip>신선한 아라빅 할랄음식을 제공하는 집</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>멕시코</thema>
+			<name>코레아노스키친</name>
+			<tel>02-795-4427</tel>
+			<address1>서울특별시 용산구 녹사평대로40길 46</address1>
+			<address2>지하1층~1층 (이태원동)</address2>
+			<menu>주요메뉴 : Three wise fries 12,000, Chicken quesadilla 9,500, Todos burrito 12,000추천메뉴 : Three wise fries 12,000</menu>
+			<lat>37.53439861</lat>
+			<lng>126.9882107</lng>
+			<tip>미국 텍사스주 인기 푸드트럭 한국상륙! 최고의 멕시칸 요리를 만나보세요!</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>멕시코</thema>
+			<name>불앤배럴(BULL&amp;BARREL)</name>
+			<tel>02-797-7703</tel>
+			<address1>서울특별시 용산구 녹사평대로32길 28</address1>
+			<address2>(이태원동)</address2>
+			<menu>주요메뉴 : Chicken Quesadilla 12,000, Naughty Nachos Beef 15,500,&lt;br&gt;Naughty Nachos chicken 14,000, Enchiladas 14,000, Big Boy Burrito 15,000추천메뉴 : Big Boy Burrito 15,000</menu>
+			<lat>37.53337887</lat>
+			<lng>126.99027</lng>
+			<tip>분위기와 친절한 직원이 생맥주와 멕시코음식을 제공하는 집</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>이탈리아</thema>
+			<name>어썸레스토랑</name>
+			<tel>070-4131-2162</tel>
+			<address1>서울특별시 용산구 녹사평대로32길 36</address1>
+			<address2>1층 (이태원동)</address2>
+			<menu>주요메뉴 : 바릴페스토파스타 17,000, 립아이스테이크 35,000, 안심스테이크 39,000추천메뉴 : 안심스테이크 39,000</menu>
+			<lat>37.53318426</lat>
+			<lng>126.9904374</lng>
+			<tip>스테이크 맛집</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>중국</thema>
+			<name>대한각</name>
+			<tel>02-798-9990</tel>
+			<address1>서울특별시 용산구 녹사평대로26길 21</address1>
+			<address2>2층 (이태원동)</address2>
+			<menu>주요메뉴 : 원족 38,000, 소양가지 28,000, 토마토소고기탕면 7,000, 토마토 계란 덮밥 7,000추천메뉴 : 원족 38,000</menu>
+			<lat>37.53087416</lat>
+			<lng>126.9913066</lng>
+			<tip>자영농장 100% 무농약 채소를 사용한 중국요리 전문점</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>우즈베키스탄</thema>
+			<name>라자트(LAZZAT)</name>
+			<tel>02-792-7008</tel>
+			<address1>서울특별시 용산구 녹사평대로32길 15</address1>
+			<address2>2층 (이태원동)</address2>
+			<menu>15주요메뉴 : 솜사(소고기파이) 3,000, 양고기그릴샤실릭 8,000우즈베크 필라프 10,000추천메뉴 : 우즈베크 필라프 10,000 </menu>
+			<lat>37.53367074</lat>
+			<lng>126.9896997</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>이탈리아</thema>
+			<name>룸에이치(Room H)</name>
+			<tel>02-796-5061</tel>
+			<address1>서울특별시 용산구 녹사평대로 248</address1>
+			<address2>1층 (이태원동)</address2>
+			<menu>주요메뉴 : 안심 스테이크(Tenolerloin) 20,000, 갈릭 고르곤 피자 full14,000추천메뉴 : 갈릭 고르곤 피자 14,000</menu>
+			<lat>37.53969282</lat>
+			<lng>126.9875581</lng>
+			<tip>저렴한 음식 가격과 고퀄리티에 음식맛, 고급스러운 분위기 레스토랑</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>멕시코</thema>
+			<name>토마틸로이태원</name>
+			<tel>02-794-9225</tel>
+			<address1>서울특별시 용산구 이태원로27가길 12</address1>
+			<address2>(이태원동)</address2>
+			<menu>주요메뉴 : 타코 11,000, 부리또 13,000, 퀘사디아 13,000, 토스타다 9,500추천메뉴 : 타코 11,000</menu>
+			<lat>37.53517754</lat>
+			<lng>126.9945827</lng>
+			<tip>멕시코 전문점 펍앤그릴 토마틸로</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>베트남</thema>
+			<name>포포유</name>
+			<tel>02-749-8947</tel>
+			<address1>서울특별시 용산구 녹사평대로 246-1</address1>
+			<address2>(이태원동)</address2>
+			<menu>주요메뉴 : 포포유 콤비네이션 12,000, 양지 쌀국수 8,000,  짜조(쌀피고기만두튀김) 6,000, 스프링롤 3,000추천메뉴 : 양지쌀국수 8,000</menu>
+			<lat>37.53962434</lat>
+			<lng>126.9874993</lng>
+			<tip>샌프란시스코의 유명베트남쉐프의 레시피를 받아 미국식 쌀국수를 정성스럽게 만들고 있습니다.</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>미국</thema>
+			<name>예스버거(Yes burger)</name>
+			<tel>02-794-3312</tel>
+			<address1>서울특별시 용산구 녹사평대로 220</address1>
+			<address2>2층 (이태원동)</address2>
+			<menu>주요메뉴 : 오!예스버거 7,700, 로드하우스 10,000, 더 젠틀맨 10,000추천메뉴 : 더 젠틀맨 10,000</menu>
+			<lat>37.53722403</lat>
+			<lng>126.9870471</lng>
+			<tip>맛있는 수제버거와 간단하게 맥주한잔하기 좋은집</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>쿠바</thema>
+			<name>더버뮤다</name>
+			<tel>02-749-9447</tel>
+			<address1>서울특별시 용산구 녹사평대로 168-6</address1>
+			<address2>(이태원동)</address2>
+			<menu>주요메뉴 : 모히또(쿠바술) 13,000, 쿠바 리브레(쿠바술) 13,000, 쿠바 샌드위치 16,000추천메뉴 : 쿠바 샌드위치 16,000</menu>
+			<lat>37.53325625</lat>
+			<lng>126.9893558</lng>
+			<tip>단 하나의 쿠바와 남미를 담는 곳</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>멕시코</thema>
+			<name>칠리칠리</name>
+			<tel>02-797-7219</tel>
+			<address1>서울특별시 용산구 녹사평대로 218</address1>
+			<address2>지상 1,2층 (이태원동)</address2>
+			<menu>주요메뉴 : 따코 5,000, 부리또 8,000, 엔칠라다 9,000추천메뉴 : 엔칠라다 9,000</menu>
+			<lat>37.53712312</lat>
+			<lng>126.9870652</lng>
+			<tip>멕시코 대중음식 따코 전문점</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>아랍</thema>
+			<name>아라빅하우스</name>
+			<tel>02-702-6559</tel>
+			<address1>서울특별시 용산구 녹사평대로 218</address1>
+			<address2>지상3층 (이태원동)</address2>
+			<menu>주요메뉴 : 캅사 15,000~16,000, 다우드 바샤 15,000, 아랍커리 18,000추천메뉴 : 캅사 15,000~16,000</menu>
+			<lat>37.53712312</lat>
+			<lng>126.9870652</lng>
+			<tip>정통 아랍 음식을 즐길 수 있는 아라빅하우스!</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>스페인</thema>
+			<name>미마드레</name>
+			<tel>02-790-7875</tel>
+			<address1>서울특별시 용산구 녹사평대로 224-1</address1>
+			<address2>2 층 (이태원동)</address2>
+			<menu>주요메뉴 : 해물치킨빠에야 19,000(1인분), 타파스샘플러 31,000, 상그리아 8,000(1잔)추천메뉴 : 해물치킨빠에야 19,000(1인분)</menu>
+			<lat>37.53773939</lat>
+			<lng>126.986961</lng>
+			<tip>스페인 정통 타파스 바</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>프랑스, 이탈리아</thema>
+			<name>(주)페어몬트인베스트먼트쁘띠발롱경리단</name>
+			<tel>02-790-2277</tel>
+			<address1>서울특별시 용산구 녹사평대로 228-1</address1>
+			<address2>1층 (이태원동)</address2>
+			<menu>주요메뉴 : 런치 2코스 28,000, 33,000, 디너 4코스 44,000~88,000추천메뉴 : 런치 2코스 28,000, 33,000</menu>
+			<lat>37.53799168</lat>
+			<lng>126.9869972</lng>
+			<tip>프렌치 이태리 코스와 다양한 와인이 준비된 프라이빗한 공간</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>일본</thema>
+			<name>아자쓰</name>
+			<tel>070-8849-6922</tel>
+			<address1>서울특별시 용산구 녹사평대로 236</address1>
+			<address2>1층 (이태원동)</address2>
+			<menu>주요메뉴 : 창고나베 29,000, 야끼소바 13,000, 츠쿠네피망 10,000추천메뉴 : 야끼소바 13,000</menu>
+			<lat>37.53871971</lat>
+			<lng>126.9872007</lng>
+			<tip>색다른 일본요리를 드시고 싶다면 아자쓰!</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>멕시코</thema>
+			<name>돈차를리세군도(Don Charly Segundo)</name>
+			<tel>070-4219-4475</tel>
+			<address1>서울특별시 용산구 녹사평대로 238-1</address1>
+			<address2>지상2층 (이태원동)</address2>
+			<menu>주요메뉴 : Alambre(소고기따꼬) 8,000~11,000, Camarones a la crema de chipotle(새우따꼬) 8,000~11,000, La gringa(돼지 치지 또로띠야) 10,000 추천메뉴 : Alambre(소고기따꼬) 8,000~11,000</menu>
+			<lat>37.53884585</lat>
+			<lng>126.9872188</lng>
+			<tip>경리단길 따꼬가 맛있는 집</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>멕시코</thema>
+			<name>빠꼬로꼬(Paco Loco)</name>
+			<tel>070-8821-6445</tel>
+			<address1>서울특별시 용산구 녹사평대로 246</address1>
+			<address2>1층 (이태원동)</address2>
+			<menu>주요메뉴 : 부리또 9,000~, 타코 7,000~, 퀘사디아 11,000추천메뉴 : 퀘사디아 11,000~ </menu>
+			<lat>37.53954866</lat>
+			<lng>126.9874766</lng>
+			<tip>경리단길 아담한 타코 집</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>미국</thema>
+			<name>케이번버거 이태원</name>
+			<tel>02-790-4948</tel>
+			<address1>서울특별시 용산구 녹사평대로 168</address1>
+			<address2>지상1층 (이태원동)</address2>
+			<menu>주요메뉴 : 케이번 치즈 버거 11,300, 케이번 베이컨 치즈 버거 13,400, 케이번 베이컨 치즈 에그 버거 13,900, 케이번 버거 9,800 추천메뉴 : 케이번 치즈 버거 11,300</menu>
+			<lat>37.5333211</lat>
+			<lng>126.989125</lng>
+			<tip>빵, 패티, 소스를 직접 만드는 버거집</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>노르웨이, 이탈리아</thema>
+			<name>살모니스트</name>
+			<tel>02-749-7918</tel>
+			<address1>서울특별시 용산구 이태원로20가길 7-5</address1>
+			<address2>지하1층 (이태원동)</address2>
+			<menu>주요메뉴 : 연어파스타 19,000, 연어피자 15,000추천메뉴 : 연어파스타 19,000</menu>
+			<lat>37.53372501</lat>
+			<lng>126.9924241</lng>
+			<tip>특일급 호텔 주방장 출신 2명이 연어를 주제로 만든 분위기 좋은 레스토랑</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>태국</thema>
+			<name>카오산</name>
+			<tel>02-790-7029</tel>
+			<address1>서울특별시 용산구 이태원로20가길 13</address1>
+			<address2>1층 (이태원동)</address2>
+			<menu>주요메뉴 : 푸팟퐁커리(꽃게커리) S 19,000, M 27,000, L 34,000, 똠양꿍 17,000, 파타이 13,000추천메뉴 : 똠양꿍</menu>
+			<lat>37.53358448</lat>
+			<lng>126.9929219</lng>
+			<tip>태국 유명 호텔 조리장분께 음식을 전수받아 태국 맛에 가깝게 연출. 꽃게커리 등. 한국인 입맛을 사로잡는 음식이 많습니다.</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>나이지리아</thema>
+			<name>해피홈레스토랑(Happy Home Restaurant)</name>
+			<tel>02-797-3185</tel>
+			<address1>서울특별시 용산구 이태원로20길 2-10</address1>
+			<address2>2층 (이태원동)</address2>
+			<menu>주요메뉴 : Egusi soup 8,000, Tomato soup 8,000, Jollf Rice 11,000추천메뉴 : Egusi 8,000</menu>
+			<lat>37.53403849</lat>
+			<lng>126.9915008</lng>
+			<tip>서아프리카 전통음식</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>태국</thema>
+			<name>스파이스마켓</name>
+			<tel>02-516-0834</tel>
+			<address1>서울특별시 용산구 이태원로26길 28</address1>
+			<address2>지상2층 (이태원동)</address2>
+			<menu>주요메뉴 : 똠양꿍 12,000~20,000, 솜땀 16,000, 가이수언 13,000, 파치이느아 20,000, 얌문센 16,000추천메뉴:똠양꿍 12,000~20,000</menu>
+			<lat>37.53327097</lat>
+			<lng>126.9935058</lng>
+			<tip>태국 현지 조리사가 조리하는 분위기 좋은 태국 레스토랑</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>미국</thema>
+			<name>시카고</name>
+			<tel>02-794-8120</tel>
+			<address1>서울특별시 용산구 이태원로27가길 37</address1>
+			<address2>지상4,5층 (이태원동)</address2>
+			<menu>주요메뉴 : 시카고 딥디쉬 피자(토마토, 바질, 꽈트로, 디아볼라, 바삭퐁) 20,000~23,000, 바베큐프라이즈 17,000, 떠먹는 찹샐러드 16,000추천메뉴 : "시카고 딥디쉬 피자(토마토, 바질, 꽈트로, 디아볼라, 바삭퐁) 20,000~23,000 "</menu>
+			<lat>37.53487473</lat>
+			<lng>126.9930983</lng>
+			<tip>The original chicago pizza is O.N.L.Y found here</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>브라질</thema>
+			<name>(주)코파카바나그릴</name>
+			<tel>02-796-1660</tel>
+			<address1>서울특별시 용산구 이태원로27가길 41</address1>
+			<address2>지상1,2층 (이태원동)</address2>
+			<menu>주요메뉴 : 무제한 리필 바비큐 29,000(VAT포함) 추천메뉴 : 무제한 리필 바비큐 29,000(VAT포함)</menu>
+			<lat>37.53486751</lat>
+			<lng>126.9930033</lng>
+			<tip>브라질 전통 바베큐요리를 무한으로 즐기세요</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>이탈리아</thema>
+			<name>올드스탠</name>
+			<tel>02-793-3433</tel>
+			<address1>서울특별시 용산구 이태원로27가길 43</address1>
+			<address2>지상1층 (이태원동)</address2>
+			<menu>주요메뉴 : 까르보나라 17,000, 알리오올리오 16,500, 마르케리타 17,000추천메뉴 : 까르보나라 17,000</menu>
+			<lat>37.53482786</lat>
+			<lng>126.9928992</lng>
+			<tip>이탈리아 전문 음식점</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>스페인</thema>
+			<name>타파스바</name>
+			<tel>02-790-0799</tel>
+			<address1>서울특별시 용산구 이태원로27가길 49</address1>
+			<address2>지상1층 (이태원동)</address2>
+			<menu>주요메뉴 : 빠에야 13,000, 랑바스 9,000, 하몽 15,000 추천메뉴 : 빠에야 13,000</menu>
+			<lat>37.53486388</lat>
+			<lng>126.9925462</lng>
+			<tip>타파스 전문점. 스페니쉬 바</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>스페인</thema>
+			<name>미카사</name>
+			<tel>02-790-0063</tel>
+			<address1>서울특별시 용산구 이태원로27가길 51</address1>
+			<address2>지상1층 (이태원동)</address2>
+			<menu>주요메뉴 : 하몬(스페인산 돼지 뒷다리 햄) 29,000,
+감바스(올리브 오일에 새우와 마늘을 익힌 냄비요리) 19,000, 빠에야(여러가지 해산물이 들어간 스페인 정통 쌀요리) 32,000추천메뉴 : 하몬 29,000</menu>
+			<lat>37.53484945</lat>
+			<lng>126.9923425</lng>
+			<tip>스페인 헤드쉐프가 총괄하는 오픈 키친 형태의 레스토랑과 와인 디스펜서가 있는 라운지의 매장</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>태국</thema>
+			<name>생어거스틴</name>
+			<tel>02-790-5447</tel>
+			<address1>서울특별시 용산구 이태원로27가길 54-4</address1>
+			<address2>지하1층 (이태원동)</address2>
+			<menu>주요메뉴 : 뿌팟봉커리 26,000, 왕새우팟타이 16,000, 나시고랭 12,000추천메뉴 : 뿌팟 봉커리 26,000</menu>
+			<lat>37.53509812</lat>
+			<lng>126.9921932</lng>
+			<tip>한국 속 프랑스거리 생어거스틴에서 선보이는 아시안 푸드</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>영국, 이탈리아</thema>
+			<name>코타지카페보리</name>
+			<tel>02-6012-3383</tel>
+			<address1>서울특별시 용산구 이태원로19길 6</address1>
+			<address2>지상1층 (이태원동)</address2>
+			<menu>주요메뉴 : 피쉬앤칩스 17,000, 수제버거 16,000, 파스타 15,000, 브런치 10,000~15,000추천메뉴 : 피쉬&amp;amp;칩스 17,000</menu>
+			<lat>37.53474131</lat>
+			<lng>126.9919941</lng>
+			<tip>케주얼다이닝을 모토로한  코티지 레스토랑 &amp; 카페</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>미국</thema>
+			<name>피셔맨즈</name>
+			<tel>02-790-9544</tel>
+			<address1>서울특별시 용산구 이태원로20가길 7-2</address1>
+			<address2>지상3층 (이태원동)</address2>
+			<menu>주요메뉴 : 쉬림프록 셋트 14,000, 관자버터구이 25,000, 명란크림파스타 16,000추천메뉴 : 쉬림프 세트 14,000</menu>
+			<lat>37.53372863</lat>
+			<lng>126.9926821</lng>
+			<tip>통통한 새우가 통채로 들어간 아메리칸 스타일 롤</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>일본</thema>
+			<name>바램</name>
+			<tel>02-795-8890</tel>
+			<address1>서울특별시 용산구 이태원로20가길 7-5</address1>
+			<address2>지상1층 (이태원동)</address2>
+			<menu>주요메뉴 : 양갈비 25,000, 양등심 23,000, 양갈비살 21,000추천메뉴 : 양갈비 25,000</menu>
+			<lat>37.53372501</lat>
+			<lng>126.9924241</lng>
+			<tip>일본식 양고기 숯불구이점</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>이탈리아</thema>
+			<name>(주)하베스트남산</name>
+			<tel>02-793-2299</tel>
+			<address1>서울특별시 용산구 소월로44가길 7</address1>
+			<address2>(이태원동)</address2>
+			<menu>주요메뉴 : 안심스테이크 53,000, 샐러드 20,000</menu>
+			<lat>37.54244314</lat>
+			<lng>126.9933466</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>파키스탄</thema>
+			<name>(주)우스마니아인터내셔날레스토랑</name>
+			<tel>02-798-7155</tel>
+			<address1>서울특별시 용산구 우사단로 34</address1>
+			<address2>지하1층 (이태원동)</address2>
+			<menu>주요메뉴 : Mix vegetable set 14,000, Mutton Qurma 16,000추천메뉴 : Chicken curry set 15,000</menu>
+			<lat>37.53322782</lat>
+			<lng>126.9956916</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>인도/터키(할랄)</thema>
+			<name>포랜레스토랑(FOREIGN RESTAURANT)</name>
+			<tel>02-794-9292</tel>
+			<address1>서울특별시 용산구 우사단로 42</address1>
+			<address2>(이태원동)</address2>
+			<menu>주요메뉴 : 케밥 아랍요리 12,000~17,000. 커리 12,000, 탄두리 12,000~17,000추천메뉴 : 뷔페 16,500</menu>
+			<lat>37.53395223</lat>
+			<lng>126.995764</lng>
+			<tip>다양한 메뉴를 접할 수 있고 이슬람분들이 믿고 먹을 수 있는 할랄 레스토랑</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>이탈리아</thema>
+			<name>피자레볼루션(이태원점)</name>
+			<tel>02-797-8290</tel>
+			<address1>서울특별시 용산구 우사단로 47</address1>
+			<address2>(이태원동)</address2>
+			<menu>주요메뉴 : Caprese pizza 5,900, Pepperon pizza 5,900추천메뉴 : Hot Chicken pizza 5,900</menu>
+			<lat>37.53435226</lat>
+			<lng>126.9954924</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>이란</thema>
+			<name>페르시안랜드</name>
+			<tel>02-797-7109</tel>
+			<address1>서울특별시 용산구 보광로60길 10</address1>
+			<address2>(이태원동)</address2>
+			<menu>주요메뉴 : 피자 9,000, 12,000, 샌드위치 5,000추천메뉴 : 양고기 바비큐 9,000, 13,000</menu>
+			<lat>37.53388371</lat>
+			<lng>126.9947231</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>인도/파키스탄</thema>
+			<name>봄베그릴</name>
+			<tel>02-792-7155</tel>
+			<address1>서울특별시 용산구 우사단로10길 11</address1>
+			<address2>1층 (이태원동)</address2>
+			<menu>주요메뉴 : Tandoory Grill 20,000, 브리야니 10,000추천메뉴 : Tandoory Grill 20,000</menu>
+			<lat>37.53319901</lat>
+			<lng>126.9962347</lng>
+			<tip>탄두리 바비큐를 추천</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>레바논</thema>
+			<name>알아지스(ALAZIZ)</name>
+			<tel>02-790-9865</tel>
+			<address1>서울특별시 용산구 우사단로10길 15</address1>
+			<address2>1층 (이태원동)</address2>
+			<menu>주요메뉴 : Beef or Lamb 6,000, Chicken 5,000, Falafel 5,000 추천메뉴 : Beef or Lamb 6,000</menu>
+			<lat>37.53326389</lat>
+			<lng>126.9964203</lng>
+			<tip>Beef or Lamb를 추천람</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>파키스탄(할랄)</thema>
+			<name>마리푸드(MARREE FOOD)</name>
+			<tel>02-3785-1436</tel>
+			<address1>서울특별시 용산구 우사단로10길 20</address1>
+			<address2>(이태원동)</address2>
+			<menu>주요메뉴 : 김치찌개 10,000, 순두부 12,000, 잡채밥 10,000추천메뉴 : 김치찌개 10,000</menu>
+			<lat>37.5330873</lat>
+			<lng>126.9966375</lng>
+			<tip>할랄 고기를 쓴 한국음식점</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>인도</thema>
+			<name>핑크보우트레이딩 리틀인디안서울 주식회사</name>
+			<tel>02-793-5416</tel>
+			<address1>서울특별시 용산구 우사단로10길 21</address1>
+			<address2>(이태원동)</address2>
+			<menu>주요메뉴 : 탄두리 치킨 18,000 치킨 말라이 케밥 14,000, 치킨 마살라 11,900추천메뉴 : 탄두리 치킨 18,000</menu>
+			<lat>37.53329273</lat>
+			<lng>126.9967099</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>터키</thema>
+			<name>파샤터키레스토랑</name>
+			<tel>02-766-8445</tel>
+			<address1>서울특별시 용산구 이태원로 188-1</address1>
+			<address2>(이태원동)</address2>
+			<menu>주요메뉴 : 도네르 두룸케밥 5,000 아나톨리아랩 10,900 Lahmacun 9,900추천메뉴 : 도네르 두룸케밥 5,000</menu>
+			<lat>37.53426214</lat>
+			<lng>126.9949041</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>터키</thema>
+			<name>페트라 팰리스(PETRA PALACE)</name>
+			<tel>02-749-9329</tel>
+			<address1>서울특별시 용산구 이태원로 197</address1>
+			<address2>(이태원동)</address2>
+			<menu>주요메뉴 : 치킨캅사 18,000 치킨 버트라 15,000추천메뉴 : 램 코프타 15,000</menu>
+			<lat>37.53483521</lat>
+			<lng>126.9959178</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>이탈리아</thema>
+			<name>라그릴리아 이태원점</name>
+			<tel>02-790-9313</tel>
+			<address1>서울특별시 용산구 이태원로 200</address1>
+			<address2>(이태원동)</address2>
+			<menu>주요메뉴 : 꽈뜨로 포르마지 14,000, 로얄 까르보나라 14,000 추천메뉴 : 파이어 온더 비프 28,000</menu>
+			<lat>37.53442076</lat>
+			<lng>126.9961668</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>터키</thema>
+			<name>케르반베이커리</name>
+			<tel>02-790-5585</tel>
+			<address1>서울특별시 용산구 이태원로 204</address1>
+			<address2>(이태원동)</address2>
+			<menu>주요메뉴 : 쿠키 5,000, 로쿰(200g) 10,000추천메뉴 : 바클라바(200g) 7,000</menu>
+			<lat>37.53450727</lat>
+			<lng>126.9965198</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>일본</thema>
+			<name>멘야산다이메</name>
+			<tel>02-790-4129</tel>
+			<address1>서울특별시 용산구 이태원로 206</address1>
+			<address2>(이태원동)</address2>
+			<menu>주요메뉴 : 츠케멘 8,000, 블랙라멘 7,500, 야끼라멘 9,000추천메뉴 : 츠케멘 8,000</menu>
+			<lat>37.53450728</lat>
+			<lng>126.9967506</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>이탈리아</thema>
+			<name>라블루피제리아</name>
+			<tel>02-807-7776</tel>
+			<address1>서울특별시 용산구 이태원로 230</address1>
+			<address2>2,3층 (한남동)</address2>
+			<menu>주요메뉴 : 리코타 치즈 샐러드 17,500, 만로 머쉬룸 파스타 19,000추천메뉴 : 슈퍼라자냐 피자 17,000</menu>
+			<lat>37.53549482</lat>
+			<lng>126.9992895</lng>
+			<tip>르꼬르동블루 출신 쉐프가 직접 요리하는 레스토랑으로 모든 음식은 수작업으로 하며 맛있고 깔끔한 맛을 느낄 수 있습니다.</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>태국</thema>
+			<name>얌타이</name>
+			<tel>02-6349-2122</tel>
+			<address1>서울특별시 용산구 이태원로 230-2</address1>
+			<address2>(한남동)</address2>
+			<menu>주요메뉴 : 팟타이 8,000, 쏨땀 17,000추천메뉴 : 쌀국수 8,000</menu>
+			<lat>37.53558131</lat>
+			<lng>126.9994162</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>일본</thema>
+			<name>니시키(NISIKI)</name>
+			<tel>02-749-0446</tel>
+			<address1>서울특별시 용산구 이태원로 232</address1>
+			<address2>(한남동)</address2>
+			<menu>주요메뉴 : 일본사누끼우동 7,500 히야시 탄탄면, 붓가케, 카레우동(우동) 9,500추천메뉴 : 돈카츠 13,000</menu>
+			<lat>37.53562816</lat>
+			<lng>126.9994931</lng>
+			<tip>일본 사누끼우동 전국대회에서 1등 수상</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>이탈리아</thema>
+			<name>피자무쪼(pizza muzzo)</name>
+			<tel>02-795-6164</tel>
+			<address1>서울특별시 용산구 이태원로 199</address1>
+			<address2>(이태원동)</address2>
+			<menu>주요메뉴 : 디아볼라(Diavola) 19,000 라사가 클레시아(Lasagaa Classica)추천메뉴 : 마르게타 디오씨(Margherita)20,000</menu>
+			<lat>37.53483522</lat>
+			<lng>126.9962075</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>레바논</thema>
+			<name>허머스키친</name>
+			<tel>02-790-7922</tel>
+			<address1>서울특별시 용산구 이태원로 214-1</address1>
+			<address2>(한남동)</address2>
+			<menu>주요메뉴 : 케밥 31,800, 중동식 피자 18,000추천메뉴 : 허머스 스리즈 11,000</menu>
+			<lat>37.53460821</lat>
+			<lng>126.9979046</lng>
+			<tip>중동 레바논 음식을 기초로한 건강한 느낌의 음식</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>태국</thema>
+			<name>타이오키드</name>
+			<tel>02-795-3338</tel>
+			<address1>서울특별시 용산구 이태원로 214-1</address1>
+			<address2>(한남동)</address2>
+			<menu>주요메뉴 : 뿌님퐁커리 30,000, 팟타이 15,000추천메뉴 : 똠양꿍 18,000</menu>
+			<lat>37.53460821</lat>
+			<lng>126.9979046</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>프랑스</thema>
+			<name>브래드쇼(Bread Show)</name>
+			<tel>02-792-2233</tel>
+			<address1>서울특별시 용산구 이태원로 214-1</address1>
+			<address2>(한남동)</address2>
+			<menu>주요메뉴 : 바게트 3,800, 에끌리어 4,000추천메뉴 : 갈레트 20,000</menu>
+			<lat>37.53460821</lat>
+			<lng>126.9979046</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>미국</thema>
+			<name>투브로즈</name>
+			<tel>02-790-0610</tel>
+			<address1>서울특별시 용산구 이태원로 216</address1>
+			<address2>(한남동)</address2>
+			<menu>주요메뉴 : 머쉬룸 치즈버거 9,300, 에그먼 베이컨 치즈버거 9800추천메뉴 : 포테이토 치즈버거 9,300</menu>
+			<lat>37.53468751</lat>
+			<lng>126.9981354</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>이탈리아</thema>
+			<name>안도(ANDO)</name>
+			<tel>02-749-0619</tel>
+			<address1>서울특별시 용산구 이태원로 216</address1>
+			<address2>(한남동)</address2>
+			<menu>주요메뉴 : 일리오 올리오 15,000, 티라미슈 12,000추천메뉴 : 시금치 베이컨 크림 바질 페스토 피자 20,000</menu>
+			<lat>37.53468751</lat>
+			<lng>126.9981354</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>스페인</thema>
+			<name>스페인클럽</name>
+			<tel>02-795-1118</tel>
+			<address1>서울특별시 용산구 이태원로 216</address1>
+			<address2>(한남동)</address2>
+			<menu>주요메뉴 : Paeua(해산물빠에야) 35,000, Albon(미트볼요리) 15,000추천메뉴 : Tapas Gambas(새우요리) 14,000</menu>
+			<lat>37.53468751</lat>
+			<lng>126.9981354</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>호주</thema>
+			<name>쓰리앨리</name>
+			<tel>02-792-0117</tel>
+			<address1>서울특별시 용산구 이태원로 220</address1>
+			<address2>(한남동)</address2>
+			<menu>주요메뉴 : 스테이크 19,500, 치킨윙 9,500추천메뉴 : 오지버거 16,500</menu>
+			<lat>37.53481365</lat>
+			<lng>126.9984794</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>인도</thema>
+			<name>이태원겐지스</name>
+			<tel>02-6368-7376</tel>
+			<address1>서울특별시 용산구 이태원로 228</address1>
+			<address2>(한남동)</address2>
+			<menu>주요메뉴 : 카레18,000, 란 2,500추천메뉴 : 만도라 25,000</menu>
+			<lat>37.53481365</lat>
+			<lng>126.9984794</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>프랑스</thema>
+			<name>키이츠</name>
+			<tel>02-793-3081</tel>
+			<address1>서울특별시 용산구 소월로38길 30-8</address1>
+			<address2>1층 (이태원동)</address2>
+			<menu>주요메뉴 : 스테이크 60,000, 생선 55,000추천메뉴 : 치킨 50,000</menu>
+			<lat>37.54349889</lat>
+			<lng>126.9901193</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>이탈리아</thema>
+			<name>브루터스</name>
+			<tel>02-749-3830</tel>
+			<address1>서울특별시 용산구 소월로38가길 30</address1>
+			<address2>(이태원동)</address2>
+			<menu>주요메뉴 : 스테이크 99,000, 파스타 22,000추천메뉴 : 스테이크 99,000</menu>
+			<lat>37.54210417</lat>
+			<lng>126.9904227</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>베트남</thema>
+			<name>레호이</name>
+			<tel>070-4242-0426</tel>
+			<address1>서울특별시 용산구 소월로38가길 5</address1>
+			<address2>1층 (이태원동)</address2>
+			<menu>주요메뉴 : Pho(소고기 쌀국수) 12,000, Buncha(베트남식 국수) 12,000추천메뉴 : Comga(베트남식 덮밥) 12,000</menu>
+			<lat>37.5432322</lat>
+			<lng>126.9901691</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>멕시코</thema>
+			<name>로스아미고스(Los Amigos)</name>
+			<tel>02-795-9711</tel>
+			<address1>서울특별시 용산구 이태원로27가길 37</address1>
+			<address2>3층 (이태원동)</address2>
+			<menu>주요메뉴 : 바하브리또 13,000~19,000, 퀘사디아 13,000~17,000, 타코 13,000~16,000추천메뉴 : 사즐링화이타 18,000~20,000(또티아 장당 300원 추가) </menu>
+			<lat>37.53487473</lat>
+			<lng>126.9930983</lng>
+			<tip>한국에서 쉽게 접하지 못 할 여러가지 멕시코 음식들이 준비되어 있습니다</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>프랑스</thema>
+			<name>빔봄(bimbom)</name>
+			<tel>070-8849-6245</tel>
+			<address1>서울특별시 용산구 회나무로 51</address1>
+			<address2>지상2층 (이태원동)</address2>
+			<menu>주요메뉴 : brunch tasting menu 44,000 (2인기준)추천메뉴 : brunch tasting menu 44,000 (2인기준)</menu>
+			<lat>37.54014373</lat>
+			<lng>126.9922832</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>이탈리아</thema>
+			<name>예환(Ye`hwan)</name>
+			<tel>02-798-798</tel>
+			<address1>서울특별시 용산구 회나무로 74</address1>
+			<address2>(이태원동)</address2>
+			<menu>주요메뉴 : 블랙 페퍼 스테이크 40,000, 해산물 토마토 파스타 18,000, 새우리조또 20,000추천메뉴 : 블랙 페퍼 스테이크 40,000</menu>
+			<lat>37.54040696</lat>
+			<lng>126.9947589</lng>
+			<tip>홈메이트 가정식 이탈리안</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>유럽권</thema>
+			<name>올리아 키친 앤 그로서리</name>
+			<tel>02-792-6004</tel>
+			<address1>서울특별시 용산구 회나무로42길 4</address1>
+			<address2>(이태원동)</address2>
+			<menu>주요메뉴 : 꽃게 로제 파스타 29,800, 제주 돌문어 샐러드 28,800, 제주 흑돼지 뱅 39,800추천메뉴 : 제주 흑돼지 뱅 39,800</menu>
+			<lat>37.54073136</lat>
+			<lng>126.9958496</lng>
+			<tip>제주도에서 공수한 한국식 재료를 접목한 퓨전 이탈리안 요리를 맛 볼 수 있고 그로서리 식료품점과 갤러리 공간이 공존하는 복합 문화 공간 입니다.</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>미국</thema>
+			<name>소울트럭</name>
+			<tel>070-4230-0506</tel>
+			<address1>서울특별시 용산구 회나무로26길 7</address1>
+			<address2>(이태원동)</address2>
+			<menu>주요메뉴 : 풀드포크보울 14,000, 칠리치즈프라이 11,000추천메뉴 : 올스타 14,000</menu>
+			<lat>37.53941567</lat>
+			<lng>126.99155</lng>
+			<tip>최고의 햄버거! 좋은음악!</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>독일, 스페인</thema>
+			<name>(주)존쿡델리미트이태원점</name>
+			<tel>02-796-8050</tel>
+			<address1>서울특별시 용산구 회나무로26길 7</address1>
+			<address2>(이태원동)</address2>
+			<menu>주요메뉴 : 바이에른 학센 45,000 존쿡 스페어 립 37,000추천메뉴 : 바이에른 학센 45,000</menu>
+			<lat>37.53941567</lat>
+			<lng>126.99155</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>이탈리아</thema>
+			<name>디코드</name>
+			<tel>02-790-3228</tel>
+			<address1>서울특별시 용산구 회나무로25길 1</address1>
+			<address2>(이태원동)</address2>
+			<menu>주요메뉴 : 한우 채끝등심 100g당 25,000, 새우로제파스타 21,000, 베이비 백립 26,000추천메뉴 : 한우 채끝등심 100당 25,000</menu>
+			<lat>37.53994185</lat>
+			<lng>126.9914459</lng>
+			<tip>이태리, 프렌치 음식을 중심으로 남산 전망과 테라스에서 식사를 하실 수 있습니다.</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>이탈리아</thema>
+			<name>스테키</name>
+			<tel>02-794-0127</tel>
+			<address1>서울특별시 용산구 회나무로25길 1</address1>
+			<address2>(이태원동)</address2>
+			<menu>주요메뉴 : 등심 스테이크 100g 2,4000, 채끝 스테이크 100g 24,000 *최소 200g부터 주문가능추천메뉴 : 안심 스테이크 25,000</menu>
+			<lat>37.53994185</lat>
+			<lng>126.9914459</lng>
+			<tip>친환경 한우 브랜드`녹색한우`를 이용한 한우전문 스테이크 하우스</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>미국</thema>
+			<name>팬스테이크키친경리단점</name>
+			<tel>02-749-7017</tel>
+			<address1>서울특별시 용산구 회나무로25길 1</address1>
+			<address2>(이태원동)</address2>
+			<menu>주요메뉴 : 팬 스테이크 14,000 스트립로인 스테이크 18,000 서해바다 파스타 15,000 김치필라프 라이스 9,500 추천메뉴 : 팬 스테이크 14,000</menu>
+			<lat>37.53994185</lat>
+			<lng>126.9914459</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>일본</thema>
+			<name>오후정</name>
+			<tel>02-749-5219</tel>
+			<address1>서울특별시 용산구 회나무로13길 14-8</address1>
+			<address2>지상1,2층 (이태원동)</address2>
+			<menu>주요메뉴 : 오세트 14,900, 후세트 16,900, 정세트 18,900 1인당 가격추천메뉴 : 오세트 14,900, 후세트 16,900, 정세트 18,900</menu>
+			<lat>37.53996696</lat>
+			<lng>126.9899975</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>일본</thema>
+			<name>메시야(mesiya)</name>
+			<tel>02-6402-0208</tel>
+			<address1>서울특별시 용산구 회나무로13가길 23</address1>
+			<address2>(이태원동)</address2>
+			<menu>주요메뉴 : 일본 가정식 백반 15,000~16,000(가지덮밥, 규동, 하야시라이스)추천메뉴 : 일본 가정식 백반 15,000~16,000(가지덮밥, 규동, 하야시라이스) </menu>
+			<lat>37.54105904</lat>
+			<lng>126.990794</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>유럽</thema>
+			<name>소셜테이블(SOCIAL TABLE)</name>
+			<tel>02-796-7565</tel>
+			<address1>서울특별시 용산구 회나무로13가길 22</address1>
+			<address2>(이태원동)</address2>
+			<menu>주요메뉴 : 우니아란치니 15,000 립아이스테이크 43,000 알레스카 플로리다 16,000추천메뉴 : 우니아란치니 15,000</menu>
+			<lat>37.54079234</lat>
+			<lng>126.990785</lng>
+			<tip>유러피안타파스 그릴&amp;바</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>미국</thema>
+			<name>로코스(LOCOS)</name>
+			<tel>02-794-3234</tel>
+			<address1>서울특별시 용산구 회나무로 83</address1>
+			<address2>(이태원동)</address2>
+			<menu>주요메뉴 : Samdler- Brisket, center cut beef rib, pulled pork 56,900추천메뉴 : Samdler- Brisket, center cut beef rib, pulled pork 56,900</menu>
+			<lat>37.54098723</lat>
+			<lng>126.9955418</lng>
+			<tip>Weeping good!</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>이탈리아</thema>
+			<name>씨리어스델리</name>
+			<tel>02-797-3354</tel>
+			<address1>서울특별시 용산구 회나무로 46</address1>
+			<address2>(이태원동)</address2>
+			<menu>주요메뉴 : 고르곤졸라 16,000, 새우크림파스타 15,000 씨리어스 버거 16,500추천메뉴 : 고르곤졸라 16,000</menu>
+			<lat>37.53966437</lat>
+			<lng>126.9918578</lng>
+			<tip>씨리어스 델리 꽃 피자</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>이탈리아/다국적</thema>
+			<name>아워커뮨</name>
+			<tel>02-792-8764</tel>
+			<address1>서울특별시 용산구 회나무로 38</address1>
+			<address2>지상1층 (이태원동)</address2>
+			<menu>주요메뉴 : 그릭요거트 40,000, 오븐토스트 12,000~15,000,  명란크림파스타 12,000 고등어파스타 16,000추천메뉴 : 그릭요거트 40,000</menu>
+			<lat>37.53962103</lat>
+			<lng>126.9906991</lng>
+			<tip>shop in shop 형태의 레스토랑 커피, 그린요거트 전문점 입점.</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>미국</thema>
+			<name>포스트앨리동하드림</name>
+			<tel>02-790-3483</tel>
+			<address1>서울특별시 용산구 회나무로 32</address1>
+			<address2>지상1층, 지하1층 (이태원동)</address2>
+			<menu>주요메뉴 : 등심 스테이크(웻) 35,000, 등심 스테이크(드라이) 40,000추천메뉴 : 등심 스테이크(웻) 35,000</menu>
+			<lat>37.53950926</lat>
+			<lng>126.9901515</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>프랑스</thema>
+			<name>치즈어랏</name>
+			<tel>02-796-8160</tel>
+			<address1>서울특별시 용산구 회나무로 24-1</address1>
+			<address2>지상1층, 지하1층 (이태원동)</address2>
+			<menu>주요메뉴 : sirloin &amp;amp; hot vegeterbles 27,000, spisy cream pasta 16,000추천메뉴 : sirloin &amp;amp; hot vegeterbles 27,000 </menu>
+			<lat>37.53921728</lat>
+			<lng>126.98945</lng>
+			<tip>치즈 덕후라면 꼭 먹어봐야 할 치즈 어랏.</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>중국</thema>
+			<name>마라</name>
+			<tel>02-794-5559</tel>
+			<address1>서울특별시 용산구 이태원로45길 4</address1>
+			<address2>1,2층 (한남동)</address2>
+			<menu>주요메뉴 : 꿔바로우 (소) 18,000, (대) 35,000, 훠기 20,000추천메뉴 : 마라샹리 (소) 38,000, (대) 53,000</menu>
+			<lat>37.5361976</lat>
+			<lng>126.9993438</lng>
+			<tip>마리샹리</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>일본/이탈리아</thema>
+			<name>탑펍앤이자카야</name>
+			<tel>02-794-9919</tel>
+			<address1>서울특별시 용산구 이태원로27길 6</address1>
+			<address2>지상5층 (이태원동)</address2>
+			<menu>주요메뉴 : 파스타 , 피자 18,000~23,000, 이자카야 안주류 8,000~28,000추천메뉴 : 무제한 스테이크 43,000</menu>
+			<lat>37.53502622</lat>
+			<lng>126.9956146</lng>
+			<tip>스테이크, 이자카야, 맛집</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>이탈리아</thema>
+			<name>까사안토니오</name>
+			<tel>02-794-8803</tel>
+			<address1>서울특별시 용산구 이태원로27길 6</address1>
+			<address2>지상2층 (이태원동)</address2>
+			<menu>주요메뉴 : 파스타 까르보나라 22,000 피자 마가리타 18,000추천메뉴 : 티본 스테이크 90,000(600g)</menu>
+			<lat>37.53502622</lat>
+			<lng>126.9956146</lng>
+			<tip>오리지널 이탈리안 푸드</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>스위스</thema>
+			<name>알트스위스샬레</name>
+			<tel>02-797-9664</tel>
+			<address1>서울특별시 용산구 이태원로27길 38</address1>
+			<address2>지상2층 (이태원동)</address2>
+			<menu>주요메뉴 : 라끌렛 (2인기준 68,000), 로스터(티) 20,000추천메뉴 : 치즈퐁듀 30,000, 오일퐁듀 30,000~37,000</menu>
+			<lat>37.53568929</lat>
+			<lng>126.9942342</lng>
+			<tip>이태원에서 37년 동안 스위스 대표음식`퐁듀`를 전문적으로 판매하고 있는 스위스풍의 레스토랑입니다. 스위스 전통가옥 샬레의  내부를 그대로재현하여 특히 외국분들이 많이 좋아하시는 분위기 입니다.</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>미국</thema>
+			<name>구에스티케이733</name>
+			<tel>02-794-7339</tel>
+			<address1>서울특별시 용산구 이태원로27길 101</address1>
+			<address2>1층 (한남동)</address2>
+			<menu>주요메뉴 : 드라이에이징 본인립아이 100g/30,000(평균600g),  드라이에이징 티본 100g/30,000(평균700~800g추천메뉴 : 드라이에이징 포터하우스 100g/33,000(평균800~900g)</menu>
+			<lat>37.53770396</lat>
+			<lng>126.9949129</lng>
+			<tip>미국식 스테이크</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>이탈리아</thema>
+			<name>비스트로 마미</name>
+			<tel>02-701-6077</tel>
+			<address1>서울특별시 용산구 이태원로27길 101</address1>
+			<address2>(한남동)</address2>
+			<menu>주요메뉴 : 연어스테이크 35,000, 해산물스파게티 28,000, 고르곤졸라피자 25,000추천메뉴 : 안심스테이크 55,000</menu>
+			<lat>37.53770396</lat>
+			<lng>126.9949129</lng>
+			<tip>가정식 프렌치&amp;이탈리안 레스토랑</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>프랑스</thema>
+			<name>비손</name>
+			<tel>02-790-0479</tel>
+			<address1>서울특별시 용산구 이태원로27길 101</address1>
+			<address2>(한남동)</address2>
+			<menu>주요메뉴 : 양파수프 12,000, 달팽이요리추천메뉴 : 프랑스식스테이크 53,000</menu>
+			<lat>37.53770396</lat>
+			<lng>126.9949129</lng>
+			<tip>프랑스식 가정식(25년 전통)</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>프랑스, 이탈리아</thema>
+			<name>오레노</name>
+			<tel>02-794-0055</tel>
+			<address1>서울특별시 용산구 이태원로27가길 8</address1>
+			<address2>지상1층 (이태원동)</address2>
+			<menu>주요메뉴 : 로씨니 22,900추천메뉴 : 비스마르크(L) 9,900</menu>
+			<lat>37.53513431</lat>
+			<lng>126.9948995</lng>
+			<tip>일본식 프렌치&amp;이탈리아의 고급 메뉴를 한번에 맛볼수 있다.</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>불가리아</thema>
+			<name>젤렌(Zelen)</name>
+			<tel>02-749-0600</tel>
+			<address1>서울특별시 용산구 이태원로27가길 52</address1>
+			<address2>(이태원동)</address2>
+			<menu>주요메뉴 : 샵스카 샐러드 15,500, 스피니치 치킨 22,000추천메뉴 : 메샤나 스카라(고기모듬) 49,500</menu>
+			<lat>37.53508732</lat>
+			<lng>126.9923968</lng>
+			<tip>불가리아 전통식 레스토랑</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>일본,태국</thema>
+			<name>(주)마이홍(마이누들)</name>
+			<tel>02-794-8990</tel>
+			<address1>서울특별시 용산구 이태원로23길 6</address1>
+			<address2>지상2,3층 (이태원동)</address2>
+			<menu>주요메뉴 : 카오패드푸 13,000, 가이양 22,000추천메뉴 : 홍라멘 14,000</menu>
+			<lat>37.53480623</lat>
+			<lng>126.9927951</lng>
+			<tip>홍석천은 맛있다.</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>인도</thema>
+			<name>모글인터내쇼날</name>
+			<tel>02-796-5501~2</tel>
+			<address1>서울특별시 용산구 이태원로27가길 36</address1>
+			<address2>(이태원동)</address2>
+			<menu>주요메뉴 : 바베큐 (닭고기, 소고기, 양고기, 참치, 왕새우) \19,250 ~ \40,000 커리 (치킨마크니 \18,700, 새우카레 \20,900, 소고기버섯카레 \22,000, 양고기카레 \18,700 팔릭파니르 \18,700)추천메뉴 : 머튼 리브(양갈비 스팀요리 2인분 기준 \66,000) 탄두리플래터(모듬바베큐 \38,500)</menu>
+			<lat>37.53522072</lat>
+			<lng>126.993225</lng>
+			<tip>1984년 인도 레스토랑으로 오픈하였고 요리사와 써빙하는 웨이터 전원이 현지인으로 이국적인 맛과 분위기를 즐길 수 있는 도심속에서 보기드문 유럽풍 야외정원이 있어 특별함을 더 느낄 수 있습니다. 년중무휴로 매주 토,일요일에는 인도 정통 스페셜 뷔페가 운영되고 있습니다 </tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>이탈리아</thema>
+			<name>그릴(Grill)</name>
+			<tel>02-3786-6227</tel>
+			<address1>서울특별시 용산구 이태원로27가길 26</address1>
+			<address2>지하1층 (이태원동)</address2>
+			<menu>주요메뉴 : New York sirloin steak 34,000, Lamb stea 38,000, Filleto di manzo 42,000, Di mare pasta 16,000추천메뉴 : chicken salami pizza 18,000</menu>
+			<lat>37.53510542</lat>
+			<lng>126.9937907</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>태국</thema>
+			<name>테이스트 오브 타이랜드(Taste of Thailand)</name>
+			<tel>02-797-2722</tel>
+			<address1>서울특별시 용산구 회나무로 22</address1>
+			<address2>지상2층 (이태원동)</address2>
+			<menu>주요메뉴 : 똠양꿍 14,500 팟타이 주문시 토핑에 따라 가격이 정해짐추천메뉴 : 똠양꿍 14,500 팟타이 주문시 토핑에 따라 가격이 정해짐</menu>
+			<lat>37.53907671</lat>
+			<lng>126.9893278</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>이탈리아</thema>
+			<name>비스트로알리(Bistro AL`LI)</name>
+			<tel>02-798-2460</tel>
+			<address1>서울특별시 용산구 이태원로55가길 26-4</address1>
+			<address2>(한남동)</address2>
+			<menu>주요메뉴 : 화덕피자(고르곤졸라) 16,000, 파스타(해물스파게티) 15,000추천메뉴 : 화덕피자(고르곤졸라) 16,000</menu>
+			<lat>37.53735448</lat>
+			<lng>126.9999547</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>미국</thema>
+			<name>제씨컴퍼니</name>
+			<tel>02-795-1303</tel>
+			<address1>서울특별시 용산구 이태원로19길 5</address1>
+			<address2>3층 (이태원동)</address2>
+			<menu>주요메뉴 : 베이컨 최다 13,900, 칠리 버거 14,900추천메뉴 : 텍사스 렌처 14,900</menu>
+			<lat>37.53475931</lat>
+			<lng>126.9917587</lng>
+			<tip>서양식 버거 &amp; 펍</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>이탈리아</thema>
+			<name>로즈앤크라운2</name>
+			<tel>02-794-2555</tel>
+			<address1>서울특별시 용산구 이태원로19길 6</address1>
+			<address2>지상 3층 (이태원동)</address2>
+			<menu>주요메뉴 : 피쉬앤칩스 16,000, 페퍼로니 피자 11,000추천메뉴 : 로즈 비프버거 12,000</menu>
+			<lat>37.53474131</lat>
+			<lng>126.9919941</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>이탈리아</thema>
+			<name>레뒤플라</name>
+			<tel>02-797-2228</tel>
+			<address1>서울특별시 용산구 이태원로19길 6-4</address1>
+			<address2>지상 3층 (이태원동)</address2>
+			<menu>주요메뉴 : 파스타 12,000~13,000, 피자 15,000추천메뉴 : 스테이크 27,000</menu>
+			<lat>37.53476294</lat>
+			<lng>126.9921253</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>멕시코</thema>
+			<name>그릴5타코</name>
+			<tel>02-790-5549</tel>
+			<address1>서울특별시 용산구 이태원로19길 9</address1>
+			<address2>지상1층 (이태원동)</address2>
+			<menu>주요메뉴 : 서울프라이즈 11,000, 김치 케사디아 9,000추천메뉴 : 치킨부리또 (싱글 8,900 세트 11,000)</menu>
+			<lat>37.53489987</lat>
+			<lng>126.9917361</lng>
+			<tip>한국인 입맛에 맞는 멕시코 음식</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>일본</thema>
+			<name>사와강</name>
+			<tel>02-797-1112</tel>
+			<address1>서울특별시 용산구 이태원로55가길 18</address1>
+			<address2>(한남동)</address2>
+			<menu>주요메뉴 : 사시미 40,000~120,000 탕(대구탕, 참복탕) ~25,000추천메뉴 : 스시 18,000~ </menu>
+			<lat>37.53762839</lat>
+			<lng>127.0001629</lng>
+			<tip>최고의 스시맛(스시강)</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>미국</thema>
+			<name>잭슨피자주식회사</name>
+			<tel>02-792-7374</tel>
+			<address1>서울특별시 용산구 이태원로55가길 26-1</address1>
+			<address2>1층 (한남동)</address2>
+			<menu>주요메뉴 : 페퍼로니 딜라이트 &amp;reg; 15,300, (L) 21,500, (S) 33,800추천메뉴 : 수퍼잭슨(R) 19,800, (L) 28,900, (S) 43,000</menu>
+			<lat>37.53736169</lat>
+			<lng>126.9998009</lng>
+			<tip>미국스타일 오리지널 크러스트피자와 딥디쉬피자 그리고 윙과 스파게티&amp;맥주를 판매하는 아메리칸 펍앤다이닝 입니다.</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>일본</thema>
+			<name>하즈키친</name>
+			<tel>02-792-0994</tel>
+			<address1>서울특별시 용산구 대사관로31길 20</address1>
+			<address2>지상2층 (한남동)</address2>
+			<menu>주요메뉴 : 모둠 생선회 50,000, 점보 새우후라이 20,000, 나가사끼 짬뽕 20,000추천메뉴 : 수제 오뎅탕 20,000</menu>
+			<lat>37.53413235</lat>
+			<lng>127.0060101</lng>
+			<tip>생활의 달인`일식4대천왕` 쉐프가 하는 집</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema> 이탈리아</thema>
+			<name>마이치치스(my chichi`s)</name>
+			<tel>02-749-7753</tel>
+			<address1>서울특별시 용산구 이태원로19길 5</address1>
+			<address2>1층 (이태원동)</address2>
+			<menu>주요메뉴 : 프랑스식 키컨 28,000, 고루곤졸라 피자 19,000추천메뉴 : 치치스 버거 15,000</menu>
+			<lat>37.53475931</lat>
+			<lng>126.9917587</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>이탈리아</thema>
+			<name>코로비아</name>
+			<tel>02-795-9660</tel>
+			<address1>서울특별시 용산구 대사관로 25</address1>
+			<address2>지상1층 (한남동)</address2>
+			<menu>주요메뉴 : 점심 35,000 ~ 61,000(5코스제공)추천메뉴 : 저녁 150,000(8코스)</menu>
+			<lat>37.53389463</lat>
+			<lng>127.0011948</lng>
+			<tip>캐비어 이탈리안 레스토랑 미슐랭 출신의 주방장의 창의적인 메뉴를 선보임 분기별 전시 그림과 메뉴 리뉴얼 실시.</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>이탈리아</thema>
+			<name>아르모니움</name>
+			<tel>02-792-3972</tel>
+			<address1>서울특별시 용산구 대사관로 33</address1>
+			<address2>지상 1, 2층 (한남동)</address2>
+			<menu>주요메뉴 : 트러플 단호박 라비올리 32,000, 오렌지소스의 광어요리 45,000추천메뉴 : 한우 채끝 등심스테이크 69,000</menu>
+			<lat>37.53384057</lat>
+			<lng>127.0017378</lng>
+			<tip>운치있고 프로포즈하기 좋은 집</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>독일</thema>
+			<name>도이취하우스</name>
+			<tel>02-794-1313</tel>
+			<address1>서울특별시 용산구 대사관로 46</address1>
+			<address2>지상1, 2층 (한남동)</address2>
+			<menu>주요메뉴 : 모듬소시지(중) 25,000(2~3인), 돼지족발요리 학센 35,000추천메뉴 : 독일 돈까스 20,000</menu>
+			<lat>37.53330715</lat>
+			<lng>127.0030503</lng>
+			<tip>직수입한 독일맥주를 넓은 홀에서 즐길 수 있는 집</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>일본</thema>
+			<name>엔스시</name>
+			<tel>02-790-8885</tel>
+			<address1>서울특별시 용산구 대사관로 48</address1>
+			<address2>지상1층 (한남동)</address2>
+			<menu>주요메뉴 : 오늘의 엔 초밥 18,000, 초밥우동세트 15,000추천메뉴 : 사시미 35,000~75,000</menu>
+			<lat>37.53335759</lat>
+			<lng>127.0035481</lng>
+			<tip>예쁜 스시와 깔끔함으로 고객을 끄는 집</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>베트남</thema>
+			<name>월남집</name>
+			<tel>02-749-5515</tel>
+			<address1>서울특별시 용산구 대사관로 65</address1>
+			<address2>1층 (한남동)</address2>
+			<menu>주요메뉴 : 쌀국수 8,500~10,500, 팟타이 9,500~11,500추천메뉴 : 월남쌈 25,000</menu>
+			<lat>37.53344762</lat>
+			<lng>127.0054534</lng>
+			<tip>한남동 베트남음식 판매</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>이탈리아</thema>
+			<name>파올로데마리아(Paolodemaria)</name>
+			<tel>02-599-9936</tel>
+			<address1>서울특별시 용산구 대사관로31길 13</address1>
+			<address2>(한남동)</address2>
+			<menu>주요메뉴 : 카프리스타일의 가지롤 19,000, 다섯가지 치즈와 꿀에 졸인 사과를 곁들인 피자 26,000, 오렌지크림과 새우를 곁들인 가레피 파스타 24,000추천메뉴 : 로즈마리풍미의 오븐감자를 곁들인 매콤한 닭고기 요리 28,000</menu>
+			<lat>37.53397019</lat>
+			<lng>127.0057295</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>일본</thema>
+			<name>하즈벤</name>
+			<tel>02-797-7272</tel>
+			<address1>서울특별시 용산구 대사관로31길 20</address1>
+			<address2>지상1층 (한남동)</address2>
+			<menu>주요메뉴 : 초밥 15,000~25,000, 벤또 13,000~19,000추천메뉴 : 덮밥 11,000~14,000</menu>
+			<lat>37.53413235</lat>
+			<lng>127.0060101</lng>
+			<tip>초밥, 벤또가 맛있는 집</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>일본</thema>
+			<name>마구로센</name>
+			<tel>02-792-1110</tel>
+			<address1>서울특별시 용산구 대사관로31길 24</address1>
+			<address2>지상1층 (한남동)</address2>
+			<menu>주요메뉴 : 마구로 50,000, 마구로특선 70,000추천메뉴 : 마구로 스페셜 100,000</menu>
+			<lat>37.53433778</lat>
+			<lng>127.0060463</lng>
+			<tip>국내 최초 생참치 취급점(예약필수)</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>태국</thema>
+			<name>마이면</name>
+			<tel>02-794-3343</tel>
+			<address1>서울특별시 용산구 보광로 111</address1>
+			<address2>A동, 1층 (이태원동)</address2>
+			<menu>주요메뉴 : 비프누들숲 9,000추천메뉴 : 팟타이 치킨, 새우 14,000</menu>
+			<lat>37.53274483</lat>
+			<lng>126.9943883</lng>
+			<tip>현지인 쉐프가 만든 태국길거리 음식</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>일본</thema>
+			<name>시소스시</name>
+			<tel>02-794-3343</tel>
+			<address1>서울특별시 용산구 보광로 111</address1>
+			<address2>(이태원동)</address2>
+			<menu>주요메뉴 : 시소모듬생선초밥 18,000추천메뉴 : 런치 생선초밥 9,000</menu>
+			<lat>37.53274483</lat>
+			<lng>126.9943883</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>미국</thema>
+			<name>리버틴</name>
+			<tel>02-790-9477</tel>
+			<address1>서울특별시 용산구 보광로 112-3</address1>
+			<address2>1층 (이태원동)</address2>
+			<menu>주요메뉴 : 에그베네딕트 17,000추천메뉴 : 버거 19,000</menu>
+			<lat>37.5328854</lat>
+			<lng>126.9946553</lng>
+			<tip>이태원 브런치문화를 선도하는 난봉꾼</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>프랑스</thema>
+			<name>꾸띠자르당</name>
+			<tel>02-793-5072</tel>
+			<address1>서울특별시 용산구 보광로 120</address1>
+			<address2>1,2층 (이태원동)</address2>
+			<menu>주요메뉴 : 링귀니파스타 21.000추천메뉴 : 양갈비 38,000</menu>
+			<lat>37.53344762</lat>
+			<lng>126.99461</lng>
+			<tip>이태원 대표 프랑스레스토랑</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>멕시코</thema>
+			<name>하시엔다</name>
+			<tel>070-4405-6322</tel>
+			<address1>서울특별시 용산구 보광로59길 10</address1>
+			<address2>(이태원동)</address2>
+			<menu>주요메뉴 : 카코 11,000추천메뉴 : 케시디야 11,000</menu>
+			<lat>37.53404223</lat>
+			<lng>126.9934967</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>프랑스</thema>
+			<name>도리키친</name>
+			<tel>02-790-1553</tel>
+			<address1>서울특별시 용산구 보광로59길 25</address1>
+			<address2>(이태원동)</address2>
+			<menu>주요메뉴 : 프렌치 어니언 스프 미정추천메뉴 : 뵈프 부르기뇽 미정</menu>
+			<lat>37.53382233</lat>
+			<lng>126.9925599</lng>
+			<tip>분위기가 좋음</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>미국</thema>
+			<name>더푸드트럭커스</name>
+			<tel>02-3785-2015</tel>
+			<address1>서울특별시 용산구 보광로59길 26</address1>
+			<address2>(이태원동)</address2>
+			<menu>주요메뉴 : dogs 7,800추천메뉴 : press 7,800</menu>
+			<lat>37.53403496</lat>
+			<lng>126.9925101</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>일본</thema>
+			<name>스시이태원</name>
+			<tel>02-794-3937</tel>
+			<address1>서울특별시 용산구 보광로59길 62</address1>
+			<address2>2층 (이태원동)</address2>
+			<menu>주요메뉴 : 연어초밥 12,000, 투데이콤보 12,000추천메뉴 : 스시이태원 브런치콤보 8,000</menu>
+			<lat>37.53375731</lat>
+			<lng>126.9905912</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>인도</thema>
+			<name>자프란레스토랑</name>
+			<tel>02-794-3570</tel>
+			<address1>서울특별시 용산구 우사단로10길 36</address1>
+			<address2>2,3층 (한남동)</address2>
+			<menu>주요메뉴 : 탄두리치킨 11,000, 18,000추천메뉴 : 양고기카레 11,000, 란 2,000</menu>
+			<lat>37.53300082</lat>
+			<lng>126.9975698</lng>
+			<tip>인도 현지 요리사가 직접만드는 정통인도 요리</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>터키</thema>
+			<name>쌀람</name>
+			<tel>02-793-4323</tel>
+			<address1>서울특별시 용산구 우사단로10길 39</address1>
+			<address2>(한남동)</address2>
+			<menu>주요메뉴 : 도네르케밥12,000, 아다나케밥 12,000추천메뉴 : 추킨수수케밥 14,000</menu>
+			<lat>37.5332495</lat>
+			<lng>126.997615</lng>
+			<tip>케밥전문점</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>파키스탄</thema>
+			<name>피에이케이인디아</name>
+			<tel>02-790-1509</tel>
+			<address1>서울특별시 용산구 우사단로10길 49</address1>
+			<address2>(한남동)</address2>
+			<menu>주요메뉴 : beef masala 12,000추천메뉴 : Dall Tark 8,000</menu>
+			<lat>37.53281703</lat>
+			<lng>126.9982486</lng>
+			<tip>아담하고 조용한 음식점</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>한식(할랄한식)</thema>
+			<name>마깐레스토랑</name>
+			<tel>02-6012-2231</tel>
+			<address1>서울특별시 용산구 우사단로10길 52</address1>
+			<address2>(한남동)</address2>
+			<menu>주요메뉴 : 불고기 10,000추천메뉴 : 비빔밥 8,000</menu>
+			<lat>37.53263323</lat>
+			<lng>126.9982622</lng>
+			<tip>아담한 식당 분위기(불고기 전문점)</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>미국</thema>
+			<name>랍스터 바(Lobster Bar)</name>
+			<tel>070-8225-3963</tel>
+			<address1>서울특별시 용산구 이태원로 140-1</address1>
+			<address2>(이태원동, 빅토리타운)</address2>
+			<menu>주요메뉴 : 그릴드라이브 랍스터 54,000, 싱가폴리안 칠리 랍스터 64,000추천메뉴 : 그릴 치즈 샌드위치, 롤 샌드위치 21,000 </menu>
+			<lat>37.53396625</lat>
+			<lng>126.9894372</lng>
+			<tip>국내 랍스터 열풍을 주도한 대표 랍스터 전문점 랍스터와 각종 해산물을 이용해 양식 및 퓨전 스타일 메뉴로 제공</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>그리스</thema>
+			<name>산토리니 타베르나(1)</name>
+			<tel>02-749-4517</tel>
+			<address1>서울특별시 용산구 이태원로 136-1</address1>
+			<address2>(이태원동)</address2>
+			<menu>주요메뉴 : 기로스 삐따브렌드 22,000, 폭 수블라끼 22,000추천메뉴 : 치킨 수블라끼 22,000</menu>
+			<lat>37.53397342</lat>
+			<lng>126.9890299</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>아르헨티나</thema>
+			<name>다코너</name>
+			<tel>02-792-6013</tel>
+			<address1>서울특별시 용산구 이태원로 136-13</address1>
+			<address2>(이태원동)</address2>
+			<menu>주요메뉴 : 치킨비리아니 8,000추천메뉴 : WAZWN spesial set menu 41,000</menu>
+			<lat>37.53378967</lat>
+			<lng>126.9896816</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>이탈리아</thema>
+			<name>더피자필</name>
+			<tel>02-795-3283</tel>
+			<address1>서울특별시 용산구 이태원로 136-4</address1>
+			<address2>(이태원동)</address2>
+			<menu>주요메뉴 : 마르게리따(margherita) 14,500, 수프림(supreme) 16,500추천메뉴 : 그릭(greek) 17,500</menu>
+			<lat>37.53390854</lat>
+			<lng>126.9890072</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>미국</thema>
+			<name>라이포스트 이태원1호점</name>
+			<tel>02-792-9991</tel>
+			<address1>서울특별시 용산구 이태원로 164</address1>
+			<address2>(이태원동)</address2>
+			<menu>주요메뉴 : 필리치즈 스테이크 샌드위치 8,800, 베트남 반미 샌드위치 8,800추천메뉴 : 자메이카 저크치킨 샌드위치 8,800 </menu>
+			<lat>37.5341863</lat>
+			<lng>126.9920801</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>미국</thema>
+			<name>(유)아웃백스테이크하우스 이태원점</name>
+			<tel>02-749-5101</tel>
+			<address1>서울특별시 용산구 이태원로 172</address1>
+			<address2>(이태원동)</address2>
+			<menu>주요메뉴 : 립 35,000, 파스타 20,000추천메뉴 : 스테이크 47,000</menu>
+			<lat>37.53422239</lat>
+			<lng>126.9929445</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>멕시코</thema>
+			<name>타코벨 이태원지점</name>
+			<tel>02-749-6696</tel>
+			<address1>서울특별시 용산구 이태원로 180</address1>
+			<address2>(이태원동)</address2>
+			<menu>주요메뉴 : 타코 2,700, 브리또 5,000추천메뉴 : 퀘사릴라 3,300</menu>
+			<lat>37.53422967</lat>
+			<lng>126.9941845</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>사우디아라비아/아랍에미레이트/카타르/모로코</thema>
+			<name>신밧드</name>
+			<tel>02-792-0069</tel>
+			<address1>서울특별시 용산구 이태원로 180</address1>
+			<address2>(이태원동)</address2>
+			<menu>주요메뉴 : 메자플레이트(후무스, 모하본, 바바가누쉬) 15,000, 쿠스쿠스 램 26,000추천메뉴 : MIXED GRILL 29,500</menu>
+			<lat>37.53422967</lat>
+			<lng>126.9941845</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>터키</thema>
+			<name>앙카라피크닉</name>
+			<tel>02-793-2550</tel>
+			<address1>서울특별시 용산구 이태원로 182</address1>
+			<address2>(이태원동)</address2>
+			<menu>주요메뉴 : 치킨케밥 5,000, 양고기샌드위치 6,500추천메뉴 : 치킨라이스 케밥 8,000 </menu>
+			<lat>37.5343414</lat>
+			<lng>126.9942886</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>터키</thema>
+			<name>파샤(PASHA)</name>
+			<tel>02-793-6144</tel>
+			<address1>서울특별시 용산구 이태원로 189</address1>
+			<address2>(이태원동)</address2>
+			<menu>주요메뉴 : 파샤케밥 27,500, 만타르피르졸라 37,500추천메뉴 : 파샤피데 23,00</menu>
+			<lat>37.5348568</lat>
+			<lng>126.9949131</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>터키</thema>
+			<name>케르반레스토랑</name>
+			<tel>02-792-4767</tel>
+			<address1>서울특별시 용산구 이태원로 190</address1>
+			<address2>(이태원동)</address2>
+			<menu>주요메뉴 : 요거트 치킨 케밥 21,000, 믹스피데 24,500추천메뉴 : 케르반 스페셜 2p 89,000</menu>
+			<lat>37.53435585</lat>
+			<lng>126.9951485</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>터키</thema>
+			<name>미스터케밥</name>
+			<tel>02-3463-2356</tel>
+			<address1>서울특별시 용산구 이태원로 192</address1>
+			<address2>(이태원동)</address2>
+			<menu>주요메뉴 : 라이스 랩 닭고기 6,500, 또띠아 빵 5,500추천메뉴 : 필라프 케밥 닭고기 8,500</menu>
+			<lat>37.53436667</lat>
+			<lng>126.9953703</lng>
+			<tip>다양한 터키 케밥과 할랄 음식의 대표적 음식점</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>터키</thema>
+			<name>앙카라펠레스</name>
+			<tel>02-3785-3787</tel>
+			<address1>서울특별시 용산구 이태원로 192</address1>
+			<address2>(이태원동)</address2>
+			<menu>주요메뉴 : Mixed Grill 30,000 Faruk pirzola 18,000추천메뉴 : Ankara Sarma Lamb 23,900</menu>
+			<lat>37.53436667</lat>
+			<lng>126.9953703</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>아랍 권</thema>
+			<name>두바이(DUBAI)</name>
+			<tel>02-798-9277</tel>
+			<address1>서울특별시 용산구 이태원로 192</address1>
+			<address2>(이태원동)</address2>
+			<menu>주요메뉴 : 믹스그릴 27,500 만디 17,600추천메뉴 : 캅사 16,500</menu>
+			<lat>37.53436667</lat>
+			<lng>126.9953703</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>파라과이</thema>
+			<name>프로메사</name>
+			<tel>02-515-4075</tel>
+			<address1>서울특별시 용산구 이태원로14길 26</address1>
+			<address2>(이태원동)</address2>
+			<menu>주요메뉴 : 세코데치보 24,000, 퀴노아샐러드 13,000추천메뉴 : 로모살떼아도 22,000</menu>
+			<lat>37.53320232</lat>
+			<lng>126.9908493</lng>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>이탈리아</thema>
+			<name>비밀(BMeal)</name>
+			<tel>02-797-0715</tel>
+			<address1>서울특별시 용산구 이태원로55가길 35</address1>
+			<address2>지상1층 (한남동)</address2>
+			<menu>주요메뉴 : 리코타 치즈 팬케잌 14,000 에그 베네딕트 12,000추천메뉴 : 아보카도 크림 까르보나라 16,000</menu>
+			<lat>37.53675261</lat>
+			<lng>126.9997058</lng>
+			<tip>기존 파스타가 아닌 건강식 재료를 사용한 건강식 파스타</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>일본</thema>
+			<name>진돈부리</name>
+			<tel>02-797-1179</tel>
+			<address1>서울특별시 용산구 이태원로55가길 38</address1>
+			<address2>지상1층 (한남동)</address2>
+			<menu>주요메뉴 : 믹소동 8,000, 규동 9,000추천메뉴 : 아부리사케동 11,000</menu>
+			<lat>37.53688236</lat>
+			<lng>126.9995338</lng>
+			<tip>일본재료를 사용해서 당일 판매재료만 판매합니다.</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>일본</thema>
+			<name>스시제트(Z)</name>
+			<tel>02-795-4267</tel>
+			<address1>서울특별시 용산구 이태원로55길 11</address1>
+			<address2>지상 1,2층 (한남동)</address2>
+			<menu>주요메뉴 : 오션 스시 코스 45,000추천메뉴 : 소울 스시 데판 코스 78,000</menu>
+			<lat>37.53824827</lat>
+			<lng>127.0008599</lng>
+			<tip>스시 &amp; 데판 전문</tip>
+		</item>
+		<item>
+			<type>5</type>
+			<thema>베트남</thema>
+			<name>르사이공(이태원점)</name>
+			<tel>02-792-0336</tel>
+			<address1>서울특별시 용산구 보광로59길 31</address1>
+			<address2>1층 (이태원동)</address2>
+			<menu>주요메뉴 : 소고기 쌀국수 8,900, 11,900추천메뉴 : 프리미엄 쌀국수 11,900, 14,900</menu>
+			<lat>37.5338151</lat>
+			<lng>126.9922159</lng>
+		</item>
+	</data>
+</results>
