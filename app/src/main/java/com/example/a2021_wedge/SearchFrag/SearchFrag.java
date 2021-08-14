@@ -174,6 +174,7 @@ public class SearchFrag extends Fragment {
                                 sintro = jsonObject.getString("intro");
                                 saddr = jsonObject.getString("addr");
                                 smenu = jsonObject.getString("menu");
+                                System.out.println("sname="+sname);
                                 adapter2.addItem(new ItemSearchList(sname));
                                 adapter2.notifyDataSetChanged();
                             } else {
@@ -189,7 +190,7 @@ public class SearchFrag extends Fragment {
 //                    SearchRequest SearchRequest = new SearchRequest(search_word, responseListener);
 //                    RequestQueue queue = Volley.newRequestQueue(getContext());
 //                    queue.add(SearchRequest);
-                    storesearchRequest SearchRequest = new  storesearchRequest(sname, responseListener);
+                    storesearchRequest SearchRequest = new  storesearchRequest(search_word, responseListener);
                     RequestQueue queue = Volley.newRequestQueue(getContext());
                     queue.add(SearchRequest);
 

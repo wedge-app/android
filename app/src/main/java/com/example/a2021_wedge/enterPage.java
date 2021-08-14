@@ -24,7 +24,7 @@ import java.util.ArrayList;
 public class enterPage extends AppCompatActivity {
     ImageButton info, menu, review, like, wait,back;
     ImageView grey_star;
-    TextView wait_num, story;
+    TextView wait_num, story, story2, Name;
     ArrayList<String> menuItem;
 
     @Override
@@ -48,8 +48,13 @@ public class enterPage extends AppCompatActivity {
         menu = findViewById(R.id.imageButton7);
         review = findViewById(R.id.imageButton8);
 
+        //가게 이름
+        Name = findViewById(R.id.textView8);
+        Name.setText(sname);
+
         //가게 설명
         story = findViewById(R.id.textView21);
+        story2 = findViewById(R.id.textView12);
 
         //대기 인원 숫자
         wait_num = findViewById(R.id.textView18);
@@ -71,9 +76,8 @@ public class enterPage extends AppCompatActivity {
         info.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //story.setText("");
                 SharedPreferences test = getSharedPreferences("test", MODE_PRIVATE);
-                story.setText(sintro);
+                story.setText(" 사장님의 말 : "+sintro+"\n 전화 : "+stel+"\n 가게 위치 :"+saddr);
 //                String openHour = test.getString("hour1", null);
 //                String openMin = test.getString("min1", null);
 //                String closeHour = test.getString("hour2", null);
@@ -89,13 +93,13 @@ public class enterPage extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 story.setText(smenu);
-                ArrayList<String> menuItem = (ArrayList<String>)menu_intent.getStringArrayListExtra("menu");
-                Serializable s = menu_intent.getSerializableExtra("menu");
-
-                for(int i = 0; i < menuItem.size(); i++)
-                {
-                    story.append("- " + menuItem.get(i));
-                }
+//                ArrayList<String> menuItem = (ArrayList<String>)menu_intent.getStringArrayListExtra("menu");
+//                Serializable s = menu_intent.getSerializableExtra("menu");
+//
+//                for(int i = 0; i < menuItem.size(); i++)
+//                {
+//                    story.append("- " + menuItem.get(i));
+//                }
 
 
             }
@@ -104,7 +108,7 @@ public class enterPage extends AppCompatActivity {
         review.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                story.setText("완전 최고예요!");
+                story.setText("완전 최고예요!"+"\n"+"자주 시켜먹어요! 너무 맛있어요~");
             }
         });
 
