@@ -174,11 +174,9 @@ public class Main extends AppCompatActivity {
                     tmpStores.setH(item.getDouble("h"));
                     tmpStores.setW(item.getDouble("w"));
                     tmpStoresArray.add(tmpStores);
+                    arrClass.name_arr[i] = tmpStores.getName();
                     arrClass.location_arr[i][0] = tmpStores.getW();
                     arrClass.location_arr[i][1] = tmpStores.getH();
-                }
-                for(int i = 0; i<arrClass.location_arr.length; i++){
-                    System.out.print(arrClass.location_arr[i][0] + ":" + arrClass.location_arr[i][1]);
                 }
 
             } catch (JSONException e) {
