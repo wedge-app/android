@@ -37,6 +37,12 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import java.io.IOException;
+import java.io.InputStream;
+
+import jxl.Workbook;
+import jxl.read.biff.BiffException;
+
 public class HomeFrag extends Fragment implements OnMapReadyCallback  {
     View v;
     MapView mapView;
@@ -84,6 +90,7 @@ public class HomeFrag extends Fragment implements OnMapReadyCallback  {
 //                textView.setText("선택 : ");
             }
         });
+
 
         linear = v.findViewById(R.id.linear);
         linear.setVisibility(View.INVISIBLE);
@@ -159,7 +166,6 @@ public class HomeFrag extends Fragment implements OnMapReadyCallback  {
         GoogleMap gMap = googleMap;
 
 
-
         MapsInitializer.initialize(this.getActivity());
         double[][] location = {{37.59193, 127.01847},{37.59210, 127.01841}};
         LatLng latLng_new;
@@ -188,6 +194,8 @@ public class HomeFrag extends Fragment implements OnMapReadyCallback  {
 
             }
             return false;
+
+
         });
 
 

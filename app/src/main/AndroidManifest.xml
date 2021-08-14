@@ -17,6 +17,9 @@
         android:theme="@style/Theme.2021_Wedge"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".StorePS"
+            android:exported="true" />
+        <activity
             android:name=".storesublist"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_storesublist"

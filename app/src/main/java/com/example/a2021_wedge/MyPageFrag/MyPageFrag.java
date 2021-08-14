@@ -17,6 +17,7 @@ import androidx.fragment.app.Fragment;
 
 import com.example.a2021_wedge.MyPageFrag.Potato.GrowingPotatoActivity;
 import com.example.a2021_wedge.R;
+import com.example.a2021_wedge.StorePS;
 
 public class MyPageFrag extends Fragment {
 
@@ -72,7 +73,7 @@ public class MyPageFrag extends Fragment {
 
         faq = v.findViewById(R.id.faq);
         faq.setOnClickListener(v1 -> {
-            Intent intent = new Intent(getActivity(), FAQActivity.class);
+            Intent intent = new Intent(getActivity(), StorePS.class);
             startActivity(intent);
         });
 
