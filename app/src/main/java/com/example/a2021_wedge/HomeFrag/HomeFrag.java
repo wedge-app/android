@@ -13,7 +13,9 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
+import android.widget.TextView;
 
+import com.example.a2021_wedge.GMap.Stores;
 import com.example.a2021_wedge.arrClass;
 
 import androidx.annotation.NonNull;
@@ -35,6 +37,9 @@ import com.google.android.gms.maps.model.MarkerOptions;
 public class HomeFrag extends Fragment implements OnMapReadyCallback {
     View v;
     MapView mapView;
+    TextView home_title;
+
+    Stores item = new Stores();
 
     public HomeFrag() {
     }
@@ -81,7 +86,7 @@ public class HomeFrag extends Fragment implements OnMapReadyCallback {
             }
         });
 
-
+        home_title = v.findViewById(R.id.text_home);
         linear = v.findViewById(R.id.linear);
         linear.setVisibility(View.INVISIBLE);
         top = AnimationUtils.loadAnimation(getContext(), R.anim.translate_top);
@@ -146,12 +151,12 @@ public class HomeFrag extends Fragment implements OnMapReadyCallback {
         MapsInitializer.initialize(this.getActivity());
         LatLng latLng_new;
 
-        // for loop를 통한 n개의 마커 생성
         for (int i = 0; i < arrClass.location_arr.length; i++) {
             // 1. 마커 옵션 설정 (만드는 과정)
             MarkerOptions makerOptions = new MarkerOptions();
             latLng_new = new LatLng(arrClass.location_arr[i][0], arrClass.location_arr[i][1]);
-            makerOptions.position(latLng_new); //
+            makerOptions.position(latLng_new).title(arrClass.name_arr[i]);
+            //
 
 
             // 2. 마커 생성 (마커를 나타냄)
@@ -174,6 +179,8 @@ public class HomeFrag extends Fragment implements OnMapReadyCallback {
             if (!isOpenPage) {
                 linear.startAnimation(top);
             }
+            home_title.setText(marker.getTitle());
+
             return false;
 
 

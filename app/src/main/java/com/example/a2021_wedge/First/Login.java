@@ -114,7 +114,7 @@ public class Login extends AppCompatActivity {
 
         FrameLayout sign = findViewById(R.id.signup);
         sign.setVisibility(View.INVISIBLE);
-        TextView x = findViewById(R.id.textView37);
+        TextView x = findViewById(R.id.home_title);
         x.setVisibility(View.INVISIBLE);
         TextView q = findViewById(R.id.textView38);
         q.setVisibility(View.INVISIBLE);
