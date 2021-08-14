@@ -11,6 +11,7 @@ import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.a2021_wedge.R;
 import com.google.android.gms.tasks.Task;
@@ -28,10 +29,10 @@ import java.util.HashMap;
 import java.util.concurrent.ExecutionException;
 
 public class StoresList extends AppCompatActivity {
-    private ArrayList<searchItem> list = new ArrayList<>();
-    private RecyclerView recyclerView;
-    private searchAdapter adapter;
-    TextView txt;
+//    private ArrayList<searchItem> list = new ArrayList<>();
+//    private RecyclerView recyclerView;
+//    private searchAdapter adapter;
+//    TextView txt;
 
 
     @Override
@@ -139,5 +140,16 @@ public class StoresList extends AppCompatActivity {
 //
 //    }
 
-
+    private long time= 0;
+    @Override
+    public void onBackPressed() {
+        if (System.currentTimeMillis() - time >= 2000) {
+            time = System.currentTimeMillis();
+            Toast.makeText(getApplicationContext(), "뒤로 버튼을 한번 더 누르면 종료합니다.", Toast.LENGTH_SHORT).show();
+        } else if (System.currentTimeMillis() - time < 2000) {
+            finishAffinity();
+            System.runFinalization();
+            System.exit(0);
+        }
+    }
 }

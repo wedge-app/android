@@ -4,7 +4,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -40,7 +42,7 @@ public class PersonalInfoActivity extends AppCompatActivity {
 
         //뒤로 가기 버튼
         back = findViewById(R.id.back);
-        back.setOnClickListener(v -> onBackPressed());
+        back.setOnClickListener(v -> finish());
 
         SharedPreferences pref = this.getSharedPreferences("user_info", Context.MODE_PRIVATE);
         String prefname = pref.getString("userName","");
@@ -103,5 +105,32 @@ public class PersonalInfoActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent ev) {
+        View view = getCurrentFocus();
+        if (view != null && (ev.getAction() == MotionEvent.ACTION_UP || ev.getAction() == MotionEvent.ACTION_MOVE) && view instanceof EditText && !view.getClass().getName().startsWith("android.webkit.")) {
+            int[] scrooges = new int[2];
+            view.getLocationOnScreen(scrooges);
+            float x = ev.getRawX() + view.getLeft() - scrooges[0];
+            float y = ev.getRawY() + view.getTop() - scrooges[1];
+            if (x < view.getLeft() || x > view.getRight() || y < view.getTop() || y > view.getBottom())
+                ((InputMethodManager) this.getSystemService(Context.INPUT_METHOD_SERVICE)).hideSoftInputFromWindow((this.getWindow().getDecorView().getApplicationWindowToken()), 0);
+        }
+        return super.dispatchTouchEvent(ev);
+    }
+
+    private long time= 0;
+    @Override
+    public void onBackPressed() {
+        if (System.currentTimeMillis() - time >= 2000) {
+            time = System.currentTimeMillis();
+            Toast.makeText(getApplicationContext(), "뒤로 버튼을 한번 더 누르면 종료합니다.", Toast.LENGTH_SHORT).show();
+        } else if (System.currentTimeMillis() - time < 2000) {
+            finishAffinity();
+            System.runFinalization();
+            System.exit(0);
+        }
     }
 }

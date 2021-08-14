@@ -16,6 +16,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.a2021_wedge.SearchFrag.SearchFrag;
+
 import java.io.Serializable;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
@@ -24,7 +26,7 @@ import java.util.ArrayList;
 public class enterPage extends AppCompatActivity {
     ImageButton info, menu, review, like, wait,back;
     ImageView grey_star;
-    TextView wait_num, story;
+    TextView wait_num, story, story2, Name;
     ArrayList<String> menuItem;
 
     @Override
@@ -33,16 +35,35 @@ public class enterPage extends AppCompatActivity {
 
         setContentView(R.layout.activity_enter_page);
 
+
+        Intent intent = getIntent(); /*데이터 수신*/
+        String sname = intent.getExtras().getString("name");
+        String stel = intent.getExtras().getString("tel");
+        String sintro = intent.getExtras().getString("intro");
+        String saddr = intent.getExtras().getString("addr");
+        String smenu = intent.getExtras().getString("menu");
+
         //뒤로가기
         back = findViewById(R.id.back3);
-        back.setOnClickListener(v -> onBackPressed());
+        back.setOnClickListener(v -> {
+                    Intent intent2 = new Intent(this, SearchFrag.class);
+                    intent2.putExtra("ssname",sname);
+                    startActivity(intent2);
+                    //onBackPressed();
+                }
+        );
 
         info = findViewById(R.id.imageButton6);
         menu = findViewById(R.id.imageButton7);
         review = findViewById(R.id.imageButton8);
 
+        //가게 이름
+        Name = findViewById(R.id.textView8);
+        Name.setText(sname);
+
         //가게 설명
         story = findViewById(R.id.textView21);
+        story2 = findViewById(R.id.textView12);
 
         //대기 인원 숫자
         wait_num = findViewById(R.id.textView18);
@@ -64,15 +85,14 @@ public class enterPage extends AppCompatActivity {
         info.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //story.setText("");
                 SharedPreferences test = getSharedPreferences("test", MODE_PRIVATE);
-
-                String openHour = test.getString("hour1", null);
-                String openMin = test.getString("min1", null);
-                String closeHour = test.getString("hour2", null);
-                String closeMin = test.getString("min2", null);
-                story.setText("영업 시간 : " + openHour + "시 " + openMin + "분 ~ " +
-                        closeHour + "시 " + closeMin +"분");
+                story.setText(" 사장님의 말 : "+sintro+"\n\n 전화 : "+stel+"\n\n 가게 위치 :"+saddr);
+//                String openHour = test.getString("hour1", null);
+//                String openMin = test.getString("min1", null);
+//                String closeHour = test.getString("hour2", null);
+//                String closeMin = test.getString("min2", null);
+//                story.setText("영업 시간 : " + openHour + "시 " + openMin + "분 ~ " +
+//                        closeHour + "시 " + closeMin +"분");
             }
         });
 
@@ -81,14 +101,14 @@ public class enterPage extends AppCompatActivity {
         menu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                story.setText("");
-                ArrayList<String> menuItem = (ArrayList<String>)menu_intent.getStringArrayListExtra("menu");
-                Serializable s = menu_intent.getSerializableExtra("menu");
-
-                for(int i = 0; i < menuItem.size(); i++)
-                {
-                    story.append("- " + menuItem.get(i));
-                }
+                story.setText(smenu);
+//                ArrayList<String> menuItem = (ArrayList<String>)menu_intent.getStringArrayListExtra("menu");
+//                Serializable s = menu_intent.getSerializableExtra("menu");
+//
+//                for(int i = 0; i < menuItem.size(); i++)
+//                {
+//                    story.append("- " + menuItem.get(i));
+//                }
 
 
             }
@@ -97,7 +117,7 @@ public class enterPage extends AppCompatActivity {
         review.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                story.setText("완전 최고예요!");
+                story.setText("완전 최고예요!"+"\n"+"자주 시켜먹어요! 너무 맛있어요~");
             }
         });
 
@@ -111,6 +131,17 @@ public class enterPage extends AppCompatActivity {
                 wait_num.setText(w + 1);
             }
         });
-
+    }
+    private long time= 0;
+    @Override
+    public void onBackPressed() {
+        if (System.currentTimeMillis() - time >= 2000) {
+            time = System.currentTimeMillis();
+            Toast.makeText(getApplicationContext(), "뒤로 버튼을 한번 더 누르면 종료합니다.", Toast.LENGTH_SHORT).show();
+        } else if (System.currentTimeMillis() - time < 2000) {
+            finishAffinity();
+            System.runFinalization();
+            System.exit(0);
+        }
     }
 }

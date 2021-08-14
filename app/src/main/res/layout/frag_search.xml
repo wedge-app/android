@@ -7,12 +7,13 @@
     android:layout_height="match_parent">
 
     <FrameLayout
+        android:id="@+id/frame1"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical">
 
             <EditText
@@ -31,6 +32,24 @@
                 android:paddingHorizontal="30dp"
                 android:textColor="#8F9090"
                 android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:text="전체 가게"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="20sp"  />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/totalList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="35dp"/>
 
 
         </LinearLayout>
@@ -52,44 +71,17 @@
                 android:layout_marginLeft="330dp"
                 android:layout_marginTop="57dp"
                 android:background="#FFFFFF"
-                app:srcCompat="@drawable/search_q" />
+                app:srcCompat="@drawable/search_q"
+                android:layout_marginStart="330dp"
+                android:contentDescription="@string/todo" />
 
-            <LinearLayout
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/search_list"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="20dp"
-                android:orientation="horizontal">
+                android:layout_height="match_parent"
+                android:layout_marginLeft="33dp"
+                android:layout_marginTop="25dp" />
 
-                <TextView
-                    android:id="@+id/textView17"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.8"
-                    android:layout_marginLeft="35dp"
-                    android:layout_marginTop="20dp"
-                    android:textColor="#000000"
-                    android:textStyle="bold"
-                    android:textSize="20sp"
-                    android:text="동대문엽기떡볶이 성신여대점" />
-
-                <ImageButton
-                    android:id="@+id/imageButton5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.2"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginRight="15dp"
-                    android:background="#ffffff"
-                    app:srcCompat="@drawable/button_enter" />
-            </LinearLayout>
-
-            <ImageView
-                android:id="@+id/imageView13"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/greyline" />
         </LinearLayout>
     </FrameLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
