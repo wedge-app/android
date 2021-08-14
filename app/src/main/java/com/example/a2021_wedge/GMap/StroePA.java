@@ -1,27 +1,24 @@
-package com.example.a2021_wedge.First;
-
+package com.example.a2021_wedge.GMap;
+/*
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.a2021_wedge.MyPageFrag.Potato.GrowingPotatoActivity;
+import com.example.a2021_wedge.MyPageFrag.Potato.TotalPotato;
+import com.example.a2021_wedge.arrClass;
 
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.FrameLayout;
-import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import com.example.a2021_wedge.GMap.Stores;
-import com.example.a2021_wedge.R;
-import com.example.a2021_wedge.arrClass;
-import com.example.a2021_wedge.bottomBar.MainActivity;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import com.example.a2021_wedge.R;
+import com.example.a2021_wedge.bottomBar.MainActivity;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
@@ -30,64 +27,31 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
 
-public class Main extends AppCompatActivity {
+public class StroePA extends AppCompatActivity {
 
     private TextView textView_pa;
     private String jsonString;
     ArrayList<Stores> StoresArrayList;
+    Button b;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_stroe_pa);
 
-        ImageView imageView = findViewById(R.id.imageView4);
-        imageView.setVisibility(View.VISIBLE);
-
-        ImageView imageView2 = findViewById(R.id.imageView5);
-        imageView2.setVisibility(View.INVISIBLE);
-
-
-        Handler handler = new Handler();
-        handler.postDelayed(() -> {
-            imageView2.setVisibility(View.VISIBLE);
-            imageView.setVisibility(View.VISIBLE);
-        }, 500);
-
-
-        handler.postDelayed(() -> {
-            Intent intent = new Intent(getApplicationContext(), Login.class);
-            startActivity(intent);
-        }, 2000);
-
+        textView_pa = (TextView) findViewById(R.id.textView_pa);
 
         JsonParse jsonParse = new JsonParse();      // AsyncTask 생성
         jsonParse.execute("http://mywedge21.dothome.co.kr/conn.php");
 
-
-        /*FrameLayout frame_pa = findViewById(R.id.frame_pa);
-        frame_pa.setOnClickListener(new View.OnClickListener() {
+        b = findViewById(R.id.button_pa);
+        b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                Intent intent = new Intent(getApplicationContext(), Login.class);
-                startActivity(intent);
+                Intent i = new Intent(StroePA.this, MainActivity.class);
+                startActivity(i);
             }
-        });*/
-    }
-
-
-    private long time= 0;
-    @Override
-    public void onBackPressed() {
-        if (System.currentTimeMillis() - time >= 2000) {
-            time = System.currentTimeMillis();
-            Toast.makeText(getApplicationContext(), "뒤로 버튼을 한번 더 누르면 종료합니다.", Toast.LENGTH_SHORT).show();
-        } else if (System.currentTimeMillis() - time < 2000) {
-            finishAffinity();
-            System.runFinalization();
-            System.exit(0);
-        }
+        });
 
     }
 
@@ -147,6 +111,7 @@ public class Main extends AppCompatActivity {
 
                 if(StoresArrayList.size() != 0) {
                     Log.d(TAG, StoresArrayList.get(0).getName());
+                    textView_pa.setText(StoresArrayList.get(0).getName());
                 }
             }
         }
@@ -189,6 +154,4 @@ public class Main extends AppCompatActivity {
 
 
     }
-
-
-}
+}*/
