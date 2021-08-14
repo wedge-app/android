@@ -75,6 +75,13 @@
                 android:layout_marginStart="330dp"
                 android:contentDescription="@string/todo" />
 
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/search_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="33dp"
+                android:layout_marginTop="25dp" />
+
         </LinearLayout>
     </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
