@@ -1,6 +1,5 @@
 package com.example.a2021_wedge.HomeFrag;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -14,46 +13,26 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
-import android.widget.Toast;
+
 import com.example.a2021_wedge.arrClass;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentActivity;
 
-import com.android.volley.AuthFailureError;
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
-import com.example.a2021_wedge.MyPageFrag.Potato.GrowingPotatoActivity;
+import androidx.fragment.app.Fragment;
+
+
 import com.example.a2021_wedge.R;
-import com.example.a2021_wedge.Sajang.StoreManagement;
-import com.example.a2021_wedge.bottomBar.MainActivity;
-import com.example.a2021_wedge.enterPage;
-import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.MapsInitializer;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.HashMap;
-import java.util.Map;
 
-import jxl.Workbook;
-import jxl.read.biff.BiffException;
-
-public class HomeFrag extends Fragment implements OnMapReadyCallback  {
+public class HomeFrag extends Fragment implements OnMapReadyCallback {
     View v;
     MapView mapView;
 
@@ -61,7 +40,7 @@ public class HomeFrag extends Fragment implements OnMapReadyCallback  {
     }
 
     @Override
-    public void onCreateOptionsMenu(Menu menu,MenuInflater inflater) {
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
     }
 
     @Override
@@ -74,7 +53,6 @@ public class HomeFrag extends Fragment implements OnMapReadyCallback  {
     boolean isOpenPage = false;
     LinearLayout linear;
     Animation top, bottom;
-    Button btn_slide;
 
     String[] items = {"한식", "중식", "양식", "일식", "패스트푸드"};
     static double[][] location_arr;
@@ -113,17 +91,6 @@ public class HomeFrag extends Fragment implements OnMapReadyCallback  {
         top.setAnimationListener(listener);
         bottom.setAnimationListener(listener);
 
-        btn_slide = v.findViewById(R.id.btn_slide);
-        btn_slide.setOnClickListener(v -> {
-            if(isOpenPage){
-                linear.startAnimation(bottom);
-            }else{
-                linear.setVisibility(View.VISIBLE);
-                linear.startAnimation(top);
-
-            }
-        });
-
         return v;
     }
 
@@ -135,14 +102,12 @@ public class HomeFrag extends Fragment implements OnMapReadyCallback  {
 
         @Override
         public void onAnimationEnd(Animation animation) {
-            if(isOpenPage){
+            if (isOpenPage) {
                 linear.setVisibility(View.INVISIBLE);
-                btn_slide.setText("열기");
-                isOpenPage=false;
-            }else{
+                isOpenPage = false;
+            } else {
                 linear.setVisibility(View.VISIBLE);
-                btn_slide.setText("닫기");
-                isOpenPage=true;
+                isOpenPage = true;
             }
         }
 
@@ -191,19 +156,23 @@ public class HomeFrag extends Fragment implements OnMapReadyCallback  {
 
             // 2. 마커 생성 (마커를 나타냄)
             gMap.addMarker(makerOptions);
-            googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng_new,16));
+            googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng_new, 16));
 
         }
+
+        gMap.setOnMapClickListener(latLng -> {
+
+            if(isOpenPage){
+                linear.setVisibility(View.VISIBLE);
+                linear.startAnimation(bottom);
+            }
+        });
 
         gMap.setOnMarkerClickListener(marker -> {
             // Triggered when user click any marker on the map
 
-            if(isOpenPage){
-                linear.startAnimation(bottom);
-            }else{
-                linear.setVisibility(View.VISIBLE);
+            if (!isOpenPage) {
                 linear.startAnimation(top);
-
             }
             return false;
 
