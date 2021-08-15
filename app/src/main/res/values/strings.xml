@@ -29,4 +29,6 @@
     <string name="title_activity_storejoin2">FullscreenActivity</string>
     <string name="title_activity_storesublist">FullscreenActivity</string>
     <string name="title_activity_stores_list">FullscreenActivity</string>
+    <string name="title_activity_notice">FullscreenActivity</string>
+    <string name="title_activity_fixmyinfo">FullscreenActivity</string>
 </resources>
