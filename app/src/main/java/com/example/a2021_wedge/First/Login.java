@@ -25,6 +25,7 @@ import com.example.a2021_wedge.Sajang.WaitingList;
 import com.example.a2021_wedge.Storejoin1;
 import com.example.a2021_wedge.bottomBar.MainActivity;
 import com.example.a2021_wedge.retrofit.LoginRequest;
+import com.example.a2021_wedge.retrofit.SjLoginRequest;
 
 
 import org.json.JSONException;
@@ -36,6 +37,8 @@ public class Login extends AppCompatActivity {
     TextView join;
     EditText email, pw;
     int check = 0;
+
+    String sID, sPW, sintro, saddr, smenu, sname, stitle;
 
 
 
@@ -68,7 +71,7 @@ public class Login extends AppCompatActivity {
             String userID = email.getText().toString();
             String userPass = pw.getText().toString();
 
-            if (check == 0) { //사장님로그인인지 판단(수정필요){
+            if (check == 0) { //사장님로그인인지 판단(수정필요)
                 Response.Listener<String> responseListener = new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
@@ -106,9 +109,52 @@ public class Login extends AppCompatActivity {
                 LoginRequest loginRequest = new LoginRequest(userID, userPass, responseListener);
                 RequestQueue queue = Volley.newRequestQueue(Login.this);
                 queue.add(loginRequest);
-            }else {
-                Intent intent = new Intent(getApplicationContext(), WaitingList.class);
-                startActivity(intent);
+            }else if(check == 1){ //사장님 로그인
+                Response.Listener<String> responseListener = new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        try {
+                            JSONObject jsonObject = new JSONObject(response);
+                            boolean success = jsonObject.getBoolean("success");
+
+                            if (success) {//로그인 성공시
+                                System.out.println("연결성공");
+                                sID = jsonObject.getString("ID");
+                                sPW = jsonObject.getString("PW");
+                                sintro = jsonObject.getString("intro");
+                                saddr = jsonObject.getString("addr");
+                                smenu = jsonObject.getString("menu");
+                                sname = jsonObject.getString("userName");
+                                stitle = jsonObject.getString("name");
+
+
+                                Intent intent = new Intent(getApplicationContext(), WaitingList.class);
+
+                                editor.putString("userID", sID);
+                                editor.putString("userPass", sPW);
+                                editor.putString("sintro", sintro);
+                                editor.putString("saddr", saddr);
+                                editor.putString("smenu", smenu);
+                                editor.putString("sname", sname);
+                                editor.putString("stitle", stitle);
+                                editor.apply();
+
+                                Toast.makeText(getApplicationContext(), sname+"님 환영합니다.", Toast.LENGTH_SHORT).show();
+                                startActivity(intent);
+
+                            } else {//로그인 실패시
+                                Toast.makeText(getApplicationContext(), "로그인 실패", Toast.LENGTH_SHORT).show();
+                            }
+
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                };
+                SjLoginRequest sloginRequest = new SjLoginRequest(userID, userPass, responseListener);
+                RequestQueue queue = Volley.newRequestQueue(Login.this);
+                queue.add(sloginRequest);
+
             }
     });
 
