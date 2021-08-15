@@ -116,7 +116,7 @@ public class Login extends AppCompatActivity {
         sign.setVisibility(View.INVISIBLE);
         TextView x = findViewById(R.id.home_title);
         x.setVisibility(View.INVISIBLE);
-        TextView q = findViewById(R.id.textView38);
+        TextView q = findViewById(R.id.text_time);
         q.setVisibility(View.INVISIBLE);
         CheckBox gene = (CheckBox) findViewById(R.id.checkBox3);
         gene.setVisibility(View.INVISIBLE);

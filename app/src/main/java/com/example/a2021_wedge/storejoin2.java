@@ -120,9 +120,9 @@ public class storejoin2 extends AppCompatActivity {
                 };
 
                 //서버로 Volley를 이용해서 요청
-                storesRequest registerRequest = new  storesRequest(sID, sPW, userName, sTel, saddr, sname, responseListener);
+                storesRequest storesRequest = new  storesRequest(sID, sPW, userName, sTel, saddr, sname, responseListener);
                 RequestQueue queue = Volley.newRequestQueue(storejoin2.this);
-                queue.add(registerRequest);
+                queue.add(storesRequest);
             }
         });
 
