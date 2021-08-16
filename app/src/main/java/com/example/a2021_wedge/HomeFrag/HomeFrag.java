@@ -1,5 +1,7 @@
 package com.example.a2021_wedge.HomeFrag;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -11,10 +13,14 @@ import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.toolbox.Volley;
 import com.example.a2021_wedge.GMap.Stores;
 import com.example.a2021_wedge.arrClass;
 
@@ -25,6 +31,8 @@ import androidx.fragment.app.Fragment;
 
 
 import com.example.a2021_wedge.R;
+import com.example.a2021_wedge.enterPage;
+import com.example.a2021_wedge.retrofit.storesearchRequest;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
@@ -33,11 +41,16 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 
 public class HomeFrag extends Fragment implements OnMapReadyCallback {
     View v;
     MapView mapView;
-    TextView home_title;
+    TextView home_title, home_time, home_tel;
+    Button enter;
+    String sname="", stel="", sintro="", saddr="", smenu="";
 
     Stores item = new Stores();
 
@@ -69,23 +82,25 @@ public class HomeFrag extends Fragment implements OnMapReadyCallback {
         mapView.onCreate(savedInstanceState);
         mapView.getMapAsync(this);
 
-        Spinner spinner = v.findViewById(R.id.spinner);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getContext(), android.R.layout.simple_spinner_item, items);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner.setAdapter(adapter);
-        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-//                textView.setText(items[position]);
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-//                textView.setText("선택 : ");
-            }
-        });
+//        Spinner spinner = v.findViewById(R.id.spinner);
+//        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getContext(), android.R.layout.simple_spinner_item, items);
+//        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+//        spinner.setAdapter(adapter);
+//        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+//            @Override
+//            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+////                textView.setText(items[position]);
+//            }
+//
+//            @Override
+//            public void onNothingSelected(AdapterView<?> parent) {
+////                textView.setText("선택 : ");
+//            }
+//        });
 
         home_title = v.findViewById(R.id.text_home);
+        home_time = v.findViewById(R.id.text_time);
+        home_tel = v.findViewById(R.id.text_tel);
         linear = v.findViewById(R.id.linear);
         linear.setVisibility(View.INVISIBLE);
         top = AnimationUtils.loadAnimation(getContext(), R.anim.translate_top);
@@ -94,6 +109,9 @@ public class HomeFrag extends Fragment implements OnMapReadyCallback {
         SlidingAnimationListener listener = new SlidingAnimationListener();
         top.setAnimationListener(listener);
         bottom.setAnimationListener(listener);
+
+        //입장 버튼
+        enter = v.findViewById(R.id.button12);
 
         return v;
     }
@@ -179,10 +197,63 @@ public class HomeFrag extends Fragment implements OnMapReadyCallback {
                 linear.startAnimation(top);
             }
             home_title.setText(marker.getTitle());
+//            SharedPreferences test = getSharedPreferences("test", MODE_PRIVATE);
+//            String openHour = test.getString("hour1", null);
+//            String openMin = test.getString("min1", null);
+//            String closeHour = test.getString("hour2", null);
+//            String closeMin = test.getString("min2", null);
+//            home_time.append("영업 시간 : " + openHour + "시 " + openMin + "분 ~ " +
+//                    closeHour + "시 " + closeMin +"분");
+            home_time.setText("영업 시간 : 11시 00분 ~ 22시 00분");
+
+
+            String search_word = marker.getTitle();
+
+            Response.Listener<String> responseListener = response -> {
+                System.out.println("Listener 진입 성공/ response 값 : " + response);
+                try {
+                    JSONObject jsonObject = new JSONObject(response);
+                    boolean success = jsonObject.getBoolean("success");
+
+                    if (success) {
+                        System.out.println("연결 성공");
+                        sname = jsonObject.getString("name");
+                        stel = jsonObject.getString("tel");
+                        sintro = jsonObject.getString("intro");
+                        saddr = jsonObject.getString("addr");
+                        smenu = jsonObject.getString("menu");
+                        System.out.println("sname="+sname);
+                    } else {
+                        System.out.println("연결 실패");
+
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            };
+            storesearchRequest SearchRequest = new  storesearchRequest(search_word, responseListener);
+            RequestQueue queue = Volley.newRequestQueue(getContext());
+            queue.add(SearchRequest);
+
+            home_tel.setText("전화 주문 : "+stel);
 
             return false;
 
 
+        });
+
+        //입장 버튼 클릭시
+        enter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), enterPage.class);
+                intent.putExtra("name",sname);
+                intent.putExtra("tel",stel);
+                intent.putExtra("intro",sintro);
+                intent.putExtra("addr",saddr);
+                intent.putExtra("menu",smenu);
+                startActivity(intent);
+            }
         });
 
 

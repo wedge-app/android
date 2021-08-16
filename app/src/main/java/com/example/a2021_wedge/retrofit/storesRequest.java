@@ -14,15 +14,17 @@ public class storesRequest extends StringRequest {
     private Map<String, String> map;
 
 
-    public storesRequest(String ID, String PW, String userName, String Tel, String addr,  String name, Response.Listener<String> listener) {
-        super(Request.Method.POST, URL, listener, null);
+    public storesRequest(String name, String tel, String intro, String addr, String menu, String ID, String PW, String userName, Response.Listener<String> listener) {
+        super(Method.POST, URL, listener, null);
         map = new HashMap<>();
+        map.put("name", name);
+        map.put("tel", tel);
+        map.put("intro", intro);
+        map.put("addr", addr);
+        map.put("menu", menu);
         map.put("ID", ID);
         map.put("PW", PW);
         map.put("userName", userName);
-        map.put("Tel", Tel);
-        map.put("addr", addr);
-        map.put("name", name);
     }
 
 

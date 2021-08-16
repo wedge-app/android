@@ -85,6 +85,10 @@ public class storejoin2 extends AppCompatActivity {
                 String sTel = tel;
                 String saddr = ssaddr.getText().toString();
                 String sname = storename.getText().toString();
+                String intro = "미기입";
+                String menu = "미기입";
+
+
 
                 if (sname.equals("")) {
                     AlertDialog.Builder builder = new AlertDialog.Builder(storejoin2.this);
@@ -118,11 +122,11 @@ public class storejoin2 extends AppCompatActivity {
                         }
                     }
                 };
-
+                System.out.println("전달할 데이터 : "+sname+", "+sTel+", "+saddr+", "+sID+", "+sPW+", "+userName);
                 //서버로 Volley를 이용해서 요청
-                storesRequest registerRequest = new  storesRequest(sID, sPW, userName, sTel, saddr, sname, responseListener);
+                storesRequest StoresRequest = new  storesRequest(sname, sTel, intro, saddr, menu, sID, sPW, userName, responseListener);
                 RequestQueue queue = Volley.newRequestQueue(storejoin2.this);
-                queue.add(registerRequest);
+                queue.add(StoresRequest);
             }
         });
 

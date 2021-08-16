@@ -207,11 +207,6 @@ public class SearchFrag extends Fragment {
                             e.printStackTrace();
                         }
                     };
-
-                    //서버로 Volley를 이용해서 요청
-//                    SearchRequest SearchRequest = new SearchRequest(search_word, responseListener);
-//                    RequestQueue queue = Volley.newRequestQueue(getContext());
-//                    queue.add(SearchRequest);
                     storesearchRequest SearchRequest = new  storesearchRequest(search_word, responseListener);
                     RequestQueue queue = Volley.newRequestQueue(getContext());
                     queue.add(SearchRequest);

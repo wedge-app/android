@@ -44,7 +44,7 @@ public class MyPageFrag extends Fragment {
         email.setText(prefname);
 
 
-        personal_info = v.findViewById(R.id.personal_info);
+//        personal_info = v.findViewById(R.id.personal_info);
 
         userName.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,10 +54,10 @@ public class MyPageFrag extends Fragment {
         });
 
 
-        personal_info.setOnClickListener(v1 -> {
-            Intent intent = new Intent(getActivity(), PersonalInfoActivity.class);
-            startActivity(intent);
-        });
+//        personal_info.setOnClickListener(v1 -> {
+//            Intent intent = new Intent(getActivity(), Fixmyinfo.class);
+//            startActivity(intent);
+//        });
 
         growing_potato = v.findViewById(R.id.growing_potato);
         growing_potato.setOnClickListener(v1 -> {

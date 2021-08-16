@@ -29,4 +29,11 @@
     <string name="title_activity_storejoin2">FullscreenActivity</string>
     <string name="title_activity_storesublist">FullscreenActivity</string>
     <string name="title_activity_stores_list">FullscreenActivity</string>
+    <string name="title_activity_notice">FullscreenActivity</string>
+    <string name="title_activity_fixmyinfo">FullscreenActivity</string>
+    <string name="waiting">대기 인원 수를 입력해 주세요</string>
+    <string name="num">숫자 입력</string>
+    <string name="c">취소</string>
+    <string name="j">줄서기</string>
+    <string name="now">현재 줄선 가게</string>
 </resources>

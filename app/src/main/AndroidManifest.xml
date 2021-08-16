@@ -74,12 +74,10 @@
             android:label="@string/title_activity_login"
             android:theme="@style/Theme.2021_Wedge.Fullscreen" />
         <activity android:name=".bottomBar.MainActivity" />
-        <activity android:name=".MyPageFrag.NoticeActivity" />
         <activity android:name=".MyPageFrag.FAQActivity" />
         <activity android:name=".MyPageFrag.FavoriteStoreActivity" />
         <activity android:name=".MyPageFrag.DevelopStoryActivity" />
         <activity android:name=".MyPageFrag.Potato.GrowingPotatoActivity" />
-        <activity android:name=".MyPageFrag.PersonalInfoActivity" />
         <activity android:name=".MyPageFrag.Potato.TotalPotato" />
         <activity android:name=".MyPageFrag.gymrestaurant" />
         <activity android:name=".MyPageFrag.Potato.LevelupPotato1" />
