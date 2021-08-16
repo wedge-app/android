@@ -54,6 +54,9 @@ public class WaitingList extends AppCompatActivity {
     TextView title, cnt, current;
     String storename, countteam, scount;
     String[] team;
+    String sname="";
+    RecyclerView recyclerView;
+    WaitingListAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,11 +68,12 @@ public class WaitingList extends AppCompatActivity {
 //        String wname = preff.getString("wwname","");
 //        String wnumtteam = preff.getString("wwcountteam","");
 
+        //대기줄
         cnt = findViewById(R.id.textView18);
 
         title = findViewById(R.id.textView45);
         SharedPreferences pref = this.getSharedPreferences("user_info", Context.MODE_PRIVATE);
-        String sname = pref.getString("stitle","");
+        sname = pref.getString("stitle","");
         title.setText(sname);
 
         ImageButton imageButton = (ImageButton) findViewById(R.id.imageButton10);
@@ -78,9 +82,9 @@ public class WaitingList extends AppCompatActivity {
             startActivity(intent);
         });
 
-        RecyclerView recyclerView = findViewById(R.id.list_waiting);
+        recyclerView = findViewById(R.id.list_waiting);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        WaitingListAdapter adapter = new WaitingListAdapter();
+        adapter = new WaitingListAdapter();
 
         //새로고침
         current = findViewById(R.id.current);
