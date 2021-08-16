@@ -16,7 +16,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -31,11 +32,13 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="20dp"
                     android:background="#FFFFFF"
-                    android:gravity="left" />
+                    android:gravity="left"
+                    tools:ignore="ContentDescription,RtlHardcoded"
+                    android:layout_marginStart="20dp" />
 
                 <Button
                     android:id="@+id/btn"
-                    android:layout_width="370dp"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:visibility="invisible"
@@ -49,9 +52,10 @@
                 android:layout_marginBottom="30dp"
                 android:autoSizeTextType="uniform"
                 android:gravity="center"
-                android:text="회원가입"
+                android:text="@string/SDGZAfswd"
                 android:textColor="#000000"
-                android:textSize="22sp" />
+                android:textSize="22sp"
+                tools:targetApi="o" />
 
             <ImageView
                 android:id="@+id/i"
@@ -59,7 +63,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="300dp"
-                android:layout_marginBottom="10dp" />
+                android:layout_marginBottom="10dp"
+                tools:ignore="ContentDescription"
+                android:layout_marginEnd="300dp" />
 
             <EditText
                 android:id="@+id/id"
@@ -72,11 +78,13 @@
                 android:autoSizeTextType="uniform"
                 android:background="@drawable/login_enter"
                 android:ems="10"
-                android:hint="아이디"
+                android:hint="@string/DBSRGZDFEA"
                 android:inputType="textPersonName"
                 android:paddingHorizontal="30dp"
                 android:textColor="#8F9090"
-                android:textSize="15sp" />
+                android:textSize="15sp"
+                android:autofillHints=""
+                tools:targetApi="o" />
 
             <ImageView
                 android:id="@+id/imageViehhw7"
@@ -84,7 +92,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="240dp"
-                android:layout_marginBottom="10dp" />
+                android:layout_marginBottom="10dp"
+                tools:ignore="ContentDescription"
+                android:layout_marginEnd="240dp" />
 
             <EditText
                 android:id="@+id/pw"
@@ -97,11 +107,13 @@
                 android:autoSizeTextType="uniform"
                 android:background="@drawable/login_enter"
                 android:ems="10"
-                android:hint="비밀번호"
+                android:hint="@string/SZGAF"
                 android:inputType="textPassword"
                 android:paddingHorizontal="30dp"
                 android:textColor="#8F9090"
-                android:textSize="15sp" />
+                android:textSize="15sp"
+                android:autofillHints=""
+                tools:targetApi="o" />
 
             <ImageView
                 android:id="@+id/imagehhView8"
@@ -109,7 +121,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="280dp"
-                android:layout_marginBottom="10dp" />
+                android:layout_marginBottom="10dp"
+                tools:ignore="ContentDescription"
+                android:layout_marginEnd="280dp" />
 
             <EditText
                 android:id="@+id/name"
@@ -122,11 +136,13 @@
                 android:autoSizeTextType="uniform"
                 android:background="@drawable/login_enter"
                 android:ems="10"
-                android:hint="이름"
+                android:hint="@string/BSAFX"
                 android:inputType="textPersonName"
                 android:paddingHorizontal="30dp"
                 android:textColor="#8F9090"
-                android:textSize="15sp" />
+                android:textSize="15sp"
+                android:autofillHints=""
+                tools:targetApi="o" />
 
             <ImageView
                 android:id="@+id/imaghheView9"
@@ -134,7 +150,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="180dp"
-                android:layout_marginBottom="10dp" />
+                android:layout_marginBottom="10dp"
+                tools:ignore="ContentDescription"
+                android:layout_marginEnd="180dp" />
 
             <EditText
                 android:id="@+id/tel"
@@ -147,18 +165,21 @@
                 android:autoSizeTextType="uniform"
                 android:background="@drawable/login_enter"
                 android:ems="10"
-                android:hint="휴대폰 번호"
+                android:hint="@string/SGZCFEA"
                 android:inputType="phone"
                 android:paddingHorizontal="30dp"
                 android:textColor="#8F9090"
-                android:textSize="15sp" />
+                android:textSize="15sp"
+                android:autofillHints=""
+                tools:targetApi="o" />
 
             <ImageButton
                 android:id="@+id/storenext"
                 app:srcCompat="@drawable/join_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#FFFFFF" />
+                android:background="#FFFFFF"
+                tools:ignore="ContentDescription" />
 
         </LinearLayout>
     </FrameLayout>
@@ -170,7 +191,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
 
             <Button
                 android:id="@+id/butthon9"
@@ -184,7 +206,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="다음"
+                android:text="@string/BVGCAF"
                 android:textColor="#000000"
                 android:textSize="15sp" />
         </LinearLayout>

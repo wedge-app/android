@@ -16,7 +16,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -31,11 +32,13 @@
                     android:layout_marginLeft="20dp"
                     android:background="#FFFFFF"
                     android:gravity="left"
-                    app:srcCompat="@drawable/back" />
+                    app:srcCompat="@drawable/back"
+                    tools:ignore="ContentDescription,RtlHardcoded"
+                    android:layout_marginStart="20dp" />
 
                 <Button
                     android:id="@+id/button8"
-                    android:layout_width="370dp"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:visibility="invisible"
@@ -49,10 +52,10 @@
                 android:layout_marginBottom="30dp"
                 android:autoSizeTextType="uniform"
                 android:gravity="center"
-                android:text="회원가입"
+                android:text="@string/bgfd"
                 android:textColor="#000000"
                 android:textSize="22sp"
-                />
+                tools:targetApi="o" />
 
             <ImageView
                 android:id="@+id/imageView6"
@@ -60,7 +63,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="300dp"
                 android:layout_marginBottom="10dp"
-                app:srcCompat="@drawable/join_id" />
+                app:srcCompat="@drawable/join_id"
+                tools:ignore="ContentDescription"
+                android:layout_marginEnd="300dp" />
 
             <EditText
                 android:id="@+id/id"
@@ -75,9 +80,11 @@
                 android:layout_marginLeft="30dp"
                 android:layout_marginBottom="30dp"
                 android:paddingHorizontal="30dp"
-                android:hint="아이디"
+                android:hint="@string/bafsV"
                 android:autoSizeTextType="uniform"
-                android:inputType="textPersonName" />
+                android:inputType="textPersonName"
+                android:autofillHints=""
+                tools:targetApi="o" />
 
             <ImageView
                 android:id="@+id/imageView7"
@@ -85,7 +92,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="240dp"
                 android:layout_marginBottom="10dp"
-                app:srcCompat="@drawable/join_password" />
+                app:srcCompat="@drawable/join_password"
+                tools:ignore="ContentDescription"
+                android:layout_marginEnd="240dp" />
 
             <EditText
                 android:id="@+id/pwd"
@@ -98,11 +107,13 @@
                 android:autoSizeTextType="uniform"
                 android:background="@drawable/login_enter"
                 android:ems="10"
-                android:hint="비밀번호"
+                android:hint="@string/vff"
                 android:inputType="textPassword"
                 android:paddingHorizontal="30dp"
                 android:textColor="#8F9090"
-                android:textSize="15sp" />
+                android:textSize="15sp"
+                android:autofillHints=""
+                tools:targetApi="o" />
 
             <ImageView
                 android:id="@+id/imageView8"
@@ -110,7 +121,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="280dp"
                 android:layout_marginBottom="10dp"
-                app:srcCompat="@drawable/join_name" />
+                app:srcCompat="@drawable/join_name"
+                tools:ignore="ContentDescription"
+                android:layout_marginEnd="280dp" />
 
             <EditText
                 android:id="@+id/name"
@@ -125,9 +138,11 @@
                 android:layout_marginLeft="30dp"
                 android:layout_marginBottom="30dp"
                 android:paddingHorizontal="30dp"
-                android:hint="이름"
+                android:hint="@string/afsv"
                 android:autoSizeTextType="uniform"
-                android:inputType="textPersonName" />
+                android:inputType="textPersonName"
+                android:autofillHints=""
+                tools:targetApi="o" />
 
             <ImageView
                 android:id="@+id/imageView9"
@@ -135,7 +150,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="180dp"
                 android:layout_marginBottom="10dp"
-                app:srcCompat="@drawable/join_phone_number" />
+                app:srcCompat="@drawable/join_phone_number"
+                tools:ignore="ContentDescription"
+                android:layout_marginEnd="180dp" />
 
             <EditText
                 android:id="@+id/tel"
@@ -150,16 +167,19 @@
                 android:layout_marginBottom="30dp"
                 android:paddingHorizontal="30dp"
                 android:background="@drawable/login_enter"
-                android:hint="휴대폰 번호"
+                android:hint="@string/cxcfdsfaX"
                 android:autoSizeTextType="uniform"
-                android:inputType="phone" />
+                android:inputType="phone"
+                android:autofillHints=""
+                tools:targetApi="o" />
 
             <ImageButton
                 android:id="@+id/imageButton3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#FFFFFF"
-                app:srcCompat="@drawable/join_button" />
+                app:srcCompat="@drawable/join_button"
+                tools:ignore="ContentDescription" />
 
         </LinearLayout>
     </FrameLayout>
@@ -171,7 +191,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
 
             <Button
                 android:id="@+id/button9"
@@ -185,7 +206,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="완료"
+                android:text="@string/szcgava"
                 android:textColor="#000000"
                 android:textSize="15sp" />
         </LinearLayout>

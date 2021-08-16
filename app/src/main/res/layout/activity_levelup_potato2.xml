@@ -18,7 +18,7 @@
             android:id="@+id/textView53"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TextView"
+            android:text="@string/fvAXFr"
             android:textColor="#000000"
             android:textSize="34sp" />
 
@@ -26,7 +26,7 @@
             android:id="@+id/textView19"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=" 님의 감자는..."
+            android:text="@string/fdvaedf"
             android:textColor="#000000"
             android:textSize="34sp" />
     </LinearLayout>
@@ -42,13 +42,13 @@
         app:layout_constraintTop_toBottomOf="@+id/p_next_level"
         app:layout_constraintVertical_bias="0.381"
         app:srcCompat="@drawable/potato"
-        tools:ignore="NotSibling" />
+        tools:ignore="ContentDescription,NotSibling" />
 
     <TextView
         android:id="@+id/textView20"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="등급 상승!!"
+        android:text="@string/sf"
         android:textColor="#000000"
         android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"

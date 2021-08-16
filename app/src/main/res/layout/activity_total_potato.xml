@@ -18,13 +18,14 @@
             android:layout_width="62dp"
             android:layout_height="match_parent"
             android:background="#FFFFFF"
-            android:src="@drawable/back" />
+            android:src="@drawable/back"
+            tools:ignore="ContentDescription" />
 
         <TextView
             android:id="@+id/textView29"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="감자의 성장 일대기"
+            android:text="@string/xfdsza"
             android:textColor="#000000"
             android:textSize="22sp" />
     </LinearLayout>
@@ -41,7 +42,8 @@
             android:layout_width="82dp"
             android:layout_height="153dp"
             android:layout_weight="1"
-            app:srcCompat="@drawable/haetpotato" />
+            app:srcCompat="@drawable/haetpotato"
+            tools:ignore="ContentDescription" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -53,14 +55,15 @@
                 android:id="@+id/textView36"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                tools:ignore="NestedWeights" />
 
             <TextView
                 android:id="@+id/lv1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="햇감자"
+                android:text="@string/dxbgf"
                 android:textColor="#000000"
                 android:textSize="20sp" />
 
@@ -69,7 +72,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="땅에서 막 나온 햇감자.\n나의 변신은 무궁무진하다.\n그 중에서도 가장 멋진 웨지 감자로 거듭날 것이다!"
+                android:text="@string/bfgsaw"
                 android:textColor="#323232" />
 
         </LinearLayout>
@@ -80,7 +83,8 @@
         android:id="@+id/next_bar1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="?android:attr/fastScrollThumbDrawable" />
+        android:src="?android:attr/fastScrollThumbDrawable"
+        tools:ignore="ContentDescription" />
 
     <LinearLayout
         android:id="@+id/basak"
@@ -93,7 +97,8 @@
             android:layout_width="198dp"
             android:layout_height="153dp"
             android:layout_weight="1"
-            android:src="@drawable/potato" />
+            android:src="@drawable/potato"
+            tools:ignore="ContentDescription" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -110,7 +115,7 @@
                 android:id="@+id/lv2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="바삭 감자"
+                android:text="@string/sgzfe"
                 android:textColor="#000000"
                 android:textSize="20sp" />
 
@@ -118,7 +123,7 @@
                 android:id="@+id/textView34"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="웨지 감자가 되기 위한 관문.\n맛집에 대한 뜨거운 열기에\n익어버려 내 몸이 바삭해졌다.\n다른 감자들과는 달라달라~!"
+                android:text="@string/drsgefd"
                 android:textColor="#323232" />
         </LinearLayout>
 
@@ -128,7 +133,8 @@
         android:id="@+id/next_bar2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="?android:attr/fastScrollThumbDrawable" />
+        android:src="?android:attr/fastScrollThumbDrawable"
+        tools:ignore="ContentDescription" />
 
     <LinearLayout
         android:id="@+id/wazi"
@@ -141,7 +147,8 @@
             android:layout_width="354dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            app:srcCompat="@drawable/wedgepotato" />
+            app:srcCompat="@drawable/wedgepotato"
+            tools:ignore="ContentDescription" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -158,7 +165,7 @@
                 android:id="@+id/lv3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="웨지 감자"
+                android:text="@string/hgsfd"
                 android:textColor="#000000"
                 android:textSize="20sp" />
 
@@ -166,7 +173,7 @@
                 android:id="@+id/textView41"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="날카롭고도 동글한 옆태가 매력적인 웨지 감자로 재탄생!! \n화려한 분신술까지 연마했다.\n웨지의 능력을 뽐낼 시간!"
+                android:text="@string/cgrsfe"
                 android:textColor="#323232" />
         </LinearLayout>
 

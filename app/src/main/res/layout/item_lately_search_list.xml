@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical">
@@ -14,24 +15,26 @@
 
         <TextView
             android:id="@+id/store_name"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="25dp"
             android:layout_marginTop="20dp"
             android:layout_weight="0.8"
-            android:text="동대문엽기떡볶이 성신여대점"
+            android:text="@string/EGRFAWER"
             android:textColor="#000000"
             android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:layout_marginStart="25dp" />
 
     </LinearLayout>
 
     <ImageView
         android:id="@+id/imageView19"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_weight="0.8"
-        app:srcCompat="@drawable/greyline" />
+        app:srcCompat="@drawable/greyline"
+        tools:ignore="ContentDescription" />
 
 
 </LinearLayout>

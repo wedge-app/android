@@ -16,7 +16,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
 
             <ImageButton
                 android:id="@+id/back3"
@@ -26,7 +27,8 @@
                 android:layout_marginTop="20dp"
                 android:background="#FFFFFF"
                 android:contentDescription="@string/todo"
-                app:srcCompat="@drawable/back" />
+                app:srcCompat="@drawable/back"
+                android:layout_marginStart="15dp" />
 
             <TextView
                 android:id="@+id/textView8"
@@ -38,7 +40,7 @@
                 android:layout_marginBottom="10dp"
                 android:layout_marginRight="20dp"
                 android:layout_weight="0.8"
-                android:text="고로킹"
+                android:text="@string/eabf"
                 android:textAlignment="center"
                 android:textColor="#000000"
                 android:textSize="28sp"
@@ -48,7 +50,8 @@
                 android:id="@+id/imageView11"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:srcCompat="@drawable/shop_line" />
+                app:srcCompat="@drawable/shop_line"
+                tools:ignore="ContentDescription" />
 
             <TextView
                 android:id="@+id/textView9"
@@ -59,9 +62,10 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="40dp"
                 android:layout_weight="1"
-                android:text="3"
+                android:text="@string/vf"
                 android:textColor="#000000"
-                android:textSize="25sp" />
+                android:textSize="25sp"
+                android:layout_marginStart="145dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -76,7 +80,9 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="#ffffff"
-                    app:srcCompat="@drawable/shop_info" />
+                    app:srcCompat="@drawable/shop_info"
+                    android:contentDescription="@string/fqv"
+                    tools:ignore="ContentDescription" />
 
                 <ImageButton
                     android:id="@+id/imageButton7"
@@ -85,7 +91,10 @@
                     android:layout_marginLeft="10dp"
                     android:layout_weight="1"
                     android:background="#ffffff"
-                    app:srcCompat="@drawable/shop_menu" />
+                    app:srcCompat="@drawable/shop_menu"
+                    android:contentDescription="@string/bsf"
+                    android:layout_marginStart="10dp"
+                    tools:ignore="ContentDescription" />
 
                 <ImageButton
                     android:id="@+id/imageButton8"
@@ -93,7 +102,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="#ffffff"
-                    app:srcCompat="@drawable/shop_review" />
+                    app:srcCompat="@drawable/shop_review"
+                    tools:ignore="ContentDescription" />
 
             </LinearLayout>
 
@@ -150,7 +160,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="#ffffff"
-                    app:srcCompat="@drawable/shop_white" />
+                    app:srcCompat="@drawable/shop_white"
+                    tools:ignore="ContentDescription" />
 
                 <ImageButton
                     android:id="@+id/imageButton9"
@@ -160,7 +171,8 @@
                     android:background="#ffffff"
                     android:layout_marginRight="-12dp"
                     app:srcCompat="@drawable/shop_waitbox"
-                    android:layout_marginEnd="-12dp" />
+                    android:layout_marginEnd="-12dp"
+                    tools:ignore="ContentDescription" />
 
             </LinearLayout>
         </LinearLayout>
@@ -173,7 +185,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
 
             <TextView
                 android:id="@+id/wait"
@@ -183,20 +196,22 @@
                 android:layout_marginLeft="80dp"
                 android:layout_marginTop="120dp"
                 android:layout_marginBottom="40dp"
-                android:text="대기 팀 :     팀"
+                android:text="@string/sbed"
                 android:textColor="#000000"
-                android:textSize="25sp" />
+                android:textSize="25sp"
+                android:layout_marginStart="80dp" />
 
             <ImageView
                 android:id="@+id/star"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
                 android:layout_marginTop="475dp"
                 android:layout_marginRight="300dp"
                 android:layout_weight="1"
                 android:background="#ffffff"
                 app:srcCompat="@drawable/shop_star"
-                android:layout_marginEnd="280dp" />
+                android:layout_marginEnd="280dp"
+                tools:ignore="ContentDescription" />
 
         </LinearLayout>
     </FrameLayout>

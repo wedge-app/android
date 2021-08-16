@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -14,7 +13,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
 
             <EditText
                 android:id="@+id/editTextTextPersonName5"
@@ -27,11 +27,13 @@
                 android:autoSizeTextType="uniform"
                 android:background="@drawable/login_enter"
                 android:ems="10"
-                android:hint="검색할 가게 입력"
+                android:hint="@string/AFA"
                 android:inputType="textPersonName"
                 android:paddingHorizontal="30dp"
                 android:textColor="#8F9090"
-                android:textSize="13sp" />
+                android:textSize="13sp"
+                android:autofillHints=""
+                tools:targetApi="o" />
 
             <TextView
                 android:id="@+id/textView9"
@@ -40,10 +42,11 @@
                 android:layout_marginLeft="35dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="10dp"
-                android:text="전체 가게"
+                android:text="@string/AFWE"
                 android:textColor="#000000"
                 android:textStyle="bold"
-                android:textSize="20sp"  />
+                android:textSize="20sp"
+                android:layout_marginStart="35dp" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/totalList"
@@ -62,7 +65,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
 
             <ImageButton
                 android:id="@+id/imageButton4"
@@ -80,7 +84,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="33dp"
-                android:layout_marginTop="25dp" />
+                android:layout_marginTop="25dp"
+                android:layout_marginStart="33dp" />
 
         </LinearLayout>
     </FrameLayout>

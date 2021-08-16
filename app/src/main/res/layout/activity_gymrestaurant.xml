@@ -19,9 +19,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
             android:gravity="center"
-            android:text="나의 감자찜 가게"
+            android:text="@string/dn"
             android:textColor="#000000"
-            android:textSize="30dp"
+            android:textSize="30sp"
             android:textStyle="bold" />
 
         <Spinner
@@ -33,7 +33,8 @@
             android:background="@drawable/yellowbox"
             android:entries="@array/array_list"
             android:gravity="center"
-            android:minHeight="48dp" />
+            android:minHeight="48dp"
+            android:layout_marginStart="255dp" />
 
         <ListView
             android:id="@+id/gym_listview"
@@ -49,7 +50,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
 
             <ImageButton
                 android:id="@+id/imageButton5"
@@ -61,7 +63,8 @@
                 android:minWidth="48dp"
                 android:minHeight="48dp"
                 app:srcCompat="@drawable/selectionline"
-                tools:ignore="SpeakableTextPresentCheck" />
+                tools:ignore="ContentDescription,SpeakableTextPresentCheck"
+                android:layout_marginStart="267dp" />
 
         </LinearLayout>
     </FrameLayout>
