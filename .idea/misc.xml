@@ -18,15 +18,20 @@
         <entry key="..\:/Users/goeun/AndroidStudioProjects/wedge/app/src/main/res/layout/activity_gymrestaurant.xml" value="0.13072916666666667" />
         <entry key="..\:/Users/goeun/AndroidStudioProjects/wedge/app/src/main/res/layout/activity_main.xml" value="0.12552083333333333" />
         <entry key="..\:/Users/goeun/AndroidStudioProjects/wedge/app/src/main/res/layout/activity_mainpage.xml" value="0.12552083333333333" />
+        <entry key="..\:/Users/goeun/AndroidStudioProjects/wedge/app/src/main/res/layout/activity_review.xml" value="0.24153846153846154" />
         <entry key="..\:/Users/goeun/AndroidStudioProjects/wedge/app/src/main/res/layout/activity_store_management.xml" value="0.24947916666666667" />
         <entry key="..\:/Users/goeun/AndroidStudioProjects/wedge/app/src/main/res/layout/activity_store_ps.xml" value="0.2" />
         <entry key="..\:/Users/goeun/AndroidStudioProjects/wedge/app/src/main/res/layout/activity_stroe_pa.xml" value="0.16018518518518518" />
         <entry key="..\:/Users/goeun/AndroidStudioProjects/wedge/app/src/main/res/layout/activity_total_potato.xml" value="0.24947916666666667" />
-        <entry key="..\:/Users/goeun/AndroidStudioProjects/wedge/app/src/main/res/layout/frag_home.xml" value="0.536" />
+        <entry key="..\:/Users/goeun/AndroidStudioProjects/wedge/app/src/main/res/layout/activity_wating_store.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/goeun/AndroidStudioProjects/wedge/app/src/main/res/layout/frag_home.xml" value="0.264" />
+        <entry key="..\:/Users/goeun/AndroidStudioProjects/wedge/app/src/main/res/layout/frag_my_page.xml" value="0.13229166666666667" />
+        <entry key="..\:/Users/goeun/AndroidStudioProjects/wedge/app/src/main/res/layout/frag_store.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/goeun/AndroidStudioProjects/wedge/app/src/main/res/layout/gym_item.xml" value="0.24947916666666667" />
         <entry key="..\:/Users/goeun/AndroidStudioProjects/wedge/app/src/main/res/layout/item.xml" value="0.24947916666666667" />
         <entry key="..\:/Users/goeun/AndroidStudioProjects/wedge/app/src/main/res/layout/item_waiting_list.xml" value="0.24947916666666667" />
         <entry key="..\:/Users/goeun/AndroidStudioProjects/wedge/app/src/main/res/layout/sample.xml" value="0.24947916666666667" />
+        <entry key="..\:/Users/goeun/AndroidStudioProjects/wedge/app/src/main/res/layout/testtt.xml" value="0.25364583333333335" />
       </map>
     </option>
   </component>
