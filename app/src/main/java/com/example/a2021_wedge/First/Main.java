@@ -140,7 +140,7 @@ public class Main extends AppCompatActivity {
             super.onPostExecute(fromdoInBackgroundString);
 
             if (fromdoInBackgroundString == null)
-                textView_pa.setText("error");
+                System.out.println("error");
             else {
                 jsonString = fromdoInBackgroundString;
                 StoresArrayList = doParse();

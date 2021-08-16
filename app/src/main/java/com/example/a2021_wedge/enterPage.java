@@ -22,6 +22,7 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.toolbox.Volley;
 import com.example.a2021_wedge.First.join;
+import com.example.a2021_wedge.Sajang.StoreManagement;
 import com.example.a2021_wedge.SearchFrag.SearchFrag;
 import com.example.a2021_wedge.retrofit.LikeStoreRequest;
 import com.example.a2021_wedge.retrofit.RegisterRequest;
@@ -54,8 +55,19 @@ public class enterPage extends AppCompatActivity {
         String saddr = intent.getExtras().getString("addr");
         String smenu = intent.getExtras().getString("menu");
 
+
         SharedPreferences pref = this.getApplication().getSharedPreferences("user_info", Context.MODE_PRIVATE);
         String uname = pref.getString("userName","");
+
+
+        SharedPreferences storeName = getSharedPreferences("storeName", MODE_PRIVATE);
+        SharedPreferences.Editor editor_s = storeName.edit();
+        editor_s.putString("store", sname);
+        editor_s.putString("userID", uname);
+        editor_s.commit();
+
+
+
 
         ImageView star = findViewById(R.id.star);
         star.setOnClickListener(v -> {
@@ -95,6 +107,7 @@ public class enterPage extends AppCompatActivity {
 
         info = findViewById(R.id.imageButton6);
         menu = findViewById(R.id.imageButton7);
+        review = findViewById(R.id.imageButton8);
 
         //가게 이름
         Name = findViewById(R.id.textView8);
@@ -166,9 +179,17 @@ public class enterPage extends AppCompatActivity {
                 Toast.makeText(enterPage.this, "줄서기가 정상신청되었습니다.", Toast.LENGTH_SHORT).show();
                 //미리 줄서기
                 int w = Integer.parseInt(wait_num.getText().toString());
-                wait_num.setText(w + 1);
+                wait_num.setText(Integer.toString(w + 1));
             }
         });
+
+        /*review.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i3 = new Intent(getApplicationContext(), Review.class);
+                startActivity(i3);
+            }
+        });*/
     }
     private long time= 0;
     @Override

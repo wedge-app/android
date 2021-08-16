@@ -60,7 +60,6 @@ public class HomeFrag extends Fragment implements OnMapReadyCallback {
     Animation top, bottom;
 
     String[] items = {"한식", "중식", "양식", "일식", "패스트푸드"};
-    static double[][] location_arr;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
