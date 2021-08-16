@@ -11,26 +11,28 @@
         android:id="@+id/back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/back"
         android:background="#FFFFFF"
-        android:contentDescription="@string/todo" />
+        android:contentDescription="@string/todo"
+        app:srcCompat="@drawable/back" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <LinearLayout
+            android:id="@+id/linearLayout2"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:ignore="MissingConstraints">
 
             <TextView
                 android:id="@+id/textView44"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="36dp"
-                android:textSize="34sp"
-                android:text="TextView" />
+                android:text="TextView"
+                android:textSize="34sp" />
 
             <TextView
                 android:id="@+id/textView1"
@@ -39,31 +41,45 @@
                 android:layout_marginTop="36dp"
                 android:text=" 님의 감자는..."
                 android:textSize="34sp" />
+
         </LinearLayout>
 
-        <ImageView
-            android:id="@+id/con_pot"
-            android:layout_width="298dp"
+        <FrameLayout
+            android:id="@+id/frameLayout2"
+            android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginTop="93dp"
             app:layout_constraintBottom_toTopOf="@+id/con_lv_pot"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/potato" />
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+            <ImageView
+                android:id="@+id/image_hpotato"
+                android:layout_width="370dp"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/haetpotato" />
+
+            <ImageView
+                android:id="@+id/image_bpotato"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/potato" />
+
+            <ImageView
+                android:id="@+id/image_wpotato"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/wedgepotato" />
+        </FrameLayout>
 
         <TextView
             android:id="@+id/con_lv_pot"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="48dp"
-            android:text="바삭 감자"
             android:textColor="#000000"
             android:textSize="34sp"
             app:layout_constraintBottom_toTopOf="@+id/info_levelup"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-        />
+            app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/info_levelup"

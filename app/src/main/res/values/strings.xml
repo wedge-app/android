@@ -37,4 +37,7 @@
     <string name="j">줄서기</string>
     <string name="now">현재 줄선 가게</string>
     <string name="table">테이블 정보 입력</string>
+    <string name="hpotato">햇감자</string>
+    <string name="bpotato">바삭감자</string>
+    <string name="wpotato">웨지감자</string>
 </resources>

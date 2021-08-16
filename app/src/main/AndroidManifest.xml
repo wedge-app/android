@@ -16,11 +16,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.2021_Wedge">
         <activity
-            android:name=".Review"
+            android:name=".Rev.ReviewList"
             android:exported="true" />
+        <activity
+            android:name=".Rev.Review"
+            android:exported="true" />
+
         <uses-library
             android:name="org.apache.http.legacy"
-            android:required="false"/>
+            android:required="false" />
+
         <activity
             android:name=".storesublist"
             android:configChanges="orientation|keyboardHidden|screenSize"
@@ -73,6 +78,7 @@
             android:theme="@style/Theme.2021_Wedge.Fullscreen" />
         <activity android:name=".bottomBar.MainActivity" />
         <activity android:name=".MyPageFrag.FAQActivity" />
+        <activity android:name=".MyPageFrag.NoticeActivity" />
         <activity android:name=".MyPageFrag.FavoriteStoreActivity" />
         <activity android:name=".MyPageFrag.DevelopStoryActivity" />
         <activity android:name=".MyPageFrag.Potato.GrowingPotatoActivity" />
