@@ -13,9 +13,8 @@ public class LikeStoreListRequest extends StringRequest {
     private Map<String, String> map;
 
     public LikeStoreListRequest(String uname, Response.Listener<String> listener) {
-        super(Method.POST, URL, listener, null);
+        super(Method.GET, URL, listener, null);
         map = new HashMap<>();
-        map.put("uname", uname);
     }
 
     @Override
