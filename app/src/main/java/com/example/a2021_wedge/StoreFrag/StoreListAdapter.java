@@ -55,6 +55,7 @@ public class StoreListAdapter extends RecyclerView.Adapter<com.example.a2021_wed
 
     public void setItems(ArrayList<ItemStore> items) {
         this.items = items;
+        notifyDataSetChanged();
     }
 
     public ItemStore getItem(int position) {
@@ -63,6 +64,7 @@ public class StoreListAdapter extends RecyclerView.Adapter<com.example.a2021_wed
 
     public void setItem(int position, ItemStore item) {
         items.set(position, item);
+        notifyItemChanged(position);
     }
 
     public void setOnItemClickListener(OnStoreListItemClickListener listener) {
@@ -116,7 +118,6 @@ public class StoreListAdapter extends RecyclerView.Adapter<com.example.a2021_wed
                 DeleteWaitingRequest deleteWaitingRequest = new DeleteWaitingRequest(s, responseListener);
                 RequestQueue queue = Volley.newRequestQueue(btn.getContext());
                 queue.add(deleteWaitingRequest);
-
             });
         }
 
