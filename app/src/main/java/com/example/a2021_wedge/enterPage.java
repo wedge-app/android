@@ -121,8 +121,6 @@ public class enterPage extends AppCompatActivity {
         story = findViewById(R.id.textView21);
         story2 = findViewById(R.id.textView12);
 
-        //대기 인원 숫자
-        wait_num = findViewById(R.id.textView18);
 
         //미리 줄서기
         wait = findViewById(R.id.imageButton9);
