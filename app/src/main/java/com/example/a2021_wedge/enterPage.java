@@ -27,6 +27,7 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.toolbox.Volley;
 import com.example.a2021_wedge.First.join;
+import com.example.a2021_wedge.Rev.ReviewList;
 import com.example.a2021_wedge.Sajang.StoreManagement;
 import com.example.a2021_wedge.SearchFrag.SearchFrag;
 import com.example.a2021_wedge.retrofit.LikeStoreRequest;
@@ -152,6 +153,14 @@ public class enterPage extends AppCompatActivity {
                 String closeMin = test.getString("min2", null);
                 story2.append("영업 시간 : " + openHour + "시 " + openMin + "분 ~ " +
                         closeHour + "시 " + closeMin +"분");
+            }
+        });
+
+        review.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(), ReviewList.class);
+                startActivity(i);
             }
         });
 

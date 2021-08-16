@@ -73,5 +73,7 @@ dependencies {
     implementation 'net.sourceforge.jexcelapi:jxl:2.6.12'
     implementation 'com.google.maps.android:android-maps-utils:0.4'
 
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
+
 
 }
