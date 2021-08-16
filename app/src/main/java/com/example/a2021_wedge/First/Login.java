@@ -149,7 +149,7 @@ public class Login extends AppCompatActivity {
                 queue.add(sloginRequest);
 
             }
-    });
+        });
 
         FrameLayout sign = findViewById(R.id.signup);
         sign.setVisibility(View.INVISIBLE);

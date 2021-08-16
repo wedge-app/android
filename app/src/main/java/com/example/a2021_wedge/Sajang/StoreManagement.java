@@ -232,13 +232,15 @@ public class StoreManagement extends AppCompatActivity {
     private long time= 0;
     @Override
     public void onBackPressed() {
-        if (System.currentTimeMillis() - time >= 2000) {
-            time = System.currentTimeMillis();
-            Toast.makeText(getApplicationContext(), "뒤로 버튼을 한번 더 누르면 종료합니다.", Toast.LENGTH_SHORT).show();
-        } else if (System.currentTimeMillis() - time < 2000) {
-            finishAffinity();
-            System.runFinalization();
-            System.exit(0);
-        }
+        Intent intent = new Intent(this, WaitingList.class);
+        startActivity(intent);
+//        if (System.currentTimeMillis() - time >= 2000) {
+//            time = System.currentTimeMillis();
+//            Toast.makeText(getApplicationContext(), "뒤로 버튼을 한번 더 누르면 종료합니다.", Toast.LENGTH_SHORT).show();
+//        } else if (System.currentTimeMillis() - time < 2000) {
+//            finishAffinity();
+//            System.runFinalization();
+//            System.exit(0);
+//        }
     }
 }

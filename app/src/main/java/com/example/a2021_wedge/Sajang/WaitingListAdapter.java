@@ -71,8 +71,8 @@ public class WaitingListAdapter extends RecyclerView.Adapter<WaitingListAdapter.
         public ViewHolder(View itemView, final OnWaitingListItemClickListener listener) {
             super(itemView);
 
-            textView2 = itemView.findViewById(R.id.nickname);
-            textView = itemView.findViewById(R.id.personnel);
+            textView2 = itemView.findViewById(R.id.countteam);
+            textView = itemView.findViewById(R.id.count);
 
             itemView.setOnClickListener(view -> {
                 int position = getAdapterPosition();
