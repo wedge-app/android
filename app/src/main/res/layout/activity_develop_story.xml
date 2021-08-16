@@ -21,8 +21,8 @@
             android:textStyle="bold"
             android:textColor="@color/black"
             android:gravity="center"
-            android:textSize="30dp"
-            android:text='"자라나는 개발자들에게' />
+            android:textSize="30sp"
+            android:text="@string/a" />
 
         <TextView
             android:id="@+id/textView23"
@@ -31,8 +31,8 @@
             android:textStyle="bold"
             android:gravity="center"
             android:textColor="@color/black"
-            android:textSize="30dp"
-            android:text='힘이 되어주세요"' />
+            android:textSize="30sp"
+            android:text="@string/b" />
 
         <TextView
             android:id="@+id/textView24"
@@ -42,8 +42,8 @@
             android:textStyle="italic"
             android:gravity="center"
             android:textColor="@color/black"
-            android:textSize="15dp"
-            android:text="당신의 기부 덕분에 더 좋은 서비스를 향해 항해합니다" />
+            android:textSize="15sp"
+            android:text="@string/d" />
 
         <ImageView
             android:id="@+id/imageView16"
@@ -51,7 +51,9 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="70dp"
             android:layout_marginTop="25dp"
-            app:srcCompat="@drawable/redboy" />
+            app:srcCompat="@drawable/redboy"
+            tools:ignore="ContentDescription"
+            android:layout_marginStart="70dp" />
 
         <TextView
             android:id="@+id/textView25"
@@ -61,8 +63,8 @@
             android:textStyle="bold"
             android:textColor="@color/black"
             android:layout_marginTop="30dp"
-            android:textSize="32dp"
-            android:text="농협 : 352-1503-3033-23" />
+            android:textSize="32sp"
+            android:text="@string/_352_1503_3033_23" />
 
         <ImageButton
             android:id="@+id/imageButton13"
@@ -72,7 +74,9 @@
             android:layout_gravity="center"
             android:layout_marginLeft="25dp"
             android:background="#FFFFFF"
-            app:srcCompat="@drawable/donationbutton" />
+            app:srcCompat="@drawable/donationbutton"
+            tools:ignore="ContentDescription"
+            android:layout_marginStart="25dp" />
 
     </LinearLayout>
 
@@ -83,7 +87,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
 
             <ImageView
                 android:id="@+id/imageView17"
@@ -94,12 +99,13 @@
                 android:maxHeight="200dp"
                 android:layout_marginTop="300dp"
                 android:layout_marginLeft="200dp"
-                app:srcCompat="@drawable/betterservice" />
+                app:srcCompat="@drawable/betterservice"
+                tools:ignore="ContentDescription"
+                android:layout_marginStart="200dp" />
         </LinearLayout>
 
     </FrameLayout>
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="20sp"

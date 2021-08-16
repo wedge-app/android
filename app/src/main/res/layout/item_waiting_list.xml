@@ -16,13 +16,13 @@
             android:layout_height="wrap_content"
             android:textColor="@color/black"
             android:textSize="20sp"
-            android:text="대기 번호 : " />
+            android:text="@string/EFR" />
 
         <TextView
             android:id="@+id/count"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TextView"
+            android:text="@string/WREG"
             android:textColor="@color/black"
             android:textSize="20sp" />
     </LinearLayout>
@@ -39,13 +39,13 @@
             android:layout_height="wrap_content"
             android:textColor="@color/black"
             android:textSize="20sp"
-            android:text="인원 : " />
+            android:text="@string/VEARE" />
 
         <TextView
             android:id="@+id/countteam"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TextView"
+            android:text="@string/RAGRE"
             android:textColor="@color/black"
             android:textSize="20sp" />
     </LinearLayout>

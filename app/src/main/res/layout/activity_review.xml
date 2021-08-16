@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:layout_gravity="right"
     android:orientation="vertical"
-    tools:context=".Rev.Review">
+    tools:context=".Rev.Review"
+    tools:ignore="RtlHardcoded">
 
     <LinearLayout
         android:id="@+id/linearLayout7"
@@ -19,7 +20,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="한줄 리뷰 작성"
+            android:text="@string/BXD"
             android:textColor="#000000"
             android:textSize="28sp" />
     </LinearLayout>
@@ -37,7 +38,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="나의 별점은..."
+            android:text="@string/SGDVZDF"
             android:textSize="24sp" />
 
         <RatingBar
@@ -58,12 +59,13 @@
             android:layout_width="match_parent"
             android:layout_height="233dp"
             android:background="@null"
-            android:hint="가게에 대한 한줄 리뷰를 남겨주세요."
+            android:hint="@string/GAE"
             android:inputType="textMultiLine"
             android:lines="8"
             android:maxLines="10"
             android:minLines="5"
-            android:scrollbars="vertical"></EditText>
+            android:scrollbars="vertical"
+            android:autofillHints="" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -76,16 +78,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="#FFC107"
-                android:text="등록"
-                app:backgroundTint="#FFC107" />
+                android:text="@string/ADFZAVRA"
+                app:backgroundTint="#FFC107"
+                style="?android:attr/buttonBarButtonStyle" />
 
             <Button
                 android:id="@+id/button_review_cancel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="#F44336"
-                android:text="취소"
-                app:backgroundTint="#F44336" />
+                android:text="@string/ERVFS"
+                app:backgroundTint="#F44336"
+                style="?android:attr/buttonBarButtonStyle" />
         </LinearLayout>
 
         <TextView

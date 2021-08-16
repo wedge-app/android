@@ -31,7 +31,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="36dp"
-                android:text="TextView"
+                android:text="@string/hgbxfd"
                 android:textSize="34sp" />
 
             <TextView
@@ -39,7 +39,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="36dp"
-                android:text=" 님의 감자는..."
+                android:text="@string/hgfsre"
                 android:textSize="34sp" />
 
         </LinearLayout>
@@ -55,19 +55,22 @@
                 android:id="@+id/image_hpotato"
                 android:layout_width="370dp"
                 android:layout_height="wrap_content"
-                app:srcCompat="@drawable/haetpotato" />
+                app:srcCompat="@drawable/haetpotato"
+                tools:ignore="ContentDescription" />
 
             <ImageView
                 android:id="@+id/image_bpotato"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:srcCompat="@drawable/potato" />
+                app:srcCompat="@drawable/potato"
+                tools:ignore="ContentDescription" />
 
             <ImageView
                 android:id="@+id/image_wpotato"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:srcCompat="@drawable/wedgepotato" />
+                app:srcCompat="@drawable/wedgepotato"
+                tools:ignore="ContentDescription" />
         </FrameLayout>
 
         <TextView
@@ -87,7 +90,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="148dp"
             android:background="#FFE589"
-            android:text="웨지 감자가 되기 위해서는... \nㅇ번의 리뷰 작성이 필요해요~"
+            android:text="@string/hgdxbfzs"
             android:textColor="#555555"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -98,7 +101,7 @@
             android:id="@+id/review_num"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="리뷰 작성 횟수 : ㅇ 번"
+            android:text="@string/mfhdrsgfes"
             android:textColor="#000000"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -113,7 +116,7 @@
             android:layout_width="213dp"
             android:layout_height="36dp"
             android:background="#FFC700"
-            android:text="감자의 성장기 한 눈에 보기"
+            android:text="@string/gbf"
             android:textColor="#CE737272"
             app:backgroundTint="#FFE589"
             app:layout_constraintBottom_toBottomOf="parent"

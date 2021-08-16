@@ -16,7 +16,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
 
             <Button
                 android:id="@+id/button3"
@@ -29,7 +30,8 @@
                 android:id="@+id/imageView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:srcCompat="@drawable/login_title" />
+                app:srcCompat="@drawable/login_title"
+                tools:ignore="ContentDescription" />
 
             <EditText
                 android:id="@+id/editTextID"
@@ -44,10 +46,11 @@
                 android:layout_marginLeft="30dp"
                 android:layout_marginBottom="10dp"
                 android:paddingHorizontal="30dp"
-                android:hint="아이디"
+                android:hint="@string/cxfrad"
                 android:autoSizeTextType="uniform"
                 android:inputType="textPersonName"
-                 />
+                android:autofillHints=""
+                tools:targetApi="o" />
 
             <EditText
                 android:id="@+id/editTextPW"
@@ -60,11 +63,13 @@
                 android:autoSizeTextType="uniform"
                 android:background="@drawable/login_enter"
                 android:ems="10"
-                android:hint="비밀번호"
+                android:hint="@string/sdcfga"
                 android:inputType="textPassword"
                 android:paddingHorizontal="30dp"
                 android:textColor="#8F9090"
-                android:textSize="13sp" />
+                android:textSize="13sp"
+                android:autofillHints=""
+                tools:targetApi="o" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -86,7 +91,8 @@
                     android:layout_weight="1"
                     android:background="#FFFFFF"
                     android:layout_marginBottom="10dp"
-                    app:srcCompat="@drawable/button" />
+                    app:srcCompat="@drawable/button"
+                    tools:ignore="ContentDescription" />
 
                 <Button
                     android:id="@+id/button5"
@@ -104,15 +110,16 @@
 
                 <TextView
                     android:id="@+id/textView"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.24"
                     android:autoSizeTextType="uniform"
                     android:gravity="center"
-                    android:text="회원가입"
+                    android:text="@string/sgcfar"
                     android:textColor="#000000"
                     android:textSize="12sp"
-                    tools:ignore="SmallSp" />
+                    tools:ignore="SmallSp"
+                    tools:targetApi="o" />
             </LinearLayout>
 
             <Button
@@ -127,7 +134,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
                 android:layout_marginBottom="100dp"
-                app:srcCompat="@drawable/potato" />
+                app:srcCompat="@drawable/potato"
+                tools:ignore="ContentDescription" />
 
         </LinearLayout>
     </FrameLayout>
@@ -139,7 +147,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
 
             <Button
                 android:id="@+id/button7"
@@ -153,7 +162,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="로그인"
+                android:text="@string/xcfrz"
                 android:textColor="#000000"
                 android:textSize="15sp" />
         </LinearLayout>
@@ -167,20 +176,22 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="380dp"
                 android:layout_marginLeft="135dp"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:layout_marginStart="135dp">
 
                 <CheckBox
                     android:id="@+id/checkBox"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="사장님이신가요?" />
+                    android:text="@string/bgsfdcxzv" />
             </LinearLayout>
         </LinearLayout>
 
@@ -196,7 +207,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
 
             <TextView
                 android:id="@+id/home_title"
@@ -205,9 +217,10 @@
                 android:layout_marginLeft="225dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="20dp"
-                android:text="X"
+                android:text="@string/hgsfx"
                 android:textColor="#000000"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:layout_marginStart="225dp" />
 
             <TextView
                 android:id="@+id/text_time"
@@ -215,10 +228,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="48dp"
                 android:layout_marginBottom="20dp"
-                android:text="가입자 정보를 골라주세요."
+                android:text="@string/sdaf"
                 android:textColor="#000000"
                 android:textSize="15sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:layout_marginStart="48dp" />
 
             <CheckBox
                 android:id="@+id/checkBox3"
@@ -226,8 +240,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
                 android:layout_marginBottom="5dp"
-                android:text="일반 회원 회원가입"
-                android:textStyle="bold" />
+                android:text="@string/dgsf"
+                android:textStyle="bold"
+                android:layout_marginStart="50dp" />
 
             <CheckBox
                 android:id="@+id/checkBox4"
@@ -235,8 +250,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
                 android:layout_marginBottom="30dp"
-                android:text="사장님 회원가입"
-                android:textStyle="bold" />
+                android:text="@string/HSRGD"
+                android:textStyle="bold"
+                android:layout_marginStart="50dp" />
         </LinearLayout>
     </FrameLayout>
 </FrameLayout>

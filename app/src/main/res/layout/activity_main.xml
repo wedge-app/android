@@ -19,7 +19,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
 
             <Button
                 android:id="@+id/button_ps"
@@ -32,14 +33,16 @@
                 android:id="@+id/imageView5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:srcCompat="@drawable/main6" />
+                app:srcCompat="@drawable/main6"
+                tools:ignore="ContentDescription" />
 
             <ImageView
                 android:id="@+id/imageView4"
                 android:layout_width="match_parent"
                 android:layout_height="310dp"
                 android:layout_marginTop="-40dp"
-                app:srcCompat="@drawable/main5" />
+                app:srcCompat="@drawable/main5"
+                tools:ignore="ContentDescription" />
 
             <Button
                 android:id="@+id/button2"
@@ -53,7 +56,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="80dp"
                 android:layout_marginBottom="20dp"
-                app:srcCompat="@drawable/potato" />
+                app:srcCompat="@drawable/potato"
+                tools:ignore="ContentDescription" />
 
         </LinearLayout>
     </FrameLayout>

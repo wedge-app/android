@@ -8,7 +8,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="5"
-        android:text="TextView" />
+        android:text="@string/FDAV" />
 
     <Button
         android:id="@+id/button11"
@@ -16,5 +16,5 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:background="#FFC107"
-        android:text="삭제" />
+        android:text="@string/WERG" />
 </LinearLayout>

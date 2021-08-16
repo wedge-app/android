@@ -19,9 +19,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
             android:gravity="center"
-            android:text="나의 감자찜 가게"
+            android:text="@string/mhfg"
             android:textColor="#000000"
-            android:textSize="30dp"
+            android:textSize="30sp"
             android:textStyle="bold" />
 
         <Spinner
@@ -32,7 +32,8 @@
             android:layout_marginTop="10dp"
             android:background="@drawable/yellowbox"
             android:entries="@array/array_list"
-            android:gravity="center" />
+            android:gravity="center"
+            android:layout_marginStart="255dp" />
 
         <TextView
             android:id="@+id/textView8"
@@ -41,9 +42,11 @@
             android:layout_marginLeft="50dp"
             android:layout_marginTop="20dp"
             android:gravity="left"
-            android:text="엽기떡볶이 성신여대점"
+            android:text="@string/hgr"
             android:textColor="#000000"
-            android:textSize="24dp" />
+            android:textSize="24sp"
+            android:layout_marginStart="50dp"
+            tools:ignore="RtlHardcoded" />
 
         <ImageView
             android:id="@+id/imageView12"
@@ -51,7 +54,9 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="40dp"
             android:layout_marginTop="20dp"
-            app:srcCompat="@drawable/greyline" />
+            app:srcCompat="@drawable/greyline"
+            tools:ignore="ContentDescription"
+            android:layout_marginStart="40dp" />
 
         <TextView
             android:id="@+id/textView11"
@@ -60,9 +65,11 @@
             android:layout_marginLeft="50dp"
             android:layout_marginTop="20dp"
             android:gravity="left"
-            android:text="짜장면"
+            android:text="@string/mfhxbg"
             android:textColor="#000000"
-            android:textSize="24dp" />
+            android:textSize="24sp"
+            android:layout_marginStart="50dp"
+            tools:ignore="RtlHardcoded" />
 
         <ImageView
             android:id="@+id/imageView13"
@@ -70,7 +77,9 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="40dp"
             android:layout_marginTop="20dp"
-            app:srcCompat="@drawable/greyline" />
+            app:srcCompat="@drawable/greyline"
+            tools:ignore="ContentDescription"
+            android:layout_marginStart="40dp" />
     </LinearLayout>
 
     <FrameLayout
@@ -79,7 +88,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
 
             <ImageButton
                 android:id="@+id/imageButton5"
@@ -88,12 +98,13 @@
                 android:layout_marginLeft="267dp"
                 android:layout_marginTop="103dp"
                 android:background="#FFC812"
-                app:srcCompat="@drawable/selectionline" />
+                app:srcCompat="@drawable/selectionline"
+                tools:ignore="ContentDescription"
+                android:layout_marginStart="267dp" />
         </LinearLayout>
     </FrameLayout>
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="20sp"

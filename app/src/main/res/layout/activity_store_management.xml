@@ -14,7 +14,8 @@
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#FFC700">
+            android:background="#FFC700"
+            tools:ignore="NestedScrolling">
 
             <FrameLayout
                 android:layout_width="match_parent"
@@ -25,7 +26,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
                     android:background="#FFC700"
-                    android:text="테이블 수 입력"
+                    android:text="@string/SCD"
                     android:textColor="#000000"
                     android:textSize="28sp"
                     android:visibility="visible"
@@ -43,7 +44,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="테이블 수 입력"
+                        android:text="@string/DC"
                         android:textColor="#000000"
                         android:textSize="24sp" />
 
@@ -73,7 +74,8 @@
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#FFE589">
+            android:background="#FFE589"
+            tools:ignore="NestedScrolling">
 
             <FrameLayout
                 android:layout_width="match_parent"
@@ -83,7 +85,7 @@
                     android:id="@+id/button_2"
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
-                    android:text="가게 운영 시간"
+                    android:text="@string/ACGFVZD"
                     android:textColor="#000000"
                     android:textSize="28sp"
                     android:visibility="visible"
@@ -100,7 +102,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="가게 운영 시간"
+                        android:text="@string/BZCswf"
                         android:textColor="#000000"
                         android:textSize="24sp" />
 
@@ -109,7 +111,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="오픈 시간 설정"
+                        android:text="@string/VDAFV"
                         app:backgroundTint="#FF9800" />
 
                     <Button
@@ -117,7 +119,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="마감 시간 설정"
+                        android:text="@string/SZGRFE"
                         app:backgroundTint="#FF9800" />
 
                     <TextView
@@ -125,18 +127,20 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="left"
-                        android:text="오픈 : "
+                        android:text="@string/WSAfes"
                         android:textColor="#000000"
-                        android:textSize="20sp" />
+                        android:textSize="20sp"
+                        tools:ignore="RtlHardcoded" />
 
                     <TextView
                         android:id="@+id/textView_close"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="left"
-                        android:text="마감 : "
+                        android:text="@string/SAF"
                         android:textColor="#000000"
-                        android:textSize="20sp" />
+                        android:textSize="20sp"
+                        tools:ignore="RtlHardcoded" />
 
                 </LinearLayout>
             </FrameLayout>
@@ -145,7 +149,8 @@
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#FFC700">
+            android:background="#FFC700"
+            tools:ignore="NestedScrolling">
 
             <FrameLayout
                 android:layout_width="match_parent"
@@ -156,7 +161,7 @@
                     android:id="@+id/button_3"
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
-                    android:text="사장님 한마디"
+                    android:text="@string/fswd"
                     android:textColor="#000000"
                     android:textSize="28sp"
                     android:visibility="visible"
@@ -172,7 +177,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="사장님 한마디"
+                        android:text="@string/asadf"
                         android:textColor="#000000"
                         android:textSize="24sp" />
 
@@ -182,13 +187,14 @@
                         android:layout_height="wrap_content"
                         android:minWidth="32dp"
                         android:minHeight="48dp"
-                        tools:ignore="SpeakableTextPresentCheck" />
+                        tools:ignore="LabelFor,SpeakableTextPresentCheck,TextFields"
+                        android:autofillHints="" />
 
                     <Button
                         android:id="@+id/button_sajang"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="입력"
+                        android:text="@string/aWfxecD"
                         app:backgroundTint="#FF9800" />
 
                 </LinearLayout>
@@ -198,7 +204,8 @@
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#FFE589">
+            android:background="#FFE589"
+            tools:ignore="NestedScrolling">
 
             <FrameLayout
                 android:layout_width="match_parent"
@@ -208,7 +215,7 @@
                     android:id="@+id/button_4"
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
-                    android:text="메뉴 관리"
+                    android:text="@string/AWVSA"
                     android:textColor="#000000"
                     android:textSize="28sp"
                     android:visibility="visible"
@@ -225,7 +232,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="메뉴 관리"
+                        android:text="@string/AWXdcF"
                         android:textColor="#000000"
                         android:textSize="24sp" />
 
@@ -239,14 +246,16 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:ems="13"
-                            android:hint="추가할 메뉴를 입력하세요"
-                            android:minHeight="48dp" />
+                            android:hint="@string/XZSGECFR"
+                            android:minHeight="48dp"
+                            android:autofillHints=""
+                            tools:ignore="TextFields" />
 
                         <Button
                             android:id="@+id/button_menu"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="항목 추가"
+                            android:text="@string/SEAGWVF"
                             app:backgroundTint="#FF9800" />
 
                     </LinearLayout>
