@@ -57,7 +57,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:background="#FF9800"
-                            android:text="테이블 정보 입력"
+                            android:text="@string/table"
                             android:textColor="#424242"
                             app:backgroundTint="#FF9800" />
 
@@ -254,7 +254,7 @@
                     <ListView
                         android:id="@+id/listView1"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"></ListView>
+                        android:layout_height="match_parent"/>
 
                 </LinearLayout>
             </FrameLayout>

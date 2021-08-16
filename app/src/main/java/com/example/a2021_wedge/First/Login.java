@@ -56,13 +56,10 @@ public class Login extends AppCompatActivity {
 
 
         //사장님 로그인
-        CheckBox checkBox = (CheckBox) findViewById(R.id.checkBox);
-        checkBox.setOnClickListener(new CheckBox.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(check == 0) check++;
-                else check--;
-            }
+        CheckBox checkBox = findViewById(R.id.checkBox);
+        checkBox.setOnClickListener(v -> {
+            if(check == 0) check++;
+            else check--;
         });
 
         //로그인 버튼
@@ -72,83 +69,79 @@ public class Login extends AppCompatActivity {
             String userPass = pw.getText().toString();
 
             if (check == 0) { //사장님로그인인지 판단(수정필요)
-                Response.Listener<String> responseListener = new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
-                        try {
-                            JSONObject jsonObject = new JSONObject(response);
-                            boolean success = jsonObject.getBoolean("success");
+                Response.Listener<String> responseListener = response -> {
+                    try {
+                        JSONObject jsonObject = new JSONObject(response);
+                        boolean success = jsonObject.getBoolean("success");
 
-                            if (success) {//로그인 성공시
-                                System.out.println("연결성공");
-                                String userID = jsonObject.getString("userID");
-                                String userPass = jsonObject.getString("userPassword");
-                                String userName = jsonObject.getString("userName");
-                                String userTel = jsonObject.getString("userTel");
+                        if (success) {//로그인 성공시
+                            System.out.println("연결성공");
+                            String userID1 = jsonObject.getString("userID");
+                            String userPass1 = jsonObject.getString("userPassword");
+                            String userName = jsonObject.getString("userName");
+                            String userTel = jsonObject.getString("userTel");
 
-                                Intent intent = new Intent(Login.this, MainActivity.class);
+                            Intent intent = new Intent(Login.this, MainActivity.class);
 
-                                editor.putString("userID", userID);
-                                editor.putString("userPass", userPass);
-                                editor.putString("userName", userName);
-                                editor.putString("userTel", userTel);
-                                editor.apply();
+                            editor.putString("userID", userID1);
+                            editor.putString("userPass", userPass1);
+                            editor.putString("userName", userName);
+                            editor.putString("userTel", userTel);
+                            editor.apply();
 
-                                Toast.makeText(getApplicationContext(), userName+"님 환영합니다.", Toast.LENGTH_SHORT).show();
-                                startActivity(intent);
+                            Toast.makeText(getApplicationContext(), userName+"님 환영합니다.", Toast.LENGTH_SHORT).show();
+                            startActivity(intent);
 
-                            } else {//로그인 실패시
-                                Toast.makeText(getApplicationContext(), "로그인 실패", Toast.LENGTH_SHORT).show();
-                            }
-
-                        } catch (JSONException e) {
-                            e.printStackTrace();
+                        } else {//로그인 실패시
+                            Toast.makeText(getApplicationContext(), "로그인 실패", Toast.LENGTH_SHORT).show();
                         }
+
+                    } catch (JSONException e) {
+                        e.printStackTrace();
                     }
                 };
+
                 LoginRequest loginRequest = new LoginRequest(userID, userPass, responseListener);
                 RequestQueue queue = Volley.newRequestQueue(Login.this);
                 queue.add(loginRequest);
+
             }else if(check == 1){ //사장님 로그인
-                Response.Listener<String> responseListener = new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
-                        try {
-                            JSONObject jsonObject = new JSONObject(response);
-                            boolean success = jsonObject.getBoolean("success");
+                Response.Listener<String> responseListener = response -> {
+                    try {
+                        JSONObject jsonObject = new JSONObject(response);
+                        boolean success = jsonObject.getBoolean("success");
 
-                            if (success) {//로그인 성공시
-                                System.out.println("연결성공");
-                                sID = jsonObject.getString("ID");
-                                sPW = jsonObject.getString("PW");
-                                sintro = jsonObject.getString("intro");
-                                saddr = jsonObject.getString("addr");
-                                smenu = jsonObject.getString("menu");
-                                sname = jsonObject.getString("userName");
-                                stitle = jsonObject.getString("name");
+                        if (success) {//로그인 성공시
+                            System.out.println("연결성공");
+                            sID = jsonObject.getString("ID");
+                            sPW = jsonObject.getString("PW");
+                            sintro = jsonObject.getString("intro");
+                            saddr = jsonObject.getString("addr");
+                            smenu = jsonObject.getString("menu");
+                            sname = jsonObject.getString("userName");
+                            stitle = jsonObject.getString("name");
 
 
-                                Intent intent = new Intent(getApplicationContext(), WaitingList.class);
+                            Intent intent = new Intent(Login.this, WaitingList.class);
 
-                                editor.putString("userID", sID);
-                                editor.putString("userPass", sPW);
-                                editor.putString("sintro", sintro);
-                                editor.putString("saddr", saddr);
-                                editor.putString("smenu", smenu);
-                                editor.putString("sname", sname);
-                                editor.putString("stitle", stitle);
-                                editor.apply();
+                            editor.putString("userID", sID);
+                            editor.putString("userPass", sPW);
+                            editor.putString("sintro", sintro);
+                            editor.putString("saddr", saddr);
+                            editor.putString("smenu", smenu);
+                            editor.putString("sname", sname);
+                            editor.putString("stitle", stitle);
+                            editor.apply();
 
-                                Toast.makeText(getApplicationContext(), sname+"님 환영합니다.", Toast.LENGTH_SHORT).show();
-                                startActivity(intent);
+                            Toast.makeText(getApplicationContext(), sname+"님 환영합니다.", Toast.LENGTH_SHORT).show();
+                            startActivity(intent);
 
-                            } else {//로그인 실패시
-                                Toast.makeText(getApplicationContext(), "로그인 실패", Toast.LENGTH_SHORT).show();
-                            }
-
-                        } catch (JSONException e) {
-                            e.printStackTrace();
+                        } else {//로그인 실패시
+                            Toast.makeText(getApplicationContext(), "로그인 실패", Toast.LENGTH_SHORT).show();
                         }
+
+                    } catch (JSONException e) {
+                        e.printStackTrace();
                     }
                 };
                 SjLoginRequest sloginRequest = new SjLoginRequest(userID, userPass, responseListener);
@@ -164,9 +157,9 @@ public class Login extends AppCompatActivity {
         x.setVisibility(View.INVISIBLE);
         TextView q = findViewById(R.id.text_time);
         q.setVisibility(View.INVISIBLE);
-        CheckBox gene = (CheckBox) findViewById(R.id.checkBox3);
+        CheckBox gene = findViewById(R.id.checkBox3);
         gene.setVisibility(View.INVISIBLE);
-        CheckBox store = (CheckBox) findViewById(R.id.checkBox4);
+        CheckBox store = findViewById(R.id.checkBox4);
         store.setVisibility(View.INVISIBLE);
 
 
