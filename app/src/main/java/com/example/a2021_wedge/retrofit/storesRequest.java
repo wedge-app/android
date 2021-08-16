@@ -14,7 +14,7 @@ public class storesRequest extends StringRequest {
     private Map<String, String> map;
 
 
-    public storesRequest(String name, String tel, String intro, String addr, String menu, String ID, String PW, String userName, Response.Listener<String> listener) {
+    public storesRequest(String name, String tel, String intro, String addr, String menu, String ID, String PW, String userName,Response.Listener<String> listener) {
         super(Method.POST, URL, listener, null);
         map = new HashMap<>();
         map.put("name", name);

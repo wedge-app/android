@@ -48,12 +48,13 @@ public class SearchFrag extends Fragment {
     ImageButton s, enter;
 
     TextView a,a1,a2,a3,b,b1,b2,b3,result;
-    String sname="", stel="", sintro="", saddr="", smenu="";
+    String sname="", stel="", sintro="", saddr="", smenu="", scount="";
     static String[] sstorename;
     static String[] storetel;
     static String[] storeintro;
     static String[] storeaddr;
     static String[] storemenu;
+    static String[] storecount;
     static String res ="";
 
 
@@ -84,6 +85,7 @@ public class SearchFrag extends Fragment {
             storeintro = new String[jsonArray.length()];
             storeaddr = new String[jsonArray.length()];
             storemenu = new String[jsonArray.length()];
+            storecount = new String[jsonArray.length()];
 
             //JSON 배열 길이만큼 반복문을 실행
             while(count < jsonArray.length()){
@@ -93,6 +95,8 @@ public class SearchFrag extends Fragment {
                 storeintro[count] = object.getString("intro");
                 storeaddr[count] = object.getString("addr");
                 storemenu[count] = object.getString("menu");
+                storecount[count] = object.getString("count");
+                System.out.println(object.getString("count"));
                 adapter.addItem(new ItemLatelySearch(sstorename[count]));
                 count++;
             }
@@ -112,6 +116,7 @@ public class SearchFrag extends Fragment {
             intent.putExtra("intro",storeintro[position]);
             intent.putExtra("addr",storeaddr[position]);
             intent.putExtra("menu",storemenu[position]);
+            intent.putExtra("scount",storecount[position]);
             startActivity(intent);
         });
 
@@ -196,7 +201,8 @@ public class SearchFrag extends Fragment {
                                 sintro = jsonObject.getString("intro");
                                 saddr = jsonObject.getString("addr");
                                 smenu = jsonObject.getString("menu");
-                                System.out.println("sname="+sname);
+                                scount = jsonObject.getString("count");
+                                System.out.println("scount="+scount);
                                 adapter2.addItem(new ItemSearchList(sname));
                                 adapter2.notifyDataSetChanged();
                             } else {
@@ -230,6 +236,7 @@ public class SearchFrag extends Fragment {
             intent.putExtra("intro",sintro);
             intent.putExtra("addr",saddr);
             intent.putExtra("menu",smenu);
+            intent.putExtra("count",scount);
             startActivity(intent);
         });
 

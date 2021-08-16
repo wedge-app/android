@@ -32,6 +32,8 @@ import com.example.a2021_wedge.SearchFrag.SearchFrag;
 import com.example.a2021_wedge.retrofit.LikeStoreRequest;
 import com.example.a2021_wedge.retrofit.RegisterRequest;
 import com.example.a2021_wedge.retrofit.WaitingStoreRequest;
+import com.example.a2021_wedge.retrofit.scount;
+import com.example.a2021_wedge.retrofit.storecount;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -45,15 +47,20 @@ import java.util.Objects;
 public class enterPage extends AppCompatActivity {
     ImageButton info, menu, review, like, wait,back;
     ImageView grey_star;
-    TextView wait_num, story, story2, Name;
+    TextView wait_num, waitn, story, story2, Name;
     ArrayList<String> menuItem;
     int i = 0;
     String sname = "", num = "";
+    String wname="", wnum="";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_enter_page);
+
+        SharedPreferences waitlist = getSharedPreferences("waitlist", MODE_PRIVATE);
+        SharedPreferences.Editor wlist = waitlist.edit();
 
 
         Intent intent = getIntent(); /*데이터 수신*/
@@ -62,6 +69,7 @@ public class enterPage extends AppCompatActivity {
         String sintro = intent.getExtras().getString("intro");
         String saddr = intent.getExtras().getString("addr");
         String smenu = intent.getExtras().getString("menu");
+        String scount = intent.getExtras().getString("scount");
 
 
         SharedPreferences pref = this.getApplication().getSharedPreferences("user_info", Context.MODE_PRIVATE);
@@ -116,6 +124,13 @@ public class enterPage extends AppCompatActivity {
         //가게 이름
         Name = findViewById(R.id.textView8);
         Name.setText(sname);
+
+        //대기인원
+        wait_num = findViewById(R.id.textView9);
+        wait_num.setText(scount);
+
+        waitn = findViewById(R.id.wait);
+        waitn.setVisibility(View.VISIBLE);
 
         //가게 설명
         story = findViewById(R.id.textView21);
@@ -183,11 +198,44 @@ public class enterPage extends AppCompatActivity {
                 int w = Integer.parseInt(wait_num.getText().toString());
                 wait_num.setText(Integer.toString(w + 1));
 
+                wname = sname;
+                wnum = Integer.toString(w + 1);
+
+                Response.Listener<String> responseListener = new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        System.out.println("Listener 진입 성공/ response 값 : " + response);
+                        try {
+                            JSONObject jsonObject = new JSONObject(response);
+                            boolean success = jsonObject.getBoolean("success");
+
+                            //회원가입 성공시
+                            if (success) {
+                                System.out.println("연결 성공");
+
+                            } else {
+                                System.out.println("연결 실패");
+                                return;
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                };
+
+                //서버로 Volley를 이용해서 요청
+                storecount ssRequest = new storecount(wnum, wname, responseListener);
+                RequestQueue queue = Volley.newRequestQueue(enterPage.this);
+                queue.add(ssRequest);
+
                 DialogWaiting dlg = new DialogWaiting(enterPage.this);
                 dlg.show();
 
             }
         });
+
+        wlist.putString("wwnum", wnum);
+        wlist.putString("wwname", wname);
     }
     private long time= 0;
     @Override
@@ -248,6 +296,12 @@ public class enterPage extends AppCompatActivity {
                 WaitingStoreRequest waitingStoreRequest = new WaitingStoreRequest(tel, sname, num, responseListener);
                 RequestQueue queue = Volley.newRequestQueue(enterPage.this);
                 queue.add(waitingStoreRequest);
+
+                scount scRequest = new scount(sname, num, wnum, responseListener);
+                RequestQueue queue2 = Volley.newRequestQueue(enterPage.this);
+                queue2.add(scRequest);
+
+                //wlist.putString("wwcountteam", num);
 
                 dismiss();
             });

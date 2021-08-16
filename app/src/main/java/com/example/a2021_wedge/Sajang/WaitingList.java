@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.MotionEvent;
@@ -19,24 +20,52 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.toolbox.Volley;
 import com.example.a2021_wedge.R;
+import com.example.a2021_wedge.SearchFrag.ItemLatelySearch;
+import com.example.a2021_wedge.SearchFrag.SearchFrag;
+import com.example.a2021_wedge.StoreFrag.ItemStore;
 import com.example.a2021_wedge.databinding.ActivityWaitinglistBinding;
+import com.example.a2021_wedge.enterPage;
+import com.example.a2021_wedge.retrofit.LikeStoreRequest;
+import com.example.a2021_wedge.retrofit.sscount;
+import com.example.a2021_wedge.retrofit.sscount2;
 
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.ArrayList;
 
 
 public class WaitingList extends AppCompatActivity {
-    TextView title;
+    TextView title, cnt, current;
+    String storename, countteam, scount;
+    String[] team;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_waitinglist);
+
+//        SharedPreferences preff = this.getApplication().getSharedPreferences("waitlist", Context.MODE_PRIVATE);
+//        String wnum = preff.getString("wwnum","");
+//        String wname = preff.getString("wwname","");
+//        String wnumtteam = preff.getString("wwcountteam","");
+
+        cnt = findViewById(R.id.textView18);
 
         title = findViewById(R.id.textView45);
         SharedPreferences pref = this.getSharedPreferences("user_info", Context.MODE_PRIVATE);
@@ -53,19 +82,47 @@ public class WaitingList extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         WaitingListAdapter adapter = new WaitingListAdapter();
 
-        adapter.addItem(new ItemWaitingList("1", "2"));
-        adapter.addItem(new ItemWaitingList("1", "2"));
-        adapter.addItem(new ItemWaitingList("1", "2"));
-        adapter.addItem(new ItemWaitingList("1", "2"));
-        adapter.addItem(new ItemWaitingList("1", "2"));
-        adapter.addItem(new ItemWaitingList("1", "2"));
-        adapter.addItem(new ItemWaitingList("1", "2"));
+        //새로고침
+        current = findViewById(R.id.current);
+        current.setOnClickListener(view -> {
+        });
 
-        recyclerView.setAdapter(adapter);
+        Response.Listener<String> responseListener = response -> {
+            try{
+                JSONObject jsonObject = new JSONObject(response);
+                JSONArray jsonArray = jsonObject.getJSONArray("response");
+                System.out.println("JSON 배열 길이 : " + jsonArray.length());
+
+                team = new String[jsonArray.length()];
+                int count = 0;
+
+                //JSON 배열 길이만큼 반복문을 실행
+                while(count < jsonArray.length()){
+                    JSONObject object = jsonArray.getJSONObject(count);
+                    storename = jsonObject.getString("storename");
+                    scount = jsonObject.getString("count");
+                    team[count] = object.getString("countteam");
+                    if(sname.equals(storename)){
+                        adapter.addItem(new ItemWaitingList(Integer.toString(count+1), team[count]));
+                    }
+                    cnt.setText(scount);
+                    count++;
+                }
+                recyclerView.setAdapter(adapter);
+            }catch(Exception e){
+                e.printStackTrace();
+            }
+        };
 
         adapter.setOnItemClickListener((holder, view, position) -> {
-
+            System.out.println("클릭됨");
+            //adapter.notifyDataSetChanged();
         });
+        //서버로 Volley를 이용해서 요청
+        sscount2 request = new  sscount2(responseListener);
+        RequestQueue queue = Volley.newRequestQueue(WaitingList.this);
+        queue.add(request);
+
     }
 
     private long time= 0;
@@ -80,6 +137,7 @@ public class WaitingList extends AppCompatActivity {
             System.exit(0);
         }
     }
+
 }
 
 
