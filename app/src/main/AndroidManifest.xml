@@ -12,6 +12,7 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:usesCleartextTraffic="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.2021_Wedge">
@@ -53,7 +54,8 @@
             android:name=".enterPage"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_enter_page"
-            android:theme="@style/Theme.2021_Wedge.Fullscreen" />
+            android:theme="@style/Theme.2021_Wedge.Fullscreen"
+            />
         <activity android:name=".First.Main">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
