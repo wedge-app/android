@@ -78,10 +78,10 @@ public class StoreManagement extends AppCompatActivity {
         textView_close = findViewById(R.id.textView_close);
         textView_close.setVisibility(View.INVISIBLE);
 
-//        button_1 = findViewById(R.id.button_1);
-//        button_1.setOnClickListener(view -> {
-//            button_1.setVisibility(View.INVISIBLE);
-//        });
+        button_1 = findViewById(R.id.button_1);
+        button_1.setOnClickListener(view -> {
+            button_1.setVisibility(View.INVISIBLE);
+        });
 
         button_2 = findViewById(R.id.button_2);
         button_2.setOnClickListener(view -> {
@@ -100,14 +100,14 @@ public class StoreManagement extends AppCompatActivity {
             button_4.setVisibility(View.INVISIBLE);
         });
 
-//        textView_1 = findViewById(R.id.textView_1);
+        textView_1 = findViewById(R.id.textView_1);
         textView_2 = findViewById(R.id.textView_2);
         textView_3 = findViewById(R.id.textView_3);
         textView_4 = findViewById(R.id.textView_4);
 
-//        textView_1.setOnClickListener(view -> {
-//            button_1.setVisibility(View.VISIBLE);
-//        });
+        textView_1.setOnClickListener(view -> {
+            button_1.setVisibility(View.VISIBLE);
+        });
 
         textView_2.setOnClickListener(view -> {
             button_2.setVisibility(View.VISIBLE);
@@ -167,7 +167,7 @@ public class StoreManagement extends AppCompatActivity {
         ////////////////////메뉴 설정
         editText1 = findViewById(R.id.editText1);
         editText1.setText(smenu);
-//        button_menu = findViewById(R.id.button_menu);
+        button_menu = findViewById(R.id.button_menu);
         SharedPreferences menu = getSharedPreferences("menu1", MODE_PRIVATE);
         SharedPreferences.Editor edit_menu = menu.edit();
 
@@ -232,57 +232,57 @@ public class StoreManagement extends AppCompatActivity {
 
 
 
-//        /////////테이블 수 입력
-//        RecyclerView mRecyclerView = (RecyclerView) findViewById(R.id.rcy_1);
-//        LinearLayoutManager mLinearLayoutManager = new LinearLayoutManager(this);
-//        mRecyclerView.setLayoutManager(mLinearLayoutManager);
-//
-//
-//        mArrayList = new ArrayList<>();
-//        mAdapter = new CustomAdapter( mArrayList);
-//        mRecyclerView.setAdapter(mAdapter);
-//
-//
-//        AlertDialog.Builder builder = new AlertDialog.Builder(StoreManagement.this);
-//        buttonTable = findViewById(R.id.button_table);
-//        // 1. 화면 아래쪽에 있는 데이터 추가 버튼을 클릭하면
-//        buttonTable.setOnClickListener(v -> {
+        /////////테이블 수 입력
+        RecyclerView mRecyclerView = (RecyclerView) findViewById(R.id.rcy_1);
+        LinearLayoutManager mLinearLayoutManager = new LinearLayoutManager(this);
+        mRecyclerView.setLayoutManager(mLinearLayoutManager);
 
 
-//            // 2. 레이아웃 파일 edit_box.xml 을 불러와서 화면에 다이얼로그를 보여줍니다.
-//
-//
-//
-//            View view = LayoutInflater.from(StoreManagement.this)
-//                    .inflate(R.layout.sample, null, false);
-//            builder.setView(view);
-//
-//            final Button ButtonInsert = view.findViewById(R.id.button_insert);
-//            final EditText EditPerson = view.findViewById(R.id.edittext_person);
-//            final EditText EditTable = view.findViewById(R.id.edittext_table);
-//
-//
-//            ButtonInsert.setText("확인");
-//
-//            final AlertDialog dialog = builder.create();
-//
-//            ButtonInsert.setOnClickListener(view1 -> {
-//
-//                String strPerson = EditPerson.getText().toString();
-//                String strTable = EditTable.getText().toString();
-//
-//                Dictionary tbl = new Dictionary(strPerson, strTable);
-//                mArrayList.add(0, tbl);
-//
-//                mAdapter.notifyItemInserted(0);
-//
-//                dialog.dismiss();
-//
-//            });
-//
-//            dialog.show();
-//
-//        });
+        mArrayList = new ArrayList<>();
+        mAdapter = new CustomAdapter( mArrayList);
+        mRecyclerView.setAdapter(mAdapter);
+
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(StoreManagement.this);
+        buttonTable = findViewById(R.id.button_table);
+        // 1. 화면 아래쪽에 있는 데이터 추가 버튼을 클릭하면
+        buttonTable.setOnClickListener(v -> {
+
+
+            // 2. 레이아웃 파일 edit_box.xml 을 불러와서 화면에 다이얼로그를 보여줍니다.
+
+
+
+            View view = LayoutInflater.from(StoreManagement.this)
+                    .inflate(R.layout.sample, null, false);
+            builder.setView(view);
+
+            final Button ButtonInsert = view.findViewById(R.id.button_insert);
+            final EditText EditPerson = view.findViewById(R.id.edittext_person);
+            final EditText EditTable = view.findViewById(R.id.edittext_table);
+
+
+            ButtonInsert.setText("확인");
+
+            final AlertDialog dialog = builder.create();
+
+            ButtonInsert.setOnClickListener(view1 -> {
+
+                String strPerson = EditPerson.getText().toString();
+                String strTable = EditTable.getText().toString();
+
+                Dictionary tbl = new Dictionary(strPerson, strTable);
+                mArrayList.add(0, tbl);
+
+                mAdapter.notifyItemInserted(0);
+
+                dialog.dismiss();
+
+            });
+
+            dialog.show();
+
+        });
 
         System.out.println("결과값 확인 : "+editText1.getText().toString()+", "+editText2.getText().toString()+", "+textView_open.getText().toString()+", "+textView_close.getText().toString()+", "+pID);
 
