@@ -6,9 +6,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.AlertDialog;
 import android.app.TimePickerDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -18,16 +20,23 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.toolbox.Volley;
 import com.example.a2021_wedge.R;
 import com.example.a2021_wedge.RecyclerView.CustomAdapter;
 import com.example.a2021_wedge.RecyclerView.Dictionary;
 import com.example.a2021_wedge.enterPage;
+import com.example.a2021_wedge.retrofit.storemanagement;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 
 public class StoreManagement extends AppCompatActivity {
 
-    Button buttonTable;
+    Button buttonTable, save;
     private ArrayList<Dictionary> mArrayList;
     private CustomAdapter mAdapter;
     private int count = -1;
@@ -39,8 +48,8 @@ public class StoreManagement extends AppCompatActivity {
 
     Button button_1, button_2, button_3, button_4;
 
-    EditText editText1;
-    Button button_menu;
+    EditText editText1, editText2;
+    Button button_menu, button_sajang;
 
     Button timePickerDialogButton1, timePickerDialogButton2;
     int alarmHour=0, alarmMinute=0;
@@ -48,10 +57,23 @@ public class StoreManagement extends AppCompatActivity {
     TextView textView_open, textView_close;
     TextView textView_1, textView_2, textView_3, textView_4;
 
+    String pID, m="", m2="";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_store_management);
+
+        SharedPreferences preff = this.getSharedPreferences("user_info", Context.MODE_PRIVATE);
+        String otime = preff.getString("otime","");
+        String ctime = preff.getString("ctime","");
+        String smenu = preff.getString("smenu","");
+        String sintro = preff.getString("sintro","");
+        pID = preff.getString("userID","");
+
+        System.out.println("초기전달값 : "+otime+", "+ctime+", "+smenu+" , "+sintro+", ID="+pID);
+
+
 
         textView_close = findViewById(R.id.textView_close);
         textView_close.setVisibility(View.INVISIBLE);
@@ -107,6 +129,7 @@ public class StoreManagement extends AppCompatActivity {
         /////////////////// 오픈 시간 설정
         timePickerDialogButton1 = findViewById(R.id.timePickerDialogButton1);
         textView_open = findViewById(R.id.textView_open);
+        textView_open.setText(otime);
 
         SharedPreferences test = getSharedPreferences("test", MODE_PRIVATE);
         SharedPreferences.Editor editor = test.edit();
@@ -114,7 +137,7 @@ public class StoreManagement extends AppCompatActivity {
         timePickerDialogButton1.setOnClickListener(v -> {
             TimePickerDialog timePickerDialog = new TimePickerDialog
                     (StoreManagement.this, (view, hourOfDay, minute) -> {
-                        textView_open.setText("오픈 : " + hourOfDay + "시 " + minute + "분");
+                        textView_open.setText(hourOfDay + ":" + minute);
                         editor.putString("hour1", String.valueOf(hourOfDay));
                         editor.putString("min1", String.valueOf(minute));
                         editor.commit();
@@ -124,12 +147,13 @@ public class StoreManagement extends AppCompatActivity {
 
         ////////////////// 마감 시간 설정
         timePickerDialogButton2 = findViewById(R.id.timePickerDialogButton2);
+        textView_close.setText(ctime);
 
 
         timePickerDialogButton2.setOnClickListener(v -> {
             TimePickerDialog timePickerDialog = new TimePickerDialog
                     (StoreManagement.this, (view, hourOfDay, minute) -> {
-                        textView_close.setText("마감 : " + hourOfDay + "시 " + minute + "분");
+                        textView_close.setText(hourOfDay + ":" + minute);
                         editor.putString("hour2", String.valueOf(hourOfDay));
                         editor.putString("min2", String.valueOf(minute));
                         editor.commit();
@@ -139,8 +163,10 @@ public class StoreManagement extends AppCompatActivity {
 
 
 
+
         ////////////////////메뉴 설정
         editText1 = findViewById(R.id.editText1);
+        editText1.setText(smenu);
         button_menu = findViewById(R.id.button_menu);
         SharedPreferences menu = getSharedPreferences("menu1", MODE_PRIVATE);
         SharedPreferences.Editor edit_menu = menu.edit();
@@ -150,13 +176,17 @@ public class StoreManagement extends AppCompatActivity {
         listItem = new ArrayList<String>();
 
         button_menu.setOnClickListener(view -> { // 버튼 메뉴를 클릭하면
-            String m = editText1.getText().toString();
+            try { //예외처리
+                m = editText1.getText().toString();
+            }catch (NullPointerException e){
+                System.out.println("널값 오류 -> editText1");
+            }
+            //m = editText1.getText().toString();
             listItem.add(m); // 배열에 추가된다.
             intent2.putExtra("menu", listItem);
             adapter.notifyDataSetChanged(); // 변경되었음을 어답터에 알려준다.
             editText1.setText("");
         });
-
 
         adapter = new ArrayAdapter<String>(getApplicationContext(),android.R.layout.simple_list_item_1,listItem);
         listView1 = findViewById(R.id.listView1);
@@ -174,6 +204,32 @@ public class StoreManagement extends AppCompatActivity {
             adapter.notifyDataSetChanged();
 
         });
+
+        ////////////////////사장님 한마디 설정
+        editText2 = findViewById(R.id.editText2);
+        editText2.setText(sintro);
+        button_sajang = findViewById(R.id.button_sajang);
+//        SharedPreferences menu = getSharedPreferences("menu1", MODE_PRIVATE);
+//        SharedPreferences.Editor edit_menu = menu.edit();
+
+
+        Intent intent3 = new Intent(getApplicationContext(), enterPage.class);
+        listItem = new ArrayList<String>();
+
+        button_menu.setOnClickListener(view -> { // 버튼 메뉴를 클릭하면
+            try { //예외처리
+                m2 = editText2.getText().toString();
+            }catch (NullPointerException e){
+                System.out.println("널값 오류 -> editText2");
+            }
+            //m2 = editText2.getText().toString();
+            listItem.add(m2); // 배열에 추가된다.
+            intent3.putExtra("intro", listItem);
+            adapter.notifyDataSetChanged(); // 변경되었음을 어답터에 알려준다.
+            editText2.setText("");
+        });
+
+
 
 
         /////////테이블 수 입력
@@ -225,6 +281,42 @@ public class StoreManagement extends AppCompatActivity {
             });
 
             dialog.show();
+
+        });
+
+        System.out.println("결과값 확인 : "+editText1.getText().toString()+", "+editText2.getText().toString()+", "+textView_open.getText().toString()+", "+textView_close.getText().toString()+", "+pID);
+
+
+        //저장버튼
+        save = findViewById(R.id.button_save);
+        save.setOnClickListener(view -> { // 버튼 메뉴를 클릭하면
+            Response.Listener<String> responseListener = new Response.Listener<String>() {
+                @Override
+                public void onResponse(String response) {
+                    System.out.println("Listener 진입 성공/ response 값 : " + response);
+                    try {
+                        JSONObject jsonObject = new JSONObject(response);
+                        boolean success = jsonObject.getBoolean("success");
+
+                        //회원가입 성공시
+                        if (success) {
+                            System.out.println("연결 성공");
+                        } else {
+                            System.out.println("연결 실패");
+                            return;
+                        }
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                }
+            };
+            System.out.println("결과값 확인 : "+editText1.getText().toString()+", "+editText2.getText().toString()+", "+textView_open.getText().toString()+", "+textView_close.getText().toString()+", "+pID);
+
+            //서버로 Volley를 이용해서 요청
+            storemanagement ssequest = new storemanagement(editText1.getText().toString(), editText2.getText().toString(), textView_open.getText().toString(), textView_close.getText().toString(), pID, responseListener);
+            RequestQueue queue = Volley.newRequestQueue(StoreManagement.this);
+            queue.add(ssequest);
+
 
         });
     }

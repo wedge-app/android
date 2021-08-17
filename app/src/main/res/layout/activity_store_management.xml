@@ -287,6 +287,14 @@
                 </LinearLayout>
             </FrameLayout>
         </ScrollView>
+
+        <Button
+            android:id="@+id/button_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="저장"
+            android:fontFamily="@font/scdream5"
+            app:backgroundTint="#FF9800" />
     </LinearLayout>
 
 </ScrollView>

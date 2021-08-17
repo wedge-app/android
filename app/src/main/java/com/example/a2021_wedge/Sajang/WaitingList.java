@@ -58,6 +58,7 @@ public class WaitingList extends AppCompatActivity {
     RecyclerView recyclerView;
     WaitingListAdapter adapter;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,6 +68,9 @@ public class WaitingList extends AppCompatActivity {
 //        String wnum = preff.getString("wwnum","");
 //        String wname = preff.getString("wwname","");
 //        String wnumtteam = preff.getString("wwcountteam","");
+
+
+
 
         //대기줄
         cnt = findViewById(R.id.textView18);
@@ -78,8 +82,8 @@ public class WaitingList extends AppCompatActivity {
 
         ImageButton imageButton = (ImageButton) findViewById(R.id.imageButton10);
         imageButton.setOnClickListener(view -> {
-            Intent intent = new Intent(getApplicationContext(), StoreManagement.class);
-            startActivity(intent);
+            Intent intentt = new Intent(getApplicationContext(), StoreManagement.class);
+            startActivity(intentt);
         });
 
         recyclerView = findViewById(R.id.list_waiting);
@@ -103,8 +107,9 @@ public class WaitingList extends AppCompatActivity {
                 //JSON 배열 길이만큼 반복문을 실행
                 while(count < jsonArray.length()){
                     JSONObject object = jsonArray.getJSONObject(count);
-                    storename = jsonObject.getString("storename");
-                    scount = jsonObject.getString("count");
+//                    //오류 : No value for storename
+//                    storename = jsonObject.getString("storename");
+                    scount = object.getString("count");
                     team[count] = object.getString("countteam");
                     System.out.println("전달할 값 : "+storename+", "+scount+","+team[count]);
                     if(sname.equals(storename)){
