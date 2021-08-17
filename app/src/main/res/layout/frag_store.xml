@@ -9,7 +9,8 @@
     <TextView
         android:id="@+id/wait_store"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
         android:layout_margin="30sp"
         android:gravity="center"
         android:fontFamily="@font/scdream5"
@@ -20,7 +21,22 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/wait_list"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20sp"/>
+        android:layout_height="0dp"
+        android:layout_weight="0.9"
+        android:layout_marginHorizontal="20sp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <Button
+        android:id="@+id/cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
+        android:text="줄서기 취소하기"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/main_orange"
+        android:layout_margin="20sp"
+        android:layout_gravity="center"/>
 
 </LinearLayout>
