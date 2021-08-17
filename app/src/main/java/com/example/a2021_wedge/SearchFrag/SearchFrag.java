@@ -39,7 +39,7 @@ public class SearchFrag extends Fragment {
     ImageButton s;
 
     TextView a;
-    String sname="", stel="", sintro="", saddr="", smenu="", scount="", sotime="", sctime="";
+    String sname="", stel="", sintro="", saddr="", smenu="", scount="", sotime="", sctime="", senter="";
     static String[] sstorename;
     static String[] storetel;
     static String[] storeintro;
@@ -48,6 +48,7 @@ public class SearchFrag extends Fragment {
     static String[] storecount;
     static String[] otime;
     static String[] ctime;
+    static String[] enter;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -75,6 +76,7 @@ public class SearchFrag extends Fragment {
                 storecount = new String[jsonArray.length()];
                 otime = new String[jsonArray.length()];
                 ctime = new String[jsonArray.length()];
+                enter = new String[jsonArray.length()];
 
                 while (count < jsonArray.length()) {
                     JSONObject object = jsonArray.getJSONObject(count);
@@ -86,6 +88,7 @@ public class SearchFrag extends Fragment {
                     storecount[count] = object.getString("count");
                     otime[count] = object.getString("opentime");
                     ctime[count] = object.getString("closetime");
+                    enter[count] = object.getString("enter");
                     System.out.println(object.getString("count"));
                     adapter.addItem(new ItemLatelySearch(sstorename[count]));
                     count++;
@@ -114,6 +117,7 @@ public class SearchFrag extends Fragment {
             intent.putExtra("scount",storecount[position]);
             intent.putExtra("otime",otime[position]);
             intent.putExtra("ctime",ctime[position]);
+            intent.putExtra("enter",enter[position]);
             startActivity(intent);
         });
 
@@ -186,6 +190,7 @@ public class SearchFrag extends Fragment {
                             scount = jsonObject.getString("count");
                             sotime = jsonObject.getString("opentime");
                             sctime = jsonObject.getString("closetime");
+                            senter = jsonObject.getString("enter");
                             adapter2.addItem(new ItemSearchList(sname));
                             adapter2.notifyDataSetChanged();
                         } else {
@@ -220,6 +225,7 @@ public class SearchFrag extends Fragment {
             intent.putExtra("scount",scount);
             intent.putExtra("otime",sotime);
             intent.putExtra("ctime",sctime);
+            intent.putExtra("enter",senter);
             startActivity(intent);
         });
 

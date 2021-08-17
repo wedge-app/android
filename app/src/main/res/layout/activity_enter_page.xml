@@ -43,7 +43,7 @@
                 android:text="@string/eabf"
                 android:textAlignment="center"
                 android:textColor="#000000"
-                android:textSize="28sp"
+                android:textSize="22sp"
                 android:fontFamily="@font/scdream5"
                 android:textStyle="bold" />
 
@@ -59,15 +59,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginLeft="145dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginLeft="160dp"
+                android:layout_marginTop="18dp"
                 android:layout_marginBottom="40dp"
                 android:layout_weight="1"
                 android:text="@string/vf"
                 android:textColor="#000000"
-                android:textSize="25sp"
+                android:textSize="20sp"
                 android:fontFamily="@font/scdream4"
-                android:layout_marginStart="145dp" />
+                android:layout_marginStart="155dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -82,8 +82,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="#ffffff"
-                    app:srcCompat="@drawable/shop_info"
                     android:contentDescription="@string/fqv"
+                    app:srcCompat="@drawable/shop_info"
                     tools:ignore="ContentDescription" />
 
                 <ImageButton
@@ -111,13 +111,13 @@
 
             <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="70dp">
+                android:layout_height="420dp"
+                android:background="@drawable/shop_yellow"
+                android:layout_marginBottom="15dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/shop_yellow"
                     android:orientation="vertical">
 
                     <TextView
@@ -149,32 +149,6 @@
                 </LinearLayout>
             </ScrollView>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <ImageButton
-                    android:id="@+id/imageButton11"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="#ffffff"
-                    app:srcCompat="@drawable/shop_white"
-                    tools:ignore="ContentDescription" />
-
-                <ImageButton
-                    android:id="@+id/imageButton9"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="#ffffff"
-                    android:layout_marginRight="-12dp"
-                    app:srcCompat="@drawable/shop_waitbox"
-                    android:layout_marginEnd="-12dp"
-                    tools:ignore="ContentDescription" />
-
-            </LinearLayout>
         </LinearLayout>
     </FrameLayout>
 
@@ -192,28 +166,75 @@
                 android:id="@+id/wait"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginLeft="80dp"
-                android:layout_marginTop="120dp"
+                android:layout_marginLeft="150dp"
+                android:layout_marginTop="112dp"
                 android:layout_marginBottom="40dp"
                 android:text="@string/sbed"
                 android:textColor="#000000"
-                android:textSize="25sp"
+                android:textSize="19sp"
                 android:fontFamily="@font/scdream4"
-                android:layout_marginStart="80dp" />
+                android:layout_marginStart="145dp" />
 
-            <ImageView
-                android:id="@+id/star"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_marginTop="475dp"
-                android:layout_marginRight="300dp"
-                android:layout_weight="1"
-                android:background="#ffffff"
-                app:srcCompat="@drawable/shop_star"
-                android:layout_marginEnd="280dp"
-                tools:ignore="ContentDescription" />
+                android:layout_height="match_parent"
+                android:layout_marginTop="495dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/star"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_weight="0.1"
+                    android:background="#ffffff"
+                    app:srcCompat="@drawable/shop_star"
+                    tools:ignore="ContentDescription" />
+
+<!--                <ImageButton-->
+<!--                    android:id="@+id/imageButton11"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="10dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:background="#ffffff"-->
+<!--                    app:srcCompat="@drawable/shop_white"-->
+<!--                    tools:ignore="ContentDescription" />-->
+
+                <ImageButton
+                    android:id="@+id/imageButton9"
+                    android:layout_width="80dp"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="-12dp"
+                    android:layout_marginRight="-12dp"
+                    android:layout_weight="0.7"
+                    android:background="#ffffff"
+                    app:srcCompat="@drawable/wait_box"
+                    tools:ignore="ContentDescription" />
+
+            </LinearLayout>
 
         </LinearLayout>
     </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/waitenter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="690dp"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:fontFamily="@font/scdream4"
+            android:layout_marginStart="190dp"
+            android:layout_weight="0.8"
+            android:text="미리 줄서기"
+            android:layout_marginLeft="195dp" />
+    </FrameLayout>
+
 </FrameLayout>

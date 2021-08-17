@@ -6,20 +6,25 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.content.Intent;
+import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.ToggleButton;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.toolbox.Volley;
 import com.example.a2021_wedge.R;
 import com.example.a2021_wedge.retrofit.sscount2;
+import com.example.a2021_wedge.retrofit.waittoggle;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 public class WaitingList extends AppCompatActivity {
@@ -32,6 +37,78 @@ public class WaitingList extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_waitinglist);
+
+        SharedPreferences preff = this.getSharedPreferences("user_info", Context.MODE_PRIVATE);
+        String enter = preff.getString("enter","");
+        String ID = preff.getString("userID", "");
+
+        //입장 가능 or 대기 시작 여부
+        ToggleButton toggleButton = (ToggleButton) findViewById(R.id.toggleButton);
+        toggleButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    Response.Listener<String> responseListener = new Response.Listener<String>() {
+                        @Override
+                        public void onResponse(String response) {
+                            try {
+                                JSONObject jsonObject = new JSONObject(response);
+                                boolean success = jsonObject.getBoolean("success");
+
+                                //회원가입 성공시
+                                if (success) {
+                                    System.out.println("연결 성공");
+                                } else {
+                                    System.out.println("연결 실패");
+                                    return;
+                                }
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    };
+                    //서버로 Volley를 이용해서 요청
+                    waittoggle ssequest = new waittoggle("1", ID, responseListener);
+                    RequestQueue queue = Volley.newRequestQueue(WaitingList.this);
+                    queue.add(ssequest);
+
+                    Toast.makeText(getApplicationContext(), "지금부터 매장 대기번호를 받습니다.",Toast.LENGTH_SHORT).show();
+
+
+                } else {
+                    Response.Listener<String> responseListener = new Response.Listener<String>() {
+                        @Override
+                        public void onResponse(String response) {
+                            try {
+                                JSONObject jsonObject = new JSONObject(response);
+                                boolean success = jsonObject.getBoolean("success");
+
+                                //회원가입 성공시
+                                if (success) {
+                                    System.out.println("연결 성공");
+                                } else {
+                                    System.out.println("연결 실패");
+                                    return;
+                                }
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    };
+                    //서버로 Volley를 이용해서 요청
+                    waittoggle ssequest = new waittoggle("0", ID, responseListener);
+                    RequestQueue queue = Volley.newRequestQueue(WaitingList.this);
+                    queue.add(ssequest);
+                    Toast.makeText(getApplicationContext(), "매장 바로 입장 가능합니다.",Toast.LENGTH_SHORT).show();
+
+                }
+            }
+        });
+
+        //대기 리스트 리셋
+        Button reset = findViewById(R.id.reset);
+        reset.setOnClickListener(view -> {
+            //대기 리스트 삭제 delete
+        });
 
         //대기줄
         cnt = findViewById(R.id.textView18);
@@ -51,10 +128,6 @@ public class WaitingList extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         adapter = new WaitingListAdapter();
 
-        //새로고침
-        current = findViewById(R.id.current);
-        current.setOnClickListener(view -> {
-        });
 
         Response.Listener<String> responseListener = response -> {
             try{
