@@ -37,6 +37,7 @@
                 android:layout_weight="2"
                 android:gravity="center"
                 android:text="@string/weaF"
+                android:fontFamily="@font/scdream4"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
 
@@ -54,6 +55,7 @@
                     android:text="@string/czfv"
                     android:textColor="@color/black"
                     android:textSize="20sp"
+                    android:fontFamily="@font/scdream5"
                     android:layout_marginStart="60dp" />
 
                 <TextView
@@ -61,6 +63,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/cWfscd"
+                    android:fontFamily="@font/scdream4"
                     android:textColor="@color/black"
                     android:textSize="20sp" />
             </LinearLayout>
@@ -87,6 +90,7 @@
         android:layout_marginBottom="10dp"
         android:background="@color/light_orange"
         android:text="@string/나의감자키우기"
+        android:fontFamily="@font/scdream4"
         android:textSize="20sp"
         android:textColor="@color/black" />
 
@@ -98,6 +102,7 @@
         android:layout_marginBottom="10dp"
         android:background="@color/light_orange"
         android:text="@string/찜한가게"
+        android:fontFamily="@font/scdream4"
         android:textSize="20sp"
         android:textColor="@color/black" />
 
@@ -110,6 +115,7 @@
         android:background="@color/light_orange"
         android:text="@string/도움말"
         android:textSize="20sp"
+        android:fontFamily="@font/scdream4"
         android:textColor="@color/black" />
 
     <androidx.appcompat.widget.AppCompatButton
@@ -121,6 +127,7 @@
         android:background="@color/light_orange"
         android:text="@string/공지사항"
         android:textSize="20sp"
+        android:fontFamily="@font/scdream4"
         android:textColor="@color/black" />
 
     <androidx.appcompat.widget.AppCompatButton
@@ -131,6 +138,7 @@
         android:layout_marginBottom="10dp"
         android:background="@color/light_orange"
         android:text="@string/개발자들의이야기"
+        android:fontFamily="@font/scdream4"
         android:textSize="20sp"
         android:textColor="@color/black" />
 
@@ -141,6 +149,7 @@
         android:layout_weight="0.6"
         android:text="@string/오늘하루는맛있었나요"
         android:textSize="20sp"
+        android:fontFamily="@font/scdream4"
         android:textColor="@color/black"
         android:gravity="center"/>
 </LinearLayout>

@@ -1,8 +1,5 @@
 package com.example.a2021_wedge.First;
 
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,6 +10,8 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -21,7 +20,6 @@ import com.example.a2021_wedge.R;
 import com.example.a2021_wedge.retrofit.RegisterRequest;
 import com.example.a2021_wedge.retrofit.RetrofitClient;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 

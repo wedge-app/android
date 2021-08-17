@@ -1,23 +1,20 @@
 package com.example.a2021_wedge.First;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.a2021_wedge.GMap.Stores;
 import com.example.a2021_wedge.R;
 import com.example.a2021_wedge.arrClass;
-import com.example.a2021_wedge.bottomBar.MainActivity;
 
 import org.json.JSONArray;
 import org.json.JSONException;

@@ -22,6 +22,7 @@
             android:text="@string/dn"
             android:textColor="#000000"
             android:textSize="30sp"
+            android:fontFamily="@font/scdream5"
             android:textStyle="bold" />
 
         <Spinner

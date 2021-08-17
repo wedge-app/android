@@ -42,6 +42,7 @@
                 android:text="@string/BSF"
                 android:textColor="@color/black"
                 android:textSize="20sp"
+                android:fontFamily="@font/scdream5"
                 android:layout_marginEnd="30dp" />
         </LinearLayout>
 
@@ -55,6 +56,8 @@
             android:textColor="@color/black"
             android:layout_marginBottom="15dp"
             android:textAlignment="center"
+            android:fontFamily="@font/scdream4"
+            android:lineSpacingExtra="20sp"
             android:text="@string/WCSD"
             android:gravity="center_horizontal" />
 
@@ -78,6 +81,7 @@
             android:textAlignment="center"
             android:textStyle="bold"
             android:text="@string/DHBSGARF"
+            android:fontFamily="@font/scdream4"
             android:gravity="center_horizontal" />
 
     </LinearLayout>

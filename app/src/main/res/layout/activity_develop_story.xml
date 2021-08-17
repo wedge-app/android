@@ -21,6 +21,7 @@
             android:textStyle="bold"
             android:textColor="@color/black"
             android:gravity="center"
+            android:fontFamily="@font/scdream5"
             android:textSize="30sp"
             android:text="@string/a" />
 
@@ -30,6 +31,7 @@
             android:layout_height="wrap_content"
             android:textStyle="bold"
             android:gravity="center"
+            android:fontFamily="@font/scdream5"
             android:textColor="@color/black"
             android:textSize="30sp"
             android:text="@string/b" />
@@ -43,6 +45,7 @@
             android:gravity="center"
             android:textColor="@color/black"
             android:textSize="15sp"
+            android:fontFamily="@font/scdream4"
             android:text="@string/d" />
 
         <ImageView
@@ -63,7 +66,8 @@
             android:textStyle="bold"
             android:textColor="@color/black"
             android:layout_marginTop="30dp"
-            android:textSize="32sp"
+            android:textSize="31sp"
+            android:fontFamily="@font/scdream5"
             android:text="@string/_352_1503_3033_23" />
 
         <ImageButton

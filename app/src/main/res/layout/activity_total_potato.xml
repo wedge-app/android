@@ -27,6 +27,7 @@
             android:layout_height="wrap_content"
             android:text="@string/xfdsza"
             android:textColor="#000000"
+            android:fontFamily="@font/scdream5"
             android:textSize="22sp" />
     </LinearLayout>
 
@@ -64,6 +65,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/dxbgf"
+                android:fontFamily="@font/scdream5"
                 android:textColor="#000000"
                 android:textSize="20sp" />
 
@@ -72,6 +74,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:fontFamily="@font/scdream4"
+                android:lineSpacingExtra="10sp"
                 android:text="@string/bfgsaw"
                 android:textColor="#323232" />
 
@@ -116,6 +120,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/sgzfe"
+                android:fontFamily="@font/scdream5"
                 android:textColor="#000000"
                 android:textSize="20sp" />
 
@@ -123,6 +128,8 @@
                 android:id="@+id/textView34"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/scdream4"
+                android:lineSpacingExtra="10dp"
                 android:text="@string/drsgefd"
                 android:textColor="#323232" />
         </LinearLayout>
@@ -166,6 +173,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/hgsfd"
+                android:fontFamily="@font/scdream5"
                 android:textColor="#000000"
                 android:textSize="20sp" />
 
@@ -173,6 +181,8 @@
                 android:id="@+id/textView41"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/scdream4"
+                android:lineSpacingExtra="10sp"
                 android:text="@string/cgrsfe"
                 android:textColor="#323232" />
         </LinearLayout>

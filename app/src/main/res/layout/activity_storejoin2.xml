@@ -53,6 +53,7 @@
                 android:autoSizeTextType="uniform"
                 android:gravity="center"
                 android:text="@string/ZSDFV"
+                android:fontFamily="@font/scdream5"
                 android:textColor="#000000"
                 android:textSize="22sp"
                 tools:targetApi="o" />
@@ -64,6 +65,7 @@
                 android:layout_marginLeft="30dp"
                 android:text="@string/SADF"
                 android:textColor="#000000"
+                android:fontFamily="@font/scdream4"
                 android:textSize="20sp"
                 android:layout_marginStart="30dp" />
 
@@ -79,6 +81,7 @@
                 android:background="@drawable/login_enter"
                 android:ems="10"
                 android:hint="@string/AF"
+                android:fontFamily="@font/scdream4"
                 android:inputType="textPersonName"
                 android:paddingHorizontal="15dp"
                 android:textColor="#8F9090"
@@ -93,6 +96,7 @@
                 android:layout_marginLeft="30dp"
                 android:text="@string/bzfd"
                 android:textColor="#000000"
+                android:fontFamily="@font/scdream4"
                 android:textSize="20sp"
                 android:layout_marginStart="30dp" />
 
@@ -166,6 +170,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="@string/xbfgszd"
+                android:fontFamily="@font/scdream5"
                 android:textColor="#000000"
                 android:textSize="15sp" />
         </LinearLayout>
