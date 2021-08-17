@@ -145,6 +145,7 @@ public class WaitingList extends AppCompatActivity {
                     storename = object.getString("storename");
                     scount = object.getString("count");
                     team = object.getString("countteam");
+                    //Integer.parseInt(String.valueOf(scount));
 
                     if(sname.equals(storename)){
                         adapter.addItem(new ItemWaitingList(scount, team));
