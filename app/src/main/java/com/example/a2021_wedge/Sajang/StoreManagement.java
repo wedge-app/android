@@ -310,10 +310,9 @@ public class StoreManagement extends AppCompatActivity {
                     }
                 }
             };
-            System.out.println("결과값 확인 : "+editText1.getText().toString()+", "+editText2.getText().toString()+", "+textView_open.getText().toString()+", "+textView_close.getText().toString()+", "+pID);
 
             //서버로 Volley를 이용해서 요청
-            storemanagement ssequest = new storemanagement(editText1.getText().toString(), editText2.getText().toString(), textView_open.getText().toString(), textView_close.getText().toString(), pID, responseListener);
+            storemanagement ssequest = new storemanagement(editText2.getText().toString(), editText1.getText().toString(), textView_open.getText().toString(), textView_close.getText().toString(), pID, responseListener);
             RequestQueue queue = Volley.newRequestQueue(StoreManagement.this);
             queue.add(ssequest);
 

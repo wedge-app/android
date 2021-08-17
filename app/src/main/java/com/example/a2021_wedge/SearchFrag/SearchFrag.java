@@ -39,13 +39,15 @@ public class SearchFrag extends Fragment {
     ImageButton s;
 
     TextView a;
-    String sname="", stel="", sintro="", saddr="", smenu="", scount="";
+    String sname="", stel="", sintro="", saddr="", smenu="", scount="", sotime="", sctime="";
     static String[] sstorename;
     static String[] storetel;
     static String[] storeintro;
     static String[] storeaddr;
     static String[] storemenu;
     static String[] storecount;
+    static String[] otime;
+    static String[] ctime;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -71,6 +73,8 @@ public class SearchFrag extends Fragment {
                 storeaddr = new String[jsonArray.length()];
                 storemenu = new String[jsonArray.length()];
                 storecount = new String[jsonArray.length()];
+                otime = new String[jsonArray.length()];
+                ctime = new String[jsonArray.length()];
 
                 while (count < jsonArray.length()) {
                     JSONObject object = jsonArray.getJSONObject(count);
@@ -80,6 +84,8 @@ public class SearchFrag extends Fragment {
                     storeaddr[count] = object.getString("addr");
                     storemenu[count] = object.getString("menu");
                     storecount[count] = object.getString("count");
+                    otime[count] = object.getString("opentime");
+                    ctime[count] = object.getString("closetime");
                     System.out.println(object.getString("count"));
                     adapter.addItem(new ItemLatelySearch(sstorename[count]));
                     count++;
@@ -106,6 +112,8 @@ public class SearchFrag extends Fragment {
             intent.putExtra("addr",storeaddr[position]);
             intent.putExtra("menu",storemenu[position]);
             intent.putExtra("scount",storecount[position]);
+            intent.putExtra("otime",otime[position]);
+            intent.putExtra("ctime",ctime[position]);
             startActivity(intent);
         });
 
@@ -176,7 +184,8 @@ public class SearchFrag extends Fragment {
                             saddr = jsonObject.getString("addr");
                             smenu = jsonObject.getString("menu");
                             scount = jsonObject.getString("count");
-                            System.out.println("scount="+scount);
+                            sotime = jsonObject.getString("opentime");
+                            sctime = jsonObject.getString("closetime");
                             adapter2.addItem(new ItemSearchList(sname));
                             adapter2.notifyDataSetChanged();
                         } else {
@@ -209,6 +218,8 @@ public class SearchFrag extends Fragment {
             intent.putExtra("addr",saddr);
             intent.putExtra("menu",smenu);
             intent.putExtra("scount",scount);
+            intent.putExtra("otime",sotime);
+            intent.putExtra("ctime",sctime);
             startActivity(intent);
         });
 
