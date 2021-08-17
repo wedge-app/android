@@ -38,7 +38,7 @@ public class Login extends AppCompatActivity {
     EditText email, pw;
     int check = 0;
 
-    String sID, sPW, sintro, saddr, smenu, sname, stitle;
+    String sID, sPW, sintro, saddr, smenu, sname, stitle, otime, ctime;
 
 
 
@@ -75,6 +75,7 @@ public class Login extends AppCompatActivity {
                         boolean success = jsonObject.getBoolean("success");
 
                         if (success) {//로그인 성공시
+
                             System.out.println("연결성공");
                             String userID1 = jsonObject.getString("userID");
                             String userPass1 = jsonObject.getString("userPassword");
@@ -89,7 +90,7 @@ public class Login extends AppCompatActivity {
                             editor.putString("userTel", userTel);
                             editor.apply();
 
-                            Toast.makeText(getApplicationContext(), userName+"님 환영합니다.", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), userName+" 님 환영합니다.", Toast.LENGTH_SHORT).show();
                             startActivity(intent);
 
                         } else {//로그인 실패시
@@ -105,7 +106,8 @@ public class Login extends AppCompatActivity {
                 RequestQueue queue = Volley.newRequestQueue(Login.this);
                 queue.add(loginRequest);
 
-            }else if(check == 1){ //사장님 로그인
+            }
+            if(check == 1){ //사장님 로그인
                 Response.Listener<String> responseListener = response -> {
                     try {
                         JSONObject jsonObject = new JSONObject(response);
@@ -120,9 +122,11 @@ public class Login extends AppCompatActivity {
                             smenu = jsonObject.getString("menu");
                             sname = jsonObject.getString("userName");
                             stitle = jsonObject.getString("name");
+                            otime = jsonObject.getString("opentime");
+                            ctime = jsonObject.getString("closetime");
 
 
-                            Intent intent = new Intent(Login.this, WaitingList.class);
+                            Intent intent = new Intent(getApplicationContext(), WaitingList.class);
 
                             editor.putString("userID", sID);
                             editor.putString("userPass", sPW);
@@ -131,9 +135,11 @@ public class Login extends AppCompatActivity {
                             editor.putString("smenu", smenu);
                             editor.putString("sname", sname);
                             editor.putString("stitle", stitle);
+                            editor.putString("otime", otime);
+                            editor.putString("ctime", ctime);
                             editor.apply();
 
-                            Toast.makeText(getApplicationContext(), sname+"님 환영합니다.", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), sname+" 님 환영합니다.", Toast.LENGTH_SHORT).show();
                             startActivity(intent);
 
                         } else {//로그인 실패시
