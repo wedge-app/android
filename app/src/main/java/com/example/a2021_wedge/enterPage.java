@@ -48,13 +48,14 @@ import java.util.Objects;
 public class enterPage extends AppCompatActivity {
     ImageButton info, menu, review, like, wait,back;
     ImageView grey_star;
-    TextView wait_num, waitn, story, story2, Name;
+    TextView wait_num, waitn, story, story2, Name, waitenter;
     ArrayList<String> menuItem;
     int i = 0;
     String sname = "", num = "";
     String wname="", wnum="";
-    String stel, sintro, saddr, smenu, scount, otime, ctime;
+    String stel, sintro, saddr, smenu, scount, otime, ctime,enter;
     int w;
+    int cancel = 0;
 
 
     @Override
@@ -75,7 +76,7 @@ public class enterPage extends AppCompatActivity {
         scount = intent.getExtras().getString("scount");
         otime = intent.getExtras().getString("otime");
         ctime = intent.getExtras().getString("ctime");
-
+        enter = intent.getExtras().getString("enter");
 
         SharedPreferences pref = this.getApplication().getSharedPreferences("user_info", Context.MODE_PRIVATE);
         String uname = pref.getString("userName","");
@@ -85,6 +86,13 @@ public class enterPage extends AppCompatActivity {
         editor_s.putString("store", sname);
         editor_s.putString("userID", uname);
         editor_s.apply();
+
+        waitenter = findViewById(R.id.waitenter);
+        if(enter.equals("0")){
+          waitenter.setText("대기 없는 매장");
+        }else if(enter.equals("1")){
+            waitenter.setText("미리 줄서기");
+        }
 
 
         ImageView star = findViewById(R.id.star);
@@ -150,9 +158,9 @@ public class enterPage extends AppCompatActivity {
         wait = findViewById(R.id.imageButton9);
 
         //회색 별 버튼
-        like = findViewById(R.id.imageButton11);
+        //like = findViewById(R.id.imageButton11);
         grey_star = findViewById(R.id.star);
-        like.setOnClickListener(new View.OnClickListener() {
+        grey_star.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if(i == 0){
@@ -204,55 +212,15 @@ public class enterPage extends AppCompatActivity {
         wait.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //미리 줄서기
-                try {
-                    System.out.println("try문 집입 완료");
-                    w = Integer.parseInt(String.valueOf(scount));
-                    wait_num.setText(Integer.toString(w + 1));
-                    System.out.println("!!!!!!!wait_num : "+wait_num);
-                    wname = sname;
-                    wnum = Integer.toString(w + 1);
-                    System.out.println("결과확인!!!!!!!wait_num : "+wnum);
 
-                } catch (NumberFormatException e) {
-                    System.out.println("예외발생");
-                } catch (Exception e) {
-                    System.out.println("예외발생");
+                if(enter.equals("0")){
+                    Toast.makeText(getApplicationContext(), "현재 이 매장은 대기없이 바로 입장 가능합니다.",Toast.LENGTH_SHORT).show();
+                }else if(enter.equals("1")){
+                    DialogWaiting dlg = new DialogWaiting(enterPage.this);
+                    dlg.show();
+                    //미리 줄서기
                 }
 
-
-
-                Response.Listener<String> responseListener = new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
-                        System.out.println("Listener 진입 성공/ response 값 : " + response);
-                        try {
-                            JSONObject jsonObject = new JSONObject(response);
-                            boolean success = jsonObject.getBoolean("success");
-
-                            //회원가입 성공시
-                            if (success) {
-                                System.out.println("연결 성공");
-
-                            } else {
-                                System.out.println("연결 실패");
-                                return;
-                            }
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                };
-
-                //서버로 Volley를 이용해서 요청
-                storecount ssRequest = new storecount(wnum, wname, responseListener);
-                RequestQueue queue = Volley.newRequestQueue(enterPage.this);
-                queue.add(ssRequest);
-
-                DialogWaiting dlg = new DialogWaiting(enterPage.this);
-                dlg.show();
-
-                Toast.makeText(enterPage.this, "줄서기가 정상신청되었습니다.", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -292,7 +260,20 @@ public class enterPage extends AppCompatActivity {
             String tel = pref.getString("userTel","");
 
             saveButton.setOnClickListener(view -> {
+                try {
+                    System.out.println("try문 집입 완료");
+                    w = Integer.parseInt(String.valueOf(scount));
+                    wait_num.setText(Integer.toString(w + 1));
+                    System.out.println("!!!!!!!wait_num : " + wait_num);
+                    wname = sname;
+                    wnum = Integer.toString(w + 1);
+                    System.out.println("결과확인!!!!!!!wait_num : " + wnum);
 
+                } catch (NumberFormatException e) {
+                    System.out.println("예외발생");
+                } catch (Exception e) {
+                    System.out.println("예외발생");
+                }
                 Response.Listener<String> responseListener = response -> {
                     System.out.println("Listener 진입 성공/ response 값 : " + response);
                     try {
@@ -325,10 +306,81 @@ public class enterPage extends AppCompatActivity {
 
                 //wlist.putString("wwcountteam", num);
 
+
+
+                Response.Listener<String> responseListener2 = new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        System.out.println("Listener 진입 성공/ response 값 : " + response);
+                        try {
+                            JSONObject jsonObject = new JSONObject(response);
+                            boolean success = jsonObject.getBoolean("success");
+
+                            //회원가입 성공시
+                            if (success) {
+                                System.out.println("연결 성공");
+
+                            } else {
+                                System.out.println("연결 실패");
+                                return;
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                };
+
+                //서버로 Volley를 이용해서 요청
+                storecount ssRequest = new storecount(wnum, wname, responseListener2);
+                RequestQueue queue3 = Volley.newRequestQueue(enterPage.this);
+                queue3.add(ssRequest);
+
+                Toast.makeText(enterPage.this, "줄서기가 정상신청되었습니다.", Toast.LENGTH_SHORT).show();
+
                 dismiss();
             });
 
-            cancelButton.setOnClickListener(view -> dismiss());
+            cancelButton.setOnClickListener(view -> {
+                try {
+                    System.out.println("try문 집입 완료");
+                    w = Integer.parseInt(String.valueOf(scount));
+                    wait_num.setText(Integer.toString(w));
+
+                    wname = sname;
+                    wnum = Integer.toString(w);
+                } catch (NumberFormatException e) {
+                    System.out.println("예외발생");
+                } catch (Exception e) {
+                    System.out.println("예외발생");
+                }
+
+                Response.Listener<String> responseListener3 = new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        System.out.println("Listener 진입 성공/ response 값 : " + response);
+                        try {
+                            JSONObject jsonObject = new JSONObject(response);
+                            boolean success = jsonObject.getBoolean("success");
+
+                            //회원가입 성공시
+                            if (success) {
+                                System.out.println("연결 성공");
+
+                            } else {
+                                System.out.println("연결 실패");
+                                return;
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                };
+                //서버로 Volley를 이용해서 요청
+                storecount ssRequest = new storecount(wnum, wname, responseListener3);
+                RequestQueue queue = Volley.newRequestQueue(enterPage.this);
+                queue.add(ssRequest);
+                dismiss();
+            });
         }
 
         public DialogWaiting(Context mContext) {

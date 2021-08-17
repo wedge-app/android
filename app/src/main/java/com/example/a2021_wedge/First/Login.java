@@ -38,7 +38,7 @@ public class Login extends AppCompatActivity {
     EditText email, pw;
     int check = 0;
 
-    String sID, sPW, sintro, saddr, smenu, sname, stitle, otime, ctime;
+    String sID, sPW, sintro, saddr, smenu, sname, stitle, otime, ctime, enter;
 
 
 
@@ -124,6 +124,7 @@ public class Login extends AppCompatActivity {
                             stitle = jsonObject.getString("name");
                             otime = jsonObject.getString("opentime");
                             ctime = jsonObject.getString("closetime");
+                            enter = jsonObject.getString("enter");
 
 
                             Intent intent = new Intent(getApplicationContext(), WaitingList.class);
@@ -137,6 +138,7 @@ public class Login extends AppCompatActivity {
                             editor.putString("stitle", stitle);
                             editor.putString("otime", otime);
                             editor.putString("ctime", ctime);
+                            editor.putString("enter", enter);
                             editor.apply();
 
                             Toast.makeText(getApplicationContext(), sname+" 님 환영합니다.", Toast.LENGTH_SHORT).show();

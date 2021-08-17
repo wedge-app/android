@@ -70,17 +70,33 @@
         android:orientation="vertical"
         android:layout_marginTop="10dp">
 
-        <TextView
-            android:id="@+id/current"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:textColor="@color/black"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            android:text="@string/rafwc"
-            android:fontFamily="@font/scdream5"
-            tools:ignore="RtlHardcoded" />
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <ToggleButton
+                android:id="@+id/toggleButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="200dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/enter_box"
+                android:textOn="대기 시작"
+                android:textOff="입장 가능"
+                 />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/reset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/enter_box"
+                android:backgroundTint="@color/main_orange"
+                android:text="대기리셋" />
+
+
+        </LinearLayout>
 
         <TextView
             android:id="@+id/textView54"
