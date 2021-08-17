@@ -63,7 +63,7 @@ public class WaitingList extends AppCompatActivity {
                 System.out.println("JSON 배열 길이 : " + jsonArray.length());
 
 //                team = new String[jsonArray.length()];
-                int count = 0;
+                int count = 0, list_count = 0;
 
                 //JSON 배열 길이만큼 반복문을 실행
                 while(count < jsonArray.length()){
@@ -75,8 +75,9 @@ public class WaitingList extends AppCompatActivity {
 
                     if(sname.equals(storename)){
                         adapter.addItem(new ItemWaitingList(scount, team));
+                        list_count++;
                     }
-                    cnt.setText(String.valueOf(count));
+                    cnt.setText(String.valueOf(list_count));
                     count++;
 
                 }
