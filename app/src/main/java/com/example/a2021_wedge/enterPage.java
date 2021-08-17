@@ -53,7 +53,7 @@ public class enterPage extends AppCompatActivity {
     int i = 0;
     String sname = "", num = "";
     String wname="", wnum="";
-    String stel, sintro, saddr, smenu, scount;
+    String stel, sintro, saddr, smenu, scount, otime, ctime;
     int w;
 
 
@@ -73,6 +73,8 @@ public class enterPage extends AppCompatActivity {
         saddr = intent.getExtras().getString("addr");
         smenu = intent.getExtras().getString("menu");
         scount = intent.getExtras().getString("scount");
+        otime = intent.getExtras().getString("otime");
+        ctime = intent.getExtras().getString("ctime");
 
 
         SharedPreferences pref = this.getApplication().getSharedPreferences("user_info", Context.MODE_PRIVATE);
@@ -83,6 +85,7 @@ public class enterPage extends AppCompatActivity {
         editor_s.putString("store", sname);
         editor_s.putString("userID", uname);
         editor_s.apply();
+
 
         ImageView star = findViewById(R.id.star);
         star.setOnClickListener(v -> {
@@ -139,6 +142,9 @@ public class enterPage extends AppCompatActivity {
         story = findViewById(R.id.textView21);
         story2 = findViewById(R.id.textView12);
 
+        story.setText("사장님의 말 : "+sintro+"\n\n전화 : "+stel+"\n\n가게 위치 :"+saddr+"\n");
+        story2.append("영업 시간 : " + otime + " ~ " + ctime);
+
 
         //미리 줄서기
         wait = findViewById(R.id.imageButton9);
@@ -162,14 +168,8 @@ public class enterPage extends AppCompatActivity {
         info.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                SharedPreferences test = getSharedPreferences("test", MODE_PRIVATE);
-                story.setText(" 사장님의 말 : "+sintro+"\n\n 전화 : "+stel+"\n\n 가게 위치 :"+saddr+"\n");
-                String openHour = test.getString("hour1", null);
-                String openMin = test.getString("min1", null);
-                String closeHour = test.getString("hour2", null);
-                String closeMin = test.getString("min2", null);
-                story2.append("영업 시간 : " + openHour + "시 " + openMin + "분 ~ " +
-                        closeHour + "시 " + closeMin +"분");
+                story.setText("사장님의 말 : "+sintro+"\n\n전화 : "+stel+"\n\n가게 위치 :"+saddr+"\n");
+                story2.append("영업 시간 : " + otime + " ~ " + ctime);
             }
         });
 
