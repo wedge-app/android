@@ -50,7 +50,7 @@ public class HomeFrag extends Fragment implements OnMapReadyCallback {
     MapView mapView;
     TextView home_title, home_time, home_tel;
     Button enter;
-    String sname="", stel="", sintro="", saddr="", smenu="";
+    String sname="", stel="", sintro="", saddr="", smenu="", scount="";
 
     Stores item = new Stores();
 
@@ -222,6 +222,7 @@ public class HomeFrag extends Fragment implements OnMapReadyCallback {
                         sintro = jsonObject.getString("intro");
                         saddr = jsonObject.getString("addr");
                         smenu = jsonObject.getString("menu");
+                        scount = jsonObject.getString("count");
                         System.out.println("sname="+sname);
                     } else {
                         System.out.println("연결 실패");
@@ -252,6 +253,7 @@ public class HomeFrag extends Fragment implements OnMapReadyCallback {
                 intent.putExtra("intro",sintro);
                 intent.putExtra("addr",saddr);
                 intent.putExtra("menu",smenu);
+                intent.putExtra("scount",scount);
                 startActivity(intent);
             }
         });

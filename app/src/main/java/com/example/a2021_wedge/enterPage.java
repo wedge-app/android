@@ -53,6 +53,8 @@ public class enterPage extends AppCompatActivity {
     int i = 0;
     String sname = "", num = "";
     String wname="", wnum="";
+    String stel, sintro, saddr, smenu, scount;
+    int w;
 
 
     @Override
@@ -66,11 +68,11 @@ public class enterPage extends AppCompatActivity {
 
         Intent intent = getIntent(); /*데이터 수신*/
         sname = intent.getExtras().getString("name");
-        String stel = intent.getExtras().getString("tel");
-        String sintro = intent.getExtras().getString("intro");
-        String saddr = intent.getExtras().getString("addr");
-        String smenu = intent.getExtras().getString("menu");
-        String scount = intent.getExtras().getString("scount");
+        stel = intent.getExtras().getString("tel");
+        sintro = intent.getExtras().getString("intro");
+        saddr = intent.getExtras().getString("addr");
+        smenu = intent.getExtras().getString("menu");
+        scount = intent.getExtras().getString("scount");
 
 
         SharedPreferences pref = this.getApplication().getSharedPreferences("user_info", Context.MODE_PRIVATE);
@@ -202,13 +204,23 @@ public class enterPage extends AppCompatActivity {
         wait.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(enterPage.this, "줄서기가 정상신청되었습니다.", Toast.LENGTH_SHORT).show();
                 //미리 줄서기
-                int w = Integer.parseInt(wait_num.getText().toString());
-                wait_num.setText(Integer.toString(w + 1));
+                try {
+                    System.out.println("try문 집입 완료");
+                    w = Integer.parseInt(String.valueOf(scount));
+                    wait_num.setText(Integer.toString(w + 1));
+                    System.out.println("!!!!!!!wait_num : "+wait_num);
+                    wname = sname;
+                    wnum = Integer.toString(w + 1);
+                    System.out.println("결과확인!!!!!!!wait_num : "+wnum);
 
-                wname = sname;
-                wnum = Integer.toString(w + 1);
+                } catch (NumberFormatException e) {
+                    System.out.println("예외발생");
+                } catch (Exception e) {
+                    System.out.println("예외발생");
+                }
+
+
 
                 Response.Listener<String> responseListener = new Response.Listener<String>() {
                     @Override
@@ -240,6 +252,7 @@ public class enterPage extends AppCompatActivity {
                 DialogWaiting dlg = new DialogWaiting(enterPage.this);
                 dlg.show();
 
+                Toast.makeText(enterPage.this, "줄서기가 정상신청되었습니다.", Toast.LENGTH_SHORT).show();
             }
         });
 

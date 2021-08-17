@@ -106,6 +106,7 @@ public class WaitingList extends AppCompatActivity {
                     storename = jsonObject.getString("storename");
                     scount = jsonObject.getString("count");
                     team[count] = object.getString("countteam");
+                    System.out.println("전달할 값 : "+storename+", "+scount+","+team[count]);
                     if(sname.equals(storename)){
                         adapter.addItem(new ItemWaitingList(Integer.toString(count+1), team[count]));
                     }
