@@ -29,6 +29,7 @@
                     android:text="@string/SCD"
                     android:textColor="#000000"
                     android:textSize="28sp"
+                    android:fontFamily="@font/scdream5"
                     android:visibility="visible"
                     app:backgroundTint="#FFC700" />
 
@@ -45,6 +46,8 @@
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="@string/DC"
+                        android:fontFamily="@font/scdream5"
+                        android:textStyle="normal"
                         android:textColor="#000000"
                         android:textSize="24sp" />
 
@@ -59,6 +62,7 @@
                             android:layout_height="wrap_content"
                             android:background="#FF9800"
                             android:text="@string/table"
+                            android:fontFamily="@font/scdream4"
                             android:textColor="#424242"
                             app:backgroundTint="#FF9800" />
 
@@ -87,6 +91,7 @@
                     android:layout_height="200dp"
                     android:text="@string/ACGFVZD"
                     android:textColor="#000000"
+                    android:fontFamily="@font/scdream5"
                     android:textSize="28sp"
                     android:visibility="visible"
                     app:backgroundTint="#FFE589" />
@@ -103,6 +108,7 @@
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="@string/BZCswf"
+                        android:fontFamily="@font/scdream5"
                         android:textColor="#000000"
                         android:textSize="24sp" />
 
@@ -112,6 +118,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/VDAFV"
+                        android:fontFamily="@font/scdream4"
                         app:backgroundTint="#FF9800" />
 
                     <Button
@@ -120,6 +127,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/SZGRFE"
+                        android:fontFamily="@font/scdream4"
                         app:backgroundTint="#FF9800" />
 
                     <TextView
@@ -128,6 +136,7 @@
                         android:layout_height="wrap_content"
                         android:gravity="left"
                         android:text="@string/WSAfes"
+                        android:fontFamily="@font/scdream4"
                         android:textColor="#000000"
                         android:textSize="20sp"
                         tools:ignore="RtlHardcoded" />
@@ -138,6 +147,7 @@
                         android:layout_height="wrap_content"
                         android:gravity="left"
                         android:text="@string/SAF"
+                        android:fontFamily="@font/scdream4"
                         android:textColor="#000000"
                         android:textSize="20sp"
                         tools:ignore="RtlHardcoded" />
@@ -164,6 +174,7 @@
                     android:text="@string/fswd"
                     android:textColor="#000000"
                     android:textSize="28sp"
+                    android:fontFamily="@font/scdream5"
                     android:visibility="visible"
                     app:backgroundTint="#FFC700" />
 
@@ -178,6 +189,7 @@
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="@string/asadf"
+                        android:fontFamily="@font/scdream5"
                         android:textColor="#000000"
                         android:textSize="24sp" />
 
@@ -187,6 +199,8 @@
                         android:layout_height="wrap_content"
                         android:minWidth="32dp"
                         android:minHeight="48dp"
+                        android:lineSpacingExtra="10sp"
+                        android:fontFamily="@font/scdream4"
                         tools:ignore="LabelFor,SpeakableTextPresentCheck,TextFields"
                         android:autofillHints="" />
 
@@ -195,6 +209,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/aWfxecD"
+                        android:fontFamily="@font/scdream4"
                         app:backgroundTint="#FF9800" />
 
                 </LinearLayout>
@@ -218,6 +233,7 @@
                     android:text="@string/AWVSA"
                     android:textColor="#000000"
                     android:textSize="28sp"
+                    android:fontFamily="@font/scdream5"
                     android:visibility="visible"
                     app:backgroundTint="#FFE589" />
 
@@ -233,6 +249,7 @@
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="@string/AWXdcF"
+                        android:fontFamily="@font/scdream5"
                         android:textColor="#000000"
                         android:textSize="24sp" />
 
@@ -248,6 +265,7 @@
                             android:ems="13"
                             android:hint="@string/XZSGECFR"
                             android:minHeight="48dp"
+                            android:fontFamily="@font/scdream4"
                             android:autofillHints=""
                             tools:ignore="TextFields" />
 
@@ -256,6 +274,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/SEAGWVF"
+                            android:fontFamily="@font/scdream5"
                             app:backgroundTint="#FF9800" />
 
                     </LinearLayout>

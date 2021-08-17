@@ -17,6 +17,7 @@
             android:layout_weight="0.75"
             android:text=""
             android:layout_gravity="center"
+            android:fontFamily="@font/scdream4"
             android:textColor="#000000"
             android:textSize="20sp" />
 
@@ -27,6 +28,7 @@
             android:layout_weight="0.25"
             android:background="@color/main_orange"
             android:text="@string/c"
+            android:fontFamily="@font/scdream5"
             android:padding="10dp"
             android:textColor="#000000" />
     </LinearLayout>

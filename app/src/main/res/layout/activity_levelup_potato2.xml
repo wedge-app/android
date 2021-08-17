@@ -19,6 +19,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/fvAXFr"
+            android:fontFamily="@font/scdream5"
             android:textColor="#000000"
             android:textSize="34sp" />
 
@@ -28,6 +29,7 @@
             android:layout_height="wrap_content"
             android:text="@string/fdvaedf"
             android:textColor="#000000"
+            android:fontFamily="@font/scdream5"
             android:textSize="34sp" />
     </LinearLayout>
 
@@ -56,5 +58,6 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/p_next_level"
+        android:fontFamily="@font/scdream4"
         app:layout_constraintVertical_bias="0.381" />
 </androidx.constraintlayout.widget.ConstraintLayout>

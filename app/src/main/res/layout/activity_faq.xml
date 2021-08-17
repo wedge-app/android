@@ -33,6 +33,7 @@
             android:text="@string/aersvf"
             android:textColor="@color/black"
             android:textSize="20sp"
+            android:fontFamily="@font/scdream5"
             android:layout_marginEnd="30dp" />
     </LinearLayout>
 
@@ -46,6 +47,7 @@
         android:textColor="#fb8b00"
         android:layout_marginBottom="5dp"
         android:text="@string/rgsfev"
+        android:fontFamily="@font/scdream4"
         android:layout_marginStart="5dp" />
 
     <TextView
@@ -55,7 +57,9 @@
         android:layout_marginLeft="5dp"
         android:textColor="@color/black"
         android:layout_marginBottom="20dp"
+        android:lineSpacingExtra="10dp"
         android:text="@string/hrfe"
+        android:fontFamily="@font/scdream4"
         android:layout_marginStart="5dp" />
 
     <ImageView
@@ -75,6 +79,7 @@
         android:textColor="#fb8b00"
         android:layout_marginBottom="5dp"
         android:text="@string/hdgrfsbdvh"
+        android:fontFamily="@font/scdream4"
         android:layout_marginStart="5dp" />
 
     <TextView
@@ -84,7 +89,9 @@
         android:layout_marginLeft="5dp"
         android:textColor="@color/black"
         android:layout_marginBottom="20dp"
+        android:lineSpacingExtra="10dp"
         android:text="@string/fre"
+        android:fontFamily="@font/scdream4"
         android:layout_marginStart="5dp" />
 
     <ImageView
@@ -104,6 +111,7 @@
         android:textColor="#fb8b00"
         android:layout_marginBottom="5dp"
         android:text="@string/grfrs"
+        android:fontFamily="@font/scdream4"
         android:layout_marginStart="5dp" />
 
     <TextView
@@ -114,6 +122,8 @@
         android:textColor="@color/black"
         android:layout_marginBottom="20dp"
         android:text="@string/hgfv"
+        android:fontFamily="@font/scdream4"
+        android:lineSpacingExtra="10dp"
         android:layout_marginStart="5dp" />
 
     <ImageView
@@ -133,6 +143,7 @@
         android:textColor="#fb8b00"
         android:layout_marginBottom="5dp"
         android:text="@string/dhrsgfe"
+        android:fontFamily="@font/scdream4"
         android:layout_marginStart="5dp" />
 
     <TextView
@@ -143,6 +154,8 @@
         android:textColor="@color/black"
         android:layout_marginBottom="20dp"
         android:text="@string/mfhdgrsef"
+        android:fontFamily="@font/scdream4"
+        android:lineSpacingExtra="10dp"
         android:layout_marginStart="5dp" />
 
     <ImageView

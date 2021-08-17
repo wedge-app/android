@@ -32,6 +32,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="36dp"
                 android:text="@string/hgbxfd"
+                android:fontFamily="@font/scdream5"
                 android:textSize="34sp" />
 
             <TextView
@@ -40,6 +41,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="36dp"
                 android:text="@string/hgfsre"
+                android:fontFamily="@font/scdream5"
                 android:textSize="34sp" />
 
         </LinearLayout>
@@ -82,6 +84,7 @@
             android:textSize="34sp"
             app:layout_constraintBottom_toTopOf="@+id/info_levelup"
             app:layout_constraintEnd_toEndOf="parent"
+            android:fontFamily="@font/scdream4"
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
@@ -95,6 +98,7 @@
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            android:fontFamily="@font/scdream4"
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
@@ -108,6 +112,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.481"
             app:layout_constraintStart_toStartOf="parent"
+            android:fontFamily="@font/scdream4"
             app:layout_constraintTop_toBottomOf="@+id/info_levelup"
             app:layout_constraintVertical_bias="0.255" />
 

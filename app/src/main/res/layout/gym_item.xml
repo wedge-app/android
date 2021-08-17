@@ -8,6 +8,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="5"
+        android:fontFamily="@font/scdream4"
         android:text="@string/FDAV" />
 
     <Button
@@ -16,5 +17,6 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:background="#FFC107"
+        android:fontFamily="@font/scdream5"
         android:text="@string/WERG" />
 </LinearLayout>
