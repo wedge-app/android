@@ -236,7 +236,7 @@ public class SearchFrag extends Fragment {
             intent.putExtra("intro",sintro);
             intent.putExtra("addr",saddr);
             intent.putExtra("menu",smenu);
-            intent.putExtra("count",scount);
+            intent.putExtra("scount",scount);
             startActivity(intent);
         });
 
