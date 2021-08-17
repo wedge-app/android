@@ -28,7 +28,7 @@
                     android:background="#FFC700"
                     android:text="@string/SCD"
                     android:textColor="#000000"
-                    android:textSize="28sp"
+                    android:textSize="28dp"
                     android:fontFamily="@font/scdream5"
                     android:visibility="visible"
                     app:backgroundTint="#FFC700" />
