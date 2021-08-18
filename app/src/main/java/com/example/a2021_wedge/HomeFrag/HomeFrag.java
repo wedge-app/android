@@ -1,5 +1,6 @@
 package com.example.a2021_wedge.HomeFrag;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -82,21 +83,7 @@ public class HomeFrag extends Fragment implements OnMapReadyCallback {
         mapView.onCreate(savedInstanceState);
         mapView.getMapAsync(this);
 
-//        Spinner spinner = v.findViewById(R.id.spinner);
-//        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getContext(), android.R.layout.simple_spinner_item, items);
-//        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-//        spinner.setAdapter(adapter);
-//        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-//            @Override
-//            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-////                textView.setText(items[position]);
-//            }
-//
-//            @Override
-//            public void onNothingSelected(AdapterView<?> parent) {
-////                textView.setText("선택 : ");
-//            }
-//        });
+
 
         home_title = v.findViewById(R.id.text_home);
         home_time = v.findViewById(R.id.text_time);
@@ -197,15 +184,6 @@ public class HomeFrag extends Fragment implements OnMapReadyCallback {
             home_title.setText(marker.getTitle());
 
 
-//            SharedPreferences test = getSharedPreferences("test", MODE_PRIVATE);
-//            String openHour = test.getString("hour1", null);
-//            String openMin = test.getString("min1", null);
-//            String closeHour = test.getString("hour2", null);
-//            String closeMin = test.getString("min2", null);
-//            home_time.append("영업 시간 : " + openHour + "시 " + openMin + "분 ~ " +
-//                    closeHour + "시 " + closeMin +"분");
-
-
 
             Response.Listener<String> responseListener = response -> {
                 System.out.println("Listener 진입 성공/ response 값 : " + response);
@@ -240,7 +218,7 @@ public class HomeFrag extends Fragment implements OnMapReadyCallback {
             storesearchRequest SearchRequest = new  storesearchRequest(home_title.getText().toString(), responseListener);
             RequestQueue queue = Volley.newRequestQueue(getContext());
             queue.add(SearchRequest);
-
+          
             return false;
         });
 
