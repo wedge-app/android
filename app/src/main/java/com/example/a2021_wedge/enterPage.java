@@ -30,12 +30,15 @@ import com.example.a2021_wedge.First.join;
 import com.example.a2021_wedge.Rev.ReviewList;
 import com.example.a2021_wedge.Sajang.StoreManagement;
 import com.example.a2021_wedge.SearchFrag.SearchFrag;
+import com.example.a2021_wedge.retrofit.LikeStoreDel;
+import com.example.a2021_wedge.retrofit.LikeStoreKeep;
 import com.example.a2021_wedge.retrofit.LikeStoreRequest;
 import com.example.a2021_wedge.retrofit.RegisterRequest;
 import com.example.a2021_wedge.retrofit.WaitingStoreRequest;
 import com.example.a2021_wedge.retrofit.scount;
 import com.example.a2021_wedge.retrofit.storecount;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -54,8 +57,11 @@ public class enterPage extends AppCompatActivity {
     String sname = "", num = "";
     String wname="", wnum="";
     String stel, sintro, saddr, smenu, scount, otime, ctime,enter;
-    int w;
+    int w,  check=0;
     int cancel = 0;
+
+    String[] lskuname, lsksname;
+
 
 
     @Override
@@ -96,29 +102,101 @@ public class enterPage extends AppCompatActivity {
 
 
         ImageView star = findViewById(R.id.star);
-        star.setOnClickListener(v -> {
-            Response.Listener<String> responseListener = response -> {
-                System.out.println("Listener 진입 성공/ response 값 : " + response);
-                try {
-                    JSONObject jsonObject = new JSONObject(response);
-                    boolean success = jsonObject.getBoolean("success");
+        Response.Listener<String> responseListener = response -> {
+            try {
+                JSONObject jsonObject = new JSONObject(response);
+                JSONArray jsonArray = jsonObject.getJSONArray("response");
+                int count = 0;
+                System.out.println("likestore 배열 길이 : " + jsonArray.length());
 
-                    if (success) {
-                        System.out.println("연결 성공");
-                        onBackPressed();
-                    } else {
-                        System.out.println("연결 실패");
-                    }
-                } catch (JSONException e) {
-                    e.printStackTrace();
+                lskuname = new String[jsonArray.length()];
+                lsksname = new String[jsonArray.length()];
+
+                while (count < jsonArray.length()) {
+                    JSONObject object = jsonArray.getJSONObject(count);
+                    lskuname[count] = object.getString("uname");
+                    lsksname[count] = object.getString("sname");
+
+                    System.out.println("php유저네임 : "+ object.getString("uname")+", php가게네임 : "+object.getString("sname"));
+                    System.out.println("유저네임 : "+ lskuname[count]+", 가게네임 : "+lsksname[count]);
+
+                    if (lsksname[count].equals(sname) && lskuname[count].equals(uname)) { check++; }
+                    count++;
                 }
-            };
-            System.out.println(sname+uname);
-            //서버로 Volley를 이용해서 요청
-            LikeStoreRequest likestorerequest = new LikeStoreRequest(uname, sname, responseListener);
-            RequestQueue queue = Volley.newRequestQueue(enterPage.this);
-            queue.add(likestorerequest);
+
+                System.out.println("check값 : "+check);
+
+                //별 초기 설정
+                if (check != 0) { //해당 유저가 이미 찜한 가게
+                    star.setImageResource(R.drawable.shop_star2);
+                } else {
+                    star.setImageResource(R.drawable.shop_star);
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        };
+        LikeStoreKeep Request = new LikeStoreKeep(responseListener);
+        RequestQueue queue0 = Volley.newRequestQueue(enterPage.this);
+        queue0.add(Request);
+
+
+        //찜(별) 클릭 시
+        star.setOnClickListener(v -> {
+            if (check == 0) { //해당 유저가 찜한 가게 아님
+                Response.Listener<String> responseListener2 = response2 -> {
+                    System.out.println("Listener 진입 성공/ response 값 : " + response2);
+                    try {
+                        JSONObject jsonObject2 = new JSONObject(response2);
+                        boolean success = jsonObject2.getBoolean("success");
+
+                        if (success) {
+                            System.out.println("연결 성공");
+                            onBackPressed();
+                        } else {
+                            System.out.println("연결 실패");
+                        }
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                };
+                System.out.println(sname + uname);
+                //서버로 Volley를 이용해서 요청
+                LikeStoreRequest likestorerequest = new LikeStoreRequest(uname, sname, responseListener2);
+                RequestQueue queue = Volley.newRequestQueue(enterPage.this);
+                queue.add(likestorerequest);
+
+                star.setImageResource(R.drawable.shop_star2);
+            } else {
+                //찜한 가게 해당 항목 삭제
+                if (check != 0) { //해당 유저가 이미 찜한 가게
+                    Response.Listener<String> responseListener3 = response2 -> {
+                        System.out.println("Listener 진입 성공/ response 값 : " + response2);
+                        try {
+                            JSONObject jsonObject2 = new JSONObject(response2);
+                            boolean success = jsonObject2.getBoolean("success");
+
+                            if (success) {
+                                System.out.println("연결 성공");
+                                onBackPressed();
+                            } else {
+                                System.out.println("연결 실패");
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    };
+                    System.out.println(sname + uname);
+                    //서버로 Volley를 이용해서 요청
+                    LikeStoreDel likestorere = new LikeStoreDel(uname, sname, responseListener3);
+                    RequestQueue queued = Volley.newRequestQueue(enterPage.this);
+                    queued.add(likestorere);
+
+                    star.setImageResource(R.drawable.shop_star);
+                }
+            }
         });
+
 
         //뒤로가기
         back = findViewById(R.id.back3);
@@ -156,24 +234,6 @@ public class enterPage extends AppCompatActivity {
 
         //미리 줄서기
         wait = findViewById(R.id.imageButton9);
-
-        //회색 별 버튼
-        //like = findViewById(R.id.imageButton11);
-        grey_star = findViewById(R.id.star);
-        grey_star.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(i == 0){
-                    grey_star.setImageResource(R.drawable.shop_star2);
-                    i++;
-                }else if(i == 0){
-                    grey_star.setImageResource(R.drawable.shop_star);
-                    i--;
-                }
-            }
-        });
-
-
 
         info.setOnClickListener(new View.OnClickListener() {
             @Override
