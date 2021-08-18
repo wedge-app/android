@@ -216,7 +216,7 @@ public class enterPage extends AppCompatActivity {
         story2 = findViewById(R.id.textView12);
 
         story.setText("사장님의 말 : " + sintro + "\n\n전화 : " + stel + "\n\n가게 위치 :" + saddr + "\n");
-        story2.append("영업 시간 : " + otime + " ~ " + ctime);
+        story2.setText("영업 시간 : " + otime + " ~ " + ctime);
 
 
         //미리 줄서기
@@ -226,7 +226,7 @@ public class enterPage extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 story.setText("사장님의 말 : " + sintro + "\n\n전화 : " + stel + "\n\n가게 위치 :" + saddr + "\n");
-                story2.append("영업 시간 : " + otime + " ~ " + ctime);
+                story2.setText("영업 시간 : " + otime + " ~ " + ctime);
             }
         });
 
