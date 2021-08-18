@@ -168,6 +168,7 @@ public class Main extends AppCompatActivity {
                     Stores tmpStores = new Stores();
                     JSONObject item = jsonArray.getJSONObject(i);
                     tmpStores.setName(item.getString("name"));
+
                     tmpStores.setH(item.getDouble("h"));
                     tmpStores.setW(item.getDouble("w"));
                     tmpStoresArray.add(tmpStores);
