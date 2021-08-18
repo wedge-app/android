@@ -181,18 +181,21 @@ public class SearchFrag extends Fragment {
                         boolean success = jsonObject.getBoolean("success");
 
                         if (success) {
-                            System.out.println("연결 성공");
-                            sname = jsonObject.getString("name");
-                            stel = jsonObject.getString("tel");
-                            sintro = jsonObject.getString("intro");
-                            saddr = jsonObject.getString("addr");
-                            smenu = jsonObject.getString("menu");
-                            scount = jsonObject.getString("count");
-                            sotime = jsonObject.getString("opentime");
-                            sctime = jsonObject.getString("closetime");
-                            senter = jsonObject.getString("enter");
-                            adapter2.addItem(new ItemSearchList(sname));
-                            adapter2.notifyDataSetChanged();
+                            if(sname.equals(jsonObject.getString("name"))){
+                            }else {
+                                System.out.println("연결 성공");
+                                sname = jsonObject.getString("name");
+                                stel = jsonObject.getString("tel");
+                                sintro = jsonObject.getString("intro");
+                                saddr = jsonObject.getString("addr");
+                                smenu = jsonObject.getString("menu");
+                                scount = jsonObject.getString("count");
+                                sotime = jsonObject.getString("opentime");
+                                sctime = jsonObject.getString("closetime");
+                                senter = jsonObject.getString("enter");
+                                adapter2.addItem(new ItemSearchList(sname));
+                                adapter2.notifyDataSetChanged();
+                            }
                         } else {
                             System.out.println("연결 실패");
 
