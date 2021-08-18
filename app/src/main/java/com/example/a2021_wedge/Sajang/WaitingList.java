@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.content.Intent;
+import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.ImageButton;
@@ -128,7 +129,6 @@ public class WaitingList extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         adapter = new WaitingListAdapter();
 
-
         Response.Listener<String> responseListener = response -> {
             try{
                 JSONObject jsonObject = new JSONObject(response);
@@ -154,6 +154,7 @@ public class WaitingList extends AppCompatActivity {
                     cnt.setText(String.valueOf(list_count));
                     count++;
 
+
                 }
 
                 recyclerView.setAdapter(adapter);
@@ -165,12 +166,21 @@ public class WaitingList extends AppCompatActivity {
 
         adapter.setOnItemClickListener((holder, view, position) -> {
             System.out.println("클릭됨");
-            //adapter.notifyDataSetChanged();
+            adapter.notifyItemRemoved(position);
+            adapter.notifyDataSetChanged();
+            onClick(view);
         });
         //서버로 Volley를 이용해서 요청
         sscount2 request = new  sscount2(responseListener);
         RequestQueue queue = Volley.newRequestQueue(WaitingList.this);
         queue.add(request);
+    }
+
+
+    public void onClick (View v){
+        Intent intent = getIntent();
+        finish();
+        startActivity(intent);
     }
 
     private long time= 0;

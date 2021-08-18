@@ -1,6 +1,8 @@
 package com.example.a2021_wedge.MyPageFrag;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -15,6 +17,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.example.a2021_wedge.First.Login;
 import com.example.a2021_wedge.MyPageFrag.Potato.GrowingPotatoActivity;
 import com.example.a2021_wedge.R;
 import com.example.a2021_wedge.Rev.Review;
@@ -22,7 +25,7 @@ import com.example.a2021_wedge.Rev.Review;
 public class MyPageFrag extends Fragment {
 
     Button personal_info, growing_potato, favorite_store, develop_story, faq, notice;
-    TextView email;
+    TextView email, text_logout;
 
     private String mJsonString;
     private TextView userName;
@@ -89,7 +92,35 @@ public class MyPageFrag extends Fragment {
             startActivity(intent);
         });
 
+        text_logout = v.findViewById(R.id.text_logout);
+        text_logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                btn_logout(v);
+            }
+        });
+
+
         return v;
 
+    }
+
+
+    public void btn_logout(View v) {
+        new AlertDialog.Builder(getActivity())
+                .setTitle("로그아웃").setMessage("로그아웃 하시겠습니까?")
+                .setPositiveButton("로그아웃", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int whichButton) {
+                        Intent i = new Intent(getActivity(), Login.class);
+                        i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                        startActivity(i);
+                    }
+                })
+                .setNegativeButton("취소", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int whichButton) {
+
+                    }
+                })
+                .show();
     }
 }
