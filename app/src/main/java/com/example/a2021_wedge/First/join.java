@@ -19,6 +19,7 @@ import com.android.volley.toolbox.Volley;
 import com.example.a2021_wedge.R;
 import com.example.a2021_wedge.retrofit.RegisterRequest;
 import com.example.a2021_wedge.retrofit.RetrofitClient;
+import com.example.a2021_wedge.storejoin2;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -78,7 +79,9 @@ public class join extends AppCompatActivity {
                             if (success) {
                                 System.out.println("연결 성공");
                                 Toast.makeText(getApplicationContext(), "회원가입 성공", Toast.LENGTH_SHORT).show();
-                                onBackPressed();
+                                //onBackPressed();
+                                Intent intent = new Intent(join.this, Login.class);
+                                startActivity(intent);
                                 //회원가입 실패시
                             } else {
                                 System.out.println("연결 실패");

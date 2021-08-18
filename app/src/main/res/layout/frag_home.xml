@@ -81,7 +81,6 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
                         android:layout_marginBottom="10dp"
-                        android:text="@string/sawrf"
                         android:fontFamily="@font/scdream4"
                         android:layout_marginStart="5dp" />
 
@@ -91,7 +90,6 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
                         android:layout_marginBottom="20dp"
-                        android:text="@string/evsza"
                         android:fontFamily="@font/scdream4"
                         android:layout_marginStart="5dp" />
 

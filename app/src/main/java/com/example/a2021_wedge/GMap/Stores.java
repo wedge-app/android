@@ -11,6 +11,8 @@ public class Stores {
     String ID;
     String PW;
     String userName;
+    String otime;
+    String ctime;
 
     public String getName() {
         return name;
@@ -91,4 +93,10 @@ public class Stores {
     public void setUserName(String userName) {
         this.userName = userName;
     }
+
+    public String getOtime() { return otime; }
+    public String getCtime() { return ctime; }
+
+    public void setOtime(String otime) { this.otime = otime; }
+    public void setCtime(String ctime) { this.ctime = ctime; }
 }

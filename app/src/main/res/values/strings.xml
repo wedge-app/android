@@ -148,7 +148,7 @@
     <string name="ewafzv">입장</string>
     <string name="weaF"><![CDATA[-> 바삭 웨지]]></string>
     <string name="czfv">아이디</string>
-    <string name="cWfscd">님</string>
+    <string name="cWfscd"> 님</string>
     <string name="AFA">검색할 가게 입력</string>
     <string name="AFWE">전체 가게</string>
     <string name="FDAV">TextView</string>
@@ -167,4 +167,6 @@
     <string name="VGARE">테이블 개수를 입력하세요.</string>
     <string name="FAE">동대문엽기떡볶이 성신여대점</string>
     <string name="save">저장</string>
+    <string name="fixmyinfo">개인 정보 수정</string>
+    <string name="fixmyinfo2">개인 정보 수정</string>
 </resources>
