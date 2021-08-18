@@ -14,10 +14,11 @@ public class DeleteWaitingRequest extends StringRequest {
     private Map<String, String> map;
 
 
-    public DeleteWaitingRequest(String sname, Response.Listener<String> listener) {
+    public DeleteWaitingRequest(String sname, String userTel, Response.Listener<String> listener) {
         super(Method.POST, URL, listener, null);
         map = new HashMap<>();
         map.put("sname", sname);
+        map.put("userTel", userTel);
     }
 
 

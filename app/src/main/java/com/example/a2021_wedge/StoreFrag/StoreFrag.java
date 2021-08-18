@@ -78,11 +78,6 @@ public class StoreFrag extends Fragment {
             }
         };
 
-//        adapter.setOnItemClickListener((holder, view, position) -> {
-//            System.out.println("클릭됨");
-//            adapter.notifyDataSetChanged();
-//        });
-
         StoreListRequest loginRequest = new StoreListRequest(responseListener);
         RequestQueue queue = Volley.newRequestQueue(requireContext());
         queue.add(loginRequest);
@@ -94,9 +89,6 @@ public class StoreFrag extends Fragment {
         btn.setOnClickListener(v1 -> {
             final ItemStore recyclerItem = adapter2.getSelected();
 
-
-
-//            String s = textView.getText().toString();
             Response.Listener<String> responseListener = response -> {
                 System.out.println("Listener 진입 성공/ response 값 : " + response);
                 try {
@@ -113,7 +105,7 @@ public class StoreFrag extends Fragment {
                 }
             };
 
-            DeleteWaitingRequest deleteWaitingRequest = new DeleteWaitingRequest(adapter2.getSelected().getName(), responseListener);
+            DeleteWaitingRequest deleteWaitingRequest = new DeleteWaitingRequest(adapter2.getSelected().getName(), userTel2, responseListener);
             RequestQueue queue = Volley.newRequestQueue(btn.getContext());
             queue.add(deleteWaitingRequest);
 
