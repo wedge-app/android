@@ -1,25 +1,23 @@
-package com.example.a2021_wedge.StoreFrag;
+package com.example.a2021_wedge.MyPageFrag.Potato;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.toolbox.Volley;
+import com.example.a2021_wedge.MyPageFrag.MyPageFrag;
 import com.example.a2021_wedge.R;
-import com.example.a2021_wedge.retrofit.DeleteWaitingRequest;
-import com.example.a2021_wedge.retrofit.StoreListRequest;
+import com.example.a2021_wedge.retrofit.DeleteReviewList;
+import com.example.a2021_wedge.retrofit.ReviewMyListRequest;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -28,29 +26,29 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
+public class ReviewMyListActivity extends AppCompatActivity {
 
-public class StoreFrag extends Fragment {
-
-    public String sname = "", tel = "", userTel2;
+    public String sname = "", userID;
     public RecyclerView recyclerView;
-    public StoreListAdapter adapter2;
+    public ReviewMyListAdapter adapter2;
     int count = 0;
-    Button btn;
-
-    private List<ItemStore> mItemList = new ArrayList<>();
+    Button btn, back;
+    public String list, store, userID2, review, rate;
+    private List<ItemReviewList> mItemList = new ArrayList<>();
 
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.frag_store, container, false);
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_review_my_list);
 
-        btn = v.findViewById(R.id.cancel);
+        btn = findViewById(R.id.cancel);
 
-        recyclerView = v.findViewById(R.id.wait_list);
-        adapter2 = new StoreListAdapter(mItemList);
+        recyclerView = findViewById(R.id.review_list);
+        adapter2 = new ReviewMyListAdapter(mItemList);
         recyclerView.setLayoutManager(new LinearLayoutManager(recyclerView.getContext()));
 
-        SharedPreferences pref = this.requireActivity().getSharedPreferences("user_info", Context.MODE_PRIVATE);
-        userTel2 = pref.getString("userTel", "");
+        SharedPreferences pref = this.getSharedPreferences("user_info", Context.MODE_PRIVATE);
+        userID = pref.getString("userID", "");
 
         bindDelete();
 
@@ -64,9 +62,13 @@ public class StoreFrag extends Fragment {
 
                 while (count < jsonArray.length()) {
                     JSONObject object = jsonArray.getJSONObject(count);
-                    String tel = object.getString("userTel");
-                    String sname = object.getString("sname");
-                    if (userTel2.equals(tel)) mItemList.add(new ItemStore(sname));
+                    list = object.getString("list");
+                    store = object.getString("store");
+                    userID2 = object.getString("userID");
+                    rate = object.getString("rate");
+                    review = object.getString("review");
+                    if (userID.equals(userID2))
+                        mItemList.add(new ItemReviewList(store, rate, review, list));
 
                     count++;
                 }
@@ -78,20 +80,26 @@ public class StoreFrag extends Fragment {
             }
         };
 
-        StoreListRequest loginRequest = new StoreListRequest(responseListener);
-        RequestQueue queue = Volley.newRequestQueue(requireContext());
-        queue.add(loginRequest);
+        ReviewMyListRequest reviewMyListRequest = new ReviewMyListRequest(responseListener);
+        RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
+        queue.add(reviewMyListRequest);
 
-        return v;
+        ImageButton back = findViewById(R.id.back);
+        back.setOnClickListener(v -> {
+            Intent intent = new Intent(getApplicationContext(), GrowingPotatoActivity.class);
+            startActivity(intent);
+        });
+
     }
 
     private void bindDelete() {
         btn.setOnClickListener(v1 -> {
-            final ItemStore recyclerItem = adapter2.getSelected();
+            final ItemReviewList recyclerItem = adapter2.getSelected();
 
             if (adapter2.getSelected() != null) {
                 Response.Listener<String> responseListener = response -> {
                     System.out.println("Listener 진입 성공/ response 값 : " + response);
+
                     try {
                         JSONObject jsonObject = new JSONObject(response);
                         boolean success = jsonObject.getBoolean("success");
@@ -105,10 +113,9 @@ public class StoreFrag extends Fragment {
                         e.printStackTrace();
                     }
                 };
-
-                DeleteWaitingRequest deleteWaitingRequest = new DeleteWaitingRequest(adapter2.getSelected().getName(), userTel2, responseListener);
+                DeleteReviewList deleteReviewList = new DeleteReviewList(adapter2.getSelected().getList(), responseListener);
                 RequestQueue queue = Volley.newRequestQueue(btn.getContext());
-                queue.add(deleteWaitingRequest);
+                queue.add(deleteReviewList);
 
                 // 선택한 item 삭제
                 mItemList.remove(recyclerItem);

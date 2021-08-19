@@ -18,11 +18,11 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="25dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:layout_weight="0.8"
             android:text="@string/EGRFAWER"
             android:textColor="#000000"
-            android:textSize="20sp"
+            android:textSize="16sp"
             android:fontFamily="@font/scdream4"
             android:textStyle="bold"
             android:layout_marginStart="25dp" />
