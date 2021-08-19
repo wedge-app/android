@@ -79,55 +79,71 @@
             android:id="@+id/con_lv_pot"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="48dp"
-            android:textColor="#000000"
-            android:textSize="34sp"
+            android:layout_marginBottom="4dp"
+            android:fontFamily="@font/scdream4"
+            android:textColor="@color/black"
+            android:textSize="12sp"
             app:layout_constraintBottom_toTopOf="@+id/info_levelup"
             app:layout_constraintEnd_toEndOf="parent"
-            android:fontFamily="@font/scdream4"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/info_levelup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="148dp"
-            android:background="#FFE589"
+            android:layout_marginBottom="244dp"
+            android:fontFamily="@font/scdream4"
             android:text="@string/hgdxbfzs"
             android:textColor="#555555"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:fontFamily="@font/scdream4"
+            app:layout_constraintHorizontal_bias="0.495"
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/review_num"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/scdream4"
             android:text="@string/mfhdrsgfes"
             android:textColor="#000000"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.481"
+            app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
-            android:fontFamily="@font/scdream4"
             app:layout_constraintTop_toBottomOf="@+id/info_levelup"
-            app:layout_constraintVertical_bias="0.255" />
+            app:layout_constraintVertical_bias="0.165" />
+
+        <Button
+            android:id="@+id/button_re"
+            android:layout_width="213dp"
+            android:layout_height="36dp"
+            android:background="#FFC700"
+            android:text="@string/gbf"
+            android:textColor="@color/black"
+            app:backgroundTint="#FFE589"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/review_num"
+            app:layout_constraintVertical_bias="0.7" />
 
         <Button
             android:id="@+id/button_ps"
             android:layout_width="213dp"
             android:layout_height="36dp"
             android:background="#FFC700"
-            android:text="@string/gbf"
-            android:textColor="#CE737272"
+            android:text="@string/show_review"
+            android:textColor="@color/black"
             app:backgroundTint="#FFE589"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/button_re"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/review_num" />
+            app:layout_constraintTop_toBottomOf="@+id/review_num"
+            app:layout_constraintVertical_bias="0.707" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
