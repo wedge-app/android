@@ -51,11 +51,6 @@
             android:name=".Sajang.StoreManagement"
             android:exported="true" />
         <activity
-            android:name=".MyPageFrag.onetalking"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:label="@string/title_activity_onetalking"
-            android:theme="@style/Theme.2021_Wedge.Fullscreen" />
-        <activity
             android:name=".enterPage"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_enter_page"
