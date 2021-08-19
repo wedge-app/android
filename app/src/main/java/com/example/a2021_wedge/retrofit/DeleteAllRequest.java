@@ -1,5 +1,6 @@
 package com.example.a2021_wedge.retrofit;
 
+import com.android.volley.AuthFailureError;
 import com.android.volley.Response;
 import com.android.volley.toolbox.StringRequest;
 
@@ -13,15 +14,15 @@ public class DeleteAllRequest extends StringRequest {
     private Map<String, String> map;
 
 
-    public DeleteAllRequest(String count, Response.Listener<String> listener) {
+    public DeleteAllRequest(String storename, Response.Listener<String> listener) {
         super(Method.POST, URL, listener, null);
-        System.out.println(" count" + count );
+        System.out.println("storename : " + storename );
         map = new HashMap<>();
-        map.put("count", count);
+        map.put("storename", storename);
 
-        for (Map.Entry<String, String> entrySet : map.entrySet()) {
-            System.out.println("Map 출력 : " + entrySet.getKey() + " : " + entrySet.getValue());
-        }
-
+    }
+    @Override
+    protected Map<String, String>getParams() throws AuthFailureError {
+        return map;
     }
 }

@@ -47,20 +47,6 @@ public class WaitingListAdapter extends RecyclerView.Adapter<WaitingListAdapter.
 
     }
 
-    public void removeAll(ArrayList<MenuView.ItemView> data){
-        items.removeAll(data);
-    }
-
-    public void clear() {
-        int size = items.size();
-        if (size > 0) {
-            for (int i = 0; i < size; i++) {
-                items.remove(0);
-            }
-
-            notifyItemRangeRemoved(0, size);
-        }
-    }
     @Override
     public int getItemCount() {
         return items.size();

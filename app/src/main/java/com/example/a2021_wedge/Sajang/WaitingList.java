@@ -7,7 +7,6 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.content.Intent;
 import android.view.View;
-import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -19,7 +18,6 @@ import com.android.volley.Response;
 import com.android.volley.toolbox.Volley;
 import com.example.a2021_wedge.R;
 import com.example.a2021_wedge.retrofit.DeleteAllRequest;
-import com.example.a2021_wedge.retrofit.DeleteStoreWaitingRequest;
 import com.example.a2021_wedge.retrofit.sscount2;
 import com.example.a2021_wedge.retrofit.waittoggle;
 
@@ -30,8 +28,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.util.ArrayList;
 
 public class WaitingList extends AppCompatActivity {
     TextView title, cnt, current;
@@ -152,6 +148,12 @@ public class WaitingList extends AppCompatActivity {
                         adapter.addItem(new ItemWaitingList(scount, team));
                         list_count++;
                     }
+
+                    SharedPreferences wait = this.getSharedPreferences("wait", Context.MODE_PRIVATE);
+                    SharedPreferences.Editor editor_w = wait.edit();
+                    editor_w.putString("wait", Integer.toString(list_count));
+                    editor_w.apply();
+
                     cnt.setText(String.valueOf(list_count));
                     count++;
 
@@ -177,36 +179,6 @@ public class WaitingList extends AppCompatActivity {
         sscount2 request = new sscount2(responseListener);
         RequestQueue queue = Volley.newRequestQueue(WaitingList.this);
         queue.add(request);
-
-
-        //대기 리스트 리셋
-        reset = findViewById(R.id.reset);
-        reset.setOnClickListener(view -> {
-            Toast.makeText(getApplicationContext(),"현재 대기팀을 0으로 설정합니다...", Toast.LENGTH_SHORT);
-
-                    System.out.println("진입");
-                    int count = 0;
-
-                    //대기 리스트 삭제 delete
-            Response.Listener<String> responseListener3 = response3 -> {
-                System.out.println("Listener 진입 성공/ response 값 : " + response3);
-
-                try {
-                    JSONObject jsonObject3 = new JSONObject(response3);
-                    boolean success3 = jsonObject3.getBoolean("success");
-
-                    System.out.println("어댑터 카운트 : " + adapter.getItemCount());
-
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-            };
-
-
-            DeleteAllRequest deleteAllRequest = new DeleteAllRequest(Integer.toString(count), responseListener3);
-            RequestQueue queue3 = Volley.newRequestQueue(reset.getContext());
-            queue3.add(deleteAllRequest);
-        });
 
 
     }
