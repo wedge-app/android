@@ -100,6 +100,15 @@ public class GrowingPotatoActivity extends AppCompatActivity {
                         review_num.setText(s);
                         info_levelup.setText(s2);
                     }
+                    else if(nums == 0){
+                        s = "리뷰 작성 횟수 : " + nums + " 번";
+                        s2 = "바삭 감자가 되기 위해서는... \n" + (5-nums) + "번의 리뷰 작성이 필요해요~";
+                        image.setVisibility(View.VISIBLE);
+                        image2.setVisibility(View.INVISIBLE);
+                        image3.setVisibility(View.INVISIBLE);
+                        review_num.setText(s);
+                        info_levelup.setText(s2);
+                    }
                     count++;
                 }
 
