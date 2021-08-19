@@ -76,6 +76,8 @@ public class Review extends AppCompatActivity {
             }
         });
 
+
+
         stars = findViewById(R.id.stars);
 
         stars.setText("나의 별점은...");
@@ -102,7 +104,9 @@ public class Review extends AppCompatActivity {
                         .setNegativeButton("확인", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
+                                Intent intent = new Intent(getApplicationContext(), ReviewList.class);
                                 finish();
+                                startActivity(intent);
                             }
                         })
 
@@ -110,9 +114,11 @@ public class Review extends AppCompatActivity {
                 dialog.show();
 
 
+
                 return;
             }
         });
+
     }
 
     class InsertData extends AsyncTask<String, Void, String> {
