@@ -6,6 +6,8 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.content.Intent;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.ImageButton;
@@ -15,10 +17,15 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.toolbox.Volley;
 import com.example.a2021_wedge.R;
+import com.example.a2021_wedge.SearchFrag.ItemLatelySearch;
+import com.example.a2021_wedge.SearchFrag.SearchFrag;
 import com.example.a2021_wedge.enterPage;
 import com.example.a2021_wedge.retrofit.LikeStoreListRequest;
+import com.example.a2021_wedge.retrofit.ShowStoreRequest;
+import com.example.a2021_wedge.retrofit.storesearchRequest;
 
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
@@ -28,6 +35,7 @@ public class gymrestaurant extends AppCompatActivity {
     ListView gym_listview;
     ArrayAdapter<String> adapter2;
     ArrayList<String> listItem2;
+    String[] ss;
 
     String uname, sname;
 
@@ -72,25 +80,24 @@ public class gymrestaurant extends AppCompatActivity {
                 e.printStackTrace();
             }
         };
-
         LikeStoreListRequest likestorerequest = new LikeStoreListRequest(uname, responseListener);
         RequestQueue queue = Volley.newRequestQueue(gymrestaurant.this);
         queue.add(likestorerequest);
+
+
+        gym_listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> a_parent, View a_view, int a_position, long a_id) {
+
+            }
+        });
 
         ImageButton back = findViewById(R.id.back);
         back.setOnClickListener(v -> finish());
     }
 
-    private long time= 0;
     @Override
     public void onBackPressed() {
-        if (System.currentTimeMillis() - time >= 2000) {
-            time = System.currentTimeMillis();
-            Toast.makeText(getApplicationContext(), "뒤로 버튼을 한번 더 누르면 종료합니다.", Toast.LENGTH_SHORT).show();
-        } else if (System.currentTimeMillis() - time < 2000) {
-            finishAffinity();
-            System.runFinalization();
-            System.exit(0);
-        }
+        finish();
     }
 }

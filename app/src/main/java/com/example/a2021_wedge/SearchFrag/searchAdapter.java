@@ -24,7 +24,7 @@ public class searchAdapter extends RecyclerView.Adapter<searchAdapter.ViewHolder
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             store_name = itemView.findViewById(R.id.textView17);
-            enter = itemView.findViewById(R.id.imageButton5);
+            //enter = itemView.findViewById(R.id.imageButton5);
         }
 
         public void setItem(searchItem item) {

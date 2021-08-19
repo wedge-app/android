@@ -82,8 +82,6 @@
         <activity android:name=".bottomBar.MainActivity" />
         <activity android:name=".MyPageFrag.FAQActivity" />
         <activity android:name=".MyPageFrag.NoticeActivity" />
-        <activity android:name=".MyPageFrag.FavoriteStoreActivity" />
-        <activity android:name=".MyPageFrag.DevelopStoryActivity" />
         <activity android:name=".MyPageFrag.Potato.GrowingPotatoActivity" />
         <activity android:name=".MyPageFrag.Potato.TotalPotato" />
         <activity android:name=".MyPageFrag.gymrestaurant" />
