@@ -51,9 +51,7 @@ public class GrowingPotatoActivity extends AppCompatActivity {
         //뒤로 가기 버튼
         back = findViewById(R.id.back);
         back.setOnClickListener(v -> {
-            Intent intent = new Intent(getApplicationContext(), MyPageFrag.class);
-            startActivity(intent);
-
+            finish();
         });
 
         a = findViewById(R.id.button_ps);
@@ -123,4 +121,8 @@ public class GrowingPotatoActivity extends AppCompatActivity {
 
 
     }
+    public void onBackPressed() {
+        finish();
+    }
+
 }
