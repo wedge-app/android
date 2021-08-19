@@ -90,6 +90,7 @@
         <activity android:name=".MyPageFrag.Potato.LevelupPotato1" />
         <activity android:name=".MyPageFrag.Potato.LevelupPotato2" />
         <activity android:name=".Sajang.WaitingList" />
+        <activity android:name=".MyPageFrag.Potato.ReviewMyListActivity"/>
     </application>
 
 </manifest>
