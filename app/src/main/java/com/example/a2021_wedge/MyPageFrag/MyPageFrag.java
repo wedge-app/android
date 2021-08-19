@@ -24,7 +24,7 @@ import com.example.a2021_wedge.Rev.Review;
 
 public class MyPageFrag extends Fragment {
 
-    Button personal_info, growing_potato, favorite_store, develop_story, faq, notice;
+    Button personal_info, growing_potato, growing_fixinfo, favorite_store, develop_story, faq, notice;
     TextView email, text_logout;
 
     private String mJsonString;
@@ -35,8 +35,8 @@ public class MyPageFrag extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.frag_my_page, container, false);
 
-        userName = v.findViewById(R.id.user_name);
-        userName.setMovementMethod(new ScrollingMovementMethod());
+//        userName = v.findViewById(R.id.user_name);
+//        userName.setMovementMethod(new ScrollingMovementMethod());
 
         email = v.findViewById(R.id.textView28);
 
@@ -49,12 +49,12 @@ public class MyPageFrag extends Fragment {
 
 //        personal_info = v.findViewById(R.id.personal_info);
 
-        userName.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
+//        userName.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//            }
+//        });
 
 
 //        personal_info.setOnClickListener(v1 -> {
@@ -65,6 +65,12 @@ public class MyPageFrag extends Fragment {
         growing_potato = v.findViewById(R.id.growing_potato);
         growing_potato.setOnClickListener(v1 -> {
             Intent intent = new Intent(getActivity(), GrowingPotatoActivity.class);
+            startActivity(intent);
+        });
+
+        growing_fixinfo = v.findViewById(R.id.growing_fixinfo);
+        growing_fixinfo.setOnClickListener(v1 -> {
+            Intent intent = new Intent(getActivity(), fixmyinfo.class);
             startActivity(intent);
         });
 

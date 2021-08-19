@@ -180,13 +180,10 @@ public class HomeFrag extends Fragment implements OnMapReadyCallback {
         gMap.setOnMarkerClickListener(marker -> {
             // Triggered when user click any marker on the map
 
-            if (!isOpenPage) {
-                linear.startAnimation(top);
-            }
+            if (!isOpenPage) { linear.startAnimation(top); }
             home_title.setText(marker.getTitle());
 
 
-            String search_word = marker.getTitle();
 
             Response.Listener<String> responseListener = response -> {
                 System.out.println("Listener 진입 성공/ response 값 : " + response);
@@ -206,25 +203,23 @@ public class HomeFrag extends Fragment implements OnMapReadyCallback {
                         sctime = jsonObject.getString("closetime");
                         senter = jsonObject.getString("enter");
                         System.out.println("sname="+sname);
+                        System.out.println("stel="+stel);
+                        System.out.println("sotime="+sotime);
+                        System.out.println("sctime="+sctime);
+                        home_time.setText("영업 시간 : "+sotime+" ~ "+sctime);
+                        home_tel.setText("전화 : "+stel);
                     } else {
                         System.out.println("연결 실패");
-
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
             };
-            storesearchRequest SearchRequest = new  storesearchRequest(search_word, responseListener);
+            storesearchRequest SearchRequest = new  storesearchRequest(home_title.getText().toString(), responseListener);
             RequestQueue queue = Volley.newRequestQueue(getContext());
             queue.add(SearchRequest);
-
-            home_time.setText("영업 시간 : " + sotime + " ~ " + sctime);
-
-            home_tel.setText("전화 주문 : "+stel);
-
+          
             return false;
-
-
         });
 
         //입장 버튼 클릭시
