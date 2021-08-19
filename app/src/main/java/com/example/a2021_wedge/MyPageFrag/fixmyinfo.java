@@ -1,18 +1,10 @@
 package com.example.a2021_wedge.MyPageFrag;
 
-import android.annotation.SuppressLint;
-
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.os.Handler;
-import android.view.MotionEvent;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -21,11 +13,7 @@ import android.widget.Toast;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.toolbox.Volley;
-import com.example.a2021_wedge.First.Login;
-import com.example.a2021_wedge.First.join;
 import com.example.a2021_wedge.R;
-import com.example.a2021_wedge.databinding.ActivityFixmyinfoBinding;
-import com.example.a2021_wedge.retrofit.RegisterRequest;
 import com.example.a2021_wedge.retrofit.fmyinfo;
 
 import org.json.JSONException;
@@ -50,7 +38,7 @@ public class fixmyinfo extends AppCompatActivity {
         String tell = pref.getString("usertel","");
 
         //뒤로 가기 버튼
-        back = findViewById(R.id.back);
+        back = findViewById(R.id.back_p);
         back.setOnClickListener(v -> finish());
 
         //수정 부분

@@ -11,21 +11,15 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.ImageButton;
-import android.widget.Toast;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.toolbox.Volley;
 import com.example.a2021_wedge.R;
-import com.example.a2021_wedge.SearchFrag.ItemLatelySearch;
-import com.example.a2021_wedge.SearchFrag.SearchFrag;
 import com.example.a2021_wedge.enterPage;
 import com.example.a2021_wedge.retrofit.LikeStoreListRequest;
-import com.example.a2021_wedge.retrofit.ShowStoreRequest;
-import com.example.a2021_wedge.retrofit.storesearchRequest;
 
 import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
@@ -92,7 +86,7 @@ public class gymrestaurant extends AppCompatActivity {
             }
         });
 
-        ImageButton back = findViewById(R.id.back);
+        ImageButton back = findViewById(R.id.back_p);
         back.setOnClickListener(v -> finish());
     }
 

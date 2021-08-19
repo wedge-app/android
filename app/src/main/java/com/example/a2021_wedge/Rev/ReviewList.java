@@ -3,20 +3,17 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
-import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.os.Bundle;
-import android.widget.Toast;
 
 
 import com.example.a2021_wedge.R;
@@ -32,7 +29,6 @@ import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
-import com.example.a2021_wedge.Rev.ReviewAdapter;
 
 public class ReviewList extends AppCompatActivity {
 
@@ -88,7 +84,7 @@ public class ReviewList extends AppCompatActivity {
             }
         });
 
-        ImageButton b = findViewById(R.id.back);
+        ImageButton b = findViewById(R.id.back_p);
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

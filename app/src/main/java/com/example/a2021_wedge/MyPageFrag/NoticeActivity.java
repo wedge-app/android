@@ -1,9 +1,7 @@
 package com.example.a2021_wedge.MyPageFrag;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageButton;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -18,7 +16,7 @@ public class NoticeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_notice);
 
         //뒤로 가기 버튼
-        back = findViewById(R.id.back);
+        back = findViewById(R.id.back_p);
         back.setOnClickListener(v -> finish());
     }
 

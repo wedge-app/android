@@ -14,7 +14,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.toolbox.Volley;
-import com.example.a2021_wedge.MyPageFrag.MyPageFrag;
 import com.example.a2021_wedge.R;
 import com.example.a2021_wedge.retrofit.DeleteReviewList;
 import com.example.a2021_wedge.retrofit.ReviewMyListRequest;
@@ -84,7 +83,7 @@ public class ReviewMyListActivity extends AppCompatActivity {
         RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
         queue.add(reviewMyListRequest);
 
-        ImageButton back = findViewById(R.id.back);
+        ImageButton back = findViewById(R.id.back_p);
         back.setOnClickListener(v -> {
             Intent intent = new Intent(getApplicationContext(), GrowingPotatoActivity.class);
             startActivity(intent);

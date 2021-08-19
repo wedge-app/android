@@ -18,7 +18,7 @@ public class FAQActivity extends AppCompatActivity {
         setContentView(R.layout.activity_faq);
 
         //뒤로 가기 버튼
-        back = findViewById(R.id.back);
+        back = findViewById(R.id.back_p);
         back.setOnClickListener(v -> finish());
     }
 
