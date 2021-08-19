@@ -74,11 +74,12 @@ public class enterPage extends AppCompatActivity {
 
         SharedPreferences pref = this.getApplication().getSharedPreferences("user_info", Context.MODE_PRIVATE);
         String uname = pref.getString("userName", "");
+        String userId = pref.getString("userID", "");
 
         SharedPreferences storeName = getSharedPreferences("storeName", MODE_PRIVATE);
         SharedPreferences.Editor editor_s = storeName.edit();
         editor_s.putString("store", sname);
-        editor_s.putString("userID", uname);
+        editor_s.putString("userID", userId);
         editor_s.apply();
 
         waitenter = findViewById(R.id.waitenter);

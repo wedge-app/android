@@ -48,11 +48,6 @@ public class GrowingPotatoActivity extends AppCompatActivity {
             Intent i = new Intent(GrowingPotatoActivity.this, TotalPotato.class);
             startActivity(i);
         });
-        //뒤로 가기 버튼
-        back = findViewById(R.id.back);
-        back.setOnClickListener(v -> {
-            finish();
-        });
 
         a = findViewById(R.id.button_ps);
         a.setOnClickListener(v -> {
