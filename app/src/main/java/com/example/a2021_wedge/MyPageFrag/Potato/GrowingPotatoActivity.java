@@ -15,7 +15,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.toolbox.Volley;
-import com.example.a2021_wedge.MyPageFrag.MyPageFrag;
 import com.example.a2021_wedge.R;
 import com.example.a2021_wedge.retrofit.ReviewMYCountRequest;
 
@@ -23,7 +22,6 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 public class GrowingPotatoActivity extends AppCompatActivity {
-    ImageButton back;
     Button b, a;
     TextView id, review_num, info_levelup;
     int nums = 0;
@@ -47,11 +45,6 @@ public class GrowingPotatoActivity extends AppCompatActivity {
         b.setOnClickListener(view -> {
             Intent i = new Intent(GrowingPotatoActivity.this, TotalPotato.class);
             startActivity(i);
-        });
-        //뒤로 가기 버튼
-        back = findViewById(R.id.back);
-        back.setOnClickListener(v -> {
-            finish();
         });
 
         a = findViewById(R.id.button_ps);
