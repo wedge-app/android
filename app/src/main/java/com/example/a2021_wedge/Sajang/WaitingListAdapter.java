@@ -7,12 +7,14 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.view.menu.MenuView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.toolbox.Volley;
 import com.example.a2021_wedge.R;
+import com.example.a2021_wedge.StoreFrag.viewHolder;
 import com.example.a2021_wedge.retrofit.DeleteStoreWaitingRequest;
 
 import org.json.JSONException;
@@ -25,6 +27,7 @@ public class WaitingListAdapter extends RecyclerView.Adapter<WaitingListAdapter.
     ArrayList<ItemWaitingList> items = new ArrayList<>();
 
     OnWaitingListItemClickListener listener;
+    Button reset;
 
     @NonNull
     @Override
@@ -35,10 +38,13 @@ public class WaitingListAdapter extends RecyclerView.Adapter<WaitingListAdapter.
         return new ViewHolder(itemView, this);
     }
 
+
+
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int position) {
         ItemWaitingList item = items.get(position);
         viewHolder.setItem(item);
+
     }
 
     @Override
@@ -129,6 +135,7 @@ public class WaitingListAdapter extends RecyclerView.Adapter<WaitingListAdapter.
 
 
             });
+
         }
 
         public void setItem(ItemWaitingList item) {

@@ -7,7 +7,6 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.content.Intent;
 import android.view.View;
-import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -18,9 +17,11 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.toolbox.Volley;
 import com.example.a2021_wedge.R;
+import com.example.a2021_wedge.retrofit.DeleteAllRequest;
 import com.example.a2021_wedge.retrofit.sscount2;
 import com.example.a2021_wedge.retrofit.waittoggle;
 
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -30,17 +31,19 @@ import org.json.JSONObject;
 
 public class WaitingList extends AppCompatActivity {
     TextView title, cnt, current;
-    String storename, scount, team, sname="";
+    String storename, storename2, scount, team, sname = "";
     RecyclerView recyclerView;
     WaitingListAdapter adapter;
+    AppCompatButton reset;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_waitinglist);
 
+
         SharedPreferences preff = this.getSharedPreferences("user_info", Context.MODE_PRIVATE);
-        String enter = preff.getString("enter","");
+        String enter = preff.getString("enter", "");
         String ID = preff.getString("userID", "");
 
         //입장 가능 or 대기 시작 여부
@@ -72,7 +75,7 @@ public class WaitingList extends AppCompatActivity {
                     RequestQueue queue = Volley.newRequestQueue(WaitingList.this);
                     queue.add(ssequest);
 
-                    Toast.makeText(getApplicationContext(), "지금부터 매장 대기번호를 받습니다.",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "지금부터 매장 대기번호를 받습니다.", Toast.LENGTH_SHORT).show();
 
 
                 } else {
@@ -99,16 +102,10 @@ public class WaitingList extends AppCompatActivity {
                     waittoggle ssequest = new waittoggle("0", ID, responseListener);
                     RequestQueue queue = Volley.newRequestQueue(WaitingList.this);
                     queue.add(ssequest);
-                    Toast.makeText(getApplicationContext(), "매장 바로 입장 가능합니다.",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "매장 바로 입장 가능합니다.", Toast.LENGTH_SHORT).show();
 
                 }
             }
-        });
-
-        //대기 리스트 리셋
-        Button reset = findViewById(R.id.reset);
-        reset.setOnClickListener(view -> {
-            //대기 리스트 삭제 delete
         });
 
         //대기줄
@@ -116,7 +113,7 @@ public class WaitingList extends AppCompatActivity {
 
         title = findViewById(R.id.textView45);
         SharedPreferences pref = this.getSharedPreferences("user_info", Context.MODE_PRIVATE);
-        sname = pref.getString("stitle","");
+        sname = pref.getString("stitle", "");
         title.setText(sname);
 
         ImageButton imageButton = (ImageButton) findViewById(R.id.imageButton10);
@@ -130,7 +127,7 @@ public class WaitingList extends AppCompatActivity {
         adapter = new WaitingListAdapter();
 
         Response.Listener<String> responseListener = response -> {
-            try{
+            try {
                 JSONObject jsonObject = new JSONObject(response);
                 JSONArray jsonArray = jsonObject.getJSONArray("response");
                 System.out.println("JSON 배열 길이 : " + jsonArray.length());
@@ -139,7 +136,7 @@ public class WaitingList extends AppCompatActivity {
                 int count = 0, list_count = 0;
 
                 //JSON 배열 길이만큼 반복문을 실행
-                while(count < jsonArray.length()){
+                while (count < jsonArray.length()) {
                     JSONObject object = jsonArray.getJSONObject(count);
 //
                     storename = object.getString("storename");
@@ -147,10 +144,16 @@ public class WaitingList extends AppCompatActivity {
                     team = object.getString("countteam");
                     //Integer.parseInt(String.valueOf(scount));
 
-                    if(sname.equals(storename)){
+                    if (sname.equals(storename)) {
                         adapter.addItem(new ItemWaitingList(scount, team));
                         list_count++;
                     }
+
+                    SharedPreferences wait = this.getSharedPreferences("wait", Context.MODE_PRIVATE);
+                    SharedPreferences.Editor editor_w = wait.edit();
+                    editor_w.putString("wait", Integer.toString(list_count));
+                    editor_w.apply();
+
                     cnt.setText(String.valueOf(list_count));
                     count++;
 
@@ -159,7 +162,7 @@ public class WaitingList extends AppCompatActivity {
 
                 recyclerView.setAdapter(adapter);
 
-            }catch(Exception e){
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         };
@@ -170,20 +173,25 @@ public class WaitingList extends AppCompatActivity {
             adapter.notifyDataSetChanged();
             onClick(view);
         });
+
+
         //서버로 Volley를 이용해서 요청
-        sscount2 request = new  sscount2(responseListener);
+        sscount2 request = new sscount2(responseListener);
         RequestQueue queue = Volley.newRequestQueue(WaitingList.this);
         queue.add(request);
+
+
     }
 
 
-    public void onClick (View v){
+    public void onClick(View v) {
         Intent intent = getIntent();
         finish();
         startActivity(intent);
     }
 
-    private long time= 0;
+    private long time = 0;
+
     @Override
     public void onBackPressed() {
         if (System.currentTimeMillis() - time >= 2000) {
