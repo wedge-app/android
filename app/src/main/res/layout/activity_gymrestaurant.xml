@@ -25,17 +25,6 @@
             android:fontFamily="@font/scdream5"
             android:textStyle="bold" />
 
-        <Spinner
-            android:id="@+id/spinner"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="255dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/yellowbox"
-            android:entries="@array/array_list"
-            android:gravity="center"
-            android:minHeight="48dp"
-            android:layout_marginStart="255dp" />
 
         <ListView
             android:id="@+id/gym_listview"
@@ -45,30 +34,6 @@
 
     </LinearLayout>
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            tools:ignore="UselessParent">
-
-            <ImageButton
-                android:id="@+id/imageButton5"
-                android:layout_width="27dp"
-                android:layout_height="23dp"
-                android:layout_marginLeft="267dp"
-                android:layout_marginTop="103dp"
-                android:background="#FFC812"
-                android:minWidth="48dp"
-                android:minHeight="48dp"
-                app:srcCompat="@drawable/selectionline"
-                tools:ignore="ContentDescription,SpeakableTextPresentCheck"
-                android:layout_marginStart="267dp" />
-
-        </LinearLayout>
-    </FrameLayout>
 
     <LinearLayout
         android:layout_width="match_parent"

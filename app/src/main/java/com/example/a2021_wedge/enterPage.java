@@ -48,7 +48,7 @@ public class enterPage extends AppCompatActivity {
     String sname = "", num = "";
     String wname = "", wnum = "";
     String stel, sintro, saddr, smenu, scount, otime, ctime, enter;
-    int w,  check=0;
+    int w,  check=0, starclick = 0;
     int cancel = 0;
     String[] lskuname, lsksname;
 
@@ -131,6 +131,7 @@ public class enterPage extends AppCompatActivity {
 
         //찜(star) 클릭 시
         star.setOnClickListener(v -> {
+            starclick=1;
             if (check == 0) { //해당 유저가 찜한 가게 아님
                 Response.Listener<String> responseListener2 = response2 -> {
                     System.out.println("Listener 진입 성공/ response 값 : " + response2);
@@ -280,15 +281,24 @@ public class enterPage extends AppCompatActivity {
 
     private long time = 0;
 
+//    @Override
+//    public void onBackPressed() {
+//        if(starclick != 1) {
+//            if (System.currentTimeMillis() - time >= 2000) {
+//                time = System.currentTimeMillis();
+//                Toast.makeText(getApplicationContext(), "뒤로 버튼을 한번 더 누르면 종료합니다.", Toast.LENGTH_SHORT).show();
+//            }else if (System.currentTimeMillis() - time < 2000) {
+//                finishAffinity();
+//                System.runFinalization();
+//                System.exit(0);
+//            }
+//        }
+//    }
+
     @Override
     public void onBackPressed() {
-        if (System.currentTimeMillis() - time >= 2000) {
-            time = System.currentTimeMillis();
-            Toast.makeText(getApplicationContext(), "뒤로 버튼을 한번 더 누르면 종료합니다.", Toast.LENGTH_SHORT).show();
-        } else if (System.currentTimeMillis() - time < 2000) {
-            finishAffinity();
-            System.runFinalization();
-            System.exit(0);
+        if(starclick != 1) {
+           finish();
         }
     }
 
